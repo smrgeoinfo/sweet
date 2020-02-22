@@ -1,4 +1,3 @@
-@prefix : <http://sweetontology.net/realm/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -18,16 +17,16 @@
 @base <http://sweetontology.net/realm> .
 
 <http://sweetontology.net/realm> rdf:type owl:Ontology ;
-                                  owl:imports <http://sweetontology.net/matrCompound> ,
-                                              <http://sweetontology.net/matrWater> ,
-                                              <http://sweetontology.net/realmAstroBody> ,
-                                              <http://sweetontology.net/rela> ,
-                                              <http://sweetontology.net/relaChemical> ,
-                                              <http://sweetontology.net/relaSpace> ,
-                                              <http://sweetontology.net/reprSpaceGeometry> ,
-                                              <http://sweetontology.net/reprSpaceGeometry3D> ,
-                                              <http://sweetontology.net/state> ,
-                                              <http://sweetontology.net/statePhysical> ;
+                                  # owl:imports <http://sweetontology.net/matrCompound> ,
+                                  #             <http://sweetontology.net/matrWater> ,
+                                  #             <http://sweetontology.net/realmAstroBody> ,
+                                  #             <http://sweetontology.net/rela> ,
+                                  #             <http://sweetontology.net/relaChemical> ,
+                                  #             <http://sweetontology.net/relaSpace> ,
+                                  #             <http://sweetontology.net/reprSpaceGeometry> ,
+                                  #             <http://sweetontology.net/reprSpaceGeometry3D> ,
+                                  #             <http://sweetontology.net/state> ,
+                                  #             <http://sweetontology.net/statePhysical> ;
                                   rdfs:label "SWEET Ontology Realm" ;
                                   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                   owl:versionInfo "3.5.0" .
