@@ -316,12 +316,12 @@ sorea:PlanetaryLayer rdf:type owl:Class .
 
 
 ###  http://sweetontology.net/realm/PlanetaryRealm
-sorea:PlanetaryRealm rdf:type owl:Class .
+sorea:PlanetaryRealm rdf:type owl:Class ;
+                     skos:prefLabel "planetary realm"@en .
 
 
 ###  http://sweetontology.net/realm/PlanetarySurface
-sorea:PlanetarySurface rdf:type owl:Class ;
-                       owl:disjointWith soreag:Subsurface .
+sorea:PlanetarySurface rdf:type owl:Class .
 
 
 ###  http://sweetontology.net/realmGeol/AbundanceZone
@@ -413,11 +413,16 @@ soreag:AssociationZone rdf:type owl:Class ;
                        skos:prefLabel "association zone"@en .
 
 
-###  http://sweetontology.net/realmGeol/Asthenosphere
-soreag:Asthenosphere rdf:type owl:Class ;
-                     owl:equivalentClass soreag:UpperMantleFlowing ;
-                     rdfs:subClassOf soreag:UpperMantle ;
-                     rdfs:label "asthenosphere"@en .
+###  http://sweetontology.net/realmGeol/AtmosphereLayer
+soreag:AtmosphereLayer rdf:type owl:Class ;
+                       rdfs:subClassOf sorea:PlanetaryLayer ;
+                       owl:disjointWith soreag:GeosphereLayer ,
+                                        soreag:LiquidsphereLayer ;
+                       skos:definition [ dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                                         dcterms:created "2020-02-22"^^xsd:date ;
+                                         rdfs:comment "An atmosphere layer is a planetary layer that is composed of gaseous material as opposed to a geosphere layer which is composed of solid material or a liquidsphere layer which is composed of liquid material. (Definition created here)"@en
+                                       ] ;
+                       skos:prefLabel "atmosphere layer"@en .
 
 
 ###  http://sweetontology.net/realmGeol/Basement
@@ -443,12 +448,6 @@ soreag:Bed rdf:type owl:Class ;
                           <https://doi.org/10.1130/9780813774022> ;
            skos:definition "Bed (Beds) is the smallest formal unit in the hierarchy of sedimentary lithostratigraphic units, e.g. a single stratum lithologically distinguishable from other layers above and below (Salvador, 2013; ICS Online, January 2020). Customarily, only distinctive beds (commonly known as marker beds), which are particularly useful for stratigraphic purposes, like correlation or reference, are given proper names and considered formal lithostratigraphic units (Staines, 1985)"@en ;
            skos:prefLabel "bed"@en .
-
-
-###  http://sweetontology.net/realmGeol/Bedrock
-soreag:Bedrock rdf:type owl:Class ;
-               rdfs:subClassOf soreag:GeosphereLayer ;
-               rdfs:label "bedrock"@en .
 
 
 ###  http://sweetontology.net/realmGeol/Beds
@@ -483,12 +482,6 @@ soreag:Block rdf:type owl:Class ;
              skos:altLabel "fault block"@en ;
              skos:definition " A block of the crust that has been displaced by movement on a fault. (Neuendorf et al., 2011)"@en ;
              skos:prefLabel "block"@en .
-
-
-###  http://sweetontology.net/realmGeol/BrittleDuctileTransitionZone
-soreag:BrittleDuctileTransitionZone rdf:type owl:Class ;
-                                    rdfs:subClassOf soreag:Crust ;
-                                    rdfs:label "brittle ductile transition zone"@en .
 
 
 ###  http://sweetontology.net/realmGeol/ChronostratigraphicUnit
@@ -538,46 +531,10 @@ soreag:Continent rdf:type owl:Class ;
                  skos:prefLabel "continent"@en .
 
 
-###  http://sweetontology.net/realmGeol/Continental
-soreag:Continental rdf:type owl:Class ;
-                   rdfs:subClassOf sorea:PlanetaryRealm ;
-                   rdfs:label "continental"@en .
-
-
-###  http://sweetontology.net/realmGeol/Core
-soreag:Core rdf:type owl:Class ;
-            rdfs:subClassOf soreag:GeosphereLayer ;
-            rdfs:label "core"@en .
-
-
-###  http://sweetontology.net/realmGeol/CoreMantleBoundary
-soreag:CoreMantleBoundary rdf:type owl:Class ;
-                          owl:equivalentClass soreag:GuttenburgDiscontinuity ;
-                          rdfs:subClassOf soreag:GeologicBoundary ;
-                          rdfs:label "core mantle boundary"@en .
-
-
 ###  http://sweetontology.net/realmGeol/Cover
 soreag:Cover rdf:type owl:Class ;
              rdfs:subClassOf soreag:GeologicStructure ;
              rdfs:label "cover"@en .
-
-
-###  http://sweetontology.net/realmGeol/Crust
-soreag:Crust rdf:type owl:Class ;
-             owl:equivalentClass soreag:SkinLayer ;
-             rdfs:subClassOf soreag:GeosphereLayer ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty sorelsp:hasLowerBoundary ;
-                               owl:allValuesFrom soreag:Moho
-                             ] .
-
-
-###  http://sweetontology.net/realmGeol/CrustMantleBoundary
-soreag:CrustMantleBoundary rdf:type owl:Class ;
-                           owl:equivalentClass soreag:Moho ;
-                           rdfs:subClassOf soreag:GeologicBoundary ;
-                           rdfs:label "crust mantle boundary"@en .
 
 
 ###  http://sweetontology.net/realmGeol/CrustalElement
@@ -593,12 +550,6 @@ soreag:CrustalElement rdf:type owl:Class ;
                       dcterms:source <http://pid.geoscience.gov.au/dataset/ga/14909> ;
                       skos:definition "Crustal Elements are geophysical domains that represent upper-crustal segments showing some overall commonality of geophysical properties, primarily magnetic and gravity data sets. Crustal elements are not geologically defined features, such as basement provinces. The latter are defined on the basis of geological criteria and are three-dimensional bodies that have a definite thickness and represent time-rock units whose maximum and minimum ages are generally, but not always, well established. Some crustal elements could represent a set of overlying or overlapping basement provinces. (Shaw et al., 1996)"@en ;
                       skos:prefLabel "crustal element"@en .
-
-
-###  http://sweetontology.net/realmGeol/DLayer
-soreag:DLayer rdf:type owl:Class ;
-              rdfs:subClassOf soreag:Mantle ;
-              rdfs:label "d layer"@en .
 
 
 ###  http://sweetontology.net/realmGeol/DenudationalFeature
@@ -919,12 +870,17 @@ soreag:GeophysicalFeature rdf:type owl:Class ;
 ###  http://sweetontology.net/realmGeol/GeosphereLayer
 soreag:GeosphereLayer rdf:type owl:Class ;
                       rdfs:subClassOf sorea:PlanetaryLayer ,
-                                      soreag:Subsurface ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty sorel:hasRealm ;
-                                        owl:allValuesFrom sorea:Geosphere
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass sorea:PlanetaryRealm
                                       ] ;
-                      rdfs:label "geosphere layer"@en .
+                      owl:disjointWith soreag:LiquidsphereLayer ;
+                      skos:definition [ dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                                        dcterms:created "2020-02-22"^^xsd:date ;
+                                        rdfs:comment "A geosphere layer is a planetary layer that is composed of solid material, as opposed to a liquidsphere layer which is composed of liquid material or an atmosphere layer which is composed of gaseous material. (Definition created here)"@en
+                                      ] ;
+                      skos:prefLabel "geosphere layer"@en .
 
 
 ###  http://sweetontology.net/realmGeol/Geotrail
@@ -973,12 +929,6 @@ soreag:Group rdf:type owl:Class ;
              skos:prefLabel "group"@en .
 
 
-###  http://sweetontology.net/realmGeol/GuttenburgDiscontinuity
-soreag:GuttenburgDiscontinuity rdf:type owl:Class ;
-                               rdfs:subClassOf soreag:GeologicBoundary ;
-                               rdfs:label "guttenburg discontinuity"@en .
-
-
 ###  http://sweetontology.net/realmGeol/HalfGraben
 soreag:HalfGraben rdf:type owl:Class ;
                   rdfs:subClassOf soreag:StructuralFeature ;
@@ -999,6 +949,21 @@ soreag:Horst rdf:type owl:Class ;
              dcterms:source <http://www.glossaryofgeology.org> ;
              skos:definition "An elongate block that is bounded on both sides by normal faults that dip away from one another. It is a structural form and may or may not be expressed geomorphologically. (Neuendorf et al., 2011)"@en ;
              skos:prefLabel "horst"@en .
+
+
+###  http://sweetontology.net/realmGeol/HydrosphereLayer
+soreag:HydrosphereLayer rdf:type owl:Class ;
+                        rdfs:subClassOf soreag:LiquidsphereLayer ;
+                        skos:definition [ dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                                          dcterms:created "2020-02-22"^^xsd:date ;
+                                          dcterms:source <https://en.wikipedia.org/wiki/Hydrosphere> ;
+                                          rdfs:comment "The term \"hydropshere\" is from Greek ὕδωρ hydōr, \"water\" and σφαῖρα sphaira, \"sphere\" and \"is the combined mass of water found on, under, and above the surface of a planet earth\" (Wikipedia)."@en
+                                        ] ;
+                        skos:prefLabel "hydrosphere layer"@en ;
+                        skos:scopeNote [ dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                                         dcterms:created "2020-02-22"^^xsd:date ;
+                                         rdfs:comment "This definition is earth-specific and excludes non-water liquids and non-earth planets so does not indclude the liquid hydrogen layer on Jupiter. For those, see \"liquidsphere layer\""@en
+                                       ] .
 
 
 ###  http://sweetontology.net/realmGeol/IgneousProvince
@@ -1022,13 +987,6 @@ soreag:Inlier rdf:type owl:Class ;
               dcterms:source <http://www.glossaryofgeology.org> ;
               skos:definition "An area or group of rocks surrounded by younger rocks, e.g., an eroded anticlinal crest. (Neuendorf et al., 2011)"@en ;
               skos:prefLabel "inlier"@en .
-
-
-###  http://sweetontology.net/realmGeol/InnerCore
-soreag:InnerCore rdf:type owl:Class ;
-                 rdfs:subClassOf soreag:Core ;
-                 owl:disjointWith soreag:OuterCore ;
-                 rdfs:label "inner core"@en .
 
 
 ###  http://sweetontology.net/realmGeol/IntervalZone
@@ -1071,12 +1029,6 @@ soreag:LargeIgneousProvince rdf:type owl:Class ;
                             skos:prefLabel "large igneous province"@en .
 
 
-###  http://sweetontology.net/realmGeol/LehmannDiscontinuity
-soreag:LehmannDiscontinuity rdf:type owl:Class ;
-                            rdfs:subClassOf soreag:GeologicBoundary ;
-                            rdfs:label "lehmann discontinuity"@en .
-
-
 ###  http://sweetontology.net/realmGeol/LineageZone
 soreag:LineageZone rdf:type owl:Class ;
                    rdfs:subClassOf soreag:BiostratigraphicUnit ;
@@ -1086,6 +1038,16 @@ soreag:LineageZone rdf:type owl:Class ;
                    dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
                    skos:definition "The body of strata containing specimens representing a specific segment of an evolutionary lineage. (ICS, Online, December 2019)"@en ;
                    skos:prefLabel "lineage zone"@en .
+
+
+###  http://sweetontology.net/realmGeol/LiquidsphereLayer
+soreag:LiquidsphereLayer rdf:type owl:Class ;
+                         rdfs:subClassOf sorea:PlanetaryLayer ;
+                         skos:definition [ dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                                           dcterms:created "2020-02-22"^^xsd:date ;
+                                           rdfs:comment "An liquidsphere layer is a planetary layer that is composed of liquid material as opposed to a geosphere layer which is composed of solid material or an atomosphere layer which is composed of gaseou material. (Definition created here)"@en
+                                         ] ;
+                         skos:prefLabel "liquidsphere layer"@en .
 
 
 ###  http://sweetontology.net/realmGeol/Lithodeme
@@ -1111,16 +1073,6 @@ soreag:LithodemicFeature rdf:type owl:Class ;
                          skos:prefLabel "lithodemic feature"@en .
 
 
-###  http://sweetontology.net/realmGeol/Lithosphere
-soreag:Lithosphere rdf:type owl:Class ;
-                   rdfs:subClassOf soreag:GeosphereLayer ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty sorelsc:containsMaterial ;
-                                     owl:allValuesFrom somarock:Rock
-                                   ] ;
-                   rdfs:label "lithosphere"@en .
-
-
 ###  http://sweetontology.net/realmGeol/LithostratigraphicUnit
 soreag:LithostratigraphicUnit rdf:type owl:Class ;
                               rdfs:subClassOf soreag:StratigraphicUnit ;
@@ -1136,12 +1088,6 @@ soreag:LithostratigraphicUnit rdf:type owl:Class ;
 soreag:Lopolith rdf:type owl:Class ;
                 rdfs:subClassOf soreag:PlutonicStructure ;
                 rdfs:label "lopolith"@en .
-
-
-###  http://sweetontology.net/realmGeol/LowerMantle
-soreag:LowerMantle rdf:type owl:Class ;
-                   rdfs:subClassOf soreag:Mantle ;
-                   rdfs:label "lower mantle"@en .
 
 
 ###  http://sweetontology.net/realmGeol/MagnetostratigraphicPolaritySubzone
@@ -1193,16 +1139,6 @@ soreag:MagnetostratigraphicUnit rdf:type owl:Class ;
                                 skos:prefLabel "magnetostratigraphic unit"@en .
 
 
-###  http://sweetontology.net/realmGeol/Mantle
-soreag:Mantle rdf:type owl:Class ;
-              rdfs:subClassOf soreag:GeosphereLayer ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty sorelsp:hasUpperBoundary ;
-                                owl:allValuesFrom soreag:Moho
-                              ] ;
-              rdfs:label "mantle"@en .
-
-
 ###  http://sweetontology.net/realmGeol/Member
 soreag:Member rdf:type owl:Class ;
               rdfs:subClassOf soreag:LithostratigraphicUnit ;
@@ -1212,13 +1148,6 @@ soreag:Member rdf:type owl:Class ;
               dcterms:source <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> ;
               skos:definition "The formal lithostratigraphic unit next in rank below a formation. (ICS, Online, December 2019)"@en ;
               skos:prefLabel "member"@en .
-
-
-###  http://sweetontology.net/realmGeol/Mesosphere
-soreag:Mesosphere rdf:type owl:Class ;
-                  owl:equivalentClass soreag:UpperMantleRigid ;
-                  rdfs:subClassOf soreag:UpperMantle ;
-                  rdfs:label "mesosphere"@en .
 
 
 ###  http://sweetontology.net/realmGeol/MineralProvince
@@ -1231,19 +1160,6 @@ soreag:MineralProvince rdf:type owl:Class ;
                        skos:altLabel "Metallogenic province"@en ;
                        skos:definition "An area characterized by a particular assemblage of mineral deposits, or by one or more characteristic types of mineralization. A metallogenic province may have had more than one episode of mineralization.  (Neuendorf et al., 2011)"@en ;
                        skos:prefLabel "mineral province"@en .
-
-
-###  http://sweetontology.net/realmGeol/Moho
-soreag:Moho rdf:type owl:Class ;
-            owl:equivalentClass soreag:Mohorovi_i_Discontinuity ;
-            rdfs:subClassOf soreag:GeologicBoundary ;
-            rdfs:label "moho"@en .
-
-
-###  http://sweetontology.net/realmGeol/Mohorovi_i_Discontinuity
-soreag:Mohorovi_i_Discontinuity rdf:type owl:Class ;
-                                rdfs:subClassOf soreag:GeologicBoundary ;
-                                rdfs:label "mohorovicic discontinuity"@en .
 
 
 ###  http://sweetontology.net/realmGeol/Monocline
@@ -1290,12 +1206,6 @@ soreag:NappeComplex rdf:type owl:Class ;
                     dcterms:source <https://doi.org/10.1080/11035897.2016.1178666> ;
                     skos:definition "A nappe complex consists of two or more distinct nappes that are stacked upon, and related to, one another in some significant respect, e.g., shared general environment of origin, similar metamorphism and/or deformation. (Kumpulainen, 2017)"@en ;
                     skos:prefLabel "nappe complex"@en .
-
-
-###  http://sweetontology.net/realmGeol/OuterCore
-soreag:OuterCore rdf:type owl:Class ;
-                 rdfs:subClassOf soreag:Core ;
-                 rdfs:label "outer core"@en .
 
 
 ###  http://sweetontology.net/realmGeol/Outlier
@@ -1429,12 +1339,6 @@ soreag:Sill rdf:type owl:Class ;
             rdfs:label "sill"@en .
 
 
-###  http://sweetontology.net/realmGeol/SkinLayer
-soreag:SkinLayer rdf:type owl:Class ;
-                 rdfs:subClassOf soreag:GeosphereLayer ;
-                 rdfs:label "skin layer"@en .
-
-
 ###  http://sweetontology.net/realmGeol/StratigraphicEvent
 soreag:StratigraphicEvent rdf:type owl:Class ;
                           rdfs:subClassOf soreag:StratigraphicFeature ;
@@ -1489,12 +1393,6 @@ soreag:Subgroup rdf:type owl:Class ;
                                     <https://orcid.org/0000-0002-8742-7730> ;
                 skos:definition "A Subgroup is a part of a Group. (Definition created here: Paul Blake, John McKellar)"@en ;
                 skos:prefLabel "subgroup"@en .
-
-
-###  http://sweetontology.net/realmGeol/Subsurface
-soreag:Subsurface rdf:type owl:Class ;
-                  rdfs:subClassOf sorea:PlanetaryRealm ;
-                  rdfs:label "subsurface"@en .
 
 
 ###  http://sweetontology.net/realmGeol/Suite
@@ -1643,22 +1541,6 @@ soreag:Terrane rdf:type owl:Class ;
                skos:prefLabel "terrane"@en .
 
 
-###  http://sweetontology.net/realmGeol/TransitionalCrust
-soreag:TransitionalCrust rdf:type owl:Class ;
-                         rdfs:subClassOf soreag:Crust ;
-                         rdfs:label "transitional crust"@en .
-
-
-###  http://sweetontology.net/realmGeol/TransitionalLithosphere
-soreag:TransitionalLithosphere rdf:type owl:Class ;
-                               rdfs:subClassOf soreag:GeosphereLayer ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty sorelph:hasPlanetaryStructure ;
-                                                 owl:someValuesFrom soreag:TransitionalCrust
-                                               ] ;
-                               rdfs:label "transitional lithosphere"@en .
-
-
 ###  http://sweetontology.net/realmGeol/Unconformity
 soreag:Unconformity rdf:type owl:Class ;
                     rdfs:subClassOf soreag:DenudationalFeature ;
@@ -1669,24 +1551,6 @@ soreag:Unconformity rdf:type owl:Class ;
                                    <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
                     skos:definition "The surface of contact between rock strata that represents a lack of continuity in deposition, encompassing a period of nondeposition or weathering/erosion prior to the deposition of younger rocks, sometimes, in the case of sedimentary rocks, marked by the absence of conformity between the dip and strike of underlying and overlying strata. (Modified from Neuendorf et al., 2011; Allaby, 2013)"@en ;
                     skos:prefLabel "unconformity"@en .
-
-
-###  http://sweetontology.net/realmGeol/UpperMantle
-soreag:UpperMantle rdf:type owl:Class ;
-                   rdfs:subClassOf soreag:Mantle ;
-                   rdfs:label "upper mantle"@en .
-
-
-###  http://sweetontology.net/realmGeol/UpperMantleFlowing
-soreag:UpperMantleFlowing rdf:type owl:Class ;
-                          rdfs:subClassOf soreag:UpperMantle ;
-                          rdfs:label "upper mantle flowing"@en .
-
-
-###  http://sweetontology.net/realmGeol/UpperMantleRigid
-soreag:UpperMantleRigid rdf:type owl:Class ;
-                        rdfs:subClassOf soreag:UpperMantle ;
-                        rdfs:label "upper mantle rigid"@en .
 
 
 ###  http://sweetontology.net/realmGeol/Window
@@ -1802,8 +1666,8 @@ soreag:Crust rdf:type owl:NamedIndividual .
 ###  http://www.stratigraphy.org/index.php/ics-stratigraphicguide
 <http://www.stratigraphy.org/index.php/ics-stratigraphicguide> rdf:type owl:NamedIndividual ,
                                                                         sohur:Publication ;
-                                                               dcterms:created "2013"^^xsd:gYear ;
                                                                dcterms:creator "International Commission on Stratigraphy" ;
+                                                               dcterms:date "2013"^^xsd:gYear ;
                                                                dcterms:publisher "International Commission on Stratigraphy" ;
                                                                dcterms:type sdo:WebSite ,
                                                                             wiki:Q35127 ;
@@ -2076,9 +1940,6 @@ soreag:Crust rdf:type owl:NamedIndividual .
 #################################################################
 #    Annotations
 #################################################################
-
-soreag:Crust rdfs:label "crust"@en .
-
 
 owl:Nothing skos:definition ""@en .
 
