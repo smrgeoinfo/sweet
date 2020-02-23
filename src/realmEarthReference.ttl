@@ -155,6 +155,10 @@ sorea:Earth rdf:type owl:NamedIndividual ;
             rdfs:label "earth"@en .
 
 
+###  http://sweetontology.net/realm/EarthGeosphere
+sorea:EarthGeosphere rdf:type owl:NamedIndividual .
+
+
 ###  http://sweetontology.net/realmAstroHelio/EarthExosphere
 soreaah:EarthExosphere rdf:type owl:NamedIndividual ,
                                 soreag:AtmosphereLayer ;
@@ -202,6 +206,16 @@ soreaer:AphoticLayer rdf:type owl:NamedIndividual ,
                      skos:prefLabel "aphotic layer"@en .
 
 
+###  http://sweetontology.net/realmEarthReference/Asthenosphere
+soreaer:Asthenosphere rdf:type owl:NamedIndividual ,
+                               soreag:GeosphereLayer ;
+                      sorel:isPartOf soreaer:UpperMantle ;
+                      dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                      dcterms:source <https://en.wikipedia.org/wiki/Asthenosphere> ;
+                      skos:definition "Earth's asthenosphere is a planetary layer within Earth's upper mantle that is  highly viscous, mechanically weak and a ductile region. It lies below the lithosphere, at depths between approximately 80 and 200 km (50 and 120 miles) below the surface."@en ;
+                      skos:prefLabel "asthenosphere"@en .
+
+
 ###  http://sweetontology.net/realmEarthReference/BathypelagicLayer
 soreaer:BathypelagicLayer rdf:type owl:NamedIndividual ,
                                    soreag:HydrosphereLayer ;
@@ -222,6 +236,42 @@ soreaer:BenthicLayer rdf:type owl:NamedIndividual ,
                      skos:altLabel "benthic zone"@en ;
                      skos:definition "The benthic layer is a planetary layer of Earth's hydrosphere that is the ecological region at the lowest level of a body of water such as an ocean, lake, or stream, including the sediment surface and some sub-surface layers."@en ;
                      skos:prefLabel "benthic layer"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/BrittleDuctileTransitionZone
+soreaer:BrittleDuctileTransitionZone rdf:type owl:NamedIndividual ,
+                                              soreag:GeosphereLayer ;
+                                     skos:prefLabel "brittle ductile transition zone"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/Core
+soreaer:Core rdf:type owl:NamedIndividual ,
+                      soreag:GeosphereLayer ;
+             sorel:hasPart soreaer:InnerCore ,
+                           soreaer:OuterCore ;
+             sorel:isPartOf sorea:EarthGeosphere ;
+             dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+             dcterms:source <https://en.wikipedia.org/wiki/Structure_of_the_Earth#Core> ;
+             skos:definition "Earth's core is a planetary layer within Earth's geosphere that is its innermost layer. It is immediately beneath the mantle and is generally believed to be composed primarily of iron and some nickel."@en ;
+             skos:prefLabel "core"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/Crust
+soreaer:Crust rdf:type owl:NamedIndividual ,
+                       soreag:GeosphereLayer ;
+              sorel:hasPart soreaer:BrittleDuctileTransitionZone ,
+                            soreaer:TransitionalCrust ;
+              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+              dcterms:source <https://en.wikipedia.org/wiki/Earth%27s_crust> ;
+              skos:definition "Earth's crust is a planetary layer within Earth's lithosphere that is its outermost layer. The crust lies on top of the mantle, also within the lithosphere, with the boundary between the crust and mantle conventionally placed at the Mohorovičić discontinuity, a boundary defined by a contrast in seismic velocity."@en ;
+              skos:prefLabel "crust"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/DLayer
+soreaer:DLayer rdf:type owl:NamedIndividual ,
+                        soreag:GeosphereLayer ;
+               dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+               skos:prefLabel "d-layer"@en .
 
 
 ###  http://sweetontology.net/realmEarthReference/DemersalLayer
@@ -350,6 +400,44 @@ soreaer:HadopelagicLayer rdf:type owl:NamedIndividual ,
                          skos:prefLabel "hadoopelagic layer"@en .
 
 
+###  http://sweetontology.net/realmEarthReference/InnerCore
+soreaer:InnerCore rdf:type owl:NamedIndividual ,
+                           soreag:GeosphereLayer ;
+                  dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                  dcterms:source <https://en.wikipedia.org/wiki/Earth%27s_inner_core> ;
+                  skos:definition "Earth's inner core is a planetary layer within Earth's geosphere that is the inner most layer. It is primarily a solid ball with a radius of about 1,220 kilometres (760 miles). The inner core is believed to be composed of an iron–nickel alloy with some other elements. The temperature at the inner core's surface is estimated to be approximately 5700 K (5430 °C or 9806 °F)."@en ;
+                  skos:prefLabel "inner core"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/Lithosphere
+soreaer:Lithosphere rdf:type owl:NamedIndividual ,
+                             soreag:GeosphereLayer ;
+                    sorel:hasPart soreaer:crust ;
+                    sorel:isPartOf sorea:EarthGeosphere ;
+                    dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                    skos:prefLabel "lithosphere"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/LowerMantle
+soreaer:LowerMantle rdf:type owl:NamedIndividual ,
+                             soreag:GeosphereLayer ;
+                    dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                    skos:prefLabel "lower mantle"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/Mantle
+soreaer:Mantle rdf:type owl:NamedIndividual ,
+                        soreag:GeosphereLayer ;
+               sorel:hasPart soreaer:DLayer ,
+                             soreaer:LowerMantle ,
+                             soreaer:UpperMantle ;
+               sorel:isPartOf sorea:EarthGeosphere ;
+               dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+               dcterms:source <https://en.wikipedia.org/wiki/Earth%27s_mantle> ,
+                              "Earth's mantle is a planetary layer within Earth's lithosphere that is its second outermost layer. The mantle lies underneith the crust, also within the lithosphere, with the boundary between the crust and mantle conventionally placed at the Mohorovičić discontinuity, a boundary defined by a contrast in seismic velocity. It consists of silicate rock and has a thickness of 2,900 kilometres."@en ;
+               skos:prefLabel "mantle"@en .
+
+
 ###  http://sweetontology.net/realmEarthReference/MesopelagicLayer
 soreaer:MesopelagicLayer rdf:type owl:NamedIndividual ,
                                   soreag:HydrosphereLayer ;
@@ -359,6 +447,15 @@ soreaer:MesopelagicLayer rdf:type owl:NamedIndividual ,
                          skos:altLabel "mesopelagic zone"@en ;
                          skos:definition "The mesopelagic layer is a planetary layer of Earth's hydrosphere defined by light, and begins at the depth where only 1% of incident light reaches and ends where there is no light."@en ;
                          skos:prefLabel "mesopelagic layer"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/OuterCore
+soreaer:OuterCore rdf:type owl:NamedIndividual ,
+                           soreag:GeosphereLayer ;
+                  dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                  dcterms:source <https://en.wikipedia.org/wiki/Earth%27s_outer_core> ;
+                  skos:definition "Earth's inner core is a planetary layer within Earth's geosphere and is a fluid layer about 2,400 km (1,500 mi) thick and composed of mostly iron and nickel that lies above Earth's solid inner core and below its mantle."@en ;
+                  skos:prefLabel "outer core"@en .
 
 
 ###  http://sweetontology.net/realmEarthReference/PelagicLayer
@@ -384,138 +481,60 @@ soreaer:PhoticLayer rdf:type owl:NamedIndividual ,
                     skos:prefLabel "photic layer"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/asethenosphere
-soreaer:asethenosphere rdf:type owl:NamedIndividual ,
-                                soreag:GeosphereLayer ;
-                       skos:prefLabel "earth asethenosphere"@en .
+###  http://sweetontology.net/realmEarthReference/SkinLayer
+soreaer:SkinLayer rdf:type owl:NamedIndividual ,
+                           soreag:GeosphereLayer ;
+                  dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                  skos:prefLabel "skin layer"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/brittle-ductile-transition-zone
-soreaer:brittle-ductile-transition-zone rdf:type owl:NamedIndividual ,
-                                                 soreag:GeosphereLayer ;
-                                        skos:prefLabel "brittle ductile- transition zone"@en .
+###  http://sweetontology.net/realmEarthReference/Subsurface
+soreaer:Subsurface rdf:type owl:NamedIndividual ;
+                   skos:prefLabel "skin layer"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/TransitionalCrust
+soreaer:TransitionalCrust rdf:type owl:NamedIndividual ,
+                                   soreag:GeosphereLayer ;
+                          sorel:hasPart soreaer:TransitionalLithosphere ;
+                          dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
+
+
+###  http://sweetontology.net/realmEarthReference/TransitionalLithosphere
+soreaer:TransitionalLithosphere rdf:type owl:NamedIndividual ,
+                                         soreag:GeosphereLayer ;
+                                dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
+
+
+###  http://sweetontology.net/realmEarthReference/UpperMantle
+soreaer:UpperMantle rdf:type owl:NamedIndividual ,
+                             soreag:GeosphereLayer ;
+                    sorel:hasPart soreaer:Asthenosphere ,
+                                  soreaer:UpperMantleFlowing ,
+                                  soreaer:UpperMantleRigid ;
+                    sorel:isPartOf soreaer:Mantle ;
+                    dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                    skos:prefLabel "upper mantle"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/UpperMantleFlowing
+soreaer:UpperMantleFlowing rdf:type owl:NamedIndividual ,
+                                    soreag:GeosphereLayer ;
+                           dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
+
+
+###  http://sweetontology.net/realmEarthReference/UpperMantleRigid
+soreaer:UpperMantleRigid rdf:type owl:NamedIndividual ,
+                                  soreag:GeosphereLayer ;
+                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
 
 
 ###  http://sweetontology.net/realmEarthReference/continental
 soreaer:continental rdf:type owl:NamedIndividual .
 
 
-###  http://sweetontology.net/realmEarthReference/core
-soreaer:core rdf:type owl:NamedIndividual ,
-                      soreag:GeosphereLayer ;
-             sorel:hasPart soreaer:inner-core ,
-                           soreaer:outer-core ;
-             dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-             skos:prefLabel "core"@en .
-
-
 ###  http://sweetontology.net/realmEarthReference/crust
-soreaer:crust rdf:type owl:NamedIndividual ,
-                       soreag:GeosphereLayer ;
-              sorel:hasPart soreaer:brittle-ductile-transition-zone ,
-                            soreaer:transitional-crust ;
-              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-              skos:prefLabel "crust"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/d-layer
-soreaer:d-layer rdf:type owl:NamedIndividual ,
-                         soreag:GeosphereLayer ;
-                dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                skos:prefLabel "d-layer"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/inner-core
-soreaer:inner-core rdf:type owl:NamedIndividual ,
-                            soreag:GeosphereLayer ;
-                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                   skos:prefLabel "inner core"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/lithosphere
-soreaer:lithosphere rdf:type owl:NamedIndividual ,
-                             soreag:GeosphereLayer ;
-                    sorel:hasPart soreaer:crust ;
-                    dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                    skos:prefLabel "lithosphere"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/lower-mantle
-soreaer:lower-mantle rdf:type owl:NamedIndividual ,
-                              soreag:GeosphereLayer ;
-                     dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                     skos:prefLabel "lower mantle"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/mantle
-soreaer:mantle rdf:type owl:NamedIndividual ,
-                        soreag:GeosphereLayer ;
-               sorel:hasPart soreaer:d-layer ,
-                             soreaer:lower-mantle ,
-                             soreaer:upper-mantle ;
-               dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-               skos:prefLabel "mantle"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/mesosphere
-soreaer:mesosphere rdf:type owl:NamedIndividual ,
-                            soreag:GeosphereLayer ;
-                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                   skos:prefLabel "mesosphere"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/outer-core
-soreaer:outer-core rdf:type owl:NamedIndividual ,
-                            soreag:GeosphereLayer ;
-                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                   skos:prefLabel "outer core"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/skin-layer
-soreaer:skin-layer rdf:type owl:NamedIndividual ,
-                            soreag:GeosphereLayer ;
-                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                   skos:prefLabel "skin layer"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/subsurface
-soreaer:subsurface rdf:type owl:NamedIndividual ;
-                   skos:prefLabel "skin layer"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/transitional-crust
-soreaer:transitional-crust rdf:type owl:NamedIndividual ,
-                                    soreag:GeosphereLayer ;
-                           sorel:hasPart soreaer:transitional-lithosphere ;
-                           dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
-
-
-###  http://sweetontology.net/realmEarthReference/transitional-lithosphere
-soreaer:transitional-lithosphere rdf:type owl:NamedIndividual ,
-                                          soreag:GeosphereLayer ;
-                                 dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
-
-
-###  http://sweetontology.net/realmEarthReference/upper-mantle
-soreaer:upper-mantle rdf:type owl:NamedIndividual ,
-                              soreag:GeosphereLayer ;
-                     sorel:hasPart soreaer:asethenosphere ,
-                                   soreaer:mesosphere ,
-                                   soreaer:upper-mantle-flowing ,
-                                   soreaer:upper-mantle-rigid ;
-                     dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
-
-
-###  http://sweetontology.net/realmEarthReference/upper-mantle-flowing
-soreaer:upper-mantle-flowing rdf:type owl:NamedIndividual ,
-                                      soreag:GeosphereLayer ;
-                             dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
-
-
-###  http://sweetontology.net/realmEarthReference/upper-mantle-rigid
-soreaer:upper-mantle-rigid rdf:type owl:NamedIndividual ,
-                                    soreag:GeosphereLayer ;
-                           dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
+soreaer:crust rdf:type owl:NamedIndividual .
 
 
 ###  https://orcid.org/0000-0002-8742-7730
