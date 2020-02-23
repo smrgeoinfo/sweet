@@ -302,9 +302,7 @@ somarock:Rock rdf:type owl:Class .
 
 
 ###  http://sweetontology.net/realm/Geosphere
-sorea:Geosphere rdf:type owl:Class ;
-                skos:altLabel "solid earth"@en ;
-                skos:prefLabel "geosphere"@en .
+sorea:Geosphere rdf:type owl:Class .
 
 
 ###  http://sweetontology.net/realm/PlanetaryBoundary
@@ -413,16 +411,7 @@ soreag:AssociationZone rdf:type owl:Class ;
                        skos:prefLabel "association zone"@en .
 
 
-###  http://sweetontology.net/realmGeol/AtmosphereLayer
-soreag:AtmosphereLayer rdf:type owl:Class ;
-                       rdfs:subClassOf sorea:PlanetaryLayer ;
-                       owl:disjointWith soreag:GeosphereLayer ,
-                                        soreag:LiquidsphereLayer ;
-                       skos:definition [ dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                                         dcterms:created "2020-02-22"^^xsd:date ;
-                                         rdfs:comment "An atmosphere layer is a planetary layer that is composed of gaseous material as opposed to a geosphere layer which is composed of solid material or a liquidsphere layer which is composed of liquid material. (Definition created here)"@en
-                                       ] ;
-                       skos:prefLabel "atmosphere layer"@en .
+
 
 
 ###  http://sweetontology.net/realmGeol/Basement
@@ -875,10 +864,10 @@ soreag:GeosphereLayer rdf:type owl:Class ;
                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                         owl:onClass sorea:PlanetaryRealm
                                       ] ;
-                      owl:disjointWith soreag:LiquidsphereLayer ;
+                      owl:disjointWith soreaa:liquisphereLayer , soreaa:AtmosphereLayer ;
                       skos:definition [ dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
                                         dcterms:created "2020-02-22"^^xsd:date ;
-                                        rdfs:comment "A geosphere layer is a planetary layer that is composed of solid material, as opposed to a liquidsphere layer which is composed of liquid material or an atmosphere layer which is composed of gaseous material. (Definition created here)"@en
+                                        rdfs:comment "A geosphere layer is a planetary layer that is composed of solid material, as opposed to a liquisphere layer which is composed of liquid material or an atmosphere layer which is composed of gaseous material. (Definition created here)"@en
                                       ] ;
                       skos:prefLabel "geosphere layer"@en .
 
@@ -953,17 +942,12 @@ soreag:Horst rdf:type owl:Class ;
 
 ###  http://sweetontology.net/realmGeol/HydrosphereLayer
 soreag:HydrosphereLayer rdf:type owl:Class ;
-                        rdfs:subClassOf soreag:LiquidsphereLayer ;
+                        rdfs:subClassOf soreag:liquisphereLayer ;
                         skos:definition [ dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
                                           dcterms:created "2020-02-22"^^xsd:date ;
                                           dcterms:source <https://en.wikipedia.org/wiki/Hydrosphere> ;
-                                          rdfs:comment "The term \"hydropshere\" is from Greek ὕδωρ hydōr, \"water\" and σφαῖρα sphaira, \"sphere\" and \"is the combined mass of water found on, under, and above the surface of a planet earth\" (Wikipedia)."@en
-                                        ] ;
-                        skos:prefLabel "hydrosphere layer"@en ;
-                        skos:scopeNote [ dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                                         dcterms:created "2020-02-22"^^xsd:date ;
-                                         rdfs:comment "This definition is earth-specific and excludes non-water liquids and non-earth planets so does not indclude the liquid hydrogen layer on Jupiter. For those, see \"liquidsphere layer\""@en
-                                       ] .
+                                          rdfs:comment "A hydrosphere layer is a planetary layer within the hydrosphere of a planet (Wikipedia)."@en
+                                        ] .
 
 
 ###  http://sweetontology.net/realmGeol/IgneousProvince
@@ -1040,14 +1024,14 @@ soreag:LineageZone rdf:type owl:Class ;
                    skos:prefLabel "lineage zone"@en .
 
 
-###  http://sweetontology.net/realmGeol/LiquidsphereLayer
-soreag:LiquidsphereLayer rdf:type owl:Class ;
+###  http://sweetontology.net/realmGeol/liquisphereLayer
+soreag:liquisphereLayer rdf:type owl:Class ;
                          rdfs:subClassOf sorea:PlanetaryLayer ;
                          skos:definition [ dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
                                            dcterms:created "2020-02-22"^^xsd:date ;
-                                           rdfs:comment "An liquidsphere layer is a planetary layer that is composed of liquid material as opposed to a geosphere layer which is composed of solid material or an atomosphere layer which is composed of gaseou material. (Definition created here)"@en
+                                           rdfs:comment "An liquisphere layer is a planetary layer that is composed of liquid material within a planetary liquisphere."@en
                                          ] ;
-                         skos:prefLabel "liquidsphere layer"@en .
+                         skos:prefLabel "liquisphere layer"@en .
 
 
 ###  http://sweetontology.net/realmGeol/Lithodeme
@@ -1226,8 +1210,7 @@ soreag:OverturnedFold rdf:type owl:Class ;
                                           <https://orcid.org/0000-0001-5489-9590> ,
                                           <https://orcid.org/0000-0002-8742-7730> ;
                       dcterms:source <https://doi.org/10.1093/acref/9780199653065.001.0001> ;
-                      skos:altLabel "Overfold"@en ,
-                                    "Overfolded Zone"@en ;
+                      skos:altLabel "Overfold"@en ;
                       skos:definition "A zone where folds in their axial planes are inclined so that the fold limbs dip in the same direction, although not necessarily by the same amount. For each fold, one limb is thus ‘overturned'. (Allaby, 2008)"@en ;
                       skos:prefLabel "overturned fold"@en .
 
@@ -1589,9 +1572,9 @@ sdo:Person rdf:type owl:Class .
 <http://www.glossaryofgeology.org> rdf:type owl:NamedIndividual ,
                                             sohur:Publication ;
                                    dcterms:creator [ rdf:type rdf:Seq ;
-                                                     rdf:_1 "James P. Mehl Jr." ;
+                                                     rdf:_3 "James P. Mehl Jr." ;
                                                      rdf:_2 "Julia A. Jackson" ;
-                                                     rdf:_3 "Klaus K.E. Neuendorf"
+                                                     rdf:_1 "Klaus K.E. Neuendorf"
                                                    ] ;
                                    dcterms:date "2011"^^xsd:gYear ;
                                    dcterms:identifier "ISBN: 978-0-922152-92-6" ;
