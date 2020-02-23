@@ -66,7 +66,14 @@ sorea:Atmosphere rdf:type owl:Class ;
                                    owl:onProperty sorel:hasState ;
                                    owl:hasValue sostp:Gas
                                  ] ;
-                 rdfs:label "atmosphere"@en .
+                 dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                 dcterms:modified "2020-02-23"^^xsd:date ;
+                 skos:definition [
+                    dcterms:created "2020-02-23"^^xsd:date ;
+                    rdfs:comment "An atmosphere is a layer or a set of layers of gases surrounding a planet or other material body, that is held in place by the gravity of that body. It is disjoint from a geosphere which is composed of solid material or a liquisphere which is composed of liquid material."@en ; 
+                    dcterms:source <http://dbpedia.org/page/Atmosphere> ;
+                 ] ;                                
+                 skos:prefLabel "atmosphere"@en .
 
 
 ###  http://sweetontology.net/realm/CriticalZone
@@ -86,7 +93,14 @@ sorea:Cryosphere rdf:type owl:Class ;
                                    owl:onProperty sorelsp:hasUpperBoundary ;
                                    owl:allValuesFrom sorea:PlanetarySurface
                                  ] ;
-                 rdfs:label "cryosphere"@en .
+                 dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                 dcterms:modified "2020-02-23"^^xsd:date ;                                 
+                 skos:definition [
+                    dcterms:created "2020-02-23"^^xsd:date ;
+                    rdfs:comment "A cryosphere is those portions of a planet's surface where water is in solid form, including sea ice, lake ice, river ice, snow cover, glaciers, ice caps, ice sheets, and frozen ground (which includes permafrost). Thus, there is a wide overlap with a hydrosphere."@en ; 
+                    dcterms:source <http://dbpedia.org/page/Cryosphere> ;
+                 ] ;                                 
+                 skos:prefLabel "cryosphere"@en .
 
 
 ###  http://sweetontology.net/realm/Geosphere
@@ -100,7 +114,18 @@ sorea:Geosphere rdf:type owl:Class ;
                                   owl:onProperty sorel:hasState ;
                                   owl:hasValue sostp:Solid
                                 ] ;
-                rdfs:label "geosphere"@en .
+                 dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                 dcterms:modified "2020-02-23"^^xsd:date ;
+                 skos:definition [
+                    dcterms:created "2020-02-23"^^xsd:date ;
+                    rdfs:comment "A geosphere is a layer or a set of layers of a planet consisting of material in solid form."@en ; 
+                 ] ;
+                 skos:definition [
+                    dcterms:created "2020-02-23"^^xsd:date ;
+                    rdfs:comment "As defined here, geosphere contains a planet's lithosphere, mantle, core but does not contain its liquisphere (hydrosphere in the case of Earth) or atmosphere."@en ; 
+                 ] ;
+                skos:altLabel "solid earth"@en ;
+                skos:prefLabel "geosphere"@en .
 
 
 ###  http://sweetontology.net/realm/GlobalPlanetaryLayer
@@ -112,11 +137,22 @@ sorea:GlobalPlanetaryLayer rdf:type owl:Class ;
 ###  http://sweetontology.net/realm/Hydrosphere
 sorea:Hydrosphere rdf:type owl:Class ;
                   rdfs:subClassOf sorea:PlanetaryRealm ,
+                                  sorea:Liquisphere ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty sorelch:hasSubstance ;
                                     owl:hasValue somac:Water
                                   ] ;
-                  rdfs:label "hydrosphere"@en .
+                 dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                 dcterms:modified "2020-02-23"^^xsd:date ;
+                 skos:definition [
+                    dcterms:created "2020-02-23"^^xsd:date ;
+                    rdfs:comment "A hydrosphere is a water (H2O) form of a liquisphere, as seen on the planet Earth. It contains water found on, under, and above the surface of a planet."@en ; 
+                 ] ;
+                skos:scopeNote [
+                    dcterms:created "2020-02-23"^^xsd:date ;
+                    rdfs:comment "Here hydrosphere is a sub class of liquisphere with the latter created to include liquid spheres on planets other than earth that consist of material other than water."@en ; 
+                 ] ; 
+                 skos:prefLabel "hydrosphere"@en .
 
 
 ###  http://sweetontology.net/realm/Land
@@ -127,6 +163,20 @@ sorea:Land rdf:type owl:Class ;
                              owl:hasValue sostp:Solid
                            ] ;
            rdfs:label "land"@en .
+
+
+###  http://sweetontology.net/realm/Hydrosphere
+sorea:Liquisphere rdf:type owl:Class ;
+                  rdfs:subClassOf sorea:PlanetaryRealm ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty sorel:hasState ;
+                                  owl:hasValue sostp:Liquid
+                                ] ;
+                  dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                  dcterms:created "2020-02-23"^^xsd:date ;
+                  skos:definition "An liquisphere is a planetary layer, or set of layers, that is, or are, composed of liquid material, as opposed to a geosphere which is composed of solid material or an atmosphere layer which is composed of liquid material. (Definition created here)"@en ;                                         
+                  skos:prefLabel "liquisphere"@en ;
+                  skos:scopeNote "This term has been introduced to provide a generalised notion of a liquid planetary layer since 'hydropshere' is earth-specific and does not cater for, for example, the planet Jupiter's liquid hydrogen."@en .
 
 
 ###  http://sweetontology.net/realm/Ocean
