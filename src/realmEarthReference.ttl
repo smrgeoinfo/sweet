@@ -41,12 +41,20 @@ Most of the Named Individual -> Named Individual links are made using part/whole
 dcterms:contributor rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/definition
+dcterms:definition rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/source
 dcterms:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
@@ -109,16 +117,20 @@ sorea:Geosphere rdf:type owl:Class .
 sorea:Hydrosphere rdf:type owl:Class .
 
 
-###  http://sweetontology.net/realm/Liquidsphere
-sorea:Liquidsphere rdf:type owl:Class .
+###  http://sweetontology.net/realm/Liquisphere
+sorea:Liquisphere rdf:type owl:Class .
+
+
+###  http://sweetontology.net/realmGeol/AtmosphereLayer
+soreag:AtmosphereLayer rdf:type owl:Class .
 
 
 ###  http://sweetontology.net/realmGeol/GeosphereLayer
 soreag:GeosphereLayer rdf:type owl:Class .
 
 
-###  http://sweetontology.net/realmOcean/PhoticZone
-soreao:PhoticZone rdf:type owl:Class .
+###  http://sweetontology.net/realmGeol/HydrosphereLayer
+soreag:HydrosphereLayer rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2002/07/owl#Namedindividual
@@ -151,150 +163,72 @@ soreaah:EarthExosphere rdf:type owl:NamedIndividual ,
                        skos:prefLabel "earth exosphere"@en .
 
 
-###  http://sweetontology.net/realmAstroHelio/Ionosphere
+###  http://sweetontology.net/realmAstroHelio/EarthIonosphere
 soreaah:EarthIonosphere rdf:type owl:NamedIndividual ,
-                            soreag:AtmosphereLayer ;
-                   sorel:isPartOf soreaer:EarthAtmosphere ;
-                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                   skos:prefLabel "earth ionosphere"@en .
-
-
-###  http://sweetontology.net/realmAtmo/EarthMesosphere
-soreaer:EarthMesosphere rdf:type owl:NamedIndividual ,
-                                soreag:AtmosphereLayer ;
-                       sorel:isPartOf soreaer:EarthAtmosphere ;
-                       dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                       skos:prefLabel "earth mesosphere"@en .
-
-
-###  http://sweetontology.net/realmAtmo/EarthStratosphere
-soreaer:EarthStratosphere rdf:type owl:NamedIndividual ,
-                                  soreag:AtmosphereLayer ;
-                         sorel:isPartOf soreaer:EarthAtmosphere ;
-                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                         skos:prefLabel "earth stratosphere"@en .
-
-
-###  http://sweetontology.net/realmAtmo/EarthThermosphere
-soreaer:EarthThermosphere rdf:type owl:NamedIndividual ,
-                                  soreag:AtmosphereLayer ;
-                         sorel:isPartOf soreaer:EarthAtmosphere ;
-                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                         skos:prefLabel "earth thermosphere"@en .
-
-
-###  http://sweetontology.net/realmAtmo/EarthTroposphere
-soreaer:EarthTroposphere rdf:type owl:NamedIndividual ,
                                  soreag:AtmosphereLayer ;
                         sorel:isPartOf soreaer:EarthAtmosphere ;
                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                        skos:prefLabel "earth troposphere"@en .
+                        skos:prefLabel "earth ionosphere"@en .
 
-
-soreaer:PelagicLayer rdf:type owl:NamedIndividual ,
-                              soreaer:EarthHydrosphereLayer ;
-                              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                              dcterms:source <https://en.wikipedia.org/wiki/Pelagic_zone> ;
-                              skos:prefLabel "pelagic layer"@en ;
-                              skos:altLabel "pelagic zone"@en ;
-                              rela:isPartOf soreaer:EarthHydrosphere ;
-                              skos:definition "The pelagic layer is a planetary layer of Earth's hydrosphere that consists of the water column of the open ocean."@en .
-
-
-
-soreaer:PhoticLayer rdf:type owl:NamedIndividual ,
-                              soreaer:EarthHydrosphereLayer ;
-                              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                              dcterms:source <https://en.wikipedia.org/wiki/Photic_zone> ;
-                              skos:prefLabel "photic layer"@en ;
-                              skos:altLabel "photic zone"@en ;
-                              rela:isPartOf soreaer:PelagicLayer ;
-                              skos:definition "The pelagic layer is a planetary layer of Earth's hydrosphere that is the uppermost layer of the ocean that receives sunlight enabling organisms within it to perform photosynthesis."@en .
-
-
-soreaer:EpipelagicLayer rdf:type owl:NamedIndividual ,
-                              soreaer:EarthHydrosphereLayer ;
-                              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                              skos:prefLabel "epipelagic layer"@en ;
-                              skos:altLabel "epipelagic zone"@en ;
-                              rela:isPartOf soreaer:PhoticLayer ;     
-                              dcterms:source <https://en.wikipedia.org/wiki/Pelagic_zone#Epipelagic_(sunlight)> . 
-
-
-soreaer:AphoticLayer rdf:type owl:NamedIndividual ,
-                              soreaer:EarthHydrosphereLayer ;
-                              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                              dcterms:source <https://en.wikipedia.org/wiki/Aphotic_zone> ;
-                              rela:hasPart 
-                                soreaer:MesolagicLayer , 
-                                soreaer:BathypelagicLayer , 
-                                soreaer:AbyssopelagicLayer , 
-                                soreaer:HadopelagicLayer ;
-                                rela:isPartOf soreaer:EarthHydrosphere ;
-                              skos:prefLabel "aphotic layer"@en ;
-                              skos:altLabel "aphotic zone"@en ;
-                              skos:definition "The aphotic layer is a planetary layer of Earth's hydrosphere where there is little or no sunlight and thus organisms within it cannot perform photosynthesis."@en .
-
-
-###  http://sweetontology.net/realmEarthReference/BathypelagicLayer
-soreaer:MesopelagicLayer rdf:type owl:NamedIndividual ,
-                                   soreaer:EarthHydrosphereLayer ;
-                                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                                   dcterms:source <https://en.wikipedia.org/wiki/Mesopelagic_zone> ;
-                                   rela:isPartOf soreaer:AphoticLayer ;
-                              skos:prefLabel "mesopelagic layer"@en ;
-                              skos:altLabel "mesopelagic zone"@en ;
-                              skos:definition "The mesopelagic layer is a planetary layer of Earth's hydrosphere defined by light, and begins at the depth where only 1% of incident light reaches and ends where there is no light."@en .
-
-###  http://sweetontology.net/realmEarthReference/BathypelagicLayer
-soreaer:BathypelagicLayer rdf:type owl:NamedIndividual ,
-                                   soreaer:EarthHydrosphereLayer ;
-                                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                                   dcterms:source <https://en.wikipedia.org/wiki/Pelagic_zone> ;
-                                   rela:isPartOf soreaer:AphoticLayer ;
-                                   skos:prefLabel "bathypelagic layer"@en ;
-                                   skos:altLabel "bathypelagic zone"@en ;
-                                   skos:definition "The bathypelagic layer is a planetary layer of Earth's hydrosphere that extends from a depth of 1,000 to 4,000 m below the ocean hydrosphere surface where sunlight does not reach."@en .
 
 ###  http://sweetontology.net/realmEarthReference/AbyssopelagicLayer
 soreaer:AbyssopelagicLayer rdf:type owl:NamedIndividual ,
-                                    soreaer:EarthHydrosphere ;
-                                    dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                                    dcterms:source <https://en.wikipedia.org/wiki/Abyssal_zone> ;
-                                    rela:isPartOf soreaer:AphoticLayer ;
-                                    skos:altLabel "abyssopelagic zone" , "abyssal zone" ;
-                                    skos:prefLabel "abyssopelagic layer" ;
-                                    skos:definition "The abyssopelagic layer is a planetary layer of Earth's oceans between 3,000 and 6,000 metres below the ocean surface that remains in perpetual darkness and where the seawater is devoid of oxygen due to no photosynthetic action."@en .
+                                    soreag:HydrosphereLayer ;
+                           sorel:isPartOf soreaer:AphoticLayer ;
+                           dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                           dcterms:source <https://en.wikipedia.org/wiki/Abyssal_zone> ;
+                           skos:altLabel "abyssal zone" ,
+                                         "abyssopelagic zone" ;
+                           skos:definition "The abyssopelagic layer is a planetary layer of Earth's oceans between 3,000 and 6,000 metres below the ocean surface that remains in perpetual darkness and where the seawater is devoid of oxygen due to no photosynthetic action."@en ;
+                           skos:prefLabel "abyssopelagic layer" .
+
+
+###  http://sweetontology.net/realmEarthReference/AphoticLayer
+soreaer:AphoticLayer rdf:type owl:NamedIndividual ,
+                              soreag:HydrosphereLayer ;
+                     sorel:hasPart soreaer:AbyssopelagicLayer ,
+                                   soreaer:BathypelagicLayer ,
+                                   soreaer:HadopelagicLayer ,
+                                   soreaer:MesopelagicLayer ;
+                     sorel:isPartOf soreaer:PelagicLayer ;
+                     dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                     dcterms:source <https://en.wikipedia.org/wiki/Aphotic_zone> ;
+                     skos:altLabel "aphotic zone"@en ;
+                     skos:definition "The aphotic layer is a planetary layer of Earth's hydrosphere where there is little or no sunlight and thus organisms within it cannot perform photosynthesis."@en ;
+                     skos:prefLabel "aphotic layer"@en .
+
 
 ###  http://sweetontology.net/realmEarthReference/BathypelagicLayer
-soreaer:HadopelagicLayer rdf:type owl:NamedIndividual ,
-                                   soreaer:EarthHydrosphereLayer ;
-                                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                                   dcterms:source <https://en.wikipedia.org/wiki/Hadal_zone> ;
-                                   rela:isPartOf soreaer:AphoticLayer ;
-                                    skos:altLabel "hadopelagic zone"@en , "hadal zone"@en ;
-                                    skos:prefLabel "hadoopelagic layer"@en ;
-                                    skos:definition "The hadopelagic layer is the deepest of the planetary layer of Earth's oceans lying between 6,000 and 11,000 metres below the ocean surfacethat exists in long but narrow topographic V-shaped depressions."@en .                  
+soreaer:BathypelagicLayer rdf:type owl:NamedIndividual ,
+                                   soreag:HydrosphereLayer ;
+                          sorel:isPartOf soreaer:AphoticLayer ;
+                          dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                          dcterms:source <https://en.wikipedia.org/wiki/Pelagic_zone> ;
+                          skos:altLabel "bathypelagic zone"@en ;
+                          skos:definition "The bathypelagic layer is a planetary layer of Earth's hydrosphere that extends from a depth of 1,000 to 4,000 m below the ocean hydrosphere surface where sunlight does not reach."@en ;
+                          skos:prefLabel "bathypelagic layer"@en .
 
-###  http://sweetontology.net/realmEarthReference/DemersalLayer
-soreaer:DemersalLayer rdf:type owl:NamedIndividual ,
-                               soreaer:EarthHydrosphereLayer ;
-                               dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                               dcterms:source <https://en.wikipedia.org/wiki/Demersal_zone> ;
-                               rela:isPartOf soreaer:EarthHydrosphere ;
-                              skos:altLabel "demersal zone"@en ;
-                              skos:prefLabel "demersal layer"@en ;
-                                  skos:definition "The demersal layer is a planetary layer of Earth's hydrosphere consisting of the part of the water column near to (and significantly affected by) the seabed or freshwater bottom (lake/river bed)."@en .                      
 
 ###  http://sweetontology.net/realmEarthReference/BenthicLayer
 soreaer:BenthicLayer rdf:type owl:NamedIndividual ,
-                              soreaer:EarthHydrosphereLayer ;
-                              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
-                              dcterms:source <https://en.wikipedia.org/wiki/Benthic_zone> ;
-                              rela:isPartOf soreaer:EarthHydrosphere ;
-                              skos:altLabel "benthic zone"@en ;
-                              skos:prefLabel "benthic layer"@en ;
-                              skos:definition "The benthic layer is a planetary layer of Earth's hydrosphere that is the ecological region at the lowest level of a body of water such as an ocean, lake, or stream, including the sediment surface and some sub-surface layers."@en .
+                              soreag:HydrosphereLayer ;
+                     sorel:isPartOf soreaer:EarthHydrosphere ;
+                     dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                     dcterms:source <https://en.wikipedia.org/wiki/Benthic_zone> ;
+                     skos:altLabel "benthic zone"@en ;
+                     skos:definition "The benthic layer is a planetary layer of Earth's hydrosphere that is the ecological region at the lowest level of a body of water such as an ocean, lake, or stream, including the sediment surface and some sub-surface layers."@en ;
+                     skos:prefLabel "benthic layer"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/DemersalLayer
+soreaer:DemersalLayer rdf:type owl:NamedIndividual ,
+                               soreag:HydrosphereLayer ;
+                      sorel:isPartOf soreaer:EarthHydrosphere ;
+                      dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                      dcterms:source <https://en.wikipedia.org/wiki/Demersal_zone> ;
+                      skos:altLabel "demersal zone"@en ;
+                      skos:definition "The demersal layer is a planetary layer of Earth's hydrosphere consisting of the part of the water column near to (and significantly affected by) the seabed or freshwater bottom (lake/river bed)."@en ;
+                      skos:prefLabel "demersal layer"@en .
 
 
 ###  http://sweetontology.net/realmEarthReference/EarthAtmosphere
@@ -327,25 +261,116 @@ soreaer:EarthGeosphere rdf:type owl:NamedIndividual ,
 ###  http://sweetontology.net/realmEarthReference/EarthHydrosphere
 soreaer:EarthHydrosphere rdf:type owl:NamedIndividual ,
                                   sorea:Hydrosphere ;
-                         sorel:hasPart 
-                          soreaer:AbyssopelagicLayer ,
-                          soreaer:AphoticLayer ,
-                          soreaer:BathypelagicLayer , 
-                          soreaer:BenthicLayer , 
-                          soreaer:DemersalLayer ;
-                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ; 
-                         dcterms:source <https://en.wikipedia.org/wiki/Hydrosphere> ;
+                         owl:sameAs soreaer:EarthLiquisphere ;
+                         sorel:hasPart soreaer:AbyssopelagicLayer ,
+                                       soreaer:AphoticLayer ,
+                                       soreaer:BathypelagicLayer ,
+                                       soreaer:BenthicLayer ,
+                                       soreaer:DemersalLayer ;
+                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
                          dcterms:definition "The combined mass of water found on, under, and above the surface of a planet earth,"@en ;
+                         dcterms:source <https://en.wikipedia.org/wiki/Hydrosphere> ;
                          skos:prefLabel "earth hydrosphere"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/EarthLiquidsphere
-soreaer:EarthLiquidsphere rdf:type owl:NamedIndividual ,
-                                   sorea:Liquidsphere ;
-                          owl:sameAs soreaer:EarthHydrosphere ;
-                          dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ; 
-                          dcterms:definition "The liquid planetary layer on Earth which is entirely a hydrosphere layer"@en ;
-                          skos:prefLabel "earth liquidsphere"@en .
+###  http://sweetontology.net/realmEarthReference/EarthLiquisphere
+soreaer:EarthLiquisphere rdf:type owl:NamedIndividual ,
+                                  sorea:Liquisphere ;
+                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                         dcterms:definition "The liquid planetary layer on Earth which is entirely a hydrosphere layer"@en ;
+                         skos:prefLabel "earth liquisphere"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/EarthMesosphere
+soreaer:EarthMesosphere rdf:type owl:NamedIndividual ,
+                                 soreag:AtmosphereLayer ;
+                        sorel:isPartOf soreaer:EarthAtmosphere ;
+                        dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                        skos:prefLabel "earth mesosphere"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/EarthStratosphere
+soreaer:EarthStratosphere rdf:type owl:NamedIndividual ,
+                                   soreag:AtmosphereLayer ;
+                          sorel:isPartOf soreaer:EarthAtmosphere ;
+                          dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                          skos:prefLabel "earth stratosphere"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/EarthThermosphere
+soreaer:EarthThermosphere rdf:type owl:NamedIndividual ,
+                                   soreag:AtmosphereLayer ;
+                          sorel:isPartOf soreaer:EarthAtmosphere ;
+                          dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                          skos:prefLabel "earth thermosphere"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/EarthTroposphere
+soreaer:EarthTroposphere rdf:type owl:NamedIndividual ,
+                                  soreag:AtmosphereLayer ;
+                         sorel:isPartOf soreaer:EarthAtmosphere ;
+                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                         skos:prefLabel "earth troposphere"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/EpipelagicLayer
+soreaer:EpipelagicLayer rdf:type owl:NamedIndividual ,
+                                 soreag:HydrosphereLayer ;
+                        sorel:isPartOf soreaer:PhoticLayer ;
+                        dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                        dcterms:source <https://en.wikipedia.org/wiki/Pelagic_zone#Epipelagic_(sunlight)> ;
+                        skos:altLabel "epipelagic zone"@en ;
+                        skos:prefLabel "epipelagic layer"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/HadopelagicLayer
+soreaer:HadopelagicLayer rdf:type owl:NamedIndividual ,
+                                  soreag:HydrosphereLayer ;
+                         sorel:isPartOf soreaer:AphoticLayer ;
+                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                         dcterms:source <https://en.wikipedia.org/wiki/Hadal_zone> ;
+                         skos:altLabel "hadal zone"@en ,
+                                       "hadopelagic zone"@en ;
+                         skos:definition "The hadopelagic layer is the deepest of the planetary layer of Earth's oceans lying between 6,000 and 11,000 metres below the ocean surfacethat exists in long but narrow topographic V-shaped depressions."@en ;
+                         skos:prefLabel "hadoopelagic layer"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/MesolagicLayer
+soreaer:MesolagicLayer rdf:type owl:NamedIndividual .
+
+
+###  http://sweetontology.net/realmEarthReference/MesopelagicLayer
+soreaer:MesopelagicLayer rdf:type owl:NamedIndividual ,
+                                  soreag:HydrosphereLayer ;
+                         sorel:isPartOf soreaer:AphoticLayer ;
+                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                         dcterms:source <https://en.wikipedia.org/wiki/Mesopelagic_zone> ;
+                         skos:altLabel "mesopelagic zone"@en ;
+                         skos:definition "The mesopelagic layer is a planetary layer of Earth's hydrosphere defined by light, and begins at the depth where only 1% of incident light reaches and ends where there is no light."@en ;
+                         skos:prefLabel "mesopelagic layer"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/PelagicLayer
+soreaer:PelagicLayer rdf:type owl:NamedIndividual ,
+                              soreag:HydrosphereLayer ;
+                     sorel:isPartOf soreaer:EarthHydrosphere ;
+                     dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                     dcterms:source <https://en.wikipedia.org/wiki/Pelagic_zone> ;
+                     skos:altLabel "pelagic zone"@en ;
+                     skos:definition "The pelagic layer is a planetary layer of Earth's hydrosphere that consists of the water column of the open ocean."@en ;
+                     skos:prefLabel "pelagic layer"@en .
+
+
+###  http://sweetontology.net/realmEarthReference/PhoticLayer
+soreaer:PhoticLayer rdf:type owl:NamedIndividual ,
+                             soreag:HydrosphereLayer ;
+                    sorel:hasPart soreaer:EpipelagicLayer ;
+                    sorel:isPartOf soreaer:PelagicLayer ;
+                    dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                    dcterms:source <https://en.wikipedia.org/wiki/Photic_zone> ;
+                    skos:altLabel "photic zone"@en ;
+                    skos:definition "The pelagic layer is a planetary layer of Earth's hydrosphere that is the uppermost layer of the ocean that receives sunlight enabling organisms within it to perform photosynthesis."@en ;
+                    skos:prefLabel "photic layer"@en .
 
 
 ###  http://sweetontology.net/realmEarthReference/asethenosphere
