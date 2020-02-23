@@ -1,43 +1,89 @@
 @prefix : <http://sweetontology.net/realmEarthReference/> .
-@prefix sopropsh: <http://sweetontology.net/propSpaceHeight/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix sophel: <http://sweetontology.net/phenElecMag/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sdo: <https://schema.org/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix soreaa: <http://sweetontology.net/realmAtmo/> .
-@prefix sopropsdis: <http://sweetontology.net/propSpaceDistance/> .
-@prefix soreaer: <http://sweetontology.net/realmEarthReference/> .
-@prefix soreag: <http://sweetontology.net/realmGeol/> .
-@prefix soreaah: <http://sweetontology.net/realmAstroHelio/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sorelm: <http://sweetontology.net/relaMath/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sorea: <http://sweetontology.net/realm/> .
+@prefix sorel: <http://sweetontology.net/rela/> .
+@prefix sophel: <http://sweetontology.net/phenElecMag/> .
+@prefix soreaa: <http://sweetontology.net/realmAtmo/> .
+@prefix soreag: <http://sweetontology.net/realmGeol/> .
 @prefix soreao: <http://sweetontology.net/realmOcean/> .
+@prefix sorelm: <http://sweetontology.net/relaMath/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix soreaah: <http://sweetontology.net/realmAstroHelio/> .
+@prefix soreaer: <http://sweetontology.net/realmEarthReference/> .
 @prefix sorelph: <http://sweetontology.net/relaPhysical/> .
 @prefix sorelsp: <http://sweetontology.net/relaSpace/> .
-@prefix sorea: <http://sweetontology.net/realm/> .
+@prefix sopropsh: <http://sweetontology.net/propSpaceHeight/> .
+@prefix sopropsdis: <http://sweetontology.net/propSpaceDistance/> .
 @base <http://sweetontology.net/realmEarthReference> .
 
 <http://sweetontology.net/realmEarthReference> rdf:type owl:Ontology ;
-                                                owl:imports <http://sweetontology.net/phenElecMag> ,
-                                                            <http://sweetontology.net/propSpaceDistance> ,
-                                                            <http://sweetontology.net/propSpaceHeight> ,
-                                                            <http://sweetontology.net/realm> ,
-                                                            <http://sweetontology.net/realmAstroHelio> ,
-                                                            <http://sweetontology.net/realmAtmo> ,
-                                                            <http://sweetontology.net/realmGeol> ,
-                                                            <http://sweetontology.net/realmOcean> ,
-                                                            <http://sweetontology.net/relaMath> ,
-                                                            <http://sweetontology.net/relaPhysical> ,
-                                                            <http://sweetontology.net/relaSpace> ;
-                                                rdfs:label "SWEET Ontology Realm Earth Reference" ;
+                                                dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
                                                 dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                                rdfs:comment """The purpose of this ontology is to exemplify the other realm ontologies with Earth instantiating many of the classes they define.
+
+This ontology only contains Named Individuals of classes in other SWEET realm ontologies, such as the \"SWEET Ontology Realm Geologic\" and the \"SWEET Ontology Realm Atmospheric\" and does not contain class definitions of its own.
+
+Most of the Named Individual -> Named Individual links are made using part/whole relations, for example, the \"upper mantle\" isPartOf \"mantle\"."""@en ;
+                                                rdfs:label "SWEET Ontology Realm Earth Reference" ;
                                                 owl:versionInfo "3.5.0" .
 
 #################################################################
-#    Object properties
+#    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/affiliation
+sdo:affiliation rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/email
+sdo:email rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/name
+sdo:name rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/url
+sdo:url rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://sweetontology.net/rela/hasPart
+sorel:hasPart rdf:type owl:ObjectProperty .
+
+
+###  http://sweetontology.net/rela/isPartOf
+sorel:isPartOf rdf:type owl:ObjectProperty .
+
 
 ###  http://sweetontology.net/relaPhysical/hasAstronomicalBody
 sorelph:hasAstronomicalBody rdf:type owl:ObjectProperty .
@@ -47,250 +93,404 @@ sorelph:hasAstronomicalBody rdf:type owl:ObjectProperty .
 #    Classes
 #################################################################
 
-###  http://sweetontology.net/realmGeol/Core
-soreag:Core rdf:type owl:Class .
+###  http://sweetontology.net/phenElecMag/GeomagneticField
+sophel:GeomagneticField rdf:type owl:Class .
 
 
-###  http://sweetontology.net/realmGeol/UpperMantle
-soreag:UpperMantle rdf:type owl:Class .
+###  http://sweetontology.net/realm/Atmosphere
+sorea:Atmosphere rdf:type owl:Class .
 
 
-###  http://sweetontology.net/realmOcean/AbyssopelagicZone
-soreao:AbyssopelagicZone rdf:type owl:Class .
+###  http://sweetontology.net/realm/Geosphere
+sorea:Geosphere rdf:type owl:Class .
 
 
-###  http://sweetontology.net/realmOcean/BathypelagicZone
-soreao:BathypelagicZone rdf:type owl:Class .
+###  http://sweetontology.net/realm/Hydrosphere
+sorea:Hydrosphere rdf:type owl:Class .
 
 
-###  http://sweetontology.net/realmOcean/MesopelagicZone
-soreao:MesopelagicZone rdf:type owl:Class .
+###  http://sweetontology.net/realm/Liquidsphere
+sorea:Liquidsphere rdf:type owl:Class .
+
+
+###  http://sweetontology.net/realmGeol/GeosphereLayer
+soreag:GeosphereLayer rdf:type owl:Class .
 
 
 ###  http://sweetontology.net/realmOcean/PhoticZone
 soreao:PhoticZone rdf:type owl:Class .
 
 
+###  http://www.w3.org/2002/07/owl#Namedindividual
+owl:Namedindividual rdf:type owl:Class .
+
+
+###  https://schema.org/Organization
+sdo:Organization rdf:type owl:Class .
+
+
+###  https://schema.org/Person
+sdo:Person rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://sweetontology.net/realmEarthReference/AbyssopelagicZone
-soreaer:AbyssopelagicZone rdf:type owl:NamedIndividual ,
-                                soreao:AbyssopelagicZone ;
-                       sorelph:hasAstronomicalBody sorea:Earth ;
-                       rdfs:label "abyssopelagic zone"@en .
+###  http://sweetontology.net/realm/Earth
+sorea:Earth rdf:type owl:NamedIndividual ;
+            sorel:hasPart soreaer:EarthAtmosphere ;
+            rdfs:label "earth"@en .
+
+
+###  http://sweetontology.net/realmAstroHelio/EarthExosphere
+soreaah:EarthExosphere rdf:type owl:NamedIndividual ,
+                                soreag:AtmosphereLayer ;
+                       sorel:isPartOf soreaer:EarthAtmosphere ;
+                       dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                       skos:prefLabel "earth exosphere"@en .
+
+
+###  http://sweetontology.net/realmAstroHelio/Ionosphere
+soreaah:EarthIonosphere rdf:type owl:NamedIndividual ,
+                            soreag:AtmosphereLayer ;
+                   sorel:isPartOf soreaer:EarthAtmosphere ;
+                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                   skos:prefLabel "earth ionosphere"@en .
+
+
+###  http://sweetontology.net/realmAtmo/EarthMesosphere
+soreaer:EarthMesosphere rdf:type owl:NamedIndividual ,
+                                soreag:AtmosphereLayer ;
+                       sorel:isPartOf soreaer:EarthAtmosphere ;
+                       dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                       skos:prefLabel "earth mesosphere"@en .
+
+
+###  http://sweetontology.net/realmAtmo/EarthStratosphere
+soreaer:EarthStratosphere rdf:type owl:NamedIndividual ,
+                                  soreag:AtmosphereLayer ;
+                         sorel:isPartOf soreaer:EarthAtmosphere ;
+                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                         skos:prefLabel "earth stratosphere"@en .
+
+
+###  http://sweetontology.net/realmAtmo/EarthThermosphere
+soreaer:EarthThermosphere rdf:type owl:NamedIndividual ,
+                                  soreag:AtmosphereLayer ;
+                         sorel:isPartOf soreaer:EarthAtmosphere ;
+                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                         skos:prefLabel "earth thermosphere"@en .
+
+
+###  http://sweetontology.net/realmAtmo/EarthTroposphere
+soreaer:EarthTroposphere rdf:type owl:NamedIndividual ,
+                                 soreag:AtmosphereLayer ;
+                        sorel:isPartOf soreaer:EarthAtmosphere ;
+                        dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                        skos:prefLabel "earth troposphere"@en .
+
+
+soreaer:PelagicLayer rdf:type owl:NamedIndividual ,
+                              soreaer:EarthHydrosphereLayer ;
+                              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                              dcterms:source <https://en.wikipedia.org/wiki/Pelagic_zone> ;
+                              skos:prefLabel "pelagic layer"@en ;
+                              skos:altLabel "pelagic zone"@en ;
+                              rela:isPartOf soreaer:EarthHydrosphere ;
+                              skos:definition "The pelagic layer is a planetary layer of Earth's hydrosphere that consists of the water column of the open ocean."@en .
+
+
+
+soreaer:PhoticLayer rdf:type owl:NamedIndividual ,
+                              soreaer:EarthHydrosphereLayer ;
+                              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                              dcterms:source <https://en.wikipedia.org/wiki/Photic_zone> ;
+                              skos:prefLabel "photic layer"@en ;
+                              skos:altLabel "photic zone"@en ;
+                              rela:isPartOf soreaer:PelagicLayer ;
+                              skos:definition "The pelagic layer is a planetary layer of Earth's hydrosphere that is the uppermost layer of the ocean that receives sunlight enabling organisms within it to perform photosynthesis."@en .
+
+
+soreaer:EpipelagicLayer rdf:type owl:NamedIndividual ,
+                              soreaer:EarthHydrosphereLayer ;
+                              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                              skos:prefLabel "epipelagic layer"@en ;
+                              skos:altLabel "epipelagic zone"@en ;
+                              rela:isPartOf soreaer:PhoticLayer ;     
+                              dcterms:source <https://en.wikipedia.org/wiki/Pelagic_zone#Epipelagic_(sunlight)> . 
+
+
+soreaer:AphoticLayer rdf:type owl:NamedIndividual ,
+                              soreaer:EarthHydrosphereLayer ;
+                              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                              dcterms:source <https://en.wikipedia.org/wiki/Aphotic_zone> ;
+                              rela:hasPart 
+                                soreaer:MesolagicLayer , 
+                                soreaer:BathypelagicLayer , 
+                                soreaer:AbyssopelagicLayer , 
+                                soreaer:HadopelagicLayer ;
+                                rela:isPartOf soreaer:EarthHydrosphere ;
+                              skos:prefLabel "aphotic layer"@en ;
+                              skos:altLabel "aphotic zone"@en ;
+                              skos:definition "The aphotic layer is a planetary layer of Earth's hydrosphere where there is little or no sunlight and thus organisms within it cannot perform photosynthesis."@en .
+
+
+###  http://sweetontology.net/realmEarthReference/BathypelagicLayer
+soreaer:MesopelagicLayer rdf:type owl:NamedIndividual ,
+                                   soreaer:EarthHydrosphereLayer ;
+                                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                                   dcterms:source <https://en.wikipedia.org/wiki/Mesopelagic_zone> ;
+                                   rela:isPartOf soreaer:AphoticLayer ;
+                              skos:prefLabel "mesopelagic layer"@en ;
+                              skos:altLabel "mesopelagic zone"@en ;
+                              skos:definition "The mesopelagic layer is a planetary layer of Earth's hydrosphere defined by light, and begins at the depth where only 1% of incident light reaches and ends where there is no light."@en .
+
+###  http://sweetontology.net/realmEarthReference/BathypelagicLayer
+soreaer:BathypelagicLayer rdf:type owl:NamedIndividual ,
+                                   soreaer:EarthHydrosphereLayer ;
+                                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                                   dcterms:source <https://en.wikipedia.org/wiki/Pelagic_zone> ;
+                                   rela:isPartOf soreaer:AphoticLayer ;
+                                   skos:prefLabel "bathypelagic layer"@en ;
+                                   skos:altLabel "bathypelagic zone"@en ;
+                                   skos:definition "The bathypelagic layer is a planetary layer of Earth's hydrosphere that extends from a depth of 1,000 to 4,000 m below the ocean hydrosphere surface where sunlight does not reach."@en .
+
+###  http://sweetontology.net/realmEarthReference/AbyssopelagicLayer
+soreaer:AbyssopelagicLayer rdf:type owl:NamedIndividual ,
+                                    soreaer:EarthHydrosphere ;
+                                    dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                                    dcterms:source <https://en.wikipedia.org/wiki/Abyssal_zone> ;
+                                    rela:isPartOf soreaer:AphoticLayer ;
+                                    skos:altLabel "abyssopelagic zone" , "abyssal zone" ;
+                                    skos:prefLabel "abyssopelagic layer" ;
+                                    skos:definition "The abyssopelagic layer is a planetary layer of Earth's oceans between 3,000 and 6,000 metres below the ocean surface that remains in perpetual darkness and where the seawater is devoid of oxygen due to no photosynthetic action."@en .
+
+###  http://sweetontology.net/realmEarthReference/BathypelagicLayer
+soreaer:HadopelagicLayer rdf:type owl:NamedIndividual ,
+                                   soreaer:EarthHydrosphereLayer ;
+                                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                                   dcterms:source <https://en.wikipedia.org/wiki/Hadal_zone> ;
+                                   rela:isPartOf soreaer:AphoticLayer ;
+                                    skos:altLabel "hadopelagic zone"@en , "hadal zone"@en ;
+                                    skos:prefLabel "hadoopelagic layer"@en ;
+                                    skos:definition "The hadopelagic layer is the deepest of the planetary layer of Earth's oceans lying between 6,000 and 11,000 metres below the ocean surfacethat exists in long but narrow topographic V-shaped depressions."@en .                  
+
+###  http://sweetontology.net/realmEarthReference/DemersalLayer
+soreaer:DemersalLayer rdf:type owl:NamedIndividual ,
+                               soreaer:EarthHydrosphereLayer ;
+                               dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                               dcterms:source <https://en.wikipedia.org/wiki/Demersal_zone> ;
+                               rela:isPartOf soreaer:EarthHydrosphere ;
+                              skos:altLabel "demersal zone"@en ;
+                              skos:prefLabel "demersal layer"@en ;
+                                  skos:definition "The demersal layer is a planetary layer of Earth's hydrosphere consisting of the part of the water column near to (and significantly affected by) the seabed or freshwater bottom (lake/river bed)."@en .                      
+
+###  http://sweetontology.net/realmEarthReference/BenthicLayer
+soreaer:BenthicLayer rdf:type owl:NamedIndividual ,
+                              soreaer:EarthHydrosphereLayer ;
+                              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                              dcterms:source <https://en.wikipedia.org/wiki/Benthic_zone> ;
+                              rela:isPartOf soreaer:EarthHydrosphere ;
+                              skos:altLabel "benthic zone"@en ;
+                              skos:prefLabel "benthic layer"@en ;
+                              skos:definition "The benthic layer is a planetary layer of Earth's hydrosphere that is the ecological region at the lowest level of a body of water such as an ocean, lake, or stream, including the sediment surface and some sub-surface layers."@en .
 
 
 ###  http://sweetontology.net/realmEarthReference/EarthAtmosphere
 soreaer:EarthAtmosphere rdf:type owl:NamedIndividual ,
-                              sorea:Atmosphere ;
-                     sorelph:hasAstronomicalBody sorea:Earth ;
-                     rdfs:label "earth atmosphere"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/EarthAtmosphereMesoscale
-soreaer:EarthAtmosphereMesoscale rdf:type owl:NamedIndividual ,
-                                       sopropsdis:DistanceRange_km ;
-                              rdfs:label "earth atmosphere mesoscale"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/EarthAtmosphereSynopticScale
-soreaer:EarthAtmosphereSynopticScale rdf:type owl:NamedIndividual ,
-                                           sopropsdis:DistanceRange_km ;
-                                  rdfs:label "earth atmosphere synoptic scale"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/EarthBathypelagicZone
-soreaer:EarthBathypelagicZone rdf:type owl:NamedIndividual ,
-                                    soreao:BathypelagicZone ;
-                           sorelph:hasAstronomicalBody sorea:Earth ;
-                           rdfs:label "earth bathypelagic zone"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/EarthCore
-soreaer:EarthCore rdf:type owl:NamedIndividual ,
-                        soreag:Core ;
-               sorelph:hasAstronomicalBody sorea:Earth ;
-               rdfs:label "earth core"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/EarthCrust
-soreaer:EarthCrust rdf:type owl:NamedIndividual ,
-                         soreag:Crust ;
-                sorelph:hasAstronomicalBody sorea:Earth ;
-                rdfs:label "earth crust"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/EarthDLayer
-soreaer:EarthDLayer rdf:type owl:NamedIndividual ,
-                          soreaah:DLayer ;
-                 sorelph:hasAstronomicalBody sorea:Earth ;
-                 rdfs:label "earth d layer"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/EarthELayer
-soreaer:EarthELayer rdf:type owl:NamedIndividual ,
-                          soreaah:ELayer ;
-                 sorelph:hasAstronomicalBody sorea:Earth ;
-                 rdfs:label "earth e layer"@en .
+                                 sorea:Atmosphere ;
+                        sorel:hasPart soreaer:EarthExosphere ,
+                                      soreaer:EarthMesosphere ,
+                                      soreaer:EarthStratosphere ,
+                                      soreaer:EarthThermosphere ,
+                                      soreaer:EarthTroposphere ;
+                        sorelph:hasAstronomicalBody sorea:Earth ;
+                        dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                        dcterms:source <https://en.wikipedia.org/wiki/Atmosphere_of_Earth> ;
+                        skos:definition "The atmosphere of Earth is the layer of gases, commonly known as air, that surrounds the planet Earth and is retained by Earth's gravity. (Wikipedia)"@en ;
+                        skos:prefLabel "earth atmosphere"@en .
 
 
 ###  http://sweetontology.net/realmEarthReference/EarthExosphere
-soreaer:EarthExosphere rdf:type owl:NamedIndividual ,
-                             soreaah:Exosphere ;
-                    sorelph:hasAstronomicalBody sorea:Earth ;
-                    rdfs:label "earth exosphere"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/EarthFLayer
-soreaer:EarthFLayer rdf:type owl:NamedIndividual ,
-                          soreaah:FLayer ;
-                 sorelph:hasAstronomicalBody sorea:Earth ;
-                 rdfs:label "earth f layer"@en .
+soreaer:EarthExosphere rdf:type owl:NamedIndividual ;
+                       dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
 
 
 ###  http://sweetontology.net/realmEarthReference/EarthGeosphere
 soreaer:EarthGeosphere rdf:type owl:NamedIndividual ,
-                             sorea:Geosphere ;
-                    sorelph:hasAstronomicalBody sorea:Earth ;
-                    rdfs:label "earth geosphere"@en .
+                                sorea:Geosphere ;
+                       dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                       skos:prefLabel "earth geosphere"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/EarthIonosphere
-soreaer:EarthIonosphere rdf:type owl:NamedIndividual ,
-                              soreaah:Ionosphere ;
-                     sorelph:hasAstronomicalBody sorea:Earth ;
-                     rdfs:label "earth ionosphere"@en .
+###  http://sweetontology.net/realmEarthReference/EarthHydrosphere
+soreaer:EarthHydrosphere rdf:type owl:NamedIndividual ,
+                                  sorea:Hydrosphere ;
+                         sorel:hasPart 
+                          soreaer:AbyssopelagicLayer ,
+                          soreaer:AphoticLayer ,
+                          soreaer:BathypelagicLayer , 
+                          soreaer:BenthicLayer , 
+                          soreaer:DemersalLayer ;
+                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ; 
+                         dcterms:source <https://en.wikipedia.org/wiki/Hydrosphere> ;
+                         dcterms:definition "The combined mass of water found on, under, and above the surface of a planet earth,"@en ;
+                         skos:prefLabel "earth hydrosphere"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/EarthLithosphere
-soreaer:EarthLithosphere rdf:type owl:NamedIndividual ,
-                               soreag:Lithosphere ;
-                      sorelph:hasAstronomicalBody sorea:Earth ;
-                      rdfs:label "earth lithosphere"@en .
+###  http://sweetontology.net/realmEarthReference/EarthLiquidsphere
+soreaer:EarthLiquidsphere rdf:type owl:NamedIndividual ,
+                                   sorea:Liquidsphere ;
+                          owl:sameAs soreaer:EarthHydrosphere ;
+                          dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ; 
+                          dcterms:definition "The liquid planetary layer on Earth which is entirely a hydrosphere layer"@en ;
+                          skos:prefLabel "earth liquidsphere"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/EarthMesopelagicZone
-soreaer:EarthMesopelagicZone rdf:type owl:NamedIndividual ,
-                                   soreao:MesopelagicZone ;
-                          sorelph:hasAstronomicalBody sorea:Earth ;
-                          rdfs:label "earth mesopelagic zone"@en .
+###  http://sweetontology.net/realmEarthReference/asethenosphere
+soreaer:asethenosphere rdf:type owl:NamedIndividual ,
+                                soreag:GeosphereLayer ;
+                       skos:prefLabel "earth asethenosphere"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/EarthMesosphere
-soreaer:EarthMesosphere rdf:type owl:NamedIndividual ,
-                              soreaa:Mesosphere ;
-                     sorelph:hasAstronomicalBody sorea:Earth ;
-                     rdfs:label "earth mesosphere"@en .
+###  http://sweetontology.net/realmEarthReference/brittle-ductile-transition-zone
+soreaer:brittle-ductile-transition-zone rdf:type owl:NamedIndividual ,
+                                                 soreag:GeosphereLayer ;
+                                        skos:prefLabel "brittle ductile- transition zone"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/EarthPhoticZone
-soreaer:EarthPhoticZone rdf:type owl:NamedIndividual ,
-                              soreao:PhoticZone ;
-                     sorelph:hasAstronomicalBody sorea:Earth ;
-                     rdfs:label "earth photic zone"@en .
+###  http://sweetontology.net/realmEarthReference/continental
+soreaer:continental rdf:type owl:NamedIndividual .
 
 
-###  http://sweetontology.net/realmEarthReference/EarthStratosphere
-soreaer:EarthStratosphere rdf:type owl:NamedIndividual ,
-                                soreaa:Stratosphere ;
-                       sorelph:hasAstronomicalBody sorea:Earth ;
-                       rdfs:label "earth stratosphere"@en .
+###  http://sweetontology.net/realmEarthReference/core
+soreaer:core rdf:type owl:NamedIndividual ,
+                      soreag:GeosphereLayer ;
+             sorel:hasPart soreaer:inner-core ,
+                           soreaer:outer-core ;
+             dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+             skos:prefLabel "core"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/EarthThermosphere
-soreaer:EarthThermosphere rdf:type owl:NamedIndividual ,
-                                soreaa:Thermosphere ;
-                       sorelph:hasAstronomicalBody sorea:Earth ;
-                       rdfs:label "earth thermosphere"@en .
+###  http://sweetontology.net/realmEarthReference/crust
+soreaer:crust rdf:type owl:NamedIndividual ,
+                       soreag:GeosphereLayer ;
+              sorel:hasPart soreaer:brittle-ductile-transition-zone ,
+                            soreaer:transitional-crust ;
+              dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+              skos:prefLabel "crust"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/EarthTroposphere
-soreaer:EarthTroposphere rdf:type owl:NamedIndividual ,
-                               soreaa:Troposphere ;
-                      sorelph:hasAstronomicalBody sorea:Earth ;
-                      rdfs:label "earth troposphere"@en .
+###  http://sweetontology.net/realmEarthReference/d-layer
+soreaer:d-layer rdf:type owl:NamedIndividual ,
+                         soreag:GeosphereLayer ;
+                dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                skos:prefLabel "d-layer"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/EarthUpperMantle
-soreaer:EarthUpperMantle rdf:type owl:NamedIndividual ,
-                               soreag:UpperMantle ;
-                      sorelph:hasAstronomicalBody sorea:Earth ;
-                      rdfs:label "earth upper mantle"@en .
+###  http://sweetontology.net/realmEarthReference/inner-core
+soreaer:inner-core rdf:type owl:NamedIndividual ,
+                            soreag:GeosphereLayer ;
+                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                   skos:prefLabel "inner core"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/IGRF
-soreaer:IGRF rdf:type owl:NamedIndividual ,
-                   sophel:GeomagneticField ;
-          owl:sameAs soreaer:InternationalGeomagneticReferenceField ;
-          rdfs:label "igrf"@en .
+###  http://sweetontology.net/realmEarthReference/lithosphere
+soreaer:lithosphere rdf:type owl:NamedIndividual ,
+                             soreag:GeosphereLayer ;
+                    sorel:hasPart soreaer:crust ;
+                    dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                    skos:prefLabel "lithosphere"@en .
 
 
-###  http://sweetontology.net/realmEarthReference/InternationalGeomagneticReferenceField
-soreaer:InternationalGeomagneticReferenceField rdf:type owl:NamedIndividual ,
-                                                     sophel:GeomagneticField ;
-                                            rdfs:label "international geomagnetic reference field"@en .
+###  http://sweetontology.net/realmEarthReference/lower-mantle
+soreaer:lower-mantle rdf:type owl:NamedIndividual ,
+                              soreag:GeosphereLayer ;
+                     dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                     skos:prefLabel "lower mantle"@en .
 
 
-[ rdf:type sopropsh:HeightRange_km
-] .
+###  http://sweetontology.net/realmEarthReference/mantle
+soreaer:mantle rdf:type owl:NamedIndividual ,
+                        soreag:GeosphereLayer ;
+               sorel:hasPart soreaer:d-layer ,
+                             soreaer:lower-mantle ,
+                             soreaer:upper-mantle ;
+               dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+               skos:prefLabel "mantle"@en .
 
-[ rdf:type sopropsh:HeightRange_km
- ] .
 
-[ rdf:type sopropsh:HeightRange_km
- ] .
+###  http://sweetontology.net/realmEarthReference/mesosphere
+soreaer:mesosphere rdf:type owl:NamedIndividual ,
+                            soreag:GeosphereLayer ;
+                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                   skos:prefLabel "mesosphere"@en .
 
-[ rdf:type sopropsh:HeightRange_km
- ] .
 
-[ rdf:type sopropsh:HeightRange_km
- ] .
+###  http://sweetontology.net/realmEarthReference/outer-core
+soreaer:outer-core rdf:type owl:NamedIndividual ,
+                            soreag:GeosphereLayer ;
+                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                   skos:prefLabel "outer core"@en .
 
-[ rdf:type sopropsh:HeightRange_km
- ] .
 
-[ rdf:type sopropsh:HeightRange_km
- ] .
+###  http://sweetontology.net/realmEarthReference/skin-layer
+soreaer:skin-layer rdf:type owl:NamedIndividual ,
+                            soreag:GeosphereLayer ;
+                   dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                   skos:prefLabel "skin layer"@en .
 
-[ rdf:type sopropsh:HeightRange_km
- ] .
 
-[ rdf:type sopropsh:HeightRange_km
- ] .
+###  http://sweetontology.net/realmEarthReference/subsurface
+soreaer:subsurface rdf:type owl:NamedIndividual ;
+                   skos:prefLabel "skin layer"@en .
 
-[ rdf:type sopropsh:HeightRange_km
- ] .
 
-[ rdf:type sopropsh:DepthRange_km
- ] .
+###  http://sweetontology.net/realmEarthReference/transitional-crust
+soreaer:transitional-crust rdf:type owl:NamedIndividual ,
+                                    soreag:GeosphereLayer ;
+                           sorel:hasPart soreaer:transitional-lithosphere ;
+                           dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
 
-[ rdf:type sopropsh:DepthRange_km
- ] .
 
-[ rdf:type sopropsh:DepthRange_km
- ] .
+###  http://sweetontology.net/realmEarthReference/transitional-lithosphere
+soreaer:transitional-lithosphere rdf:type owl:NamedIndividual ,
+                                          soreag:GeosphereLayer ;
+                                 dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
 
-[ rdf:type sopropsh:DepthRange_km
- ] .
 
-[ rdf:type sopropsh:DepthRange_km
- ] .
+###  http://sweetontology.net/realmEarthReference/upper-mantle
+soreaer:upper-mantle rdf:type owl:NamedIndividual ,
+                              soreag:GeosphereLayer ;
+                     sorel:hasPart soreaer:asethenosphere ,
+                                   soreaer:mesosphere ,
+                                   soreaer:upper-mantle-flowing ,
+                                   soreaer:upper-mantle-rigid ;
+                     dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
 
-[ rdf:type sopropsh:DepthRange_km
- ] .
 
-[ rdf:type sopropsh:DepthRange_km
- ] .
+###  http://sweetontology.net/realmEarthReference/upper-mantle-flowing
+soreaer:upper-mantle-flowing rdf:type owl:NamedIndividual ,
+                                      soreag:GeosphereLayer ;
+                             dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
 
-[ rdf:type sopropsh:DepthRange_km
- ] .
 
-[ rdf:type sopropsh:DepthRange_km
- ] .
+###  http://sweetontology.net/realmEarthReference/upper-mantle-rigid
+soreaer:upper-mantle-rigid rdf:type owl:NamedIndividual ,
+                                    soreag:GeosphereLayer ;
+                           dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
 
-[ rdf:type sopropsh:DepthRange_km
- ] .
+
+###  https://orcid.org/0000-0002-8742-7730
+<https://orcid.org/0000-0002-8742-7730> rdf:type owl:NamedIndividual ,
+                                                 sdo:Person ;
+                                        sdo:affiliation [ rdf:type sdo:Organization ;
+                                                          sdo:name "SURROUND Australia Pty Ltd" ;
+                                                          sdo:url <https://surroundaustralia.com>
+                                                        ] ;
+                                        sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
+                                        sdo:name "Nicholas J. Car" .
+
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
