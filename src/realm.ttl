@@ -271,12 +271,6 @@ sorepsg3:Layer rdf:type owl:Class .
 somac:Water rdf:type owl:NamedIndividual .
 
 
-###  http://sweetontology.net/realm/Earth
-sorea:Earth rdf:type owl:NamedIndividual ,
-                     soreaab:Planet ;
-            rdfs:label "earth"@en .
-
-
 ###  http://sweetontology.net/statePhysical/Gas
 sostp:Gas rdf:type owl:NamedIndividual .
 
