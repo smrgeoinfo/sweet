@@ -160,6 +160,8 @@ soreaah:EarthExosphere rdf:type owl:NamedIndividual ,
                                 soreag:AtmosphereLayer ;
                        sorel:isPartOf soreaer:EarthAtmosphere ;
                        dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                       dcterms:source <https://en.wikipedia.org/wiki/Thermosphere> ;
+                       skos:definition "Earth's exoophere is a planetary layer of Earth's atmosphere which is its outermost layer. It extends from the exobase, which is located at the top of the thermosphere at an altitude of about 700 km above sea level, to about 10,000 km (6,200 mi; 33,000,000 ft) where it merges into the solar wind."@en ;
                        skos:prefLabel "earth exosphere"@en .
 
 
@@ -168,6 +170,8 @@ soreaah:EarthIonosphere rdf:type owl:NamedIndividual ,
                                  soreag:AtmosphereLayer ;
                         sorel:isPartOf soreaer:EarthAtmosphere ;
                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                        dcterms:source <https://en.wikipedia.org/wiki/Ionosphere> ;
+                        skos:definition "Earth's ionosphere is a planetary layer of Earth's atmosphere which is the ionized part of Earth's upper atmosphere, from about 60 km (37 mi) to 1,000 km (620 mi) in altitude."@en ;
                         skos:prefLabel "earth ionosphere"@en .
 
 
@@ -248,7 +252,10 @@ soreaer:EarthAtmosphere rdf:type owl:NamedIndividual ,
 
 ###  http://sweetontology.net/realmEarthReference/EarthExosphere
 soreaer:EarthExosphere rdf:type owl:NamedIndividual ;
-                       dcterms:contributor <https://orcid.org/0000-0002-8742-7730> .
+                       sorel:isPartOf soreaer:EarthAtmosphere ;
+                       dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                       dcterms:source <https://en.wikipedia.org/wiki/Exosphere> ;
+                       skos:definition "Earth's exosphere is a planetary layer of Earth's atmosphere where molecules are gravitationally bound to that body, but where the density is too low for them to behave as a gas by colliding with each other."@en .
 
 
 ###  http://sweetontology.net/realmEarthReference/EarthGeosphere
@@ -286,6 +293,8 @@ soreaer:EarthMesosphere rdf:type owl:NamedIndividual ,
                                  soreag:AtmosphereLayer ;
                         sorel:isPartOf soreaer:EarthAtmosphere ;
                         dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                        dcterms:source <https://en.wikipedia.org/wiki/Mesosphere> ;
+                        skos:definition "Earth's mesosphere is a planetary layer of Earth's atmosphere which is the third layer of the atmosphere, directly above the stratosphere and directly below the thermosphere. In the mesosphere, temperature decreases as altitude increases."@en ;
                         skos:prefLabel "earth mesosphere"@en .
 
 
@@ -294,6 +303,8 @@ soreaer:EarthStratosphere rdf:type owl:NamedIndividual ,
                                    soreag:AtmosphereLayer ;
                           sorel:isPartOf soreaer:EarthAtmosphere ;
                           dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                          dcterms:source <https://en.wikipedia.org/wiki/Stratosphere> ;
+                          skos:definition "Earth's stratosphere is a planetary layer of Earth's atmosphere which is the second layer of the atmosphere, directly above above the troposphere, and below the mesosphere. The stratosphere is stratified (layered) in temperature, with warmer layers higher and cooler layers closer to the Earth."@en ;
                           skos:prefLabel "earth stratosphere"@en .
 
 
@@ -302,6 +313,8 @@ soreaer:EarthThermosphere rdf:type owl:NamedIndividual ,
                                    soreag:AtmosphereLayer ;
                           sorel:isPartOf soreaer:EarthAtmosphere ;
                           dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                          dcterms:source <https://en.wikipedia.org/wiki/Thermosphere> ;
+                          skos:definition "Earth's thermophere is a planetary layer of Earth's atmosphere directly above the mesosphere and below the exosphere. Within this layer, ultraviolet radiation causes photoionization/photodissociation of molecules, creating ions in the ionosphere."@en ;
                           skos:prefLabel "earth thermosphere"@en .
 
 
@@ -310,6 +323,8 @@ soreaer:EarthTroposphere rdf:type owl:NamedIndividual ,
                                   soreag:AtmosphereLayer ;
                          sorel:isPartOf soreaer:EarthAtmosphere ;
                          dcterms:contributor <https://orcid.org/0000-0002-8742-7730> ;
+                         dcterms:source <https://en.wikipedia.org/wiki/Troposphere> ;
+                         skos:definition "Earth's troposphere is a planetary layer of Earth's atmosphere which is the lowest layer of the atmosphere, and is also where nearly all weather conditions take place."@en ;
                          skos:prefLabel "earth troposphere"@en .
 
 
@@ -333,10 +348,6 @@ soreaer:HadopelagicLayer rdf:type owl:NamedIndividual ,
                                        "hadopelagic zone"@en ;
                          skos:definition "The hadopelagic layer is the deepest of the planetary layer of Earth's oceans lying between 6,000 and 11,000 metres below the ocean surfacethat exists in long but narrow topographic V-shaped depressions."@en ;
                          skos:prefLabel "hadoopelagic layer"@en .
-
-
-###  http://sweetontology.net/realmEarthReference/MesolagicLayer
-soreaer:MesolagicLayer rdf:type owl:NamedIndividual .
 
 
 ###  http://sweetontology.net/realmEarthReference/MesopelagicLayer
