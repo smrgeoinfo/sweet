@@ -10,7 +10,7 @@
 @base <http://sweetontology.net/reprSciComponent> .
 
 <http://sweetontology.net/reprSciComponent> rdf:type owl:Ontology ;
-                                             owl:imports <http://sweetontology.net/repr> ;
+                                             
                                              rdfs:label "SWEET Ontology Representation Scientific Component" ;
                                              dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                              owl:versionInfo "3.5.0" .

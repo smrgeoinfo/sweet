@@ -19,17 +19,7 @@
 @base <http://sweetontology.net/stateStorm> .
 
 <http://sweetontology.net/stateStorm> rdf:type owl:Ontology ;
-                                       owl:imports <http://sweetontology.net/phenAtmoPrecipitation> ,
-                                                   <http://sweetontology.net/phenAtmoWind> ,
-                                                   <http://sweetontology.net/propCount> ,
-                                                   <http://sweetontology.net/propSpeed> ,
-                                                   <http://sweetontology.net/rela> ,
-                                                   <http://sweetontology.net/relaMath> ,
-                                                   <http://sweetontology.net/relaPhysical> ,
-                                                   <http://sweetontology.net/relaSci> ,
-                                                   <http://sweetontology.net/repr> ,
-                                                   <http://sweetontology.net/statePhysical> ,
-                                                   <http://sweetontology.net/stateRoleImpact> ;
+                                       
                                        rdfs:label "SWEET Ontology State Storm" ;
                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                        owl:versionInfo "3.5.0" .

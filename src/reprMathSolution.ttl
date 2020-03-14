@@ -11,8 +11,7 @@
 @base <http://sweetontology.net/reprMathSolution> .
 
 <http://sweetontology.net/reprMathSolution> rdf:type owl:Ontology ;
-                                             owl:imports <http://sweetontology.net/humanResearch> ,
-                                                         <http://sweetontology.net/reprMath> ;
+                                             
                                              rdfs:label "SWEET Ontology Representation Mathematics Solution" ;
                                              dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                              owl:versionInfo "3.5.0" .

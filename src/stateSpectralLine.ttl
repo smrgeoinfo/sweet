@@ -15,12 +15,7 @@
 @base <http://sweetontology.net/stateSpectralLine> .
 
 <http://sweetontology.net/stateSpectralLine> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/matrElement> ,
-                                                          <http://sweetontology.net/propOrdinal> ,
-                                                          <http://sweetontology.net/propSpaceDistance> ,
-                                                          <http://sweetontology.net/relaChemical> ,
-                                                          <http://sweetontology.net/relaSci> ,
-                                                          <http://sweetontology.net/relaSpace> ;
+                                              
                                               rdfs:label "SWEET Ontology State Spectral Line" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

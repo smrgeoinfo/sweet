@@ -19,15 +19,7 @@
 @base <http://sweetontology.net/reprTimeSeason> .
 
 <http://sweetontology.net/reprTimeSeason> rdf:type owl:Ontology ;
-                                           owl:imports <http://sweetontology.net/propTemperature> ,
-                                                       <http://sweetontology.net/propTime> ,
-                                                       <http://sweetontology.net/rela> ,
-                                                       <http://sweetontology.net/relaMath> ,
-                                                       <http://sweetontology.net/relaSci> ,
-                                                       <http://sweetontology.net/relaTime> ,
-                                                       <http://sweetontology.net/repr> ,
-                                                       <http://sweetontology.net/reprSciUnits> ,
-                                                       <http://sweetontology.net/statePhysical> ;
+                                           
                                            rdfs:label "SWEET Ontology Representation Time Season" ;
                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                            owl:versionInfo "3.5.0" .

@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/stateSpace> .
 
 <http://sweetontology.net/stateSpace> rdf:type owl:Ontology ;
-                                       owl:imports <http://sweetontology.net/propSpace> ,
-                                                   <http://sweetontology.net/propSpaceDistance> ,
-                                                   <http://sweetontology.net/propSpaceHeight> ,
-                                                   <http://sweetontology.net/propSpaceMultidimensional> ,
-                                                   <http://sweetontology.net/relaSpace> ;
+                                       
                                        rdfs:label "SWEET Ontology State Space" ;
                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                        owl:versionInfo "3.5.0" .

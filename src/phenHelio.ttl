@@ -19,16 +19,7 @@
 @base <http://sweetontology.net/phenHelio> .
 
 <http://sweetontology.net/phenHelio> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/matrParticle> ,
-                                                  <http://sweetontology.net/phen> ,
-                                                  <http://sweetontology.net/phenStar> ,
-                                                  <http://sweetontology.net/phenSystem> ,
-                                                  <http://sweetontology.net/procPhysical> ,
-                                                  <http://sweetontology.net/procWave> ,
-                                                  <http://sweetontology.net/realm> ,
-                                                  <http://sweetontology.net/rela> ,
-                                                  <http://sweetontology.net/relaPhysical> ,
-                                                  <http://sweetontology.net/relaSci> ;
+                                      
                                       rdfs:label "SWEET Ontology Phenomena Heliosphere" ;
                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                       owl:versionInfo "3.5.0" .

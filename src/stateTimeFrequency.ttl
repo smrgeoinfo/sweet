@@ -15,12 +15,7 @@
 @base <http://sweetontology.net/stateTimeFrequency> .
 
 <http://sweetontology.net/stateTimeFrequency> rdf:type owl:Ontology ;
-                                               owl:imports <http://sweetontology.net/propTimeFrequency> ,
-                                                           <http://sweetontology.net/relaTime> ,
-                                                           <http://sweetontology.net/repr> ,
-                                                           <http://sweetontology.net/reprMath> ,
-                                                           <http://sweetontology.net/reprSciUnits> ,
-                                                           <http://sweetontology.net/stateTime> ;
+                                               
                                                rdfs:label "SWEET Ontology State Time Frequency" ;
                                                dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                owl:versionInfo "3.5.0" .

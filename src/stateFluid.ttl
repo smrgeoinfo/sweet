@@ -13,10 +13,7 @@
 @base <http://sweetontology.net/stateFluid> .
 
 <http://sweetontology.net/stateFluid> rdf:type owl:Ontology ;
-                                       owl:imports <http://sweetontology.net/rela> ,
-                                                   <http://sweetontology.net/relaMath> ,
-                                                   <http://sweetontology.net/statePhysical> ,
-                                                   <http://sweetontology.net/stateSystem> ;
+                                       
                                        rdfs:label "SWEET Ontology State Fluid" ;
                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                        owl:versionInfo "3.5.0" .

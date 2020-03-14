@@ -1,176 +1,144 @@
+# baseURI: http://sweetontology.net/realmOceanFloor
+
 @prefix : <http://sweetontology.net/realmOceanFloor/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sophso: <http://sweetontology.net/phenSolid/> .
+@prefix sopropsdis: <http://sweetontology.net/propSpaceDistance/> .
+@prefix soreahb: <http://sweetontology.net/realmHydroBody/> .
+@prefix soreal: <http://sweetontology.net/realmLandform/> .
+@prefix sorealf: <http://sweetontology.net/realmLandFluvial/> .
+@prefix sorealo: <http://sweetontology.net/realmLandOrographic/> .
+@prefix sorealv: <http://sweetontology.net/realmLandVolcanic/> .
+@prefix soreaofl: <http://sweetontology.net/realmOceanFloor/> .
+@prefix sorel: <http://sweetontology.net/rela/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix soreahb: <http://sweetontology.net/realmHydroBody/> .
-@prefix sophso: <http://sweetontology.net/phenSolid/> .
-@prefix sorealf: <http://sweetontology.net/realmLandFluvial/> .
-@prefix soreal: <http://sweetontology.net/realmLandform/> .
-@prefix sorealo: <http://sweetontology.net/realmLandOrographic/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sorel: <http://sweetontology.net/rela/> .
-@prefix sorealv: <http://sweetontology.net/realmLandVolcanic/> .
-@prefix sopropsdis: <http://sweetontology.net/propSpaceDistance/> .
-@prefix soreaofl: <http://sweetontology.net/realmOceanFloor/> .
-@base <http://sweetontology.net/realmOceanFloor> .
 
-<http://sweetontology.net/realmOceanFloor> rdf:type owl:Ontology ;
-                                            owl:imports <http://sweetontology.net/phenSolid> ,
-                                                        <http://sweetontology.net/propSpaceDistance> ,
-                                                        <http://sweetontology.net/realmHydroBody> ,
-                                                        <http://sweetontology.net/realmLandFluvial> ,
-                                                        <http://sweetontology.net/realmLandOrographic> ,
-                                                        <http://sweetontology.net/realmLandVolcanic> ,
-                                                        <http://sweetontology.net/realmLandform> ,
-                                                        <http://sweetontology.net/rela> ;
-                                            rdfs:label "SWEET Ontology Realm Ocean Floor" ;
-                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                            owl:versionInfo "3.5.0" .
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://sweetontology.net/realmOceanFloor/AbyssalHill
-soreaofl:AbyssalHill rdf:type owl:Class ;
-                  rdfs:subClassOf sorealo:Hill ,
-                                  soreaofl:SeaFloor ;
-                  rdfs:label "abyssal hill"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/AbyssalPlain
-soreaofl:AbyssalPlain rdf:type owl:Class ;
-                   rdfs:subClassOf soreal:Plain ,
-                                   soreaofl:SeaFloor ;
-                   rdfs:label "abyssal plain"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/AbyssalTrench
-soreaofl:AbyssalTrench rdf:type owl:Class ;
-                    owl:equivalentClass soreaofl:DeepSeaTrench ;
-                    rdfs:label "abyssal trench"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/AlgalFlat
-soreaofl:AlgalFlat rdf:type owl:Class ;
-                rdfs:subClassOf soreaofl:SeaFloor ;
-                rdfs:label "algal flat"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/ColdSeep
-soreaofl:ColdSeep rdf:type owl:Class ;
-               rdfs:subClassOf sophso:Fissure ,
-                               soreaofl:SeaFloor ;
-               rdfs:label "cold seep"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/ContinentalRise
-soreaofl:ContinentalRise rdf:type owl:Class ;
-                      rdfs:subClassOf soreaofl:SeaFloor ;
-                      rdfs:label "continental rise"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/ContinentalShelf
-soreaofl:ContinentalShelf rdf:type owl:Class ;
-                       rdfs:subClassOf soreaofl:SeaFloor ;
-                       rdfs:label "continental shelf"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/ContinentalSlope
-soreaofl:ContinentalSlope rdf:type owl:Class ;
-                       rdfs:subClassOf soreaofl:SeaFloor ;
-                       rdfs:label "continental slope"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/DeepOceanBasin
-soreaofl:DeepOceanBasin rdf:type owl:Class ;
-                     rdfs:subClassOf soreaofl:SeaFloor ;
-                     rdfs:label "deep ocean basin"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/DeepSeaTrench
-soreaofl:DeepSeaTrench rdf:type owl:Class ;
-                    rdfs:subClassOf sorealf:Trench ,
-                                    soreaofl:SeaFloor ;
-                    rdfs:label "deep sea trench"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/Guyot
-soreaofl:Guyot rdf:type owl:Class ;
-            rdfs:subClassOf soreaofl:Seamount ;
-            rdfs:label "guyot"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/HydrothermalVent
-soreaofl:HydrothermalVent rdf:type owl:Class ;
-                       rdfs:subClassOf sorealv:Geyser ,
-                                       soreaofl:SeaFloor ;
-                       rdfs:label "hydrothermal vent"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/MidOceanRidge
-soreaofl:MidOceanRidge rdf:type owl:Class ;
-                    rdfs:subClassOf soreaofl:OceanRidge ;
-                    rdfs:label "mid ocean ridge"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/OceanFloor
-soreaofl:OceanFloor rdf:type owl:Class ;
-                 owl:equivalentClass soreaofl:SeaFloor ;
-                 rdfs:label "ocean floor"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/OceanRidge
-soreaofl:OceanRidge rdf:type owl:Class ;
-                 rdfs:subClassOf sorealo:Ridge ,
-                                 soreaofl:SeaFloor ;
-                 rdfs:label "ocean ridge"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/OceanicPlateau
-soreaofl:OceanicPlateau rdf:type owl:Class ;
-                     rdfs:subClassOf soreaofl:OceanRidge ;
-                     rdfs:label "oceanic plateau"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/Reef
-soreaofl:Reef rdf:type owl:Class ;
-           rdfs:subClassOf soreaofl:OceanRidge ;
-           rdfs:label "reef"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/SeaFloor
-soreaofl:SeaFloor rdf:type owl:Class ;
-               owl:equivalentClass soreaofl:Seabed ;
-               rdfs:subClassOf soreahb:WaterBodyBoundary ;
-               rdfs:label "sea floor"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/Seabed
-soreaofl:Seabed rdf:type owl:Class ;
-             rdfs:label "seabed"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/Seamount
-soreaofl:Seamount rdf:type owl:Class ;
-               rdfs:subClassOf sorealo:Mountain ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty sorel:hasRealm ;
-                                 owl:allValuesFrom soreaofl:SeaFloor
-                               ] ;
-               rdfs:label "seamount"@en .
-
-
-###  http://sweetontology.net/realmOceanFloor/SubmarineCanyon
-soreaofl:SubmarineCanyon rdf:type owl:Class ;
-                      rdfs:subClassOf sorealf:Canyon ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty sorel:hasRealm ;
-                                        owl:allValuesFrom soreaofl:SeaFloor
-                                      ] ;
-                      rdfs:label "submarine canyon"@en .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+<http://sweetontology.net/realmOceanFloor>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:label "SWEET Ontology Realm Ocean Floor" ;
+  owl:versionInfo "3.5.0" ;
+.
+soreaofl:AbyssalHill
+  a owl:Class ;
+  rdfs:label "abyssal hill"@en ;
+  rdfs:subClassOf sorealo:Hill ;
+  rdfs:subClassOf soreaofl:SeaFloor ;
+.
+soreaofl:AbyssalPlain
+  a owl:Class ;
+  rdfs:label "abyssal plain"@en ;
+  rdfs:subClassOf soreal:Plain ;
+  rdfs:subClassOf soreaofl:SeaFloor ;
+.
+soreaofl:AbyssalTrench
+  a owl:Class ;
+  rdfs:label "abyssal trench"@en ;
+  owl:equivalentClass soreaofl:DeepSeaTrench ;
+.
+soreaofl:AlgalFlat
+  a owl:Class ;
+  rdfs:label "algal flat"@en ;
+  rdfs:subClassOf soreaofl:SeaFloor ;
+.
+soreaofl:ColdSeep
+  a owl:Class ;
+  rdfs:label "cold seep"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/common/Dynamic_Feature> ;
+.
+soreaofl:ContinentalRise
+  a owl:Class ;
+  rdfs:label "continental rise"@en ;
+  rdfs:subClassOf soreaofl:SeaFloor ;
+.
+soreaofl:ContinentalShelf
+  a owl:Class ;
+  rdfs:label "continental shelf"@en ;
+  rdfs:subClassOf soreaofl:SeaFloor ;
+.
+soreaofl:ContinentalSlope
+  a owl:Class ;
+  rdfs:label "continental slope"@en ;
+  rdfs:subClassOf soreaofl:SeaFloor ;
+.
+soreaofl:DeepOceanBasin
+  a owl:Class ;
+  rdfs:label "deep ocean basin"@en ;
+  rdfs:subClassOf soreaofl:SeaFloor ;
+.
+soreaofl:DeepSeaTrench
+  a owl:Class ;
+  rdfs:label "deep sea trench"@en ;
+  rdfs:subClassOf sorealf:Trench ;
+  rdfs:subClassOf soreaofl:SeaFloor ;
+.
+soreaofl:Guyot
+  a owl:Class ;
+  rdfs:label "guyot"@en ;
+  rdfs:subClassOf soreaofl:Seamount ;
+.
+soreaofl:HydrothermalVent
+  a owl:Class ;
+  rdfs:label "hydrothermal vent"@en ;
+  rdfs:subClassOf sorealv:Geyser ;
+  rdfs:subClassOf soreaofl:SeaFloor ;
+.
+soreaofl:MidOceanRidge
+  a owl:Class ;
+  rdfs:label "mid ocean ridge"@en ;
+  rdfs:subClassOf soreaofl:OceanRidge ;
+.
+soreaofl:OceanFloor
+  a owl:Class ;
+  rdfs:label "ocean floor"@en ;
+  owl:equivalentClass soreaofl:SeaFloor ;
+.
+soreaofl:OceanRidge
+  a owl:Class ;
+  rdfs:label "ocean ridge"@en ;
+  rdfs:subClassOf sorealo:Ridge ;
+  rdfs:subClassOf soreaofl:SeaFloor ;
+.
+soreaofl:OceanicPlateau
+  a owl:Class ;
+  rdfs:label "oceanic plateau"@en ;
+  rdfs:subClassOf soreaofl:OceanRidge ;
+.
+soreaofl:Reef
+  a owl:Class ;
+  rdfs:label "reef"@en ;
+  rdfs:subClassOf soreaofl:OceanRidge ;
+.
+soreaofl:SeaFloor
+  a owl:Class ;
+  rdfs:label "sea floor"@en ;
+  owl:equivalentClass soreaofl:Seabed ;
+.
+soreaofl:Seabed
+  a owl:Class ;
+  rdfs:label "seabed"@en ;
+.
+soreaofl:Seamount
+  a owl:Class ;
+  rdfs:label "seamount"@en ;
+  rdfs:subClassOf sorealo:Mountain ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soreaofl:SeaFloor ;
+      owl:onProperty sorel:hasRealm ;
+    ] ;
+.
+soreaofl:SubmarineCanyon
+  a owl:Class ;
+  rdfs:label "submarine canyon"@en ;
+  rdfs:subClassOf sorealf:Canyon ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soreaofl:SeaFloor ;
+      owl:onProperty sorel:hasRealm ;
+    ] ;
+.

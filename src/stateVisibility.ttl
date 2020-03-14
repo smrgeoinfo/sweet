@@ -11,8 +11,7 @@
 @base <http://sweetontology.net/stateVisibility> .
 
 <http://sweetontology.net/stateVisibility> rdf:type owl:Ontology ;
-                                            owl:imports <http://sweetontology.net/propOrdinal> ,
-                                                        <http://sweetontology.net/relaPhysical> ;
+                                            
                                             rdfs:label "SWEET Ontology State Visibility" ;
                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                             owl:versionInfo "3.5.0" .

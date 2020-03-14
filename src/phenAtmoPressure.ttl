@@ -22,19 +22,7 @@
 @base <http://sweetontology.net/phenAtmoPressure> .
 
 <http://sweetontology.net/phenAtmoPressure> rdf:type owl:Ontology ;
-                                             owl:imports <http://sweetontology.net/phen> ,
-                                                         <http://sweetontology.net/phenAtmo> ,
-                                                         <http://sweetontology.net/phenAtmoPrecipitation> ,
-                                                         <http://sweetontology.net/phenFluidDynamics> ,
-                                                         <http://sweetontology.net/phenFluidTransport> ,
-                                                         <http://sweetontology.net/prop> ,
-                                                         <http://sweetontology.net/propTimeFrequency> ,
-                                                         <http://sweetontology.net/realmRegion> ,
-                                                         <http://sweetontology.net/rela> ,
-                                                         <http://sweetontology.net/relaSpace> ,
-                                                         <http://sweetontology.net/reprSpaceGeometry> ,
-                                                         <http://sweetontology.net/stateRole> ,
-                                                         <http://sweetontology.net/stateSpaceScale> ;
+                                             
                                              rdfs:label "SWEET Ontology Phenomena Atmosphere Pressure" ;
                                              dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                              owl:versionInfo "3.5.0" .

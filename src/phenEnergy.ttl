@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/phenEnergy> .
 
 <http://sweetontology.net/phenEnergy> rdf:type owl:Ontology ;
-                                       owl:imports <http://sweetontology.net/human> ,
-                                                   <http://sweetontology.net/humanEnvirConservation> ,
-                                                   <http://sweetontology.net/matrEnergy> ,
-                                                   <http://sweetontology.net/matrWater> ,
-                                                   <http://sweetontology.net/procPhysical> ,
-                                                   <http://sweetontology.net/prop> ,
-                                                   <http://sweetontology.net/propEnergy> ,
-                                                   <http://sweetontology.net/rela> ,
-                                                   <http://sweetontology.net/relaPhysical> ;
+                                       
                                        rdfs:label "SWEET Ontology Phenomena Energy" ;
                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                        owl:versionInfo "3.5.0" .

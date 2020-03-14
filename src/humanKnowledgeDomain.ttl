@@ -20,17 +20,7 @@
 @base <http://sweetontology.net/humanKnowledgeDomain> .
 
 <http://sweetontology.net/humanKnowledgeDomain> rdf:type owl:Ontology ;
-                                                 owl:imports <http://sweetontology.net/human> ,
-                                                             <http://sweetontology.net/matrBiomass> ,
-                                                             <http://sweetontology.net/matrRock> ,
-                                                             <http://sweetontology.net/phenBiol> ,
-                                                             <http://sweetontology.net/propEnergy> ,
-                                                             <http://sweetontology.net/realmGeol> ,
-                                                             <http://sweetontology.net/rela> ,
-                                                             <http://sweetontology.net/relaHuman> ,
-                                                             <http://sweetontology.net/relaTime> ,
-                                                             <http://sweetontology.net/repr> ,
-                                                             <http://sweetontology.net/stateTime> ;
+                                                 
                                                  rdfs:label "SWEET Ontology Human Knowledge Domain" ;
                                                  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                  owl:versionInfo "3.5.0" .

@@ -10,7 +10,7 @@
 @base <http://sweetontology.net/reprSciMethodology> .
 
 <http://sweetontology.net/reprSciMethodology> rdf:type owl:Ontology ;
-                                               owl:imports <http://sweetontology.net/humanResearch> ;
+                                               
                                                rdfs:label "SWEET Ontology Representation Representation Scientific Methodology" ;
                                                dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                owl:versionInfo "3.5.0" .

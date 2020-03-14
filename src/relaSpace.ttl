@@ -24,21 +24,7 @@
 @base <http://sweetontology.net/relaSpace> .
 
 <http://sweetontology.net/relaSpace> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/phenWave> ,
-                                                  <http://sweetontology.net/propOrdinal> ,
-                                                  <http://sweetontology.net/propSpace> ,
-                                                  <http://sweetontology.net/propSpaceDirection> ,
-                                                  <http://sweetontology.net/propSpaceDistance> ,
-                                                  <http://sweetontology.net/propSpaceHeight> ,
-                                                  <http://sweetontology.net/propSpaceLocation> ,
-                                                  <http://sweetontology.net/propSpaceMultidimensional> ,
-                                                  <http://sweetontology.net/realmRegion> ,
-                                                  <http://sweetontology.net/rela> ,
-                                                  <http://sweetontology.net/relaMath> ,
-                                                  <http://sweetontology.net/reprSpaceDirection> ,
-                                                  <http://sweetontology.net/reprSpaceGeometry> ,
-                                                  <http://sweetontology.net/reprSpaceGeometry3D> ,
-                                                  <http://sweetontology.net/stateSpaceScale> ;
+                                      
                                       rdfs:label "SWEET Ontology Relationships Space" ;
                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                       owl:versionInfo "3.5.0" .

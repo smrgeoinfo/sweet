@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/propMass> .
 
 <http://sweetontology.net/propMass> rdf:type owl:Ontology ;
-                                     owl:imports <http://sweetontology.net/prop> ,
-                                                 <http://sweetontology.net/propQuantity> ,
-                                                 <http://sweetontology.net/propSpaceMultidimensional> ,
-                                                 <http://sweetontology.net/rela> ,
-                                                 <http://sweetontology.net/relaMath> ,
-                                                 <http://sweetontology.net/relaSci> ,
-                                                 <http://sweetontology.net/reprMathOperation> ,
-                                                 <http://sweetontology.net/reprSciUnits> ,
-                                                 <http://sweetontology.net/statePhysical> ;
+                                     
                                      rdfs:label "SWEET Ontology Property Mass" ;
                                      dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                      owl:versionInfo "3.5.0" .

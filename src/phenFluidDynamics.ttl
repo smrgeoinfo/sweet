@@ -17,14 +17,7 @@
 @base <http://sweetontology.net/phenFluidDynamics> .
 
 <http://sweetontology.net/phenFluidDynamics> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/phen> ,
-                                                          <http://sweetontology.net/procPhysical> ,
-                                                          <http://sweetontology.net/propPressure> ,
-                                                          <http://sweetontology.net/rela> ,
-                                                          <http://sweetontology.net/relaSci> ,
-                                                          <http://sweetontology.net/relaSpace> ,
-                                                          <http://sweetontology.net/reprSpaceGeometry> ,
-                                                          <http://sweetontology.net/statePhysical> ;
+                                              
                                               rdfs:label "SWEET Ontology Phenomena Fluid Dynamics" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

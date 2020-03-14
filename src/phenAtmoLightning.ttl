@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/phenAtmoLightning> .
 
 <http://sweetontology.net/phenAtmoLightning> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/phenAtmo> ,
-                                                          <http://sweetontology.net/phenAtmoPrecipitation> ,
-                                                          <http://sweetontology.net/phenWave> ,
-                                                          <http://sweetontology.net/propCharge> ,
-                                                          <http://sweetontology.net/rela> ;
+                                              
                                               rdfs:label "SWEET Ontology Phenomena Atmosphere Lightning" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

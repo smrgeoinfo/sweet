@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/propEnergyFlux> .
 
 <http://sweetontology.net/propEnergyFlux> rdf:type owl:Ontology ;
-                                           owl:imports <http://sweetontology.net/phenGeolSeismicity> ,
-                                                       <http://sweetontology.net/phenStar> ,
-                                                       <http://sweetontology.net/propEnergy> ,
-                                                       <http://sweetontology.net/propQuantity> ,
-                                                       <http://sweetontology.net/rela> ,
-                                                       <http://sweetontology.net/relaPhysical> ,
-                                                       <http://sweetontology.net/relaSci> ,
-                                                       <http://sweetontology.net/repr> ,
-                                                       <http://sweetontology.net/reprSciUnits> ;
+                                           
                                            rdfs:label "SWEET Ontology Property Energy Flux" ;
                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                            owl:versionInfo "3.5.0" .

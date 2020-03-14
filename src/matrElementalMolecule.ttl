@@ -12,9 +12,7 @@
 @base <http://sweetontology.net/matrElementalMolecule> .
 
 <http://sweetontology.net/matrElementalMolecule> rdf:type owl:Ontology ;
-                                                  owl:imports <http://sweetontology.net/matr> ,
-                                                              <http://sweetontology.net/matrElement> ,
-                                                              <http://sweetontology.net/relaChemical> ;
+                                                  
                                                   rdfs:label "SWEET Ontology Material Elemental Molecule" ;
                                                   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                   owl:versionInfo "3.5.0" .

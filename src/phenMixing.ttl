@@ -16,13 +16,7 @@
 @base <http://sweetontology.net/phenMixing> .
 
 <http://sweetontology.net/phenMixing> rdf:type owl:Ontology ;
-                                       owl:imports <http://sweetontology.net/matrSediment> ,
-                                                   <http://sweetontology.net/phen> ,
-                                                   <http://sweetontology.net/procPhysical> ,
-                                                   <http://sweetontology.net/procStateChange> ,
-                                                   <http://sweetontology.net/rela> ,
-                                                   <http://sweetontology.net/relaChemical> ,
-                                                   <http://sweetontology.net/relaPhysical> ;
+                                       
                                        rdfs:label "SWEET Ontology Phenomena Mixing" ;
                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                        owl:versionInfo "3.5.0" .

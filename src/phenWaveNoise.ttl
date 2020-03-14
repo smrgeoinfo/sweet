@@ -13,10 +13,7 @@
 @base <http://sweetontology.net/phenWaveNoise> .
 
 <http://sweetontology.net/phenWaveNoise> rdf:type owl:Ontology ;
-                                          owl:imports <http://sweetontology.net/phen> ,
-                                                      <http://sweetontology.net/phenWave> ,
-                                                      <http://sweetontology.net/rela> ,
-                                                      <http://sweetontology.net/stateRole> ;
+                                          
                                           rdfs:label "SWEET Ontology Phenomena Wave Noise" ;
                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                           owl:versionInfo "3.5.0" .

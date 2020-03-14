@@ -10,7 +10,7 @@
 @base <http://sweetontology.net/stateRoleTrust> .
 
 <http://sweetontology.net/stateRoleTrust> rdf:type owl:Ontology ;
-                                           owl:imports <http://sweetontology.net/propOrdinal> ;
+                                           
                                            rdfs:label "SWEET Ontology State Role Trust" ;
                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                            owl:versionInfo "3.5.0" .

@@ -21,18 +21,7 @@
 @base <http://sweetontology.net/stateDataProcessing> .
 
 <http://sweetontology.net/stateDataProcessing> rdf:type owl:Ontology ;
-                                                owl:imports <http://sweetontology.net/propOrdinal> ,
-                                                            <http://sweetontology.net/relaProvenance> ,
-                                                            <http://sweetontology.net/reprDataModel> ,
-                                                            <http://sweetontology.net/reprDataProduct> ,
-                                                            <http://sweetontology.net/reprDataService> ,
-                                                            <http://sweetontology.net/reprDataServiceAnalysis> ,
-                                                            <http://sweetontology.net/reprDataServiceGeospatial> ,
-                                                            <http://sweetontology.net/reprDataServiceReduction> ,
-                                                            <http://sweetontology.net/reprDataServiceValidation> ,
-                                                            <http://sweetontology.net/reprSciModel> ,
-                                                            <http://sweetontology.net/reprSciProvenance> ,
-                                                            <http://sweetontology.net/stateSystem> ;
+                                                
                                                 rdfs:label "SWEET Ontology State Data Processing" ;
                                                 dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                 owl:versionInfo "3.5.0" .

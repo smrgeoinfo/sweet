@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/matrIon> .
 
 <http://sweetontology.net/matrIon> rdf:type owl:Ontology ;
-                                    owl:imports <http://sweetontology.net/matr> ,
-                                                <http://sweetontology.net/matrCompound> ,
-                                                <http://sweetontology.net/matrElement> ,
-                                                <http://sweetontology.net/matrElementalMolecule> ,
-                                                <http://sweetontology.net/rela> ,
-                                                <http://sweetontology.net/relaChemical> ,
-                                                <http://sweetontology.net/relaPhysical> ,
-                                                <http://sweetontology.net/state> ,
-                                                <http://sweetontology.net/statePhysical> ;
+                                    
                                     rdfs:label "SWEET Ontology Material Ion" ;
                                     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                     owl:versionInfo "3.5.0" .

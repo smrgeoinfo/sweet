@@ -16,12 +16,7 @@
 @base <http://sweetontology.net/matrInstrument> .
 
 <http://sweetontology.net/matrInstrument> rdf:type owl:Ontology ;
-                                           owl:imports <http://sweetontology.net/matrEquipment> ,
-                                                       <http://sweetontology.net/phenOceanCoastal> ,
-                                                       <http://sweetontology.net/propPressure> ,
-                                                       <http://sweetontology.net/propSpeed> ,
-                                                       <http://sweetontology.net/propTemperature> ,
-                                                       <http://sweetontology.net/relaSci> ;
+                                           
                                            rdfs:label "SWEET Ontology Material Instrument" ;
                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                            owl:versionInfo "3.5.0" .

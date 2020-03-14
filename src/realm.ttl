@@ -1,243 +1,200 @@
+# baseURI: http://sweetontology.net/realm
+
 @prefix : <http://sweetontology.net/realm/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix somac: <http://sweetontology.net/matrCompound/> .
+@prefix somaw: <http://sweetontology.net/matrWater/> .
+@prefix sorea: <http://sweetontology.net/realm/> .
+@prefix soreaab: <http://sweetontology.net/realmAstroBody/> .
+@prefix sorel: <http://sweetontology.net/rela/> .
+@prefix sorelch: <http://sweetontology.net/relaChemical/> .
+@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
+@prefix sorepsg: <http://sweetontology.net/reprSpaceGeometry/> .
+@prefix sorepsg3: <http://sweetontology.net/reprSpaceGeometry3D/> .
+@prefix sostp: <http://sweetontology.net/statePhysical/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix somac: <http://sweetontology.net/matrCompound/> .
-@prefix sorepsg: <http://sweetontology.net/reprSpaceGeometry/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sorel: <http://sweetontology.net/rela/> .
-@prefix soreaab: <http://sweetontology.net/realmAstroBody/> .
-@prefix sorelch: <http://sweetontology.net/relaChemical/> .
-@prefix sorepsg3: <http://sweetontology.net/reprSpaceGeometry3D/> .
-@prefix sorea: <http://sweetontology.net/realm/> .
-@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
-@prefix somaw: <http://sweetontology.net/matrWater/> .
-@prefix sostp: <http://sweetontology.net/statePhysical/> .
-@base <http://sweetontology.net/realm> .
 
-<http://sweetontology.net/realm> rdf:type owl:Ontology ;
-                                  owl:imports <http://sweetontology.net/matrCompound> ,
-                                              <http://sweetontology.net/matrWater> ,
-                                              <http://sweetontology.net/realmAstroBody> ,
-                                              <http://sweetontology.net/rela> ,
-                                              <http://sweetontology.net/relaChemical> ,
-                                              <http://sweetontology.net/relaSpace> ,
-                                              <http://sweetontology.net/reprSpaceGeometry> ,
-                                              <http://sweetontology.net/reprSpaceGeometry3D> ,
-                                              <http://sweetontology.net/state> ,
-                                              <http://sweetontology.net/statePhysical> ;
-                                  rdfs:label "SWEET Ontology Realm" ;
-                                  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                  owl:versionInfo "3.5.0" .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://sweetontology.net/rela/hasState
-sorel:hasState rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaChemical/hasSubstance
-sorelch:hasSubstance rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/hasLowerBoundary
-sorelsp:hasLowerBoundary rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/hasUpperBoundary
-sorelsp:hasUpperBoundary rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://sweetontology.net/realm/Atmosphere
-sorea:Atmosphere rdf:type owl:Class ;
-                 rdfs:subClassOf sorea:PlanetaryRealm ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty sorelsp:hasLowerBoundary ;
-                                   owl:allValuesFrom sorea:PlanetarySurface
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty sorel:hasState ;
-                                   owl:hasValue sostp:Gas
-                                 ] ;
-                 rdfs:label "atmosphere"@en .
-
-
-###  http://sweetontology.net/realm/CriticalZone
-sorea:CriticalZone rdf:type owl:Class ;
-                   rdfs:subClassOf sorea:PlanetaryRealm ;
-                   rdfs:label "critical zone"@en .
-
-
-###  http://sweetontology.net/realm/Cryosphere
-sorea:Cryosphere rdf:type owl:Class ;
-                 rdfs:subClassOf sorea:Hydrosphere ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty sorelch:hasSubstance ;
-                                   owl:allValuesFrom somaw:Ice
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty sorelsp:hasUpperBoundary ;
-                                   owl:allValuesFrom sorea:PlanetarySurface
-                                 ] ;
-                 rdfs:label "cryosphere"@en .
-
-
-###  http://sweetontology.net/realm/Geosphere
-sorea:Geosphere rdf:type owl:Class ;
-                rdfs:subClassOf sorea:PlanetaryRealm ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty sorelsp:hasUpperBoundary ;
-                                  owl:allValuesFrom sorea:PlanetarySurface
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty sorel:hasState ;
-                                  owl:hasValue sostp:Solid
-                                ] ;
-                rdfs:label "geosphere"@en .
-
-
-###  http://sweetontology.net/realm/GlobalPlanetaryLayer
-sorea:GlobalPlanetaryLayer rdf:type owl:Class ;
-                           owl:equivalentClass sorea:PlanetaryLayer ;
-                           rdfs:label "global planetary layer"@en .
-
-
-###  http://sweetontology.net/realm/Hydrosphere
-sorea:Hydrosphere rdf:type owl:Class ;
-                  rdfs:subClassOf sorea:PlanetaryRealm ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty sorelch:hasSubstance ;
-                                    owl:hasValue somac:Water
-                                  ] ;
-                  rdfs:label "hydrosphere"@en .
-
-
-###  http://sweetontology.net/realm/Land
-sorea:Land rdf:type owl:Class ;
-           rdfs:subClassOf sorea:Geosphere ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty sorel:hasState ;
-                             owl:hasValue sostp:Solid
-                           ] ;
-           rdfs:label "land"@en .
-
-
-###  http://sweetontology.net/realm/Ocean
-sorea:Ocean rdf:type owl:Class ;
-            rdfs:subClassOf sorea:Hydrosphere ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty sorelsp:hasUpperBoundary ;
-                              owl:allValuesFrom sorea:PlanetarySurface
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty sorel:hasState ;
-                              owl:hasValue sostp:Liquid
-                            ] ;
-            rdfs:label "ocean"@en .
-
-
-###  http://sweetontology.net/realm/PlanetaryBoundary
-sorea:PlanetaryBoundary rdf:type owl:Class ;
-                        owl:equivalentClass sorea:PlanetarySurfaceLevel ;
-                        rdfs:label "planetary boundary"@en .
-
-
-###  http://sweetontology.net/realm/PlanetaryLayer
-sorea:PlanetaryLayer rdf:type owl:Class ;
-                     rdfs:subClassOf sorepsg3:Layer ;
-                     rdfs:label "planetary layer"@en .
-
-
-###  http://sweetontology.net/realm/PlanetaryRealm
-sorea:PlanetaryRealm rdf:type owl:Class ;
-                     rdfs:subClassOf sorea:Realm ;
-                     rdfs:label "planetary realm"@en .
-
-
-###  http://sweetontology.net/realm/PlanetaryStructure
-sorea:PlanetaryStructure rdf:type owl:Class ;
-                         rdfs:subClassOf sorea:PlanetaryRealm ;
-                         rdfs:label "planetary structure"@en .
-
-
-###  http://sweetontology.net/realm/PlanetarySurface
-sorea:PlanetarySurface rdf:type owl:Class ;
-                       owl:equivalentClass sorea:Subaerial ;
-                       rdfs:subClassOf sorea:PlanetarySurfaceLevel ;
-                       rdfs:label "planetary surface"@en .
-
-
-###  http://sweetontology.net/realm/PlanetarySurfaceLevel
-sorea:PlanetarySurfaceLevel rdf:type owl:Class ;
-                            rdfs:subClassOf sorea:CriticalZone ,
-                                            sorepsg:Surface ;
-                            rdfs:label "planetary surface level"@en .
-
-
-###  http://sweetontology.net/realm/Realm
-sorea:Realm rdf:type owl:Class ;
-            rdfs:label "realm"@en .
-
-
-###  http://sweetontology.net/realm/Ring
-sorea:Ring rdf:type owl:Class ;
-           rdfs:subClassOf sorea:PlanetaryRealm ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty sorel:hasState ;
-                             owl:hasValue sostp:Solid
-                           ] ;
-           rdfs:label "ring"@en .
-
-
-###  http://sweetontology.net/realm/Subaerial
-sorea:Subaerial rdf:type owl:Class ;
-                rdfs:label "subaerial"@en .
-
-
-###  http://sweetontology.net/realmAstroBody/Planet
-soreaab:Planet rdf:type owl:Class .
-
-
-###  http://sweetontology.net/reprSpaceGeometry/Surface
-sorepsg:Surface rdf:type owl:Class .
-
-
-###  http://sweetontology.net/reprSpaceGeometry3D/Layer
-sorepsg3:Layer rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://sweetontology.net/matrCompound/Water
-somac:Water rdf:type owl:NamedIndividual .
-
-
-###  http://sweetontology.net/realm/Earth
-sorea:Earth rdf:type owl:NamedIndividual ,
-                     soreaab:Planet ;
-            rdfs:label "earth"@en .
-
-
-###  http://sweetontology.net/statePhysical/Gas
-sostp:Gas rdf:type owl:NamedIndividual .
-
-
-###  http://sweetontology.net/statePhysical/Liquid
-sostp:Liquid rdf:type owl:NamedIndividual .
-
-
-###  http://sweetontology.net/statePhysical/Solid
-sostp:Solid rdf:type owl:NamedIndividual .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+somac:Water
+  a owl:NamedIndividual ;
+.
+<http://sweetontology.net/realm>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:label "SWEET Ontology Realm" ;
+  owl:versionInfo "3.5.0" ;
+.
+sorea:Atmosphere
+  a owl:Class ;
+  rdfs:label "atmosphere"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/common/Situation> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sorea:PlanetarySurface ;
+      owl:onProperty sorelsp:hasLowerBoundary ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostp:Gas ;
+      owl:onProperty sorel:hasState ;
+    ] ;
+.
+sorea:CriticalZone
+  a owl:Class ;
+  rdfs:label "critical zone"@en ;
+.
+sorea:Cryosphere
+  a owl:Class ;
+  rdfs:label "cryosphere"@en ;
+  rdfs:subClassOf sorea:Hydrosphere ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom somaw:Ice ;
+      owl:onProperty sorelch:hasSubstance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sorea:PlanetarySurface ;
+      owl:onProperty sorelsp:hasUpperBoundary ;
+    ] ;
+.
+sorea:Earth
+  a soreaab:Planet ;
+  a owl:NamedIndividual ;
+  rdfs:label "earth"@en ;
+.
+sorea:Geosphere
+  a owl:Class ;
+  rdfs:label "geosphere"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/common/Geologic_Setting> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sorea:PlanetarySurface ;
+      owl:onProperty sorelsp:hasUpperBoundary ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostp:Solid ;
+      owl:onProperty sorel:hasState ;
+    ] ;
+.
+sorea:GlobalPlanetaryLayer
+  a owl:Class ;
+  rdfs:label "global planetary layer"@en ;
+  owl:equivalentClass sorea:PlanetaryLayer ;
+.
+sorea:Hydrosphere
+  a owl:Class ;
+  rdfs:label "hydrosphere"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/common/Situation> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue somac:Water ;
+      owl:onProperty sorelch:hasSubstance ;
+    ] ;
+.
+sorea:Land
+  a owl:Class ;
+  rdfs:label "land"@en ;
+  rdfs:subClassOf sorea:Geosphere ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostp:Solid ;
+      owl:onProperty sorel:hasState ;
+    ] ;
+.
+sorea:Ocean
+  a owl:Class ;
+  rdfs:label "ocean"@en ;
+  rdfs:subClassOf sorea:Hydrosphere ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sorea:PlanetarySurface ;
+      owl:onProperty sorelsp:hasUpperBoundary ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostp:Liquid ;
+      owl:onProperty sorel:hasState ;
+    ] ;
+.
+sorea:PlanetaryBoundary
+  a owl:Class ;
+  rdfs:label "planetary boundary"@en ;
+  owl:equivalentClass sorea:PlanetarySurfaceLevel ;
+.
+sorea:PlanetaryLayer
+  a owl:Class ;
+  rdfs:label "planetary layer"@en ;
+  rdfs:subClassOf sorepsg3:Layer ;
+.
+sorea:PlanetaryRealm
+  a owl:Class ;
+  rdfs:label "planetary realm"@en ;
+.
+sorea:PlanetaryStructure
+  a owl:Class ;
+  rdfs:label "planetary structure"@en ;
+.
+sorea:PlanetarySurface
+  a owl:Class ;
+  rdfs:label "planetary surface"@en ;
+  rdfs:subClassOf sorea:PlanetarySurfaceLevel ;
+  owl:equivalentClass sorea:Subaerial ;
+.
+sorea:PlanetarySurfaceLevel
+  a owl:Class ;
+  rdfs:label "planetary surface level"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/common/Situation> ;
+.
+sorea:Realm
+  a owl:Class ;
+  rdfs:label "realm"@en ;
+.
+sorea:Ring
+  a owl:Class ;
+  rdfs:label "ring"@en ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostp:Solid ;
+      owl:onProperty sorel:hasState ;
+    ] ;
+.
+sorea:Subaerial
+  a owl:Class ;
+  rdfs:label "subaerial"@en ;
+.
+soreaab:Planet
+  a owl:Class ;
+.
+sorel:hasState
+  a owl:ObjectProperty ;
+.
+sorelch:hasSubstance
+  a owl:ObjectProperty ;
+.
+sorelsp:hasLowerBoundary
+  a owl:ObjectProperty ;
+.
+sorelsp:hasUpperBoundary
+  a owl:ObjectProperty ;
+.
+sorepsg:Surface
+  a owl:Class ;
+.
+sorepsg3:Layer
+  a owl:Class ;
+.
+sostp:Gas
+  a owl:NamedIndividual ;
+.
+sostp:Liquid
+  a owl:NamedIndividual ;
+.
+sostp:Solid
+  a owl:NamedIndividual ;
+.

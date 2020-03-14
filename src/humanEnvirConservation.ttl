@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/humanEnvirConservation> .
 
 <http://sweetontology.net/humanEnvirConservation> rdf:type owl:Ontology ;
-                                                   owl:imports <http://sweetontology.net/human> ,
-                                                               <http://sweetontology.net/humanCommerce> ,
-                                                               <http://sweetontology.net/prop> ,
-                                                               <http://sweetontology.net/realm> ,
-                                                               <http://sweetontology.net/rela> ;
+                                                   
                                                    rdfs:label "SWEET Ontology Human Environmental Conservation" ;
                                                    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                    owl:versionInfo "3.5.0" .

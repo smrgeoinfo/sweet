@@ -22,19 +22,7 @@
 @base <http://sweetontology.net/realmBiolBiome> .
 
 <http://sweetontology.net/realmBiolBiome> rdf:type owl:Ontology ;
-                                           owl:imports <http://sweetontology.net/humanCommerce> ,
-                                                       <http://sweetontology.net/matr> ,
-                                                       <http://sweetontology.net/matrAnimal> ,
-                                                       <http://sweetontology.net/matrBiomass> ,
-                                                       <http://sweetontology.net/matrPlant> ,
-                                                       <http://sweetontology.net/realm> ,
-                                                       <http://sweetontology.net/realmClimateZone> ,
-                                                       <http://sweetontology.net/rela> ,
-                                                       <http://sweetontology.net/relaClimate> ,
-                                                       <http://sweetontology.net/relaHuman> ,
-                                                       <http://sweetontology.net/relaSci> ,
-                                                       <http://sweetontology.net/reprSciComponent> ,
-                                                       <http://sweetontology.net/stateBiological> ;
+                                           
                                            rdfs:label "SWEET Ontology Realm Biologic Biome" ;
                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                            owl:versionInfo "3.5.0" .

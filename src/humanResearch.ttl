@@ -12,8 +12,7 @@
 @base <http://sweetontology.net/humanResearch> .
 
 <http://sweetontology.net/humanResearch> rdf:type owl:Ontology ;
-                                          owl:imports <http://sweetontology.net/human> ,
-                                                      <http://sweetontology.net/repr> ;
+                                          
                                           rdfs:label "SWEET Ontology Human Research" ;
                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                           owl:versionInfo "3.5.0" .

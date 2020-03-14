@@ -17,14 +17,7 @@
 @base <http://sweetontology.net/matrAerosol> .
 
 <http://sweetontology.net/matrAerosol> rdf:type owl:Ontology ;
-                                        owl:imports <http://sweetontology.net/matr> ,
-                                                    <http://sweetontology.net/phenSolid> ,
-                                                    <http://sweetontology.net/propSpaceDistance> ,
-                                                    <http://sweetontology.net/realmLandform> ,
-                                                    <http://sweetontology.net/rela> ,
-                                                    <http://sweetontology.net/relaMath> ,
-                                                    <http://sweetontology.net/relaSpace> ,
-                                                    <http://sweetontology.net/statePhysical> ;
+                                        
                                         rdfs:label "SWEET Ontology Material Aerosol" ;
                                         dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                         owl:versionInfo "3.5.0" .

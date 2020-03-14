@@ -16,14 +16,7 @@
 @base <http://sweetontology.net/realmAstroHelio> .
 
 <http://sweetontology.net/realmAstroHelio> rdf:type owl:Ontology ;
-                                            owl:imports <http://sweetontology.net/propOrdinal> ,
-                                                        <http://sweetontology.net/realm> ,
-                                                        <http://sweetontology.net/rela> ,
-                                                        <http://sweetontology.net/relaPhysical> ,
-                                                        <http://sweetontology.net/relaSpace> ,
-                                                        <http://sweetontology.net/state> ,
-                                                        <http://sweetontology.net/statePhysical> ,
-                                                        <http://sweetontology.net/stateSpectralBand> ;
+                                            
                                             rdfs:label "SWEET Ontology Realm Astrophysical Heliosphere" ;
                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                             owl:versionInfo "3.5.0" .

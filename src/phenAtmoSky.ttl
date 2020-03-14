@@ -15,12 +15,7 @@
 @base <http://sweetontology.net/phenAtmoSky> .
 
 <http://sweetontology.net/phenAtmoSky> rdf:type owl:Ontology ;
-                                        owl:imports <http://sweetontology.net/phen> ,
-                                                    <http://sweetontology.net/phenAtmo> ,
-                                                    <http://sweetontology.net/phenAtmoFog> ,
-                                                    <http://sweetontology.net/phenEnvirImpact> ,
-                                                    <http://sweetontology.net/procWave> ,
-                                                    <http://sweetontology.net/rela> ;
+                                        
                                         rdfs:label "SWEET Ontology Phenomena Atmosphere Sky" ;
                                         dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                         owl:versionInfo "3.5.0" .

@@ -1,0 +1,1165 @@
+# baseURI: http://sweetontology.net/sweetGeo
+# imports: http://loop3d.org/GSO/ontology/2020/1/common/ontology
+# imports: http://loop3d.org/GSO/ontology/2020/1/geologicfeature/ontology
+# imports: http://sweetontology.net/matr
+# imports: http://sweetontology.net/matrElement
+# imports: http://sweetontology.net/matrMineral
+# imports: http://sweetontology.net/matrNaturalResource
+# imports: http://sweetontology.net/matrParticle
+# imports: http://sweetontology.net/matrRock
+# imports: http://sweetontology.net/matrRockIgneous
+# imports: http://sweetontology.net/matrSediment
+# imports: http://sweetontology.net/matrWater
+# imports: http://sweetontology.net/phen
+# imports: http://sweetontology.net/phenCryo
+# imports: http://sweetontology.net/phenCycleMaterial
+# imports: http://sweetontology.net/phenEcology
+# imports: http://sweetontology.net/phenGeol
+# imports: http://sweetontology.net/phenGeolFault
+# imports: http://sweetontology.net/phenGeolGeomorphology
+# imports: http://sweetontology.net/phenGeolSeismicity
+# imports: http://sweetontology.net/phenGeolTectonic
+# imports: http://sweetontology.net/phenGeolVolcano
+# imports: http://sweetontology.net/phenHydro
+# imports: http://sweetontology.net/phenOceanCoastal
+# imports: http://sweetontology.net/phenPlanetClimate
+# imports: http://sweetontology.net/prop
+# imports: http://sweetontology.net/realm
+# imports: http://sweetontology.net/realmClimateZone
+# imports: http://sweetontology.net/realmCryo
+# imports: http://sweetontology.net/realmEarthReference
+# imports: http://sweetontology.net/realmGeol
+# imports: http://sweetontology.net/realmGeolBasin
+# imports: http://sweetontology.net/realmGeolConstituent
+# imports: http://sweetontology.net/realmGeolContinental
+# imports: http://sweetontology.net/realmGeolOrogen
+# imports: http://sweetontology.net/realmHydro
+# imports: http://sweetontology.net/realmHydroBody
+# imports: http://sweetontology.net/realmLandAeolian
+# imports: http://sweetontology.net/realmLandCoastal
+# imports: http://sweetontology.net/realmLandFluvial
+# imports: http://sweetontology.net/realmLandGlacial
+# imports: http://sweetontology.net/realmLandOrographic
+# imports: http://sweetontology.net/realmLandProtected
+# imports: http://sweetontology.net/realmLandTectonic
+# imports: http://sweetontology.net/realmLandVolcanic
+# imports: http://sweetontology.net/realmLandform
+# imports: http://sweetontology.net/realmOcean
+# imports: http://sweetontology.net/realmOceanFloor
+# imports: http://sweetontology.net/realmRegion
+# imports: http://sweetontology.net/realmSoil
+# imports: http://sweetontology.net/rela
+# imports: http://sweetontology.net/relaClimate
+# imports: http://sweetontology.net/repr
+# imports: http://sweetontology.net/state
+# imports: http://sweetontology.net/stateSolid
+# imports: http://sweetontology.net/stateTime
+# imports: http://sweetontology.net/stateTimeGeologic
+
+@prefix : <http://sweetontology.net/sweetGeo/> .
+@prefix common: <http://loop3d.org/GSO/ontology/2020/1/common/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geologicfeature: <http://loop3d.org/GSO/ontology/2020/1/geologicfeature/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+common:Amount_Of_Matter
+  owl:equivalentClass <http://sweetontology.net/matr/Substance> ;
+.
+<http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process>
+  a owl:Class ;
+  rdfs:subClassOf common:Process ;
+.
+<http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Ductile_Flow>
+  rdfs:subClassOf geologicfeature:Deformation ;
+.
+<http://ns.nature.com/terms/Journal>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/Arch>
+  rdfs:subClassOf <http://sweetontology.net/realmLandform/Landform> ;
+.
+<http://sweetontology.net/human/HumanNeed>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/humanResearch/Publication>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/matr/ChemicalSubstance>
+  rdfs:subClassOf common:Amount_Of_Matter ;
+.
+<http://sweetontology.net/matr/InorganicSubstance>
+  rdfs:subClassOf <http://sweetontology.net/matr/Inorganic> ;
+.
+<http://sweetontology.net/matr/MixedChemicalSubstance>
+  rdfs:subClassOf <http://sweetontology.net/matr/Mixture> ;
+.
+<http://sweetontology.net/matr/Mixture>
+  rdfs:subClassOf common:Amount_Of_Matter ;
+.
+<http://sweetontology.net/matr/Substance>
+  rdfs:subClassOf common:Amount_Of_Matter ;
+  owl:equivalentClass common:Amount_Of_Matter ;
+.
+<http://sweetontology.net/matrElement/ChemicalElement>
+  rdfs:subClassOf common:Element ;
+.
+<http://sweetontology.net/matrElement/Element>
+  rdfs:subClassOf common:Element ;
+.
+<http://sweetontology.net/matrElement/Ha>
+  rdfs:subClassOf <http://sweetontology.net/matrElement/Element> ;
+.
+<http://sweetontology.net/matrMineral/Glass>
+  rdfs:subClassOf common:State_Of_Matter ;
+  owl:equivalentClass common:Glass ;
+.
+<http://sweetontology.net/matrMineral/Mineral>
+  rdfs:subClassOf geologicfeature:Mineral ;
+.
+<http://sweetontology.net/matrNaturalResource/CrudeOil>
+  rdfs:subClassOf <http://sweetontology.net/matrNaturalResource/FossilFuel> ;
+.
+<http://sweetontology.net/matrNaturalResource/Deposit>
+  rdfs:subClassOf geologicfeature:Rock_Body ;
+.
+<http://sweetontology.net/matrNaturalResource/NaturalResource>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/GeoResourceAccumulation> ;
+.
+<http://sweetontology.net/matrParticle/Atom>
+  rdfs:subClassOf common:Physical_Object ;
+.
+<http://sweetontology.net/matrParticle/Molecule>
+  rdfs:subClassOf common:Physical_Object ;
+.
+<http://sweetontology.net/matrParticle/Nucleon>
+  rdfs:subClassOf common:Physical_Object ;
+.
+<http://sweetontology.net/matrParticle/Particle>
+  rdfs:subClassOf common:Physical_Object ;
+.
+<http://sweetontology.net/matrRock/Fossil>
+  rdfs:subClassOf geologicfeature:Fossil ;
+.
+<http://sweetontology.net/matrRock/Molasse>
+  rdfs:subClassOf geologicfeature:Geologic_Unit ;
+.
+<http://sweetontology.net/matrRock/Regolith>
+  rdfs:subClassOf geologicfeature:Rock_Body ;
+.
+<http://sweetontology.net/matrRock/RockBody>
+  owl:equivalentClass geologicfeature:Rock_Body ;
+.
+<http://sweetontology.net/matrRock/Serpentinization>
+  rdfs:subClassOf geologicfeature:Transformation ;
+.
+<http://sweetontology.net/matrRockIgneous/PlutonicRock>
+  rdfs:subClassOf <http://sweetontology.net/matrRockIgneous/IgneousRock> ;
+.
+<http://sweetontology.net/matrRockIgneous/TuffRing>
+  rdfs:subClassOf :Volcanic_Feature ;
+.
+<http://sweetontology.net/matrRockIgneous/VolcanicCone>
+  rdfs:subClassOf :Volcanic_Feature ;
+.
+<http://sweetontology.net/matrRockIgneous/VolcanicNeck>
+  rdfs:subClassOf :Volcanic_Feature ;
+.
+<http://sweetontology.net/matrSediment/Alluvium>
+  rdfs:subClassOf <http://sweetontology.net/matrSediment/Sediment> ;
+.
+<http://sweetontology.net/matrSediment/Boulder>
+  rdfs:subClassOf geologicfeature:Granular_Particle_Material ;
+.
+<http://sweetontology.net/matrSediment/Clast>
+  rdfs:subClassOf geologicfeature:Granular_Particle_Material ;
+.
+<http://sweetontology.net/matrSediment/Clay>
+  rdfs:subClassOf <http://sweetontology.net/matrMineral/Mineral> ;
+.
+<http://sweetontology.net/matrSediment/Cobble>
+  rdfs:subClassOf geologicfeature:Granular_Particle_Material ;
+.
+<http://sweetontology.net/matrSediment/DebrisFlow>
+  rdfs:subClassOf geologicfeature:Rock_Body ;
+.
+<http://sweetontology.net/matrSediment/Ejecta>
+  rdfs:subClassOf geologicfeature:Pyroclastic_Granular_Material ;
+.
+<http://sweetontology.net/matrSediment/Sediment>
+  rdfs:subClassOf geologicfeature:Rock_Material ;
+.
+<http://sweetontology.net/matrSediment/VolcanicDeposit>
+  rdfs:subClassOf geologicfeature:Geologic_Unit ;
+.
+<http://sweetontology.net/matrWater/IceParticle>
+  rdfs:subClassOf <http://sweetontology.net/matrParticle/Particle> ;
+.
+<http://sweetontology.net/matrWater/Steam>
+  rdfs:subClassOf <http://sweetontology.net/matr/InorganicSubstance> ;
+.
+<http://sweetontology.net/phen/Event>
+  rdfs:subClassOf common:Event ;
+  owl:equivalentClass common:Event ;
+.
+<http://sweetontology.net/phen/Occurrence>
+  rdfs:subClassOf common:Event ;
+.
+<http://sweetontology.net/phen/Phenomena>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/phen/Precipitation>
+  rdfs:subClassOf geologicfeature:Transformation ;
+.
+<http://sweetontology.net/phenAtmoPrecipitation/Rainfall>
+  rdfs:subClassOf common:Event ;
+.
+<http://sweetontology.net/phenCryo/Accumulation>
+  rdfs:subClassOf geologicfeature:Additive_Process ;
+  owl:equivalentClass <http://sweetontology.net/phenSystem/Accumulation> ;
+.
+<http://sweetontology.net/phenCryo/Calving>
+  rdfs:subClassOf geologicfeature:Subtractive_Process ;
+.
+<http://sweetontology.net/phenCryo/Englacial>
+  rdfs:subClassOf <http://sweetontology.net/realmCryo/GlacialRegion> ;
+.
+<http://sweetontology.net/phenCryo/Glacial>
+  rdfs:subClassOf <http://sweetontology.net/realmCryo/GlacialRegion> ;
+.
+<http://sweetontology.net/phenCryo/GlacialProcess>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenCryo/GlacierRetreat>
+  rdfs:subClassOf geologicfeature:Subtractive_Process ;
+.
+<http://sweetontology.net/phenCryo/IceCalving>
+  rdfs:subClassOf <http://sweetontology.net/phenCryo/Calving> ;
+.
+<http://sweetontology.net/phenCryo/Periglacial>
+  rdfs:subClassOf <http://sweetontology.net/realmCryo/GlacialRegion> ;
+.
+<http://sweetontology.net/phenCryo/Proglacial>
+  rdfs:subClassOf <http://sweetontology.net/realmCryo/GlacialRegion> ;
+.
+<http://sweetontology.net/phenCryo/Subglacial>
+  rdfs:subClassOf <http://sweetontology.net/realmCryo/GlacialRegion> ;
+.
+<http://sweetontology.net/phenCryo/Supraglacial>
+  rdfs:subClassOf <http://sweetontology.net/realmCryo/GlacialRegion> ;
+.
+<http://sweetontology.net/phenEcology/Adaptation>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenEcology/Bioaccumulation>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenEcology/Bioconcentration>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenEcology/Competition>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenEcology/Evolution>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenEcology/Migration>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenEcology/Mutation>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenEcology/NaturalSelection>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenEcology/Predation>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenEcology/Selection>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenEcology/Speciation>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicprocess/Biological_Process> ;
+.
+<http://sweetontology.net/phenGeol/CompositeProcess>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenGeol/Differentiation>
+  rdfs:subClassOf geologicfeature:Transformation ;
+.
+<http://sweetontology.net/phenGeol/Fluvial>
+  rdfs:label "fluvial process?" ;
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/phenGeol/GeospherePhenomena>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/phenGeol/Orogenesis>
+  rdfs:subClassOf geologicfeature:Deformation ;
+.
+<http://sweetontology.net/phenGeol/Pedogenesis>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenGeol/RockCycleProcess>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/phenGeol/StratigraphicSequence>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/StratigraphicUnit> ;
+.
+<http://sweetontology.net/phenGeolFault/Dextral>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+.
+<http://sweetontology.net/phenGeolFault/GenericDecollement>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+.
+<http://sweetontology.net/phenGeolFault/NoMovementSense>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+.
+<http://sweetontology.net/phenGeolFault/Normal>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+.
+<http://sweetontology.net/phenGeolFault/Reverse>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+.
+<http://sweetontology.net/phenGeolFault/Sinistral>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+.
+<http://sweetontology.net/phenGeolFault/Slip>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+.
+<http://sweetontology.net/phenGeolFault/Thrust>
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Abrasion>
+  rdfs:subClassOf geologicfeature:Transformation ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Avalanche>
+  rdfs:subClassOf geologicfeature:Geologic_Event ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Creep>
+  rdfs:subClassOf geologicfeature:Deformation ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Denundation>
+  rdfs:subClassOf geologicfeature:Subtractive_Process ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Karst>
+  rdfs:label "karsting process?" ;
+  rdfs:subClassOf geologicfeature:Subtractive_Process ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/MassWasting>
+  rdfs:subClassOf geologicfeature:Deformation ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/MaterialDisplacement>
+  rdfs:subClassOf geologicfeature:Geologic_Process ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Mudslide>
+  rdfs:subClassOf geologicfeature:Geologic_Event ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Reptation>
+  rdfs:subClassOf :Thing_1 ;
+  skos:definition "Reptation is the thermal motion of very long linear, entangled macromolecules in polymer melts or concentrated polymer solutions. Derived from the word reptile, reptation suggests the movement of entangled polymer chains as being analogous to snakes slithering through one another.  https://en.wikipedia.org/wiki/Reptation"@en ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/RockSlopeFailure>
+  rdfs:subClassOf geologicfeature:Deformation ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Saltation>
+  rdfs:subClassOf geologicfeature:Deformation ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Slump>
+  rdfs:subClassOf geologicfeature:Deformation ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Solifluction>
+  rdfs:subClassOf geologicfeature:Deformation ;
+.
+<http://sweetontology.net/phenGeolGeomorphology/Subsidence>
+  rdfs:subClassOf geologicfeature:Deformation ;
+.
+<http://sweetontology.net/phenGeolSeismicity/Earthquake>
+  rdfs:subClassOf geologicfeature:Geologic_Event ;
+.
+<http://sweetontology.net/phenGeolTectonic/IsostaticAdjustment>
+  rdfs:subClassOf <http://sweetontology.net/phenGeolTectonic/TectonicProcess> ;
+.
+<http://sweetontology.net/phenGeolTectonic/TectonicAssemblage>
+  rdfs:subClassOf geologicfeature:Geologic_Unit ;
+.
+<http://sweetontology.net/phenGeolTectonic/TectonicPhenomena>
+  owl:equivalentClass <http://sweetontology.net/phenGeolTectonic/TectonicProcess> ;
+.
+<http://sweetontology.net/phenGeolTectonic/TectonicProcess>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenGeolVolcano/EruptionCloud>
+  rdfs:subClassOf :Volcanic_Feature ;
+.
+<http://sweetontology.net/phenGeolVolcano/MagmaMotion>
+  rdfs:subClassOf <http://sweetontology.net/phenSystem/Displacement> ;
+.
+<http://sweetontology.net/phenGeolVolcano/Magmatic>
+  rdfs:subClassOf <http://sweetontology.net/phenGeol/GeospherePhenomena> ;
+.
+<http://sweetontology.net/phenGeolVolcano/MantleThermalPlume>
+  rdfs:subClassOf <http://sweetontology.net/phenGeolVolcano/MantlePlume> ;
+.
+<http://sweetontology.net/phenGeolVolcano/NueeArdenteEruption>
+  rdfs:subClassOf <http://sweetontology.net/phenGeolVolcano/VolcanicEruption> ;
+.
+<http://sweetontology.net/phenGeolVolcano/SteamBlastEruption>
+  rdfs:subClassOf <http://sweetontology.net/phenGeolVolcano/VolcanicEruption> ;
+.
+<http://sweetontology.net/phenGeolVolcano/VolcanicPhenomena>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/phenGeolVolcano/Volcanism>
+  rdfs:subClassOf geologicfeature:Additive_Process ;
+.
+<http://sweetontology.net/phenGeolVolcano/Vulcanism>
+  rdfs:subClassOf geologicfeature:Additive_Process ;
+.
+<http://sweetontology.net/phenHydro/GroundwaterStorage>
+  rdfs:subClassOf geologicfeature:Additive_Process ;
+.
+<http://sweetontology.net/phenHydro/HydrothermalAlteration>
+  rdfs:subClassOf geologicfeature:Transformation ;
+.
+<http://sweetontology.net/phenHydro/Percolate>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/phenHydro/RadionucleiRetardation>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenHydro/Snowslide>
+  rdfs:subClassOf common:Event ;
+.
+<http://sweetontology.net/phenHydro/WaterFlow>
+  rdfs:subClassOf <http://sweetontology.net/phenSystem/Displacement> ;
+.
+<http://sweetontology.net/phenOceanCoastal/Attrition>
+  rdfs:subClassOf geologicfeature:Subtractive_Process ;
+.
+<http://sweetontology.net/phenOceanCoastal/BeachDepletion>
+  rdfs:subClassOf geologicfeature:Subtractive_Process ;
+.
+<http://sweetontology.net/phenPlanetClimate/ClimateAverage>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/phenPlanetClimate/ClimateChange>
+  rdfs:subClassOf common:Event ;
+.
+<http://sweetontology.net/phenPlanetClimate/ClimaticAnomaly>
+  rdfs:subClassOf <http://sweetontology.net/realmClimateZone/ClimateClassification> ;
+.
+<http://sweetontology.net/phenPlanetClimate/ClimaticAverage>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/phenPlanetClimate/ClimatologicalAverage>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/phenPlanetClimate/Drought>
+  rdfs:subClassOf common:Event ;
+.
+<http://sweetontology.net/phenPlanetClimate/GreenhouseEffect>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenReaction/Eruption>
+  rdfs:subClassOf <http://sweetontology.net/phenGeolVolcano/Vulcanism> ;
+.
+<http://sweetontology.net/phenSolid/Deformation>
+  rdfs:subClassOf geologicfeature:Deformation ;
+.
+<http://sweetontology.net/phenSolid/Erosion>
+  rdfs:subClassOf geologicfeature:Subtractive_Process ;
+.
+<http://sweetontology.net/phenSystem/Accumulation>
+  rdfs:subClassOf geologicfeature:Additive_Process ;
+.
+<http://sweetontology.net/phenSystem/Displacement>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenSystem/Exchange>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenSystem/Inundation>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenSystem/Recycling>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenSystem/Removal>
+  rdfs:subClassOf geologicfeature:Subtractive_Process ;
+.
+<http://sweetontology.net/phenSystemComplexity/Collapse>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/phenWave/GravityWave>
+  rdfs:subClassOf common:Dynamic_Feature ;
+.
+<http://sweetontology.net/phenWave/Wave>
+  rdfs:subClassOf common:Dynamic_Feature ;
+.
+<http://sweetontology.net/proc/Force>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/procPhysical/Cooling>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/procPhysical/Heating>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/procPhysical/Motion>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/procPhysical/PhysicalProcess>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/procStateChange/Melting>
+  rdfs:subClassOf geologicfeature:Transformation ;
+.
+<http://sweetontology.net/prop/Measure>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/prop/PhysicalProperty>
+  owl:equivalentClass common:Physical_Property ;
+.
+<http://sweetontology.net/prop/Property>
+  rdfs:subClassOf :Thing_1 ;
+  owl:equivalentClass common:Property ;
+.
+<http://sweetontology.net/prop/ReactionProperty>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/prop/Role>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/prop/StatisticalSummary>
+  rdfs:subClassOf <http://sweetontology.net/repr/Representation> ;
+.
+<http://sweetontology.net/prop/SystemProperty>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/propChemical/Moisture>
+  rdfs:subClassOf common:Amount_Of_Matter ;
+.
+<http://sweetontology.net/propDifference/Anomaly>
+  rdfs:subClassOf common:Inherent_Feature ;
+.
+<http://sweetontology.net/propEnergy/Heat>
+  rdfs:subClassOf common:Physical_Endurant ;
+.
+<http://sweetontology.net/propEnergyFlux/RadiativeForcing>
+  rdfs:subClassOf common:Process ;
+.
+<http://sweetontology.net/propFunction/Average>
+  rdfs:subClassOf <http://sweetontology.net/reprMath/NumericalEntity> ;
+.
+<http://sweetontology.net/propFunction/TemporalAverage>
+  rdfs:subClassOf <http://sweetontology.net/repr/Representation> ;
+.
+<http://sweetontology.net/propMass/Mass>
+  rdfs:subClassOf <http://sweetontology.net/prop/PhysicalProperty> ;
+.
+<http://sweetontology.net/propOrdinal/Age>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/propSpaceDirection/Direction>
+  rdfs:subClassOf <http://sweetontology.net/repr/Representation> ;
+.
+<http://sweetontology.net/propSpaceDistance/SizeRange_micron>
+  rdfs:subClassOf <http://sweetontology.net/prop/PhysicalProperty> ;
+.
+<http://sweetontology.net/propSpaceThickness/PrecipitationRange>
+  rdfs:subClassOf <http://sweetontology.net/prop/HydrogeologicalProperty> ;
+.
+<http://sweetontology.net/propSpaceThickness/PrecipitationRange_cm>
+  rdfs:subClassOf <http://sweetontology.net/prop/HydrogeologicalProperty> ;
+.
+<http://sweetontology.net/propTemperature/Temperature>
+  rdfs:subClassOf <http://sweetontology.net/prop/PhysicalProperty> ;
+.
+<http://sweetontology.net/propTime/Duration>
+  rdfs:subClassOf <http://sweetontology.net/repr/Representation> ;
+.
+<http://sweetontology.net/realm/CriticalZone>
+  rdfs:subClassOf common:Situation ;
+.
+<http://sweetontology.net/realm/GlobalPlanetaryLayer>
+  rdfs:subClassOf common:Physical_Object ;
+.
+<http://sweetontology.net/realm/PlanetaryBoundary>
+  rdfs:subClassOf common:Physical_Boundary ;
+.
+<http://sweetontology.net/realm/PlanetaryRealm>
+  rdfs:subClassOf <http://sweetontology.net/realm/Realm> ;
+.
+<http://sweetontology.net/realm/PlanetaryStructure>
+  rdfs:subClassOf common:Situation ;
+.
+<http://sweetontology.net/realm/Realm>
+  rdfs:subClassOf common:Situation ;
+.
+<http://sweetontology.net/realm/Subaerial>
+  rdfs:subClassOf <http://sweetontology.net/realm/CriticalZone> ;
+  rdfs:subClassOf <http://sweetontology.net/realm/Land> ;
+.
+<http://sweetontology.net/realmAstroBody/Planet>
+  rdfs:subClassOf common:Physical_Object ;
+.
+<http://sweetontology.net/realmClimateZone/DryClimate>
+  rdfs:subClassOf <http://sweetontology.net/realmClimateZone/ClimateClassification> ;
+.
+<http://sweetontology.net/realmClimateZone/ITCZ>
+  rdfs:subClassOf common:Feature ;
+.
+<http://sweetontology.net/realmClimateZone/TemperateClimate>
+  rdfs:subClassOf <http://sweetontology.net/realmClimateZone/ClimateClassification> ;
+.
+<http://sweetontology.net/realmClimateZone/TropicalClimate>
+  rdfs:subClassOf <http://sweetontology.net/realmClimateZone/ClimateClassification> ;
+.
+<http://sweetontology.net/realmCryo/GlacialRegion>
+  rdfs:subClassOf common:Situation ;
+.
+<http://sweetontology.net/realmCryo/IceCap>
+  rdfs:subClassOf <http://sweetontology.net/realmCryo/GlacialRegion> ;
+.
+<http://sweetontology.net/realmCryo/IceFloe>
+  rdfs:subClassOf common:Physical_Object ;
+.
+<http://sweetontology.net/realmCryo/Snout>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/realmGeol/Basement>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/Continental> ;
+.
+<http://sweetontology.net/realmGeol/Block>
+  rdfs:subClassOf common:Material_Spatial_Feature ;
+.
+<http://sweetontology.net/realmGeol/Continental>
+  rdfs:subClassOf <http://sweetontology.net/realm/Geosphere> ;
+.
+<http://sweetontology.net/realmGeol/Cover>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/Continental> ;
+.
+<http://sweetontology.net/realmGeol/DenudationalFeature>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmGeol/Depression>
+  rdfs:subClassOf <http://sweetontology.net/realmLandform/Landform> ;
+.
+<http://sweetontology.net/realmGeol/Dome>
+  rdfs:subClassOf <http://sweetontology.net/realmLandform/Landform> ;
+.
+<http://sweetontology.net/realmGeol/Duplex>
+  rdfs:subClassOf geologicfeature:Geologic_Structure ;
+.
+<http://sweetontology.net/realmGeol/Embayment>
+  rdfs:subClassOf <http://sweetontology.net/realmLandform/Landform> ;
+.
+<http://sweetontology.net/realmGeol/Escarpment>
+  rdfs:subClassOf <http://sweetontology.net/realmLandform/Landform> ;
+.
+<http://sweetontology.net/realmGeol/Fault>
+  rdfs:subClassOf geologicfeature:Fault ;
+.
+<http://sweetontology.net/realmGeol/FaultSet>
+  rdfs:subClassOf geologicfeature:Geologic_Structure ;
+.
+<http://sweetontology.net/realmGeol/FaultZone>
+  rdfs:subClassOf geologicfeature:Geologic_Structure ;
+.
+<http://sweetontology.net/realmGeol/Fold>
+  rdfs:subClassOf geologicfeature:Fold ;
+.
+<http://sweetontology.net/realmGeol/GeoResourceAccumulation>
+  rdfs:subClassOf geologicfeature:Rock_Body ;
+.
+<http://sweetontology.net/realmGeol/GeologicProvince>
+  rdfs:subClassOf geologicfeature:Rock_Body ;
+.
+<http://sweetontology.net/realmGeol/GeologicStructure>
+  owl:equivalentClass geologicfeature:Geologic_Structure ;
+.
+<http://sweetontology.net/realmGeol/GeologicallySignificantSite>
+  rdfs:subClassOf common:Material_Spatial_Feature ;
+.
+<http://sweetontology.net/realmGeol/GeophysicalFeature>
+  rdfs:subClassOf geologicfeature:Geologic_Unit ;
+.
+<http://sweetontology.net/realmGeol/GeosphereLayer>
+  rdfs:subClassOf geologicfeature:Rock_Body ;
+.
+<http://sweetontology.net/realmGeol/Graben>
+  rdfs:subClassOf geologicfeature:Geologic_Structure ;
+.
+<http://sweetontology.net/realmGeol/HalfGraben>
+  rdfs:subClassOf geologicfeature:Geologic_Structure ;
+.
+<http://sweetontology.net/realmGeol/Horst>
+  rdfs:subClassOf geologicfeature:Geologic_Structure ;
+.
+<http://sweetontology.net/realmGeol/InnerCore>
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <http://sweetontology.net/realmGeol/Core> ;
+      owl:onProperty <http://sweetontology.net/rela/partOf> ;
+    ] ;
+.
+<http://sweetontology.net/realmGeol/LithodemicFeature>
+  rdfs:subClassOf geologicfeature:Geologic_Unit ;
+.
+<http://sweetontology.net/realmGeol/OuterCore>
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <http://sweetontology.net/realmGeol/Core> ;
+      owl:onProperty <http://sweetontology.net/rela/partOf> ;
+    ] ;
+.
+<http://sweetontology.net/realmGeol/PlutonicStructure>
+  rdfs:subClassOf geologicfeature:Geologic_Structure ;
+.
+<http://sweetontology.net/realmGeol/Ridge>
+  rdfs:subClassOf <http://sweetontology.net/realmLandform/Landform> ;
+.
+<http://sweetontology.net/realmGeol/ShearZone>
+  rdfs:subClassOf geologicfeature:Rock_Body ;
+.
+<http://sweetontology.net/realmGeol/SolidEarth>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmGeol/StratigraphicFeature>
+  rdfs:subClassOf geologicfeature:Geologic_Unit ;
+.
+<http://sweetontology.net/realmGeol/StructuralFeature>
+  rdfs:subClassOf geologicfeature:Geologic_Structure ;
+.
+<http://sweetontology.net/realmGeol/Subsurface>
+  rdfs:subClassOf <http://sweetontology.net/realm/Geosphere> ;
+.
+<http://sweetontology.net/realmGeol/TectonicFeature>
+  rdfs:subClassOf common:Material_Spatial_Feature ;
+.
+<http://sweetontology.net/realmGeolContinental/ContinentalMargin>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmGeolOrogen/RearArc>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmGeolOrogen/RetroArc>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmHydro/Dyke>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmHydro/Embankment>
+  rdfs:subClassOf <http://sweetontology.net/realmLandFluvial/FluvialLandform> ;
+.
+<http://sweetontology.net/realmHydro/FloodBank>
+  rdfs:subClassOf <http://sweetontology.net/realmLandFluvial/FluvialLandform> ;
+.
+<http://sweetontology.net/realmHydro/GroundwaterLevel>
+  rdfs:subClassOf <http://sweetontology.net/prop/HydrogeologicalProperty> ;
+.
+<http://sweetontology.net/realmHydro/HydrosphereFeature>
+  rdfs:subClassOf common:Material_Spatial_Feature ;
+.
+<http://sweetontology.net/realmHydro/Levee>
+  rdfs:subClassOf <http://sweetontology.net/realmLandFluvial/FluvialLandform> ;
+.
+<http://sweetontology.net/realmHydro/RaisedBank>
+  rdfs:subClassOf <http://sweetontology.net/realmLandFluvial/FluvialLandform> ;
+.
+<http://sweetontology.net/realmHydro/UnsaturatedZone>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmHydro/WaterTableAquifer>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmHydroBody/CarbonateCompensationLevel>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmHydroBody/Dam>
+  rdfs:subClassOf common:Material_Spatial_Feature ;
+.
+<http://sweetontology.net/realmHydroBody/Fiord>
+  rdfs:subClassOf <http://sweetontology.net/realmLandform/Landform> ;
+.
+<http://sweetontology.net/realmLandAeolian/Desert>
+  rdfs:subClassOf <http://sweetontology.net/realm/Land> ;
+.
+<http://sweetontology.net/realmLandAeolian/Eolian>
+  rdfs:subClassOf <http://sweetontology.net/realm/Land> ;
+.
+<http://sweetontology.net/realmLandAeolian/SandDune>
+  rdfs:subClassOf <http://sweetontology.net/realmLandAeolian/Dune> ;
+.
+<http://sweetontology.net/realmLandCoastal/Coastal>
+  rdfs:subClassOf common:Geologic_Setting ;
+.
+<http://sweetontology.net/realmLandCoastal/DeltaBar>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandCoastal/Intertidal>
+  rdfs:subClassOf <http://sweetontology.net/realmLandCoastal/CoastalRegion> ;
+.
+<http://sweetontology.net/realmLandCoastal/Littoral>
+  rdfs:subClassOf <http://sweetontology.net/realmLandCoastal/CoastalRegion> ;
+.
+<http://sweetontology.net/realmLandCoastal/LittoralZone>
+  rdfs:subClassOf <http://sweetontology.net/realmLandCoastal/CoastalRegion> ;
+.
+<http://sweetontology.net/realmLandCoastal/Riparian>
+  rdfs:subClassOf common:Geologic_Setting ;
+.
+<http://sweetontology.net/realmLandCoastal/RiparianZone>
+  rdfs:subClassOf <http://sweetontology.net/realm/CriticalZone> ;
+.
+<http://sweetontology.net/realmLandCoastal/ShorePlatform>
+  rdfs:subClassOf <http://sweetontology.net/realmLandCoastal/CoastalRegion> ;
+.
+<http://sweetontology.net/realmLandCoastal/Shoreline>
+  rdfs:subClassOf <http://sweetontology.net/realmLandCoastal/CoastalRegion> ;
+.
+<http://sweetontology.net/realmLandCoastal/TidePool>
+  rdfs:subClassOf common:Material_Spatial_Feature ;
+.
+<http://sweetontology.net/realmLandFluvial/DrainageBasin>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandFluvial/DryLake>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandFluvial/SaltFlat>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/Depression> ;
+.
+<http://sweetontology.net/realmLandFluvial/SaltLake>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandGlacial/GlacialMoraine>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandGlacial/Till>
+  rdfs:subClassOf geologicfeature:Clastic_Granular_Material ;
+.
+<http://sweetontology.net/realmLandOrographic/Hummock>
+  skos:definition "A hummock is a small knoll or mound above ground.[1] They are typically less than 15 meters in height and tend to appear in groups or fields. It is difficult to make generalizations about hummocks because of the diversity in their morphology and sedimentology https://en.wikipedia.org/wiki/Hummock"@en ;
+.
+<http://sweetontology.net/realmLandOrographic/Orographic>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/realmLandOrographic/TopographicalRegion>
+  rdfs:subClassOf common:Spatial_Region ;
+.
+<http://sweetontology.net/realmLandProtected/MPA>
+  rdfs:subClassOf <http://sweetontology.net/realmOcean/OceanRegion> ;
+.
+<http://sweetontology.net/realmLandProtected/Parkland>
+  rdfs:subClassOf <http://sweetontology.net/realmLandform/Land> ;
+.
+<http://sweetontology.net/realmLandTectonic/ConvergentMargin>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmLandTectonic/ConvergentPlateBoundary>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmLandTectonic/Diapir>
+  rdfs:subClassOf geologicfeature:Geologic_Unit ;
+.
+<http://sweetontology.net/realmLandTectonic/DivergentPlateBoundary>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmLandTectonic/FaultZone>
+  rdfs:subClassOf geologicfeature:Rock_Body ;
+.
+<http://sweetontology.net/realmLandTectonic/LargeIgneousProvince>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmLandTectonic/Ophiolite>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmLandTectonic/StressRegime>
+  rdfs:subClassOf common:Geologic_Setting ;
+.
+<http://sweetontology.net/realmLandTectonic/TransformFault>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/Fault> ;
+.
+<http://sweetontology.net/realmLandTectonic/TransformMargin>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmLandTectonic/TransformPlateBoundary>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmLandVolcanic/Caldera>
+  rdfs:subClassOf common:Physical_Object ;
+.
+<http://sweetontology.net/realmLandVolcanic/CompositeVolcano>
+  rdfs:subClassOf :Volcanic_Feature ;
+.
+<http://sweetontology.net/realmLandVolcanic/LavaPlain>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandVolcanic/SubmarineVolcano>
+  rdfs:subClassOf :Volcanic_Feature ;
+.
+<http://sweetontology.net/realmLandVolcanic/Tumulus>
+  rdfs:subClassOf <http://sweetontology.net/realmLandOrographic/Hill> ;
+  skos:definition "A tumulus (plural tumuli) is a mound of earth and stones raised over a grave or graves. Tumuli are also known as barrows, burial mounds or kurgans, and may be found throughout much of the world.  https://en.wikipedia.org/wiki/Tumulus"@en ;
+.
+<http://sweetontology.net/realmLandVolcanic/VolcanicArc>
+  rdfs:subClassOf :Volcanic_Feature ;
+.
+<http://sweetontology.net/realmLandVolcanic/VolcanicChain>
+  rdfs:subClassOf common:Spatial_Region ;
+.
+<http://sweetontology.net/realmLandVolcanic/VolcanicField>
+  rdfs:subClassOf common:Spatial_Region ;
+.
+<http://sweetontology.net/realmLandVolcanic/VolcanicSystem>
+  rdfs:subClassOf common:Physical_Object ;
+.
+<http://sweetontology.net/realmLandform/ImpactBasin>
+  rdfs:subClassOf :BolidImpactLandform ;
+.
+<http://sweetontology.net/realmLandform/LandCover>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/realmLandform/LandRegion>
+  rdfs:subClassOf common:Spatial_Region ;
+.
+<http://sweetontology.net/realmLandform/LandSurface>
+  rdfs:subClassOf <http://sweetontology.net/realm/PlanetarySurface> ;
+.
+<http://sweetontology.net/realmLandform/Landform>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandform/ShatterCone>
+  rdfs:subClassOf :BolidImpactLandform ;
+.
+<http://sweetontology.net/realmLandform/SurfaceRegion>
+  rdfs:subClassOf common:Spatial_Region ;
+.
+<http://sweetontology.net/realmOcean/Abyssal>
+  rdfs:subClassOf <http://sweetontology.net/realm/Ocean> ;
+.
+<http://sweetontology.net/realmOcean/EuphoticZone>
+  rdfs:subClassOf common:Situation ;
+.
+<http://sweetontology.net/realmOcean/OpenOcean>
+  rdfs:subClassOf <http://sweetontology.net/realm/Ocean> ;
+.
+<http://sweetontology.net/realmOcean/PelagicZone>
+  rdfs:subClassOf <http://sweetontology.net/realm/Ocean> ;
+.
+<http://sweetontology.net/realmOceanFloor/AbyssalTrench>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmOceanFloor/OceanFloor>
+  rdfs:subClassOf common:Material_Spatial_Feature ;
+.
+<http://sweetontology.net/realmOceanFloor/SeaFloor>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmOceanFloor/Seabed>
+  rdfs:subClassOf common:Material_Spatial_Feature ;
+.
+<http://sweetontology.net/realmSoil/Substratum>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/repr/Component>
+  rdfs:subClassOf <http://sweetontology.net/repr/Representation> ;
+.
+<http://sweetontology.net/repr/MeasurementScale>
+  rdfs:subClassOf <http://sweetontology.net/repr/ReferenceFrame> ;
+.
+<http://sweetontology.net/repr/Representation>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/reprMath/Array>
+  rdfs:subClassOf <http://sweetontology.net/repr/Representation> ;
+.
+<http://sweetontology.net/reprMath/NumericalEntity>
+  rdfs:subClassOf <http://sweetontology.net/repr/Representation> ;
+.
+<http://sweetontology.net/reprMath/Scalar>
+  rdfs:subClassOf <http://sweetontology.net/reprMath/NumericalEntity> ;
+.
+<http://sweetontology.net/reprMath/Variable>
+  rdfs:subClassOf <http://sweetontology.net/repr/Representation> ;
+.
+<http://sweetontology.net/reprMathGraph/Cycle>
+  rdfs:subClassOf <http://sweetontology.net/reprSciProvenance/Genesis> ;
+.
+<http://sweetontology.net/reprSciComponent/Storage>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/reprSciProvenance/Genesis>
+  rdfs:subClassOf common:Process ;
+  skos:prefLabel "Genesis"@en ;
+  skos:scopeNote "Genesis is an ordered sequence of processes that explains the origin of a type of Endurant, or the constituents of a Perdurant (SMR 2020)"@en ;
+.
+<http://sweetontology.net/reprSciProvenance/History>
+  rdfs:subClassOf common:Event ;
+  skos:prefLabel "History"@en ;
+  skos:scopeNote "History is  a sequence of events with associated ages, or a Genesis process with an assigned age (SMR, this vocab 2020)"@en ;
+.
+<http://sweetontology.net/reprSpace/Space>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/reprSpaceGeometry/Arc>
+  rdfs:subClassOf :Volcanic_Feature ;
+.
+<http://sweetontology.net/reprSpaceGeometry/Cluster>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/reprSpaceGeometry/Depression>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/reprSpaceGeometry/Region>
+  rdfs:subClassOf common:Spatial_Region ;
+.
+<http://sweetontology.net/reprSpaceGeometry/Ridge>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/reprSpaceGeometry/Surface>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/reprSpaceGeometry/Trough>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/reprSpaceGeometry3D/Cavity>
+  rdfs:subClassOf common:Physical_Void ;
+.
+<http://sweetontology.net/reprSpaceGeometry3D/Layer>
+  rdfs:subClassOf common:Physical_Endurant ;
+.
+<http://sweetontology.net/reprSpaceGeometry3D/Tube>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/reprTimeSeason/Season>
+  rdfs:subClassOf common:Time_Interval ;
+.
+<http://sweetontology.net/reprTimeSeason/WetSeason>
+  rdfs:subClassOf <http://sweetontology.net/reprTimeSeason/Season> ;
+.
+<http://sweetontology.net/state/State>
+  rdfs:subClassOf common:Property ;
+.
+<http://sweetontology.net/statePhysical/SubstanceForm>
+  rdfs:subClassOf common:State_Of_Matter ;
+  owl:equivalentClass common:State_Of_Matter ;
+.
+<http://sweetontology.net/stateRoleGeographic/Boundary>
+  rdfs:subClassOf common:Physical_Boundary ;
+.
+<http://sweetontology.net/stateRoleGeographic/Margin>
+  rdfs:subClassOf :Thing_1 ;
+.
+<http://sweetontology.net/stateTime/GeologicTimeUnit>
+  rdfs:subClassOf common:Time_Interval ;
+  owl:equivalentClass geologicfeature:Geologic_Date_Interval ;
+.
+<http://sweetontology.net/stateTime/NeotectonicPeriod>
+  rdfs:subClassOf common:Time_Interval ;
+.
+<http://sweetontology.net/sweetGeo>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:comment "This is a view of SWEET focused on Geology, by smr"@en ;
+  rdfs:label "SWEET Ontology" ;
+  owl:imports common:ontology ;
+  owl:imports geologicfeature:ontology ;
+  owl:imports <http://sweetontology.net/matr> ;
+  owl:imports <http://sweetontology.net/matrElement> ;
+  owl:imports <http://sweetontology.net/matrMineral> ;
+  owl:imports <http://sweetontology.net/matrNaturalResource> ;
+  owl:imports <http://sweetontology.net/matrParticle> ;
+  owl:imports <http://sweetontology.net/matrRock> ;
+  owl:imports <http://sweetontology.net/matrRockIgneous> ;
+  owl:imports <http://sweetontology.net/matrSediment> ;
+  owl:imports <http://sweetontology.net/matrWater> ;
+  owl:imports <http://sweetontology.net/phen> ;
+  owl:imports <http://sweetontology.net/phenCryo> ;
+  owl:imports <http://sweetontology.net/phenCycleMaterial> ;
+  owl:imports <http://sweetontology.net/phenEcology> ;
+  owl:imports <http://sweetontology.net/phenGeol> ;
+  owl:imports <http://sweetontology.net/phenGeolFault> ;
+  owl:imports <http://sweetontology.net/phenGeolGeomorphology> ;
+  owl:imports <http://sweetontology.net/phenGeolSeismicity> ;
+  owl:imports <http://sweetontology.net/phenGeolTectonic> ;
+  owl:imports <http://sweetontology.net/phenGeolVolcano> ;
+  owl:imports <http://sweetontology.net/phenHydro> ;
+  owl:imports <http://sweetontology.net/phenOceanCoastal> ;
+  owl:imports <http://sweetontology.net/phenPlanetClimate> ;
+  owl:imports <http://sweetontology.net/prop> ;
+  owl:imports <http://sweetontology.net/realm> ;
+  owl:imports <http://sweetontology.net/realmClimateZone> ;
+  owl:imports <http://sweetontology.net/realmCryo> ;
+  owl:imports <http://sweetontology.net/realmEarthReference> ;
+  owl:imports <http://sweetontology.net/realmGeol> ;
+  owl:imports <http://sweetontology.net/realmGeolBasin> ;
+  owl:imports <http://sweetontology.net/realmGeolConstituent> ;
+  owl:imports <http://sweetontology.net/realmGeolContinental> ;
+  owl:imports <http://sweetontology.net/realmGeolOrogen> ;
+  owl:imports <http://sweetontology.net/realmHydro> ;
+  owl:imports <http://sweetontology.net/realmHydroBody> ;
+  owl:imports <http://sweetontology.net/realmLandAeolian> ;
+  owl:imports <http://sweetontology.net/realmLandCoastal> ;
+  owl:imports <http://sweetontology.net/realmLandFluvial> ;
+  owl:imports <http://sweetontology.net/realmLandGlacial> ;
+  owl:imports <http://sweetontology.net/realmLandOrographic> ;
+  owl:imports <http://sweetontology.net/realmLandProtected> ;
+  owl:imports <http://sweetontology.net/realmLandTectonic> ;
+  owl:imports <http://sweetontology.net/realmLandVolcanic> ;
+  owl:imports <http://sweetontology.net/realmLandform> ;
+  owl:imports <http://sweetontology.net/realmOcean> ;
+  owl:imports <http://sweetontology.net/realmOceanFloor> ;
+  owl:imports <http://sweetontology.net/realmRegion> ;
+  owl:imports <http://sweetontology.net/realmSoil> ;
+  owl:imports <http://sweetontology.net/rela> ;
+  owl:imports <http://sweetontology.net/relaClimate> ;
+  owl:imports <http://sweetontology.net/repr> ;
+  owl:imports <http://sweetontology.net/state> ;
+  owl:imports <http://sweetontology.net/stateSolid> ;
+  owl:imports <http://sweetontology.net/stateTime> ;
+  owl:imports <http://sweetontology.net/stateTimeGeologic> ;
+  owl:versionInfo "3.5.0" ;
+.
+:BolidImpactLandform
+  a owl:Class ;
+  rdfs:comment "Features that are the product of bolide impact events" ;
+  rdfs:label "Bolide Impact landform "@en ;
+  rdfs:subClassOf <http://sweetontology.net/realmLandform/Landform> ;
+  skos:prefLabel "Bolide Impact landform "@en ;
+.
+:GeomorphicFeature
+  a owl:Class ;
+  rdfs:comment "A feature describing the shape and nature of the Earth's land surface (ie, a landform).  These landforms may be created by natural Earth processes (eg, river channel, beach, moraine, mountain) or through human (anthropogenic) activity (eg, dredged channel, reclaimed land, mine waste dumps). GeoSciML v3.2" ;
+  rdfs:label "Geomorphic Feature "@en ;
+  rdfs:subClassOf common:Morphologic_Feature ;
+  skos:prefLabel "Geomorphic Feature  "@en ;
+.
+:Thing_1
+  a owl:Class ;
+  rdfs:comment "A feature describing the shape and nature of the Earth's land surface (ie, a landform).  These landforms may be created by natural Earth processes (eg, river channel, beach, moraine, mountain) or through human (anthropogenic) activity (eg, dredged channel, reclaimed land, mine waste dumps). GeoSciML v3.2" ;
+  rdfs:label "Geomorphic Feature "@en ;
+  rdfs:subClassOf owl:Thing ;
+  skos:prefLabel "Geomorphic Feature  "@en ;
+.
+:Volcanic_Feature
+  a owl:Class ;
+  rdfs:comment "Features that are the product of volcanic activiy" ;
+  rdfs:label "Volcanic Feature "@en ;
+  rdfs:subClassOf common:Feature ;
+  skos:prefLabel "Volcanic Feature  "@en ;
+.
+<http://www.opengis.net/ont/geosparql#Feature>
+  rdfs:subClassOf :Thing_1 ;
+.
+<https://schema.org/Organization>
+  rdfs:subClassOf :Thing_1 ;
+.
+<https://schema.org/Person>
+  rdfs:subClassOf :Thing_1 ;
+.

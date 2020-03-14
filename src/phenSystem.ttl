@@ -11,8 +11,7 @@
 @base <http://sweetontology.net/phenSystem> .
 
 <http://sweetontology.net/phenSystem> rdf:type owl:Ontology ;
-                                       owl:imports <http://sweetontology.net/phen> ,
-                                                   <http://sweetontology.net/reprSciModel> ;
+                                       
                                        rdfs:label "SWEET Ontology Phenomena System" ;
                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                        owl:versionInfo "3.5.0" .

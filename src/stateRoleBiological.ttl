@@ -13,10 +13,7 @@
 @base <http://sweetontology.net/stateRoleBiological> .
 
 <http://sweetontology.net/stateRoleBiological> rdf:type owl:Ontology ;
-                                                owl:imports <http://sweetontology.net/matrBiomass> ,
-                                                            <http://sweetontology.net/prop> ,
-                                                            <http://sweetontology.net/relaSci> ,
-                                                            <http://sweetontology.net/stateRole> ;
+                                                
                                                 rdfs:label "SWEET Ontology State Role Biological" ;
                                                 dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                 owl:versionInfo "3.5.0" .

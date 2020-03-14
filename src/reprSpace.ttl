@@ -12,9 +12,7 @@
 @base <http://sweetontology.net/reprSpace> .
 
 <http://sweetontology.net/reprSpace> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/relaSci> ,
-                                                  <http://sweetontology.net/repr> ,
-                                                  <http://sweetontology.net/reprSciUnits> ;
+                                      
                                       rdfs:label "SWEET Ontology Representation Space" ;
                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                       owl:versionInfo "3.5.0" .

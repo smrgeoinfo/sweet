@@ -23,20 +23,7 @@
 @base <http://sweetontology.net/propTemperature> .
 
 <http://sweetontology.net/propTemperature> rdf:type owl:Ontology ;
-                                            owl:imports <http://sweetontology.net/matrParticle> ,
-                                                        <http://sweetontology.net/phenAtmoWind> ,
-                                                        <http://sweetontology.net/propEnergy> ,
-                                                        <http://sweetontology.net/propFunction> ,
-                                                        <http://sweetontology.net/propQuantity> ,
-                                                        <http://sweetontology.net/rela> ,
-                                                        <http://sweetontology.net/relaChemical> ,
-                                                        <http://sweetontology.net/relaMath> ,
-                                                        <http://sweetontology.net/relaSci> ,
-                                                        <http://sweetontology.net/reprMathOperation> ,
-                                                        <http://sweetontology.net/reprSciUnits> ,
-                                                        <http://sweetontology.net/reprTimeSeason> ,
-                                                        <http://sweetontology.net/statePhysical> ,
-                                                        <http://sweetontology.net/stateThermodynamic> ;
+                                            
                                             rdfs:label "SWEET Ontology Property Temperature" ;
                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                             owl:versionInfo "3.5.0" .

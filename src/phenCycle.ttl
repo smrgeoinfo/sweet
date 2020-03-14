@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/phenCycle> .
 
 <http://sweetontology.net/phenCycle> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/phenStar> ,
-                                                  <http://sweetontology.net/phenSystem> ,
-                                                  <http://sweetontology.net/realm> ,
-                                                  <http://sweetontology.net/rela> ,
-                                                  <http://sweetontology.net/relaPhysical> ,
-                                                  <http://sweetontology.net/relaSpace> ,
-                                                  <http://sweetontology.net/relaTime> ,
-                                                  <http://sweetontology.net/stateSpaceScale> ,
-                                                  <http://sweetontology.net/stateTimeFrequency> ;
+                                      
                                       rdfs:label "SWEET Ontology Phenomena Cycle" ;
                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                       owl:versionInfo "3.5.0" .

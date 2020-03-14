@@ -13,10 +13,7 @@
 @base <http://sweetontology.net/humanEnvirStandards> .
 
 <http://sweetontology.net/humanEnvirStandards> rdf:type owl:Ontology ;
-                                                owl:imports <http://sweetontology.net/humanEnvirControl> ,
-                                                            <http://sweetontology.net/humanJurisdiction> ,
-                                                            <http://sweetontology.net/propMass> ,
-                                                            <http://sweetontology.net/realmLandform> ;
+                                                
                                                 rdfs:label "SWEET Ontology Human Environmental Standards" ;
                                                 dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                 owl:versionInfo "3.5.0" .

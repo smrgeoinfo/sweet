@@ -12,9 +12,7 @@
 @base <http://sweetontology.net/matrIndustrial> .
 
 <http://sweetontology.net/matrIndustrial> rdf:type owl:Ontology ;
-                                           owl:imports <http://sweetontology.net/human> ,
-                                                       <http://sweetontology.net/matr> ,
-                                                       <http://sweetontology.net/matrEquipment> ;
+                                           
                                            rdfs:label "SWEET Ontology Material Industrial" ;
                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                            owl:versionInfo "3.5.0" .

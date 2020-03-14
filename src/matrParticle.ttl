@@ -1,152 +1,118 @@
+# baseURI: http://sweetontology.net/matrParticle
+
 @prefix : <http://sweetontology.net/matrParticle/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://sweetontology.net/matr/> .
+@prefix somapa: <http://sweetontology.net/matrParticle/> .
+@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
+@prefix sostp: <http://sweetontology.net/statePhysical/> .
+@prefix sostss: <http://sweetontology.net/stateSpaceScale/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix soma: <http://sweetontology.net/matr/> .
-@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
-@prefix somapa: <http://sweetontology.net/matrParticle/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sostss: <http://sweetontology.net/stateSpaceScale/> .
-@prefix sostp: <http://sweetontology.net/statePhysical/> .
-@base <http://sweetontology.net/matrParticle> .
 
-<http://sweetontology.net/matrParticle> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/matr> ,
-                                                     <http://sweetontology.net/relaSpace> ,
-                                                     <http://sweetontology.net/statePhysical> ,
-                                                     <http://sweetontology.net/stateSpaceScale> ;
-                                         rdfs:label "SWEET Ontology Material Particle" ;
-                                         dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                         owl:versionInfo "3.5.0" .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://sweetontology.net/relaSpace/hasSpatialScale
-sorelsp:hasSpatialScale rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://sweetontology.net/matrParticle/AnomalousEnergeticParticle
-somapa:AnomalousEnergeticParticle rdf:type owl:Class ;
-                                rdfs:subClassOf somapa:CosmicRay ;
-                                rdfs:label "anomalous energetic particle"@en .
-
-
-###  http://sweetontology.net/matrParticle/Atom
-somapa:Atom rdf:type owl:Class ;
-          rdfs:subClassOf sostp:SubstanceForm ;
-          rdfs:label "atom"@en .
-
-
-###  http://sweetontology.net/matrParticle/CosmicRay
-somapa:CosmicRay rdf:type owl:Class ;
-               rdfs:subClassOf somapa:EnergeticParticle ;
-               rdfs:label "cosmic ray"@en .
-
-
-###  http://sweetontology.net/matrParticle/Electron
-somapa:Electron rdf:type owl:Class ;
-              rdfs:subClassOf somapa:SubatomicParticle ;
-              rdfs:label "electron"@en .
-
-
-###  http://sweetontology.net/matrParticle/EnergeticParticle
-somapa:EnergeticParticle rdf:type owl:Class ;
-                       rdfs:subClassOf somapa:SubatomicParticle ;
-                       rdfs:label "energetic particle"@en .
-
-
-###  http://sweetontology.net/matrParticle/GammaRay
-somapa:GammaRay rdf:type owl:Class ;
-              rdfs:subClassOf somapa:Photon ;
-              rdfs:label "gamma ray"@en .
-
-
-###  http://sweetontology.net/matrParticle/HeavyNuclei
-somapa:HeavyNuclei rdf:type owl:Class ;
-                 rdfs:subClassOf somapa:SubatomicParticle ;
-                 rdfs:label "heavy nuclei"@en .
-
-
-###  http://sweetontology.net/matrParticle/Molecule
-somapa:Molecule rdf:type owl:Class ;
-              rdfs:subClassOf sostp:SubstanceForm ;
-              rdfs:label "molecule"@en .
-
-
-###  http://sweetontology.net/matrParticle/Neutrino
-somapa:Neutrino rdf:type owl:Class ;
-              rdfs:subClassOf somapa:SubatomicParticle ;
-              rdfs:label "neutrino"@en .
-
-
-###  http://sweetontology.net/matrParticle/Neutron
-somapa:Neutron rdf:type owl:Class ;
-             rdfs:subClassOf somapa:SubatomicParticle ;
-             rdfs:label "neutron"@en .
-
-
-###  http://sweetontology.net/matrParticle/Nucleon
-somapa:Nucleon rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Class ;
-                                   owl:unionOf ( somapa:Neutron
-                                                 somapa:Proton
-                                               )
-                                 ] ;
-             rdfs:label "nucleon"@en .
-
-
-###  http://sweetontology.net/matrParticle/Particle
-somapa:Particle rdf:type owl:Class ;
-              rdfs:subClassOf soma:Substance ;
-              rdfs:label "particle"@en .
-
-
-###  http://sweetontology.net/matrParticle/Photon
-somapa:Photon rdf:type owl:Class ;
-            rdfs:subClassOf somapa:SubatomicParticle ;
-            rdfs:label "photon"@en .
-
-
-###  http://sweetontology.net/matrParticle/Proton
-somapa:Proton rdf:type owl:Class ;
-            rdfs:subClassOf somapa:SubatomicParticle ;
-            rdfs:label "proton"@en .
-
-
-###  http://sweetontology.net/matrParticle/SolarEnergeticParticle
-somapa:SolarEnergeticParticle rdf:type owl:Class ;
-                            rdfs:subClassOf somapa:CosmicRay ;
-                            rdfs:label "solar energetic particle"@en .
-
-
-###  http://sweetontology.net/matrParticle/SubatomicParticle
-somapa:SubatomicParticle rdf:type owl:Class ;
-                       rdfs:subClassOf soma:Substance ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty sorelsp:hasSpatialScale ;
-                                         owl:hasValue sostss:SubatomicScale
-                                       ] ;
-                       rdfs:label "subatomic particle"@en .
-
-
-###  http://sweetontology.net/statePhysical/SubstanceForm
-sostp:SubstanceForm rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://sweetontology.net/stateSpaceScale/SubatomicScale
-sostss:SubatomicScale rdf:type owl:NamedIndividual .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+<http://sweetontology.net/matrParticle>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:label "SWEET Ontology Material Particle" ;
+  owl:versionInfo "3.5.0" ;
+.
+somapa:AnomalousEnergeticParticle
+  a owl:Class ;
+  rdfs:label "anomalous energetic particle"@en ;
+  rdfs:subClassOf somapa:CosmicRay ;
+.
+somapa:Atom
+  a owl:Class ;
+  rdfs:label "atom"@en ;
+.
+somapa:CosmicRay
+  a owl:Class ;
+  rdfs:label "cosmic ray"@en ;
+  rdfs:subClassOf somapa:EnergeticParticle ;
+.
+somapa:Electron
+  a owl:Class ;
+  rdfs:label "electron"@en ;
+  rdfs:subClassOf somapa:SubatomicParticle ;
+.
+somapa:EnergeticParticle
+  a owl:Class ;
+  rdfs:label "energetic particle"@en ;
+  rdfs:subClassOf somapa:SubatomicParticle ;
+.
+somapa:GammaRay
+  a owl:Class ;
+  rdfs:label "gamma ray"@en ;
+  rdfs:subClassOf somapa:Photon ;
+.
+somapa:HeavyNuclei
+  a owl:Class ;
+  rdfs:label "heavy nuclei"@en ;
+  rdfs:subClassOf somapa:SubatomicParticle ;
+.
+somapa:Molecule
+  a owl:Class ;
+  rdfs:label "molecule"@en ;
+.
+somapa:Neutrino
+  a owl:Class ;
+  rdfs:label "neutrino"@en ;
+  rdfs:subClassOf somapa:SubatomicParticle ;
+.
+somapa:Neutron
+  a owl:Class ;
+  rdfs:label "neutron"@en ;
+  rdfs:subClassOf somapa:SubatomicParticle ;
+.
+somapa:Nucleon
+  a owl:Class ;
+  rdfs:label "nucleon"@en ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:unionOf (
+          somapa:Neutron
+          somapa:Proton
+        ) ;
+    ] ;
+.
+somapa:Particle
+  a owl:Class ;
+  rdfs:label "particle"@en ;
+.
+somapa:Photon
+  a owl:Class ;
+  rdfs:label "photon"@en ;
+  rdfs:subClassOf somapa:SubatomicParticle ;
+.
+somapa:Proton
+  a owl:Class ;
+  rdfs:label "proton"@en ;
+  rdfs:subClassOf somapa:SubatomicParticle ;
+.
+somapa:SolarEnergeticParticle
+  a owl:Class ;
+  rdfs:label "solar energetic particle"@en ;
+  rdfs:subClassOf somapa:CosmicRay ;
+.
+somapa:SubatomicParticle
+  a owl:Class ;
+  rdfs:label "subatomic particle"@en ;
+  rdfs:subClassOf somapa:Particle ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostss:SubatomicScale ;
+      owl:onProperty sorelsp:hasSpatialScale ;
+    ] ;
+.
+sorelsp:hasSpatialScale
+  a owl:ObjectProperty ;
+.
+sostp:SubstanceForm
+  a owl:Class ;
+.
+sostss:SubatomicScale
+  a owl:NamedIndividual ;
+.

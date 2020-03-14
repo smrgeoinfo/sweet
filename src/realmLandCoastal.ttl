@@ -1,349 +1,288 @@
+# baseURI: http://sweetontology.net/realmLandCoastal
+
 @prefix : <http://sweetontology.net/realmLandCoastal/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sophoc: <http://sweetontology.net/phenOceanCoastal/> .
+@prefix sorea: <http://sweetontology.net/realm/> .
 @prefix soreahb: <http://sweetontology.net/realmHydroBody/> .
 @prefix soreal: <http://sweetontology.net/realmLandform/> .
-@prefix sophoc: <http://sweetontology.net/phenOceanCoastal/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sorel: <http://sweetontology.net/rela/> .
-@prefix sostrg: <http://sweetontology.net/stateRoleGeographic/> .
 @prefix sorealc: <http://sweetontology.net/realmLandCoastal/> .
 @prefix soreao: <http://sweetontology.net/realmOcean/> .
+@prefix sorel: <http://sweetontology.net/rela/> .
 @prefix sorelsp: <http://sweetontology.net/relaSpace/> .
-@prefix sorea: <http://sweetontology.net/realm/> .
-@base <http://sweetontology.net/realmLandCoastal> .
-
-<http://sweetontology.net/realmLandCoastal> rdf:type owl:Ontology ;
-                                             owl:imports <http://sweetontology.net/phenOceanCoastal> ,
-                                                         <http://sweetontology.net/realm> ,
-                                                         <http://sweetontology.net/realmHydroBody> ,
-                                                         <http://sweetontology.net/realmLandform> ,
-                                                         <http://sweetontology.net/realmOcean> ,
-                                                         <http://sweetontology.net/rela> ,
-                                                         <http://sweetontology.net/relaSpace> ,
-                                                         <http://sweetontology.net/stateRoleGeographic> ;
-                                             rdfs:label "SWEET Ontology Realm Land Coastal" ;
-                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                             owl:versionInfo "3.5.0" .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://sweetontology.net/rela/hasPhenomena
-sorel:hasPhenomena rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/rela/hasRealm
-sorel:hasRealm rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/hasCommon2DBorderWith
-sorelsp:hasCommon2DBorderWith rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/isAdjacentTo
-sorelsp:isAdjacentTo rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/surroundedBy
-sorelsp:surroundedBy rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://sweetontology.net/Arch
-<http://sweetontology.net/Arch> rdf:type owl:Class ;
-                                rdfs:subClassOf sorealc:CoastalLandform .
-
-
-###  http://sweetontology.net/realmLandCoastal/Atoll
-sorealc:Atoll rdf:type owl:Class ;
-            rdfs:subClassOf sorealc:Island ;
-            rdfs:label "atoll"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Bar
-sorealc:Bar rdf:type owl:Class ;
-          owl:equivalentClass sorealc:DeltaBar ;
-          rdfs:subClassOf sorealc:Delta ,
-                          sorealc:Spit ;
-          rdfs:label "bar"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/BarrierIsland
-sorealc:BarrierIsland rdf:type owl:Class ;
-                    rdfs:subClassOf sorealc:Island ;
-                    rdfs:label "barrier island"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Beach
-sorealc:Beach rdf:type owl:Class ;
-            rdfs:subClassOf soreal:Landform ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty sorelsp:isAdjacentTo ;
-                              owl:allValuesFrom soreahb:BodyOfWater
-                            ] ;
-            rdfs:label "beach"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Coastal
-sorealc:Coastal rdf:type owl:Class ;
-              owl:equivalentClass sorealc:CoastalRegion ;
-              rdfs:label "coastal"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/CoastalLandform
-sorealc:CoastalLandform rdf:type owl:Class ;
-                      rdfs:subClassOf soreal:Landform ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty sorel:hasRealm ;
-                                        owl:someValuesFrom sorealc:CoastalRegion
-                                      ] ;
-                      rdfs:label "coastal landform"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/CoastalMargin
-sorealc:CoastalMargin rdf:type owl:Class ;
-                    rdfs:subClassOf sorealc:CoastalRegion ,
-                                    sostrg:Margin ;
-                    rdfs:label "coastal margin"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/CoastalPlain
-sorealc:CoastalPlain rdf:type owl:Class ;
-                   rdfs:subClassOf sorealc:CoastalRegion ,
-                                   soreal:Plain ;
-                   rdfs:label "coastal plain"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/CoastalRegion
-sorealc:CoastalRegion rdf:type owl:Class ;
-                    rdfs:subClassOf sorea:PlanetaryRealm ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty sorelsp:hasCommon2DBorderWith ;
-                                      owl:someValuesFrom sorea:Land
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty sorelsp:hasCommon2DBorderWith ;
-                                      owl:someValuesFrom soreao:OceanRegion
-                                    ] ;
-                    rdfs:label "coastal region"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Cove
-sorealc:Cove rdf:type owl:Class ;
-           rdfs:subClassOf sorealc:CoastalRegion ;
-           rdfs:label "cove"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Delta
-sorealc:Delta rdf:type owl:Class ;
-            rdfs:subClassOf sorealc:CoastalLandform ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty sorel:hasRealm ;
-                              owl:someValuesFrom soreahb:River
-                            ] ;
-            rdfs:label "delta"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/DeltaBar
-sorealc:DeltaBar rdf:type owl:Class ;
-               rdfs:label "delta bar"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Harbor
-sorealc:Harbor rdf:type owl:Class ;
-             rdfs:subClassOf sorealc:CoastalRegion ;
-             rdfs:label "harbor"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Hinterland
-sorealc:Hinterland rdf:type owl:Class ;
-                 rdfs:subClassOf soreal:LandRegion ;
-                 rdfs:label "hinterland"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Intertidal
-sorealc:Intertidal rdf:type owl:Class ;
-                 owl:equivalentClass sorealc:IntertidalZone ;
-                 rdfs:label "intertidal"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/IntertidalZone
-sorealc:IntertidalZone rdf:type owl:Class ;
-                     owl:equivalentClass sorealc:Littoral ,
-                                         sorealc:LittoralZone ,
-                                         sorealc:TidePool ;
-                     rdfs:subClassOf sorealc:CoastalRegion ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty sorel:hasPhenomena ;
-                                       owl:allValuesFrom sophoc:OceanTide
-                                     ] ;
-                     rdfs:label "intertidal zone"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Island
-sorealc:Island rdf:type owl:Class ;
-             rdfs:subClassOf soreal:Landform ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty sorelsp:surroundedBy ;
-                               owl:allValuesFrom soreahb:BodyOfWater
-                             ] ;
-             rdfs:label "island"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/IslandArc
-sorealc:IslandArc rdf:type owl:Class ;
-                rdfs:subClassOf sorealc:CoastalLandform ;
-                rdfs:label "island arc"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Isthmus
-sorealc:Isthmus rdf:type owl:Class ;
-              rdfs:subClassOf sorealc:CoastalRegion ;
-              rdfs:label "isthmus"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Key
-sorealc:Key rdf:type owl:Class ;
-          rdfs:subClassOf sorealc:Island ;
-          rdfs:label "key"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Littoral
-sorealc:Littoral rdf:type owl:Class ;
-               rdfs:label "littoral"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/LittoralZone
-sorealc:LittoralZone rdf:type owl:Class ;
-                   rdfs:label "littoral zone"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/MudFlat
-sorealc:MudFlat rdf:type owl:Class ;
-              rdfs:subClassOf sorealc:CoastalLandform ;
-              rdfs:label "mud flat"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Riparian
-sorealc:Riparian rdf:type owl:Class ;
-               owl:equivalentClass sorealc:RiparianZone ;
-               rdfs:subClassOf sorealc:CoastalRegion ;
-               rdfs:label "riparian"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/RiparianZone
-sorealc:RiparianZone rdf:type owl:Class ;
-                   rdfs:label "riparian zone"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Shoal
-sorealc:Shoal rdf:type owl:Class ;
-            rdfs:subClassOf sorealc:CoastalLandform ;
-            rdfs:label "shoal"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Shore
-sorealc:Shore rdf:type owl:Class ;
-            owl:equivalentClass sorealc:Shoreline ;
-            rdfs:subClassOf sorealc:CoastalRegion ,
-                            soreal:Land ;
-            rdfs:label "shore"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/ShorePlatform
-sorealc:ShorePlatform rdf:type owl:Class ;
-                    owl:equivalentClass sorealc:WaveCutPlatform ;
-                    rdfs:label "shore platform"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Shoreline
-sorealc:Shoreline rdf:type owl:Class ;
-                rdfs:label "shoreline"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Spit
-sorealc:Spit rdf:type owl:Class ;
-           rdfs:subClassOf sorealc:CoastalRegion ;
-           rdfs:label "spit"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Supratidal
-sorealc:Supratidal rdf:type owl:Class ;
-                 rdfs:subClassOf sorealc:CoastalRegion ;
-                 rdfs:label "supratidal"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Terracette
-sorealc:Terracette rdf:type owl:Class ;
-                 rdfs:subClassOf sorealc:CoastalRegion ;
-                 rdfs:label "terracette"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Tidal
-sorealc:Tidal rdf:type owl:Class ;
-            rdfs:subClassOf sorealc:CoastalRegion ;
-            rdfs:label "tidal"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/TidePool
-sorealc:TidePool rdf:type owl:Class ;
-               rdfs:label "tide pool"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Tombolo
-sorealc:Tombolo rdf:type owl:Class ;
-              rdfs:subClassOf sorealc:Bar ;
-              rdfs:label "tombolo"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/Updrift
-sorealc:Updrift rdf:type owl:Class ;
-              rdfs:subClassOf sorealc:CoastalRegion ;
-              rdfs:label "updrift"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/WaveAttackZone
-sorealc:WaveAttackZone rdf:type owl:Class ;
-                     rdfs:subClassOf sorealc:CoastalRegion ;
-                     rdfs:label "wave attack zone"@en .
-
-
-###  http://sweetontology.net/realmLandCoastal/WaveCutPlatform
-sorealc:WaveCutPlatform rdf:type owl:Class ;
-                      rdfs:subClassOf sorealc:CoastalRegion ;
-                      rdfs:label "wave cut platform"@en .
-
-
-###  http://sweetontology.net/realmLandform/Land
-soreal:Land rdf:type owl:Class .
-
-
-###  http://sweetontology.net/realmLandform/LandRegion
-soreal:LandRegion rdf:type owl:Class .
-
-
-###  http://sweetontology.net/realmLandform/Landform
-soreal:Landform rdf:type owl:Class .
-
-
-###  http://sweetontology.net/realmLandform/Plain
-soreal:Plain rdf:type owl:Class .
-
-
-###  http://sweetontology.net/realmOcean/OceanRegion
-soreao:OceanRegion rdf:type owl:Class .
-
-
-###  http://sweetontology.net/stateRoleGeographic/Margin
-sostrg:Margin rdf:type owl:Class .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+@prefix sostrg: <http://sweetontology.net/stateRoleGeographic/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sweetontology.net/Arch>
+  a owl:Class ;
+.
+<http://sweetontology.net/realmLandCoastal>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:label "SWEET Ontology Realm Land Coastal" ;
+  owl:versionInfo "3.5.0" ;
+.
+sorealc:Atoll
+  a owl:Class ;
+  rdfs:label "atoll"@en ;
+  rdfs:subClassOf sorealc:Island ;
+.
+sorealc:Bar
+  a owl:Class ;
+  rdfs:label "bar"@en ;
+  rdfs:subClassOf sorealc:Delta ;
+  rdfs:subClassOf sorealc:Spit ;
+  owl:equivalentClass sorealc:DeltaBar ;
+.
+sorealc:BarrierIsland
+  a owl:Class ;
+  rdfs:label "barrier island"@en ;
+  rdfs:subClassOf sorealc:Island ;
+.
+sorealc:Beach
+  a owl:Class ;
+  rdfs:label "beach"@en ;
+  rdfs:subClassOf sorealc:CoastalLandform ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soreahb:BodyOfWater ;
+      owl:onProperty sorelsp:isAdjacentTo ;
+    ] ;
+.
+sorealc:Coastal
+  a owl:Class ;
+  rdfs:label "coastal"@en ;
+  owl:equivalentClass sorealc:CoastalRegion ;
+.
+sorealc:CoastalLandform
+  a owl:Class ;
+  rdfs:label "coastal landform"@en ;
+  rdfs:subClassOf soreal:Landform ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorel:hasRealm ;
+      owl:someValuesFrom sorealc:CoastalRegion ;
+    ] ;
+.
+sorealc:CoastalMargin
+  a owl:Class ;
+  rdfs:label "coastal margin"@en ;
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+sorealc:CoastalPlain
+  a owl:Class ;
+  rdfs:label "coastal plain"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+  rdfs:subClassOf soreal:Plain ;
+.
+sorealc:CoastalRegion
+  a owl:Class ;
+  rdfs:label "coastal region"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/common/Geologic_Setting> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelsp:hasCommon2DBorderWith ;
+      owl:someValuesFrom sorea:Land ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelsp:hasCommon2DBorderWith ;
+      owl:someValuesFrom soreao:OceanRegion ;
+    ] ;
+.
+sorealc:Cove
+  a owl:Class ;
+  rdfs:label "cove"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+.
+sorealc:Delta
+  a owl:Class ;
+  rdfs:label "delta"@en ;
+  rdfs:subClassOf sorealc:CoastalLandform ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorel:hasRealm ;
+      owl:someValuesFrom soreahb:River ;
+    ] ;
+.
+sorealc:DeltaBar
+  a owl:Class ;
+  rdfs:label "delta bar"@en ;
+.
+sorealc:Harbor
+  a owl:Class ;
+  rdfs:label "harbor"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+.
+sorealc:Hinterland
+  a owl:Class ;
+  rdfs:label "hinterland"@en ;
+  rdfs:subClassOf soreal:LandRegion ;
+.
+sorealc:Intertidal
+  a owl:Class ;
+  rdfs:label "intertidal"@en ;
+  owl:equivalentClass sorealc:IntertidalZone ;
+.
+sorealc:IntertidalZone
+  a owl:Class ;
+  rdfs:label "intertidal zone"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sophoc:OceanTide ;
+      owl:onProperty sorel:hasPhenomena ;
+    ] ;
+  owl:equivalentClass sorealc:Littoral ;
+  owl:equivalentClass sorealc:LittoralZone ;
+  owl:equivalentClass sorealc:TidePool ;
+.
+sorealc:Island
+  a owl:Class ;
+  rdfs:label "island"@en ;
+  rdfs:subClassOf soreal:Landform ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soreahb:BodyOfWater ;
+      owl:onProperty sorelsp:surroundedBy ;
+    ] ;
+.
+sorealc:IslandArc
+  a owl:Class ;
+  rdfs:label "island arc"@en ;
+  rdfs:subClassOf sorealc:CoastalLandform ;
+.
+sorealc:Isthmus
+  a owl:Class ;
+  rdfs:label "isthmus"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+.
+sorealc:Key
+  a owl:Class ;
+  rdfs:label "key"@en ;
+  rdfs:subClassOf sorealc:Island ;
+.
+sorealc:Littoral
+  a owl:Class ;
+  rdfs:label "littoral"@en ;
+.
+sorealc:LittoralZone
+  a owl:Class ;
+  rdfs:label "littoral zone"@en ;
+.
+sorealc:MudFlat
+  a owl:Class ;
+  rdfs:label "mud flat"@en ;
+  rdfs:subClassOf sorealc:CoastalLandform ;
+.
+sorealc:Riparian
+  a owl:Class ;
+  rdfs:label "riparian"@en ;
+  owl:equivalentClass sorealc:RiparianZone ;
+.
+sorealc:RiparianZone
+  a owl:Class ;
+  rdfs:label "riparian zone"@en ;
+.
+sorealc:Shoal
+  a owl:Class ;
+  rdfs:label "shoal"@en ;
+  rdfs:subClassOf sorealc:CoastalLandform ;
+.
+sorealc:Shore
+  a owl:Class ;
+  rdfs:label "shore"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+  rdfs:subClassOf soreal:Land ;
+  owl:equivalentClass sorealc:Shoreline ;
+.
+sorealc:ShorePlatform
+  a owl:Class ;
+  rdfs:label "shore platform"@en ;
+  owl:equivalentClass sorealc:WaveCutPlatform ;
+.
+sorealc:Shoreline
+  a owl:Class ;
+  rdfs:label "shoreline"@en ;
+.
+sorealc:Spit
+  a owl:Class ;
+  rdfs:label "spit"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+.
+sorealc:Supratidal
+  a owl:Class ;
+  rdfs:label "supratidal"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+.
+sorealc:Terracette
+  a owl:Class ;
+  rdfs:label "terracette"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+.
+sorealc:Tidal
+  a owl:Class ;
+  rdfs:label "tidal"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+.
+sorealc:TidePool
+  a owl:Class ;
+  rdfs:label "tide pool"@en ;
+.
+sorealc:Tombolo
+  a owl:Class ;
+  rdfs:label "tombolo"@en ;
+  rdfs:subClassOf sorealc:Bar ;
+.
+sorealc:Updrift
+  a owl:Class ;
+  rdfs:label "updrift"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+.
+sorealc:WaveAttackZone
+  a owl:Class ;
+  rdfs:label "wave attack zone"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+.
+sorealc:WaveCutPlatform
+  a owl:Class ;
+  rdfs:label "wave cut platform"@en ;
+  rdfs:subClassOf sorealc:CoastalRegion ;
+.
+soreal:Land
+  a owl:Class ;
+.
+soreal:LandRegion
+  a owl:Class ;
+.
+soreal:Landform
+  a owl:Class ;
+.
+soreal:Plain
+  a owl:Class ;
+.
+soreao:OceanRegion
+  a owl:Class ;
+.
+sorel:hasPhenomena
+  a owl:ObjectProperty ;
+.
+sorel:hasRealm
+  a owl:ObjectProperty ;
+.
+sorelsp:hasCommon2DBorderWith
+  a owl:ObjectProperty ;
+.
+sorelsp:isAdjacentTo
+  a owl:ObjectProperty ;
+.
+sorelsp:surroundedBy
+  a owl:ObjectProperty ;
+.
+sostrg:Margin
+  a owl:Class ;
+.

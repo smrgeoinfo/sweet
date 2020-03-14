@@ -19,16 +19,7 @@
 @base <http://sweetontology.net/propSpaceDistance> .
 
 <http://sweetontology.net/propSpaceDistance> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/procPhysical> ,
-                                                          <http://sweetontology.net/procWave> ,
-                                                          <http://sweetontology.net/prop> ,
-                                                          <http://sweetontology.net/propMass> ,
-                                                          <http://sweetontology.net/propQuantity> ,
-                                                          <http://sweetontology.net/propSpace> ,
-                                                          <http://sweetontology.net/rela> ,
-                                                          <http://sweetontology.net/relaMath> ,
-                                                          <http://sweetontology.net/relaSci> ,
-                                                          <http://sweetontology.net/reprSciUnits> ;
+                                              
                                               rdfs:label "SWEET Ontology Property Space Distance" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

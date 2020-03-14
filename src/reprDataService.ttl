@@ -12,9 +12,7 @@
 @base <http://sweetontology.net/reprDataService> .
 
 <http://sweetontology.net/reprDataService> rdf:type owl:Ontology ;
-                                            owl:imports <http://sweetontology.net/human> ,
-                                                        <http://sweetontology.net/relaProvenance> ,
-                                                        <http://sweetontology.net/reprMathSolution> ;
+                                            
                                             rdfs:label "SWEET Ontology Representation Data Service" ;
                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                             owl:versionInfo "3.5.0" .

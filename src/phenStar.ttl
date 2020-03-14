@@ -20,16 +20,7 @@
 @base <http://sweetontology.net/phenStar> .
 
 <http://sweetontology.net/phenStar> rdf:type owl:Ontology ;
-                                     owl:imports <http://sweetontology.net/matrParticle> ,
-                                                 <http://sweetontology.net/phen> ,
-                                                 <http://sweetontology.net/phenFluidDynamics> ,
-                                                 <http://sweetontology.net/phenWave> ,
-                                                 <http://sweetontology.net/procChemical> ,
-                                                 <http://sweetontology.net/realmAstroBody> ,
-                                                 <http://sweetontology.net/realmAstroStar> ,
-                                                 <http://sweetontology.net/rela> ,
-                                                 <http://sweetontology.net/relaChemical> ,
-                                                 <http://sweetontology.net/relaPhysical> ;
+                                     
                                      rdfs:label "SWEET Ontology Phenomena Star" ;
                                      dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                      owl:versionInfo "3.5.0" .

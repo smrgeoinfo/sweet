@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://loop3d.org/GSO/ontology/2020/1/common/ontology" uri="GSO-Common.ttl"/>
+	<uri id="User Entered Import Resolution" name="http://loop3d.org/GSO/ontology/2020/1/geologicfeature/ontology" uri="GSO-Geology.ttl"/>
+	
+	
+	
     <uri id="User Entered Import Resolution" name="http://sweetontology.net/matrCompound" uri="matrCompound.ttl"/>
     <uri id="User Entered Import Resolution" name="http://sweetontology.net/human" uri="human.ttl"/>
     <uri id="User Entered Import Resolution" name="http://sweetontology.net/humanAgriculture" uri="humanAgriculture.ttl"/>

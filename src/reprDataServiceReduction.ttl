@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/reprDataServiceReduction> .
 
 <http://sweetontology.net/reprDataServiceReduction> rdf:type owl:Ontology ;
-                                                     owl:imports <http://sweetontology.net/prop> ,
-                                                                 <http://sweetontology.net/relaProvenance> ,
-                                                                 <http://sweetontology.net/reprDataService> ,
-                                                                 <http://sweetontology.net/reprSpace> ,
-                                                                 <http://sweetontology.net/reprTime> ;
+                                                     
                                                      rdfs:label "SWEET Ontology Representation Data Service Reduction" ;
                                                      dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                      owl:versionInfo "3.5.0" .

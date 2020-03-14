@@ -16,13 +16,7 @@
 @base <http://sweetontology.net/matrCompound> .
 
 <http://sweetontology.net/matrCompound> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/matr> ,
-                                                     <http://sweetontology.net/matrElement> ,
-                                                     <http://sweetontology.net/matrElementalMolecule> ,
-                                                     <http://sweetontology.net/rela> ,
-                                                     <http://sweetontology.net/relaChemical> ,
-                                                     <http://sweetontology.net/state> ,
-                                                     <http://sweetontology.net/stateChemical> ;
+                                         
                                          rdfs:label "SWEET Ontology Material Compound" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .

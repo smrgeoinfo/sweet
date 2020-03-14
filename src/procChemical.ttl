@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/procChemical> .
 
 <http://sweetontology.net/procChemical> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/matrParticle> ,
-                                                     <http://sweetontology.net/proc> ,
-                                                     <http://sweetontology.net/procPhysical> ,
-                                                     <http://sweetontology.net/rela> ,
-                                                     <http://sweetontology.net/stateSystem> ;
+                                         
                                          rdfs:label "SWEET Ontology Process Chemical" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .

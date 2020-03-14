@@ -25,22 +25,7 @@
 @base <http://sweetontology.net/phenAtmoCloud> .
 
 <http://sweetontology.net/phenAtmoCloud> rdf:type owl:Ontology ;
-                                          owl:imports <http://sweetontology.net/matr> ,
-                                                      <http://sweetontology.net/matrAerosol> ,
-                                                      <http://sweetontology.net/matrWater> ,
-                                                      <http://sweetontology.net/phen> ,
-                                                      <http://sweetontology.net/phenAtmo> ,
-                                                      <http://sweetontology.net/phenAtmoPressure> ,
-                                                      <http://sweetontology.net/phenAtmoWindMesoscale> ,
-                                                      <http://sweetontology.net/phenFluidInstability> ,
-                                                      <http://sweetontology.net/phenFluidTransport> ,
-                                                      <http://sweetontology.net/phenMixing> ,
-                                                      <http://sweetontology.net/procPhysical> ,
-                                                      <http://sweetontology.net/realmLandOrographic> ,
-                                                      <http://sweetontology.net/rela> ,
-                                                      <http://sweetontology.net/relaChemical> ,
-                                                      <http://sweetontology.net/relaSpace> ,
-                                                      <http://sweetontology.net/state> ;
+                                          
                                           rdfs:label "SWEET Ontology Phenomena Atmosphere Cloud" ;
                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                           owl:versionInfo "3.5.0" .

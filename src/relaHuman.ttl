@@ -16,13 +16,7 @@
 @base <http://sweetontology.net/relaHuman> .
 
 <http://sweetontology.net/relaHuman> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/humanCommerce> ,
-                                                  <http://sweetontology.net/humanDecision> ,
-                                                  <http://sweetontology.net/humanJurisdiction> ,
-                                                  <http://sweetontology.net/humanKnowledgeDomain> ,
-                                                  <http://sweetontology.net/humanResearch> ,
-                                                  <http://sweetontology.net/matrEquipment> ,
-                                                  <http://sweetontology.net/matrIndustrial> ;
+                                      
                                       rdfs:label "SWEET Ontology Relationships Human" ;
                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                       owl:versionInfo "3.5.0" .

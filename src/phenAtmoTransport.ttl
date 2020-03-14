@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/phenAtmoTransport> .
 
 <http://sweetontology.net/phenAtmoTransport> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/matr> ,
-                                                          <http://sweetontology.net/phen> ,
-                                                          <http://sweetontology.net/phenAtmoFog> ,
-                                                          <http://sweetontology.net/phenFluidTransport> ,
-                                                          <http://sweetontology.net/phenSystem> ,
-                                                          <http://sweetontology.net/realmAtmoBoundaryLayer> ,
-                                                          <http://sweetontology.net/rela> ,
-                                                          <http://sweetontology.net/relaChemical> ,
-                                                          <http://sweetontology.net/stateChemical> ;
+                                              
                                               rdfs:label "SWEET Ontology Phenomena Atmosphere Transport" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

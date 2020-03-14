@@ -11,8 +11,7 @@
 @base <http://sweetontology.net/matrPlant> .
 
 <http://sweetontology.net/matrPlant> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/matrBiomass> ,
-                                                  <http://sweetontology.net/relaSci> ;
+                                      
                                       rdfs:label "SWEET Ontology Material Plant" ;
                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                       owl:versionInfo "3.5.0" .

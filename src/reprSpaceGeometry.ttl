@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/reprSpaceGeometry> .
 
 <http://sweetontology.net/reprSpaceGeometry> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/relaMath> ,
-                                                          <http://sweetontology.net/relaSpace> ,
-                                                          <http://sweetontology.net/repr> ,
-                                                          <http://sweetontology.net/reprMath> ,
-                                                          <http://sweetontology.net/reprMathFunction> ;
+                                              
                                               rdfs:label "SWEET Ontology Representation Space Geometry" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

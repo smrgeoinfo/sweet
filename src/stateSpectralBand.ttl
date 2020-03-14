@@ -15,12 +15,7 @@
 @base <http://sweetontology.net/stateSpectralBand> .
 
 <http://sweetontology.net/stateSpectralBand> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/propOrdinal> ,
-                                                          <http://sweetontology.net/propSpaceDistance> ,
-                                                          <http://sweetontology.net/propTimeFrequency> ,
-                                                          <http://sweetontology.net/relaMath> ,
-                                                          <http://sweetontology.net/relaSpace> ,
-                                                          <http://sweetontology.net/relaTime> ;
+                                              
                                               rdfs:label "SWEET Ontology State Spectral Band" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

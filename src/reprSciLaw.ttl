@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/reprSciLaw> .
 
 <http://sweetontology.net/reprSciLaw> rdf:type owl:Ontology ;
-                                       owl:imports <http://sweetontology.net/phenAtmoPrecipitation> ,
-                                                   <http://sweetontology.net/phenAtmoWind> ,
-                                                   <http://sweetontology.net/procWave> ,
-                                                   <http://sweetontology.net/propPressure> ,
-                                                   <http://sweetontology.net/propSpeed> ,
-                                                   <http://sweetontology.net/rela> ,
-                                                   <http://sweetontology.net/repr> ,
-                                                   <http://sweetontology.net/reprSciModel> ,
-                                                   <http://sweetontology.net/statePhysical> ;
+                                       
                                        rdfs:label "SWEET Ontology Representation Scientific Law" ;
                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                        owl:versionInfo "3.5.0" .

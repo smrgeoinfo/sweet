@@ -13,10 +13,7 @@
 @base <http://sweetontology.net/reprSciProvenance> .
 
 <http://sweetontology.net/reprSciProvenance> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/humanResearch> ,
-                                                          <http://sweetontology.net/proc> ,
-                                                          <http://sweetontology.net/prop> ,
-                                                          <http://sweetontology.net/repr> ;
+                                              
                                               rdfs:label "SWEET Ontology Representation Science Provenance" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

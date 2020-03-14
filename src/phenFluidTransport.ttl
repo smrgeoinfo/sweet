@@ -15,12 +15,7 @@
 @base <http://sweetontology.net/phenFluidTransport> .
 
 <http://sweetontology.net/phenFluidTransport> rdf:type owl:Ontology ;
-                                               owl:imports <http://sweetontology.net/matr> ,
-                                                           <http://sweetontology.net/phen> ,
-                                                           <http://sweetontology.net/phenEnvirImpact> ,
-                                                           <http://sweetontology.net/propQuantity> ,
-                                                           <http://sweetontology.net/rela> ,
-                                                           <http://sweetontology.net/statePhysical> ;
+                                               
                                                rdfs:label "SWEET Ontology Phenomena Fluid Transport" ;
                                                dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                owl:versionInfo "3.5.0" .

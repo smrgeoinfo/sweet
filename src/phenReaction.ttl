@@ -17,14 +17,7 @@
 @base <http://sweetontology.net/phenReaction> .
 
 <http://sweetontology.net/phenReaction> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/matrIsotope> ,
-                                                     <http://sweetontology.net/phenWaveNoise> ,
-                                                     <http://sweetontology.net/procChemical> ,
-                                                     <http://sweetontology.net/rela> ,
-                                                     <http://sweetontology.net/relaChemical> ,
-                                                     <http://sweetontology.net/relaSci> ,
-                                                     <http://sweetontology.net/stateRole> ,
-                                                     <http://sweetontology.net/stateRoleImpact> ;
+                                         
                                          rdfs:label "SWEET Ontology Phenomena Reaction" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .

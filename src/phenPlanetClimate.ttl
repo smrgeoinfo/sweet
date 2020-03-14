@@ -1,289 +1,239 @@
+# baseURI: http://sweetontology.net/phenPlanetClimate
+
 @prefix : <http://sweetontology.net/phenPlanetClimate/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix sopropdife: <http://sweetontology.net/propDifference/> .
-@prefix sopropche: <http://sweetontology.net/propChemical/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sorel: <http://sweetontology.net/rela/> .
+@prefix soph: <http://sweetontology.net/phen/> .
+@prefix sophpc: <http://sweetontology.net/phenPlanetClimate/> .
+@prefix sopropche: <http://sweetontology.net/propChemical/> .
+@prefix sopropdife: <http://sweetontology.net/propDifference/> .
 @prefix sopropfu: <http://sweetontology.net/propFunction/> .
 @prefix sopropt: <http://sweetontology.net/propTemperature/> .
+@prefix sorel: <http://sweetontology.net/rela/> .
 @prefix sorelm: <http://sweetontology.net/relaMath/> .
-@prefix sostss: <http://sweetontology.net/stateSpaceScale/> .
-@prefix soreps: <http://sweetontology.net/reprSpace/> .
-@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
-@prefix soph: <http://sweetontology.net/phen/> .
 @prefix sorelsc: <http://sweetontology.net/relaSci/> .
-@prefix sophpc: <http://sweetontology.net/phenPlanetClimate/> .
-@base <http://sweetontology.net/phenPlanetClimate> .
-
-<http://sweetontology.net/phenPlanetClimate> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/phen> ,
-                                                          <http://sweetontology.net/propChemical> ,
-                                                          <http://sweetontology.net/propDifference> ,
-                                                          <http://sweetontology.net/propFunction> ,
-                                                          <http://sweetontology.net/propTemperature> ,
-                                                          <http://sweetontology.net/rela> ,
-                                                          <http://sweetontology.net/relaMath> ,
-                                                          <http://sweetontology.net/relaSci> ,
-                                                          <http://sweetontology.net/relaSpace> ,
-                                                          <http://sweetontology.net/reprSpace> ,
-                                                          <http://sweetontology.net/stateSpaceScale> ;
-                                              rdfs:label "SWEET Ontology Phenomena Planetary Climate" ;
-                                              dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                              owl:versionInfo "3.5.0" .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://sweetontology.net/rela/hasPhenomena
-sorel:hasPhenomena rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaMath/averageOver
-sorelm:averageOver rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaMath/deviationFrom
-sorelm:deviationFrom rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSci/hasQuantity
-sorelsc:hasQuantity rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://sweetontology.net/phenPlanetClimate/Climate
-sophpc:Climate rdf:type owl:Class ;
-                owl:equivalentClass sophpc:ClimateAverage ,
-                                    sophpc:ClimaticAverage ,
-                                    sophpc:ClimatologicalAverage ;
-                rdfs:subClassOf soph:PlanetaryPhenomena ,
-                                sopropfu:TemporalAverage ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty sorelsc:hasQuantity ;
-                                  owl:someValuesFrom sopropche:Moisture
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty sorelsc:hasQuantity ;
-                                  owl:someValuesFrom sopropt:Temperature
-                                ] ;
-                rdfs:label "climate"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/ClimateAnomaly
-sophpc:ClimateAnomaly rdf:type owl:Class ;
-                       owl:equivalentClass sophpc:ClimaticAnomaly ;
-                       rdfs:subClassOf sophpc:ClimatePhenomena ,
-                                       sopropdife:Anomaly ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty sorelm:deviationFrom ;
-                                         owl:someValuesFrom sophpc:Climate
-                                       ] ;
-                       rdfs:label "climate anomaly"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/ClimateAverage
-sophpc:ClimateAverage rdf:type owl:Class ;
-                       rdfs:label "climate average"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/ClimateChange
-sophpc:ClimateChange rdf:type owl:Class ;
-                      rdfs:subClassOf sophpc:GlobalChange ;
-                      rdfs:label "climate change"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/ClimatePhenomena
-sophpc:ClimatePhenomena rdf:type owl:Class ;
-                         rdfs:subClassOf soph:PlanetaryPhenomena ;
-                         rdfs:label "climate phenomena"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/ClimaticAnomaly
-sophpc:ClimaticAnomaly rdf:type owl:Class ;
-                        rdfs:label "climatic anomaly"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/ClimaticAverage
-sophpc:ClimaticAverage rdf:type owl:Class ;
-                        rdfs:label "climatic average"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/ClimatologicalAverage
-sophpc:ClimatologicalAverage rdf:type owl:Class ;
-                              rdfs:label "climatological average"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/Drought
-sophpc:Drought rdf:type owl:Class ;
-                rdfs:subClassOf sophpc:ClimateAnomaly ;
-                rdfs:label "drought"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/GlobalChange
-sophpc:GlobalChange rdf:type owl:Class ;
-                     rdfs:subClassOf sophpc:ClimatePhenomena ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty sorelsp:hasSpatialScale ;
-                                       owl:hasValue sostss:Global
-                                     ] ;
-                     rdfs:label "global change"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/GlobalClimate
-sophpc:GlobalClimate rdf:type owl:Class ;
-                      rdfs:subClassOf sophpc:Climate ,
-                                      sopropfu:Average ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty sorelm:averageOver ;
-                                        owl:someValuesFrom soreps:Space
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty sorelsp:hasSpatialScale ;
-                                        owl:hasValue sostss:Global
-                                      ] ;
-                      rdfs:label "global climate"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/GlobalWarming
-sophpc:GlobalWarming rdf:type owl:Class ;
-                      rdfs:subClassOf sophpc:GlobalChange ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty sorel:hasPhenomena ;
-                                        owl:allValuesFrom sophpc:GreenhouseEffect
-                                      ] ;
-                      rdfs:label "global warming"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/GreenhouseEffect
-sophpc:GreenhouseEffect rdf:type owl:Class ;
-                         rdfs:subClassOf sophpc:GlobalWarming ;
-                         rdfs:label "greenhouse effect"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/HeatIsland
-sophpc:HeatIsland rdf:type owl:Class ;
-                   rdfs:subClassOf sophpc:ClimatePhenomena ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty sorelsp:hasSpatialScale ;
-                                     owl:hasValue sostss:Microscale
-                                   ] ;
-                   rdfs:label "heat island"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/LocalClimate
-sophpc:LocalClimate rdf:type owl:Class ;
-                     rdfs:subClassOf sophpc:Climate ;
-                     rdfs:label "local climate"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/Mesoclimate
-sophpc:Mesoclimate rdf:type owl:Class ;
-                    rdfs:subClassOf sophpc:Climate ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty sorelsp:hasSpatialScale ;
-                                      owl:hasValue sostss:Mesoscale
-                                    ] ;
-                    rdfs:label "mesoclimate"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/Microclimate
-sophpc:Microclimate rdf:type owl:Class ;
-                     rdfs:subClassOf sophpc:Climate ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty sorelsp:hasSpatialScale ;
-                                       owl:hasValue sostss:Microscale
-                                     ] ;
-                     rdfs:label "microclimate"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/MoistureClimate
-sophpc:MoistureClimate rdf:type owl:Class ;
-                        rdfs:subClassOf sophpc:Climate ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty sorelsc:hasQuantity ;
-                                          owl:someValuesFrom sopropche:Moisture
-                                        ] ;
-                        rdfs:label "moisture climate"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/NuclearWinter
-sophpc:NuclearWinter rdf:type owl:Class ;
-                      rdfs:subClassOf sophpc:ClimatePhenomena ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty sorelsp:hasSpatialScale ;
-                                        owl:hasValue sostss:Global
-                                      ] ;
-                      rdfs:label "nuclear winter"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/Paleoclimate
-sophpc:Paleoclimate rdf:type owl:Class ;
-                     rdfs:subClassOf sophpc:Climate ;
-                     rdfs:label "paleoclimate"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/RegionalClimate
-sophpc:RegionalClimate rdf:type owl:Class ;
-                        rdfs:subClassOf sophpc:Climate ;
-                        rdfs:label "regional climate"@en .
-
-
-###  http://sweetontology.net/phenPlanetClimate/ThermalClimate
-sophpc:ThermalClimate rdf:type owl:Class ;
-                       rdfs:subClassOf sophpc:Climate ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty sorelsc:hasQuantity ;
-                                         owl:someValuesFrom sopropt:Temperature
-                                       ] ;
-                       rdfs:label "thermal climate"@en .
-
-
-###  http://sweetontology.net/propChemical/Moisture
-sopropche:Moisture rdf:type owl:Class .
-
-
-###  http://sweetontology.net/propDifference/Anomaly
-sopropdife:Anomaly rdf:type owl:Class .
-
-
-###  http://sweetontology.net/propFunction/Average
-sopropfu:Average rdf:type owl:Class .
-
-
-###  http://sweetontology.net/propFunction/TemporalAverage
-sopropfu:TemporalAverage rdf:type owl:Class .
-
-
-###  http://sweetontology.net/propTemperature/Temperature
-sopropt:Temperature rdf:type owl:Class .
-
-
-###  http://sweetontology.net/reprSpace/Space
-soreps:Space rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://sweetontology.net/stateSpaceScale/Global
-sostss:Global rdf:type owl:NamedIndividual .
-
-
-###  http://sweetontology.net/stateSpaceScale/Mesoscale
-sostss:Mesoscale rdf:type owl:NamedIndividual .
-
-
-###  http://sweetontology.net/stateSpaceScale/Microscale
-sostss:Microscale rdf:type owl:NamedIndividual .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
+@prefix soreps: <http://sweetontology.net/reprSpace/> .
+@prefix sostss: <http://sweetontology.net/stateSpaceScale/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sweetontology.net/phenPlanetClimate>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:label "SWEET Ontology Phenomena Planetary Climate" ;
+  owl:versionInfo "3.5.0" ;
+.
+sophpc:Climate
+  a owl:Class ;
+  rdfs:label "climate"@en ;
+  rdfs:subClassOf <http://sweetontology.net/realmClimateZone/ClimateClassification> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelsc:hasQuantity ;
+      owl:someValuesFrom sopropche:Moisture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelsc:hasQuantity ;
+      owl:someValuesFrom sopropt:Temperature ;
+    ] ;
+  owl:equivalentClass sophpc:ClimateAverage ;
+  owl:equivalentClass sophpc:ClimaticAverage ;
+  owl:equivalentClass sophpc:ClimatologicalAverage ;
+.
+sophpc:ClimateAnomaly
+  a owl:Class ;
+  rdfs:label "climate anomaly"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/common/Event> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelm:deviationFrom ;
+      owl:someValuesFrom sophpc:Climate ;
+    ] ;
+  owl:equivalentClass sophpc:ClimaticAnomaly ;
+.
+sophpc:ClimateAverage
+  a owl:Class ;
+  rdfs:label "climate average"@en ;
+.
+sophpc:ClimateChange
+  a owl:Class ;
+  rdfs:label "climate change"@en ;
+.
+sophpc:ClimatePhenomena
+  a owl:Class ;
+  rdfs:label "climate phenomena"@en ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+.
+sophpc:ClimaticAnomaly
+  a owl:Class ;
+  rdfs:label "climatic anomaly"@en ;
+.
+sophpc:ClimaticAverage
+  a owl:Class ;
+  rdfs:label "climatic average"@en ;
+.
+sophpc:ClimatologicalAverage
+  a owl:Class ;
+  rdfs:label "climatological average"@en ;
+.
+sophpc:Drought
+  a owl:Class ;
+  rdfs:label "drought"@en ;
+.
+sophpc:GlobalChange
+  a owl:Class ;
+  rdfs:label "global change"@en ;
+  rdfs:subClassOf sophpc:ClimatePhenomena ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostss:Global ;
+      owl:onProperty sorelsp:hasSpatialScale ;
+    ] ;
+.
+sophpc:GlobalClimate
+  a owl:Class ;
+  rdfs:label "global climate"@en ;
+  rdfs:subClassOf sophpc:Climate ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostss:Global ;
+      owl:onProperty sorelsp:hasSpatialScale ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelm:averageOver ;
+      owl:someValuesFrom soreps:Space ;
+    ] ;
+.
+sophpc:GlobalWarming
+  a owl:Class ;
+  rdfs:label "global warming"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/common/Event> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sophpc:GreenhouseEffect ;
+      owl:onProperty sorel:hasPhenomena ;
+    ] ;
+.
+sophpc:GreenhouseEffect
+  a owl:Class ;
+  rdfs:label "greenhouse effect"@en ;
+.
+sophpc:HeatIsland
+  a owl:Class ;
+  rdfs:label "heat island"@en ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostss:Microscale ;
+      owl:onProperty sorelsp:hasSpatialScale ;
+    ] ;
+.
+sophpc:LocalClimate
+  a owl:Class ;
+  rdfs:label "local climate"@en ;
+  rdfs:subClassOf sophpc:Climate ;
+.
+sophpc:Mesoclimate
+  a owl:Class ;
+  rdfs:label "mesoclimate"@en ;
+  rdfs:subClassOf sophpc:Climate ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostss:Mesoscale ;
+      owl:onProperty sorelsp:hasSpatialScale ;
+    ] ;
+.
+sophpc:Microclimate
+  a owl:Class ;
+  rdfs:label "microclimate"@en ;
+  rdfs:subClassOf sophpc:Climate ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostss:Microscale ;
+      owl:onProperty sorelsp:hasSpatialScale ;
+    ] ;
+.
+sophpc:MoistureClimate
+  a owl:Class ;
+  rdfs:label "moisture climate"@en ;
+  rdfs:subClassOf sophpc:Climate ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelsc:hasQuantity ;
+      owl:someValuesFrom sopropche:Moisture ;
+    ] ;
+.
+sophpc:NuclearWinter
+  a owl:Class ;
+  rdfs:label "nuclear winter"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/common/Event> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostss:Global ;
+      owl:onProperty sorelsp:hasSpatialScale ;
+    ] ;
+.
+sophpc:Paleoclimate
+  a owl:Class ;
+  rdfs:label "paleoclimate"@en ;
+  rdfs:subClassOf sophpc:Climate ;
+.
+sophpc:RegionalClimate
+  a owl:Class ;
+  rdfs:label "regional climate"@en ;
+  rdfs:subClassOf sophpc:Climate ;
+.
+sophpc:ThermalClimate
+  a owl:Class ;
+  rdfs:label "thermal climate"@en ;
+  rdfs:subClassOf sophpc:Climate ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelsc:hasQuantity ;
+      owl:someValuesFrom sopropt:Temperature ;
+    ] ;
+.
+sopropche:Moisture
+  a owl:Class ;
+.
+sopropdife:Anomaly
+  a owl:Class ;
+.
+sopropfu:Average
+  a owl:Class ;
+.
+sopropfu:TemporalAverage
+  a owl:Class ;
+.
+sopropt:Temperature
+  a owl:Class ;
+.
+sorel:hasPhenomena
+  a owl:ObjectProperty ;
+.
+sorelm:averageOver
+  a owl:ObjectProperty ;
+.
+sorelm:deviationFrom
+  a owl:ObjectProperty ;
+.
+sorelsc:hasQuantity
+  a owl:ObjectProperty ;
+.
+soreps:Space
+  a owl:Class ;
+.
+sostss:Global
+  a owl:NamedIndividual ;
+.
+sostss:Mesoscale
+  a owl:NamedIndividual ;
+.
+sostss:Microscale
+  a owl:NamedIndividual ;
+.

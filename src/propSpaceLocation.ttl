@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/propSpaceLocation> .
 
 <http://sweetontology.net/propSpaceLocation> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/propSpace> ,
-                                                          <http://sweetontology.net/rela> ,
-                                                          <http://sweetontology.net/relaMath> ,
-                                                          <http://sweetontology.net/reprSpaceGeometry> ,
-                                                          <http://sweetontology.net/stateSystem> ;
+                                              
                                               rdfs:label "SWEET Ontology Property Space Location" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

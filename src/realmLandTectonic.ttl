@@ -1,386 +1,330 @@
+# baseURI: http://sweetontology.net/realmLandTectonic
+
 @prefix : <http://sweetontology.net/realmLandTectonic/> .
-@prefix somarocki: <http://sweetontology.net/matrRockIgneous/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix soreagor: <http://sweetontology.net/realmGeolOrogen/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix somarock: <http://sweetontology.net/matrRock/> .
+@prefix somarocki: <http://sweetontology.net/matrRockIgneous/> .
 @prefix sophgt: <http://sweetontology.net/phenGeolTectonic/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix soreagcont: <http://sweetontology.net/realmGeolContinental/> .
+@prefix sophso: <http://sweetontology.net/phenSolid/> .
 @prefix soreag: <http://sweetontology.net/realmGeol/> .
+@prefix soreagb: <http://sweetontology.net/realmGeolBasin/> .
+@prefix soreagcont: <http://sweetontology.net/realmGeolContinental/> .
+@prefix soreagor: <http://sweetontology.net/realmGeolOrogen/> .
 @prefix soreal: <http://sweetontology.net/realmLandform/> .
 @prefix sorealo: <http://sweetontology.net/realmLandOrographic/> .
-@prefix somarock: <http://sweetontology.net/matrRock/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sorel: <http://sweetontology.net/rela/> .
 @prefix sorealt: <http://sweetontology.net/realmLandTectonic/> .
-@prefix soreagb: <http://sweetontology.net/realmGeolBasin/> .
+@prefix sorel: <http://sweetontology.net/rela/> .
 @prefix sorelch: <http://sweetontology.net/relaChemical/> .
 @prefix sorelph: <http://sweetontology.net/relaPhysical/> .
-@prefix sophso: <http://sweetontology.net/phenSolid/> .
-@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
 @prefix sorelsc: <http://sweetontology.net/relaSci/> .
-@base <http://sweetontology.net/realmLandTectonic> .
-
-<http://sweetontology.net/realmLandTectonic> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/matr> ,
-                                                          <http://sweetontology.net/matrRock> ,
-                                                          <http://sweetontology.net/matrRockIgneous> ,
-                                                          <http://sweetontology.net/phenGeolTectonic> ,
-                                                          <http://sweetontology.net/phenSolid> ,
-                                                          <http://sweetontology.net/realmGeol> ,
-                                                          <http://sweetontology.net/realmGeolBasin> ,
-                                                          <http://sweetontology.net/realmGeolContinental> ,
-                                                          <http://sweetontology.net/realmGeolOrogen> ,
-                                                          <http://sweetontology.net/realmLandOrographic> ,
-                                                          <http://sweetontology.net/realmLandform> ,
-                                                          <http://sweetontology.net/rela> ,
-                                                          <http://sweetontology.net/relaChemical> ,
-                                                          <http://sweetontology.net/relaPhysical> ,
-                                                          <http://sweetontology.net/relaSci> ,
-                                                          <http://sweetontology.net/relaSpace> ;
-                                              rdfs:label "SWEET Ontology Realm Land Tectonic" ;
-                                              dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                              owl:versionInfo "3.5.0" .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://sweetontology.net/rela/hasPhenomena
-sorel:hasPhenomena rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/rela/hasRealm
-sorel:hasRealm rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/rela/partOf
-sorel:partOf rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaChemical/hasSubstance
-sorelch:hasSubstance rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaPhysical/hasPlanetaryStructure
-sorelph:hasPlanetaryStructure rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSci/hasBasin
-sorelsc:hasBasin rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSci/hasGeologicProvince
-sorelsc:hasGeologicProvince rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSci/hasGeomorphologicalType
-sorelsc:hasGeomorphologicalType rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/above
-sorelsp:above rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/below
-sorelsp:below rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/hasOuterBoundary
-sorelsp:hasOuterBoundary rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://sweetontology.net/realmLandTectonic/AseismicRidge
-sorealt:AseismicRidge rdf:type owl:Class ;
-                   rdfs:subClassOf sorealo:Ridge ;
-                   rdfs:label "aseismic ridge"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/ConvergentBoundary
-sorealt:ConvergentBoundary rdf:type owl:Class ;
-                        owl:equivalentClass sorealt:ConvergentMargin ,
-                                            sorealt:ConvergentPlateBoundary ;
-                        rdfs:subClassOf sorealt:PlateBoundary ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty sorel:hasPhenomena ;
-                                          owl:someValuesFrom sophgt:AsymmetricHeatFlow
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty sorel:hasPhenomena ;
-                                          owl:someValuesFrom sophso:Subsidence
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty sorelsc:hasGeologicProvince ;
-                                          owl:someValuesFrom soreagor:Orogen
-                                        ] ;
-                        rdfs:label "convergent boundary"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/ConvergentMargin
-sorealt:ConvergentMargin rdf:type owl:Class ;
-                      rdfs:label "convergent margin"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/ConvergentPlateBoundary
-sorealt:ConvergentPlateBoundary rdf:type owl:Class ;
-                             rdfs:label "convergent plate boundary"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/Diapir
-sorealt:Diapir rdf:type owl:Class ;
-            rdfs:subClassOf soreag:GeologicFeature ;
-            rdfs:label "diapir"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/DivergentBoundary
-sorealt:DivergentBoundary rdf:type owl:Class ;
-                       owl:equivalentClass sorealt:DivergentPlateBoundary ;
-                       rdfs:subClassOf sorealt:PlateBoundary ;
-                       rdfs:label "divergent boundary"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/DivergentPlateBoundary
-sorealt:DivergentPlateBoundary rdf:type owl:Class ;
-                            rdfs:label "divergent plate boundary"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/FaultZone
-sorealt:FaultZone rdf:type owl:Class ;
-               owl:equivalentClass sorealt:FractureZone ;
-               rdfs:label "fault zone"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/FloodBasalt
-sorealt:FloodBasalt rdf:type owl:Class ;
-                 rdfs:subClassOf soreal:Landform ;
-                 rdfs:label "flood basalt"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/Footwall
-sorealt:Footwall rdf:type owl:Class ;
-              rdfs:subClassOf soreag:GeologicFeature ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty sorel:partOf ;
-                                owl:allValuesFrom sorealt:FractureZone
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty sorelsp:below ;
-                                owl:allValuesFrom sophso:Fault
-                              ] ;
-              owl:disjointWith sorealt:HangingWall ;
-              rdfs:label "footwall"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/FossilPlateBoundary
-sorealt:FossilPlateBoundary rdf:type owl:Class ;
-                         rdfs:subClassOf sorealt:PlateBoundary ;
-                         rdfs:label "fossil plate boundary"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/FractureZone
-sorealt:FractureZone rdf:type owl:Class ;
-                  rdfs:subClassOf soreag:GeologicBoundary ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty sorel:hasPhenomena ;
-                                    owl:allValuesFrom sophso:Fracture
-                                  ] ;
-                  rdfs:label "fracture zone"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/HangingWall
-sorealt:HangingWall rdf:type owl:Class ;
-                 rdfs:subClassOf soreag:GeologicFeature ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty sorel:partOf ;
-                                   owl:allValuesFrom sorealt:FractureZone
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty sorelsp:above ;
-                                   owl:allValuesFrom sophso:Fault
-                                 ] ;
-                 rdfs:label "hanging wall"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/LIP
-sorealt:LIP rdf:type owl:Class ;
-         owl:equivalentClass sorealt:LargeIgneousProvince ;
-         rdfs:subClassOf soreal:SurfaceRegion ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty sorel:hasRealm ;
-                           owl:someValuesFrom sorealt:FloodBasalt
-                         ] ;
-         rdfs:label "lip"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/LargeIgneousProvince
-sorealt:LargeIgneousProvince rdf:type owl:Class ;
-                          rdfs:label "large igneous province"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/Ophiolite
-sorealt:Ophiolite rdf:type owl:Class ;
-               rdfs:subClassOf soreag:GeologicFeature ;
-               rdfs:label "ophiolite"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/PairedMetamorphicBelt
-sorealt:PairedMetamorphicBelt rdf:type owl:Class ;
-                           rdfs:subClassOf soreag:GeologicFeature ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty sorel:hasPhenomena ;
-                                             owl:allValuesFrom sophgt:AsymmetricHeatFlow
-                                           ] ;
-                           rdfs:label "paired metamorphic belt"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/Plate
-sorealt:Plate rdf:type owl:Class ;
-           rdfs:subClassOf soreag:GeologicProvince ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty sorel:partOf ;
-                             owl:allValuesFrom soreag:Lithosphere
-                           ] ;
-           rdfs:label "plate"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/PlateBoundary
-sorealt:PlateBoundary rdf:type owl:Class ;
-                   rdfs:subClassOf soreag:GeologicBoundary ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty sorelsc:hasGeomorphologicalType ;
-                                     owl:someValuesFrom sorealt:TectonicLandform
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty sorelph:hasPlanetaryStructure ;
-                                     owl:allValuesFrom sorealt:TripleJunction
-                                   ] ;
-                   rdfs:label "plate boundary"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/Rift
-sorealt:Rift rdf:type owl:Class ;
-          rdfs:subClassOf soreag:GeologicBoundary ,
-                          sorealt:FractureZone ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty sorelch:hasSubstance ;
-                            owl:allValuesFrom somarocki:AnorogenicIgneousRock
-                          ] ;
-          rdfs:label "rift"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/RiftValley
-sorealt:RiftValley rdf:type owl:Class ;
-                rdfs:subClassOf soreag:GeologicFeature ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty sorelsc:hasGeomorphologicalType ;
-                                  owl:allValuesFrom sorealt:TectonicLandform
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty sorelsp:hasOuterBoundary ;
-                                  owl:allValuesFrom soreagcont:ContinentalRift
-                                ] ;
-                rdfs:label "rift valley"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/StressRegime
-sorealt:StressRegime rdf:type owl:Class ;
-                  rdfs:subClassOf soreag:GeologicBoundary ;
-                  rdfs:label "stress regime"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/SubductionZone
-sorealt:SubductionZone rdf:type owl:Class ;
-                    rdfs:subClassOf soreag:GeologicProvince ;
-                    rdfs:label "subduction zone"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/SupraSubductionZoneComplex
-sorealt:SupraSubductionZoneComplex rdf:type owl:Class ;
-                                rdfs:subClassOf soreag:GeologicProvince ;
-                                rdfs:label "supra subduction zone complex"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/Suture
-sorealt:Suture rdf:type owl:Class ;
-            rdfs:subClassOf sorealt:FossilPlateBoundary ,
-                            sorealt:FractureZone ;
-            rdfs:label "suture"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/TectonicLandform
-sorealt:TectonicLandform rdf:type owl:Class ;
-                      rdfs:subClassOf soreal:Landform ;
-                      rdfs:label "tectonic landform"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/ThrustSystem
-sorealt:ThrustSystem rdf:type owl:Class ;
-                  rdfs:subClassOf sorealt:FractureZone ;
-                  rdfs:label "thrust system"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/TransformBoundary
-sorealt:TransformBoundary rdf:type owl:Class ;
-                       owl:equivalentClass sorealt:TransformMargin ,
-                                           sorealt:TransformPlateBoundary ;
-                       rdfs:subClassOf sorealt:PlateBoundary ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty sorelsc:hasBasin ;
-                                         owl:someValuesFrom soreagb:TranspressionalBasin
-                                       ] ;
-                       rdfs:label "transform boundary"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/TransformFault
-sorealt:TransformFault rdf:type owl:Class ;
-                    rdfs:subClassOf sophso:Fault ;
-                    rdfs:label "transform fault"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/TransformMargin
-sorealt:TransformMargin rdf:type owl:Class ;
-                     rdfs:label "transform margin"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/TransformPlateBoundary
-sorealt:TransformPlateBoundary rdf:type owl:Class ;
-                            rdfs:label "transform plate boundary"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/TranspressionalStressRegime
-sorealt:TranspressionalStressRegime rdf:type owl:Class ;
-                                 rdfs:subClassOf sorealt:StressRegime ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty sorelch:hasSubstance ;
-                                                   owl:allValuesFrom somarock:Melange
-                                                 ] ;
-                                 rdfs:label "transpressional stress regime"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/TranstensionalStressRegime
-sorealt:TranstensionalStressRegime rdf:type owl:Class ;
-                                rdfs:subClassOf sorealt:StressRegime ;
-                                rdfs:label "transtensional stress regime"@en .
-
-
-###  http://sweetontology.net/realmLandTectonic/TripleJunction
-sorealt:TripleJunction rdf:type owl:Class ;
-                    rdfs:subClassOf soreag:GeologicBoundary ;
-                    rdfs:label "triple junction"@en .
-
-
-###  http://sweetontology.net/realmLandform/Landform
-soreal:Landform rdf:type owl:Class .
-
-
-###  http://sweetontology.net/realmLandform/SurfaceRegion
-soreal:SurfaceRegion rdf:type owl:Class .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sweetontology.net/realmLandTectonic>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:label "SWEET Ontology Realm Land Tectonic" ;
+  owl:versionInfo "3.5.0" ;
+.
+sorealt:AseismicRidge
+  a owl:Class ;
+  rdfs:label "aseismic ridge"@en ;
+  rdfs:subClassOf sorealo:Ridge ;
+.
+sorealt:ConvergentBoundary
+  a owl:Class ;
+  rdfs:label "convergent boundary"@en ;
+  rdfs:subClassOf sorealt:PlateBoundary ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorel:hasPhenomena ;
+      owl:someValuesFrom sophgt:AsymmetricHeatFlow ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorel:hasPhenomena ;
+      owl:someValuesFrom sophso:Subsidence ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelsc:hasGeologicProvince ;
+      owl:someValuesFrom soreagor:Orogen ;
+    ] ;
+  owl:equivalentClass sorealt:ConvergentMargin ;
+  owl:equivalentClass sorealt:ConvergentPlateBoundary ;
+.
+sorealt:ConvergentMargin
+  a owl:Class ;
+  rdfs:label "convergent margin"@en ;
+.
+sorealt:ConvergentPlateBoundary
+  a owl:Class ;
+  rdfs:label "convergent plate boundary"@en ;
+.
+sorealt:Diapir
+  a owl:Class ;
+  rdfs:label "diapir"@en ;
+.
+sorealt:DivergentBoundary
+  a owl:Class ;
+  rdfs:label "divergent boundary"@en ;
+  rdfs:subClassOf sorealt:PlateBoundary ;
+  owl:equivalentClass sorealt:DivergentPlateBoundary ;
+.
+sorealt:DivergentPlateBoundary
+  a owl:Class ;
+  rdfs:label "divergent plate boundary"@en ;
+.
+sorealt:FaultZone
+  a owl:Class ;
+  rdfs:label "fault zone"@en ;
+  owl:equivalentClass sorealt:FractureZone ;
+.
+sorealt:FloodBasalt
+  a owl:Class ;
+  rdfs:label "flood basalt"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicfeature/Rock_Body> ;
+.
+sorealt:Footwall
+  a owl:Class ;
+  rdfs:label "footwall"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicfeature/Geologic_Structure> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sophso:Fault ;
+      owl:onProperty sorelsp:below ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sorealt:FractureZone ;
+      owl:onProperty sorel:partOf ;
+    ] ;
+  owl:disjointWith sorealt:HangingWall ;
+.
+sorealt:FossilPlateBoundary
+  a owl:Class ;
+  rdfs:label "fossil plate boundary"@en ;
+  rdfs:subClassOf sorealt:PlateBoundary ;
+.
+sorealt:FractureZone
+  a owl:Class ;
+  rdfs:label "fracture zone"@en ;
+  rdfs:subClassOf soreag:GeologicBoundary ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sophso:Fracture ;
+      owl:onProperty sorel:hasPhenomena ;
+    ] ;
+.
+sorealt:HangingWall
+  a owl:Class ;
+  rdfs:label "hanging wall"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicfeature/Geologic_Structure> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sophso:Fault ;
+      owl:onProperty sorelsp:above ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sorealt:FractureZone ;
+      owl:onProperty sorel:partOf ;
+    ] ;
+.
+sorealt:LIP
+  a owl:Class ;
+  rdfs:label "lip"@en ;
+  rdfs:subClassOf soreal:SurfaceRegion ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorel:hasRealm ;
+      owl:someValuesFrom sorealt:FloodBasalt ;
+    ] ;
+  owl:equivalentClass sorealt:LargeIgneousProvince ;
+.
+sorealt:LargeIgneousProvince
+  a owl:Class ;
+  rdfs:label "large igneous province"@en ;
+.
+sorealt:Ophiolite
+  a owl:Class ;
+  rdfs:label "ophiolite"@en ;
+.
+sorealt:PairedMetamorphicBelt
+  a owl:Class ;
+  rdfs:label "paired metamorphic belt"@en ;
+  rdfs:subClassOf soreag:TectonicFeature ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sophgt:AsymmetricHeatFlow ;
+      owl:onProperty sorel:hasPhenomena ;
+    ] ;
+.
+sorealt:Plate
+  a owl:Class ;
+  rdfs:label "plate"@en ;
+  rdfs:subClassOf soreag:GeologicProvince ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soreag:Lithosphere ;
+      owl:onProperty sorel:partOf ;
+    ] ;
+.
+sorealt:PlateBoundary
+  a owl:Class ;
+  rdfs:label "plate boundary"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicfeature/Rock_Body_Boundary> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sorealt:TripleJunction ;
+      owl:onProperty sorelph:hasPlanetaryStructure ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelsc:hasGeomorphologicalType ;
+      owl:someValuesFrom sorealt:TectonicLandform ;
+    ] ;
+.
+sorealt:Rift
+  a owl:Class ;
+  rdfs:label "rift"@en ;
+  rdfs:subClassOf soreag:GeologicBoundary ;
+  rdfs:subClassOf sorealt:FractureZone ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom somarocki:AnorogenicIgneousRock ;
+      owl:onProperty sorelch:hasSubstance ;
+    ] ;
+.
+sorealt:RiftValley
+  a owl:Class ;
+  rdfs:label "rift valley"@en ;
+  rdfs:subClassOf soreag:TectonicFeature ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soreagcont:ContinentalRift ;
+      owl:onProperty sorelsp:hasOuterBoundary ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sorealt:TectonicLandform ;
+      owl:onProperty sorelsc:hasGeomorphologicalType ;
+    ] ;
+.
+sorealt:StressRegime
+  a owl:Class ;
+  rdfs:label "stress regime"@en ;
+.
+sorealt:SubductionZone
+  a owl:Class ;
+  rdfs:label "subduction zone"@en ;
+  rdfs:subClassOf soreag:GeologicProvince ;
+.
+sorealt:SupraSubductionZoneComplex
+  a owl:Class ;
+  rdfs:label "supra subduction zone complex"@en ;
+  rdfs:subClassOf soreag:GeologicProvince ;
+.
+sorealt:Suture
+  a owl:Class ;
+  rdfs:label "suture"@en ;
+  rdfs:subClassOf sorealt:FossilPlateBoundary ;
+  rdfs:subClassOf sorealt:FractureZone ;
+.
+sorealt:TectonicLandform
+  a owl:Class ;
+  rdfs:label "tectonic landform"@en ;
+  rdfs:subClassOf soreal:Landform ;
+.
+sorealt:ThrustSystem
+  a owl:Class ;
+  rdfs:label "thrust system"@en ;
+  rdfs:subClassOf sorealt:FractureZone ;
+.
+sorealt:TransformBoundary
+  a owl:Class ;
+  rdfs:label "transform boundary"@en ;
+  rdfs:subClassOf sorealt:PlateBoundary ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelsc:hasBasin ;
+      owl:someValuesFrom soreagb:TranspressionalBasin ;
+    ] ;
+  owl:equivalentClass sorealt:TransformMargin ;
+  owl:equivalentClass sorealt:TransformPlateBoundary ;
+.
+sorealt:TransformFault
+  a owl:Class ;
+  rdfs:label "transform fault"@en ;
+.
+sorealt:TransformMargin
+  a owl:Class ;
+  rdfs:label "transform margin"@en ;
+.
+sorealt:TransformPlateBoundary
+  a owl:Class ;
+  rdfs:label "transform plate boundary"@en ;
+.
+sorealt:TranspressionalStressRegime
+  a owl:Class ;
+  rdfs:label "transpressional stress regime"@en ;
+  rdfs:subClassOf sorealt:StressRegime ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom somarock:Melange ;
+      owl:onProperty sorelch:hasSubstance ;
+    ] ;
+.
+sorealt:TranstensionalStressRegime
+  a owl:Class ;
+  rdfs:label "transtensional stress regime"@en ;
+  rdfs:subClassOf sorealt:StressRegime ;
+.
+sorealt:TripleJunction
+  a owl:Class ;
+  rdfs:label "triple junction"@en ;
+  rdfs:subClassOf sorealt:PlateBoundary ;
+.
+soreal:Landform
+  a owl:Class ;
+.
+soreal:SurfaceRegion
+  a owl:Class ;
+.
+sorel:hasPhenomena
+  a owl:ObjectProperty ;
+.
+sorel:hasRealm
+  a owl:ObjectProperty ;
+.
+sorel:partOf
+  a owl:ObjectProperty ;
+.
+sorelch:hasSubstance
+  a owl:ObjectProperty ;
+.
+sorelph:hasPlanetaryStructure
+  a owl:ObjectProperty ;
+.
+sorelsc:hasBasin
+  a owl:ObjectProperty ;
+.
+sorelsc:hasGeologicProvince
+  a owl:ObjectProperty ;
+.
+sorelsc:hasGeomorphologicalType
+  a owl:ObjectProperty ;
+.
+sorelsp:above
+  a owl:ObjectProperty ;
+.
+sorelsp:below
+  a owl:ObjectProperty ;
+.
+sorelsp:hasOuterBoundary
+  a owl:ObjectProperty ;
+.

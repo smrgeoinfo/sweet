@@ -15,11 +15,7 @@
 @base <http://sweetontology.net/relaTime> .
 
 <http://sweetontology.net/relaTime> rdf:type owl:Ontology ;
-                                     owl:imports <http://sweetontology.net/propTime> ,
-                                                 <http://sweetontology.net/propTimeFrequency> ,
-                                                 <http://sweetontology.net/relaMath> ,
-                                                 <http://sweetontology.net/relaSpace> ,
-                                                 <http://sweetontology.net/reprTime> ;
+                                     
                                      rdfs:label "SWEET Ontology Relationships Time" ;
                                      dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                      owl:versionInfo "3.5.0" .

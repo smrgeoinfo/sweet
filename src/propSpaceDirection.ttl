@@ -17,14 +17,7 @@
 @base <http://sweetontology.net/propSpaceDirection> .
 
 <http://sweetontology.net/propSpaceDirection> rdf:type owl:Ontology ;
-                                               owl:imports <http://sweetontology.net/propQuantity> ,
-                                                           <http://sweetontology.net/propSpaceLocation> ,
-                                                           <http://sweetontology.net/relaSci> ,
-                                                           <http://sweetontology.net/relaSpace> ,
-                                                           <http://sweetontology.net/reprMath> ,
-                                                           <http://sweetontology.net/reprSciUnits> ,
-                                                           <http://sweetontology.net/reprSpaceDirection> ,
-                                                           <http://sweetontology.net/reprSpaceGeometry3D> ;
+                                               
                                                rdfs:label "SWEET Ontology Property Space Direction" ;
                                                dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                owl:versionInfo "3.5.0" .

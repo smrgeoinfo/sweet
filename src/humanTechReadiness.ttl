@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/humanTechReadiness> .
 
 <http://sweetontology.net/humanTechReadiness> rdf:type owl:Ontology ;
-                                               owl:imports <http://sweetontology.net/humanResearch> ,
-                                                           <http://sweetontology.net/matrEquipment> ,
-                                                           <http://sweetontology.net/relaHuman> ,
-                                                           <http://sweetontology.net/relaSci> ,
-                                                           <http://sweetontology.net/repr> ;
+                                               
                                                rdfs:label "SWEET Ontology Human Technology Readiness" ;
                                                dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                owl:versionInfo "3.5.0" .

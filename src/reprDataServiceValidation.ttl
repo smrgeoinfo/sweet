@@ -11,8 +11,7 @@
 @base <http://sweetontology.net/reprDataServiceValidation> .
 
 <http://sweetontology.net/reprDataServiceValidation> rdf:type owl:Ontology ;
-                                                      owl:imports <http://sweetontology.net/humanResearch> ,
-                                                                  <http://sweetontology.net/reprDataService> ;
+                                                      
                                                       rdfs:label "SWEET Ontology Representation Data Service Validation" ;
                                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                       owl:versionInfo "3.5.0" .

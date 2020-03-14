@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/propSpeed> .
 
 <http://sweetontology.net/propSpeed> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/phenAtmoWind> ,
-                                                  <http://sweetontology.net/prop> ,
-                                                  <http://sweetontology.net/propQuantity> ,
-                                                  <http://sweetontology.net/rela> ,
-                                                  <http://sweetontology.net/relaSci> ,
-                                                  <http://sweetontology.net/relaSpace> ,
-                                                  <http://sweetontology.net/reprMath> ,
-                                                  <http://sweetontology.net/reprSciUnits> ,
-                                                  <http://sweetontology.net/reprSpaceDirection> ;
+                                      
                                       rdfs:label "SWEET Ontology Property Speed" ;
                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                       owl:versionInfo "3.5.0" .

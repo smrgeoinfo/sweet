@@ -15,12 +15,7 @@
 @base <http://sweetontology.net/relaClimate> .
 
 <http://sweetontology.net/relaClimate> rdf:type owl:Ontology ;
-                                        owl:imports <http://sweetontology.net/phenPlanetClimate> ,
-                                                    <http://sweetontology.net/propSpaceThickness> ,
-                                                    <http://sweetontology.net/propTemperature> ,
-                                                    <http://sweetontology.net/propTime> ,
-                                                    <http://sweetontology.net/realmClimateZone> ,
-                                                    <http://sweetontology.net/reprTimeSeason> ;
+                                        
                                         rdfs:label "SWEET Ontology Relationships Climate" ;
                                         dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                         owl:versionInfo "3.5.0" .

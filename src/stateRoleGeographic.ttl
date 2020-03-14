@@ -11,8 +11,7 @@
 @base <http://sweetontology.net/stateRoleGeographic> .
 
 <http://sweetontology.net/stateRoleGeographic> rdf:type owl:Ontology ;
-                                                owl:imports <http://sweetontology.net/humanCommerce> ,
-                                                            <http://sweetontology.net/prop> ;
+                                                
                                                 rdfs:label "SWEET Ontology State Role Geographic" ;
                                                 dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                 owl:versionInfo "3.5.0" .

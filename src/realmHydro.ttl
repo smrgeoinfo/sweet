@@ -1,304 +1,248 @@
+# baseURI: http://sweetontology.net/realmHydro
+
 @prefix : <http://sweetontology.net/realmHydro/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix somaw: <http://sweetontology.net/matrWater/> .
+@prefix sorea: <http://sweetontology.net/realm/> .
+@prefix soreah: <http://sweetontology.net/realmHydro/> .
+@prefix sorel: <http://sweetontology.net/rela/> .
+@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
+@prefix sorepsg: <http://sweetontology.net/reprSpaceGeometry/> .
+@prefix sostrg: <http://sweetontology.net/stateRoleGeographic/> .
+@prefix sostsc: <http://sweetontology.net/stateSpaceConfiguration/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix sostsc: <http://sweetontology.net/stateSpaceConfiguration/> .
-@prefix sorepsg: <http://sweetontology.net/reprSpaceGeometry/> .
-@prefix soreah: <http://sweetontology.net/realmHydro/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sorel: <http://sweetontology.net/rela/> .
-@prefix sostrg: <http://sweetontology.net/stateRoleGeographic/> .
-@prefix sorea: <http://sweetontology.net/realm/> .
-@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
-@prefix somaw: <http://sweetontology.net/matrWater/> .
-@base <http://sweetontology.net/realmHydro> .
 
-<http://sweetontology.net/realmHydro> rdf:type owl:Ontology ;
-                                       owl:imports <http://sweetontology.net/matrWater> ,
-                                                   <http://sweetontology.net/propSpaceDistance> ,
-                                                   <http://sweetontology.net/realm> ,
-                                                   <http://sweetontology.net/rela> ,
-                                                   <http://sweetontology.net/relaSpace> ,
-                                                   <http://sweetontology.net/reprSpaceGeometry> ,
-                                                   <http://sweetontology.net/stateRoleGeographic> ,
-                                                   <http://sweetontology.net/stateSpaceConfiguration> ,
-                                                   <http://sweetontology.net/stateSystem> ;
-                                       rdfs:label "SWEET Ontology Realm Hydrosphere" ;
-                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                       owl:versionInfo "3.5.0" .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://sweetontology.net/rela/partOf
-sorel:partOf rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/hasSpatialConfiguration
-sorelsp:hasSpatialConfiguration rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/inside
-sorelsp:inside rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://sweetontology.net/realmHydro/Aquiclude
-soreah:Aquiclude rdf:type owl:Class ;
-               rdfs:subClassOf soreah:HydrosphereFeature ;
-               rdfs:label "aquiclude"@en .
-
-
-###  http://sweetontology.net/realmHydro/Aquifer
-soreah:Aquifer rdf:type owl:Class ;
-             rdfs:subClassOf soreah:HydrosphereFeature ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty sorel:partOf ;
-                               owl:allValuesFrom soreah:SaturatedZone
-                             ] ;
-             rdfs:label "aquifer"@en .
-
-
-###  http://sweetontology.net/realmHydro/Aquifuge
-soreah:Aquifuge rdf:type owl:Class ;
-              rdfs:subClassOf soreah:HydrosphereFeature ;
-              rdfs:label "aquifuge"@en .
-
-
-###  http://sweetontology.net/realmHydro/Aquitard
-soreah:Aquitard rdf:type owl:Class ;
-              rdfs:subClassOf soreah:HydrosphereFeature ;
-              rdfs:label "aquitard"@en .
-
-
-###  http://sweetontology.net/realmHydro/Bank
-soreah:Bank rdf:type owl:Class ;
-          rdfs:subClassOf soreah:HydrosphereFeature ;
-          rdfs:label "bank"@en .
-
-
-###  http://sweetontology.net/realmHydro/CascadingWater
-soreah:CascadingWater rdf:type owl:Class ;
-                    rdfs:subClassOf somaw:Groundwater ,
-                                    soreah:HydrosphereFeature ;
-                    rdfs:label "cascading water"@en .
-
-
-###  http://sweetontology.net/realmHydro/ConeOfDepression
-soreah:ConeOfDepression rdf:type owl:Class ;
-                      rdfs:subClassOf soreah:HydrosphereFeature ,
-                                      sorepsg:Trough ;
-                      rdfs:label "cone of depression"@en .
-
-
-###  http://sweetontology.net/realmHydro/ConeOfImpression
-soreah:ConeOfImpression rdf:type owl:Class ;
-                      rdfs:subClassOf soreah:HydrosphereFeature ,
-                                      sorepsg:Ridge ;
-                      rdfs:label "cone of impression"@en .
-
-
-###  http://sweetontology.net/realmHydro/ConfinedAquifer
-soreah:ConfinedAquifer rdf:type owl:Class ;
-                     rdfs:subClassOf soreah:Aquifer ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty sorelsp:hasSpatialConfiguration ;
-                                       owl:hasValue sostsc:Confined
-                                     ] ;
-                     rdfs:label "confined aquifer"@en .
-
-
-###  http://sweetontology.net/realmHydro/ConfinedBed
-soreah:ConfinedBed rdf:type owl:Class ;
-                 rdfs:subClassOf soreah:HydrosphereFeature ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty sorelsp:hasSpatialConfiguration ;
-                                   owl:hasValue sostsc:Confined
-                                 ] ;
-                 rdfs:label "confined bed"@en .
-
-
-###  http://sweetontology.net/realmHydro/ConfinedUnit
-soreah:ConfinedUnit rdf:type owl:Class ;
-                  rdfs:subClassOf soreah:HydrosphereFeature ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty sorelsp:hasSpatialConfiguration ;
-                                    owl:hasValue sostsc:Confined
-                                  ] ;
-                  rdfs:label "confined unit"@en .
-
-
-###  http://sweetontology.net/realmHydro/ConfinedZone
-soreah:ConfinedZone rdf:type owl:Class ;
-                  rdfs:subClassOf soreah:HydrosphereFeature ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty sorelsp:hasSpatialConfiguration ;
-                                    owl:hasValue sostsc:Confined
-                                  ] ;
-                  rdfs:label "confined zone"@en .
-
-
-###  http://sweetontology.net/realmHydro/Dike
-soreah:Dike rdf:type owl:Class ;
-          owl:equivalentClass soreah:Dyke ,
-                              soreah:Embankment ,
-                              soreah:FloodBank ,
-                              soreah:Levee ,
-                              soreah:RaisedBank ;
-          rdfs:subClassOf soreah:Bank ;
-          rdfs:label "dike"@en .
-
-
-###  http://sweetontology.net/realmHydro/Dyke
-soreah:Dyke rdf:type owl:Class ;
-          rdfs:label "dyke"@en .
-
-
-###  http://sweetontology.net/realmHydro/Embankment
-soreah:Embankment rdf:type owl:Class ;
-                rdfs:label "embankment"@en .
-
-
-###  http://sweetontology.net/realmHydro/FloodBank
-soreah:FloodBank rdf:type owl:Class ;
-               rdfs:label "flood bank"@en .
-
-
-###  http://sweetontology.net/realmHydro/GroundwaterLevel
-soreah:GroundwaterLevel rdf:type owl:Class ;
-                      rdfs:subClassOf sorea:PlanetarySurfaceLevel ,
-                                      soreah:HydrosphereFeature ;
-                      rdfs:label "groundwater level"@en .
-
-
-###  http://sweetontology.net/realmHydro/HydrosphereFeature
-soreah:HydrosphereFeature rdf:type owl:Class ;
-                        rdfs:subClassOf sorea:PlanetaryRealm ;
-                        rdfs:label "hydrosphere feature"@en .
-
-
-###  http://sweetontology.net/realmHydro/Levee
-soreah:Levee rdf:type owl:Class ;
-           rdfs:label "levee"@en .
-
-
-###  http://sweetontology.net/realmHydro/PotentiometricSurface
-soreah:PotentiometricSurface rdf:type owl:Class ;
-                           rdfs:subClassOf soreah:HydrosphereFeature ;
-                           rdfs:label "potentiometric surface"@en .
-
-
-###  http://sweetontology.net/realmHydro/RaisedBank
-soreah:RaisedBank rdf:type owl:Class ;
-                rdfs:label "raised bank"@en .
-
-
-###  http://sweetontology.net/realmHydro/SaturatedZone
-soreah:SaturatedZone rdf:type owl:Class ;
-                   rdfs:subClassOf soreah:HydrosphereFeature ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty sorel:partOf ;
-                                     owl:allValuesFrom soreah:Aquifer
-                                   ] ;
-                   rdfs:label "saturated zone"@en .
-
-
-###  http://sweetontology.net/realmHydro/SeepageFace
-soreah:SeepageFace rdf:type owl:Class ;
-                 rdfs:subClassOf sostrg:Boundary ;
-                 rdfs:label "seepage face"@en .
-
-
-###  http://sweetontology.net/realmHydro/SurfaceWater
-soreah:SurfaceWater rdf:type owl:Class ;
-                  rdfs:subClassOf soreah:HydrosphereFeature ;
-                  rdfs:label "surface water"@en .
-
-
-###  http://sweetontology.net/realmHydro/UnconfinedAquifer
-soreah:UnconfinedAquifer rdf:type owl:Class ;
-                       owl:equivalentClass soreah:WaterTableAquifer ;
-                       rdfs:subClassOf soreah:Aquifer ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty sorelsp:hasSpatialConfiguration ;
-                                         owl:hasValue sostsc:Unconfined
-                                       ] ;
-                       rdfs:label "unconfined aquifer"@en .
-
-
-###  http://sweetontology.net/realmHydro/UndergroundWater
-soreah:UndergroundWater rdf:type owl:Class ;
-                      rdfs:subClassOf somaw:Groundwater ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty sorelsp:inside ;
-                                        owl:allValuesFrom soreah:VadoseZone
-                                      ] ;
-                      rdfs:label "underground water"@en .
-
-
-###  http://sweetontology.net/realmHydro/UnsaturatedZone
-soreah:UnsaturatedZone rdf:type owl:Class ;
-                     owl:equivalentClass soreah:VadoseZone ;
-                     rdfs:label "unsaturated zone"@en .
-
-
-###  http://sweetontology.net/realmHydro/VadoseZone
-soreah:VadoseZone rdf:type owl:Class ;
-                rdfs:subClassOf soreah:HydrosphereFeature ;
-                rdfs:label "vadose zone"@en .
-
-
-###  http://sweetontology.net/realmHydro/WarmPool
-soreah:WarmPool rdf:type owl:Class ;
-              rdfs:subClassOf soreah:HydrosphereFeature ;
-              rdfs:label "warm pool"@en .
-
-
-###  http://sweetontology.net/realmHydro/WaterColumn
-soreah:WaterColumn rdf:type owl:Class ;
-                 rdfs:subClassOf soreah:HydrosphereFeature ;
-                 rdfs:label "water column"@en .
-
-
-###  http://sweetontology.net/realmHydro/WaterTable
-soreah:WaterTable rdf:type owl:Class ;
-                rdfs:subClassOf soreah:HydrosphereFeature ;
-                rdfs:label "water table"@en .
-
-
-###  http://sweetontology.net/realmHydro/WaterTableAquifer
-soreah:WaterTableAquifer rdf:type owl:Class ;
-                       rdfs:label "water table aquifer"@en .
-
-
-###  http://sweetontology.net/reprSpaceGeometry/Ridge
-sorepsg:Ridge rdf:type owl:Class .
-
-
-###  http://sweetontology.net/reprSpaceGeometry/Trough
-sorepsg:Trough rdf:type owl:Class .
-
-
-###  http://sweetontology.net/stateRoleGeographic/Boundary
-sostrg:Boundary rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://sweetontology.net/stateSpaceConfiguration/Confined
-sostsc:Confined rdf:type owl:NamedIndividual .
-
-
-###  http://sweetontology.net/stateSpaceConfiguration/Unconfined
-sostsc:Unconfined rdf:type owl:NamedIndividual .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+<http://sweetontology.net/realmHydro>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:label "SWEET Ontology Realm Hydrosphere" ;
+  owl:versionInfo "3.5.0" ;
+.
+soreah:Aquiclude
+  a owl:Class ;
+  rdfs:label "aquiclude"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:Aquifer
+  a owl:Class ;
+  rdfs:label "aquifer"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soreah:SaturatedZone ;
+      owl:onProperty sorel:partOf ;
+    ] ;
+.
+soreah:Aquifuge
+  a owl:Class ;
+  rdfs:label "aquifuge"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:Aquitard
+  a owl:Class ;
+  rdfs:label "aquitard"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:Bank
+  a owl:Class ;
+  rdfs:label "bank"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:CascadingWater
+  a owl:Class ;
+  rdfs:label "cascading water"@en ;
+  rdfs:subClassOf somaw:Groundwater ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:ConeOfDepression
+  a owl:Class ;
+  rdfs:label "cone of depression"@en ;
+  rdfs:subClassOf soreah:GroundwaterLevel ;
+.
+soreah:ConeOfImpression
+  a owl:Class ;
+  rdfs:label "cone of impression"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+  rdfs:subClassOf sorepsg:Ridge ;
+.
+soreah:ConfinedAquifer
+  a owl:Class ;
+  rdfs:label "confined aquifer"@en ;
+  rdfs:subClassOf soreah:Aquifer ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostsc:Confined ;
+      owl:onProperty sorelsp:hasSpatialConfiguration ;
+    ] ;
+.
+soreah:ConfinedBed
+  a owl:Class ;
+  rdfs:label "confined bed"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostsc:Confined ;
+      owl:onProperty sorelsp:hasSpatialConfiguration ;
+    ] ;
+.
+soreah:ConfinedUnit
+  a owl:Class ;
+  rdfs:label "confined unit"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostsc:Confined ;
+      owl:onProperty sorelsp:hasSpatialConfiguration ;
+    ] ;
+.
+soreah:ConfinedZone
+  a owl:Class ;
+  rdfs:label "confined zone"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostsc:Confined ;
+      owl:onProperty sorelsp:hasSpatialConfiguration ;
+    ] ;
+.
+soreah:Dike
+  a owl:Class ;
+  rdfs:label "dike"@en ;
+  rdfs:subClassOf soreah:Bank ;
+  owl:equivalentClass soreah:Dyke ;
+  owl:equivalentClass soreah:Embankment ;
+  owl:equivalentClass soreah:FloodBank ;
+  owl:equivalentClass soreah:Levee ;
+  owl:equivalentClass soreah:RaisedBank ;
+.
+soreah:Dyke
+  a owl:Class ;
+  rdfs:label "dyke"@en ;
+.
+soreah:Embankment
+  a owl:Class ;
+  rdfs:label "embankment"@en ;
+.
+soreah:FloodBank
+  a owl:Class ;
+  rdfs:label "flood bank"@en ;
+.
+soreah:GroundwaterLevel
+  a owl:Class ;
+  rdfs:label "groundwater level"@en ;
+.
+soreah:HydrosphereFeature
+  a owl:Class ;
+  rdfs:label "hydrosphere feature"@en ;
+.
+soreah:Levee
+  a owl:Class ;
+  rdfs:label "levee"@en ;
+.
+soreah:PotentiometricSurface
+  a owl:Class ;
+  rdfs:label "potentiometric surface"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:RaisedBank
+  a owl:Class ;
+  rdfs:label "raised bank"@en ;
+.
+soreah:SaturatedZone
+  a owl:Class ;
+  rdfs:label "saturated zone"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soreah:Aquifer ;
+      owl:onProperty sorel:partOf ;
+    ] ;
+.
+soreah:SeepageFace
+  a owl:Class ;
+  rdfs:label "seepage face"@en ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+.
+soreah:SurfaceWater
+  a owl:Class ;
+  rdfs:label "surface water"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:UnconfinedAquifer
+  a owl:Class ;
+  rdfs:label "unconfined aquifer"@en ;
+  rdfs:subClassOf soreah:Aquifer ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostsc:Unconfined ;
+      owl:onProperty sorelsp:hasSpatialConfiguration ;
+    ] ;
+  owl:equivalentClass soreah:WaterTableAquifer ;
+.
+soreah:UndergroundWater
+  a owl:Class ;
+  rdfs:label "underground water"@en ;
+  rdfs:subClassOf somaw:Groundwater ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soreah:VadoseZone ;
+      owl:onProperty sorelsp:inside ;
+    ] ;
+.
+soreah:UnsaturatedZone
+  a owl:Class ;
+  rdfs:label "unsaturated zone"@en ;
+  owl:equivalentClass soreah:VadoseZone ;
+.
+soreah:VadoseZone
+  a owl:Class ;
+  rdfs:label "vadose zone"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:WarmPool
+  a owl:Class ;
+  rdfs:label "warm pool"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:WaterColumn
+  a owl:Class ;
+  rdfs:label "water column"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:WaterTable
+  a owl:Class ;
+  rdfs:label "water table"@en ;
+  rdfs:subClassOf soreah:HydrosphereFeature ;
+.
+soreah:WaterTableAquifer
+  a owl:Class ;
+  rdfs:label "water table aquifer"@en ;
+.
+sorel:partOf
+  a owl:ObjectProperty ;
+.
+sorelsp:hasSpatialConfiguration
+  a owl:ObjectProperty ;
+.
+sorelsp:inside
+  a owl:ObjectProperty ;
+.
+sorepsg:Ridge
+  a owl:Class ;
+.
+sorepsg:Trough
+  a owl:Class ;
+.
+sostrg:Boundary
+  a owl:Class ;
+.
+sostsc:Confined
+  a owl:NamedIndividual ;
+.
+sostsc:Unconfined
+  a owl:NamedIndividual ;
+.

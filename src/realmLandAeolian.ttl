@@ -1,148 +1,117 @@
+# baseURI: http://sweetontology.net/realmLandAeolian
+
 @prefix : <http://sweetontology.net/realmLandAeolian/> .
-@prefix sopropsh: <http://sweetontology.net/propSpaceHeight/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix somas: <http://sweetontology.net/matrSediment/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix soreala: <http://sweetontology.net/realmLandAeolian/> .
-@prefix soma: <http://sweetontology.net/matr/> .
-@prefix soreal: <http://sweetontology.net/realmLandform/> .
-@prefix soph: <http://sweetontology.net/phen/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix soma: <http://sweetontology.net/matr/> .
+@prefix somas: <http://sweetontology.net/matrSediment/> .
+@prefix soph: <http://sweetontology.net/phen/> .
+@prefix sophgg: <http://sweetontology.net/phenGeolGeomorphology/> .
+@prefix sopropsh: <http://sweetontology.net/propSpaceHeight/> .
+@prefix soreal: <http://sweetontology.net/realmLandform/> .
+@prefix soreala: <http://sweetontology.net/realmLandAeolian/> .
 @prefix sorel: <http://sweetontology.net/rela/> .
 @prefix sorelch: <http://sweetontology.net/relaChemical/> .
 @prefix sorelsp: <http://sweetontology.net/relaSpace/> .
-@prefix sophgg: <http://sweetontology.net/phenGeolGeomorphology/> .
-@base <http://sweetontology.net/realmLandAeolian> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://sweetontology.net/realmLandAeolian> rdf:type owl:Ontology ;
-                                             owl:imports <http://sweetontology.net/matr> ,
-                                                         <http://sweetontology.net/matrSediment> ,
-                                                         <http://sweetontology.net/phen> ,
-                                                         <http://sweetontology.net/phenGeolGeomorphology> ,
-                                                         <http://sweetontology.net/propSpaceHeight> ,
-                                                         <http://sweetontology.net/realmLandform> ,
-                                                         <http://sweetontology.net/rela> ,
-                                                         <http://sweetontology.net/relaChemical> ,
-                                                         <http://sweetontology.net/relaSpace> ;
-                                             rdfs:label "SWEET Ontology Realm Land Aeolian" ;
-                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                             owl:versionInfo "3.5.0" .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://sweetontology.net/rela/hasPhenomena
-sorel:hasPhenomena rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaChemical/hasSubstance
-sorelch:hasSubstance rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/hasSpatialExtent
-sorelsp:hasSpatialExtent rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://sweetontology.net/realmLandAeolian/Aeolian
-soreala:Aeolian rdf:type owl:Class ;
-             owl:equivalentClass soreala:Eolian ;
-             rdfs:subClassOf sophgg:Weathering ;
-             rdfs:label "aeolian"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/AeolianLandform
-soreala:AeolianLandform rdf:type owl:Class ;
-                     rdfs:subClassOf soreal:Landform ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty sorel:hasPhenomena ;
-                                       owl:allValuesFrom soreala:Eolian
-                                     ] ;
-                     rdfs:label "aeolian landform"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/Barchan
-soreala:Barchan rdf:type owl:Class ;
-             rdfs:subClassOf soreala:Dune ;
-             rdfs:label "barchan"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/Desert
-soreala:Desert rdf:type owl:Class ;
-            rdfs:subClassOf soreala:AeolianLandform ;
-            rdfs:label "desert"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/Dune
-soreala:Dune rdf:type owl:Class ;
-          owl:equivalentClass soreala:SandDune ;
-          rdfs:subClassOf soreala:AeolianLandform ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty sorelch:hasSubstance ;
-                            owl:allValuesFrom somas:Sand
-                          ] ;
-          rdfs:label "dune"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/Eolian
-soreala:Eolian rdf:type owl:Class ;
-            rdfs:label "eolian"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/Erg
-soreala:Erg rdf:type owl:Class ;
-         rdfs:subClassOf soreala:AeolianLandform ;
-         rdfs:label "erg"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/HighDesert
-soreala:HighDesert rdf:type owl:Class ;
-                rdfs:subClassOf soreala:Desert ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty sorelsp:hasSpatialExtent ;
-                                  owl:allValuesFrom sopropsh:Elevation
-                                ] ;
-                rdfs:label "high desert"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/SandDune
-soreala:SandDune rdf:type owl:Class ;
-              rdfs:label "sand dune"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/Seif
-soreala:Seif rdf:type owl:Class ;
-          rdfs:subClassOf soreala:Dune ;
-          rdfs:label "seif"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/Slack
-soreala:Slack rdf:type owl:Class ;
-           rdfs:subClassOf soreala:AeolianLandform ;
-           rdfs:label "slack"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/SlipFace
-soreala:SlipFace rdf:type owl:Class ;
-              rdfs:subClassOf soreala:AeolianLandform ;
-              rdfs:label "slip face"@en .
-
-
-###  http://sweetontology.net/realmLandAeolian/Yardang
-soreala:Yardang rdf:type owl:Class ;
-             rdfs:subClassOf soreala:AeolianLandform ;
-             rdfs:label "yardang"@en .
-
-
-###  http://sweetontology.net/realmLandform/Landform
-soreal:Landform rdf:type owl:Class .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+<http://sweetontology.net/realmLandAeolian>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:label "SWEET Ontology Realm Land Aeolian" ;
+  owl:versionInfo "3.5.0" ;
+.
+soreala:Aeolian
+  a owl:Class ;
+  rdfs:label "aeolian"@en ;
+  rdfs:subClassOf sophgg:Weathering ;
+  owl:equivalentClass soreala:Eolian ;
+.
+soreala:AeolianLandform
+  a owl:Class ;
+  rdfs:label "aeolian landform"@en ;
+  rdfs:subClassOf soreal:Landform ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soreala:Eolian ;
+      owl:onProperty sorel:hasPhenomena ;
+    ] ;
+.
+soreala:Barchan
+  a owl:Class ;
+  rdfs:label "barchan"@en ;
+  rdfs:subClassOf soreala:Dune ;
+.
+soreala:Desert
+  a owl:Class ;
+  rdfs:label "desert"@en ;
+.
+soreala:Dune
+  a owl:Class ;
+  rdfs:label "dune"@en ;
+  rdfs:subClassOf soreala:AeolianLandform ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom somas:Sand ;
+      owl:onProperty sorelch:hasSubstance ;
+    ] ;
+  owl:equivalentClass soreala:SandDune ;
+.
+soreala:Eolian
+  a owl:Class ;
+  rdfs:label "eolian"@en ;
+.
+soreala:Erg
+  a owl:Class ;
+  rdfs:label "erg"@en ;
+  rdfs:subClassOf soreala:AeolianLandform ;
+.
+soreala:HighDesert
+  a owl:Class ;
+  rdfs:label "high desert"@en ;
+  rdfs:subClassOf soreala:Desert ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sopropsh:Elevation ;
+      owl:onProperty sorelsp:hasSpatialExtent ;
+    ] ;
+.
+soreala:SandDune
+  a owl:Class ;
+  rdfs:label "sand dune"@en ;
+.
+soreala:Seif
+  a owl:Class ;
+  rdfs:label "seif"@en ;
+  rdfs:subClassOf soreala:Dune ;
+.
+soreala:Slack
+  a owl:Class ;
+  rdfs:label "slack"@en ;
+  rdfs:subClassOf soreala:AeolianLandform ;
+.
+soreala:SlipFace
+  a owl:Class ;
+  rdfs:label "slip face"@en ;
+  rdfs:subClassOf soreala:AeolianLandform ;
+.
+soreala:Yardang
+  a owl:Class ;
+  rdfs:label "yardang"@en ;
+  rdfs:subClassOf soreala:AeolianLandform ;
+.
+soreal:Landform
+  a owl:Class ;
+.
+sorel:hasPhenomena
+  a owl:ObjectProperty ;
+.
+sorelch:hasSubstance
+  a owl:ObjectProperty ;
+.
+sorelsp:hasSpatialExtent
+  a owl:ObjectProperty ;
+.

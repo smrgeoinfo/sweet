@@ -11,8 +11,7 @@
 @base <http://sweetontology.net/stateSpaceScale> .
 
 <http://sweetontology.net/stateSpaceScale> rdf:type owl:Ontology ;
-                                            owl:imports <http://sweetontology.net/propOrdinal> ,
-                                                        <http://sweetontology.net/relaSpace> ;
+                                            
                                             rdfs:label "SWEET Ontology State Space Scale" ;
                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                             owl:versionInfo "3.5.0" .

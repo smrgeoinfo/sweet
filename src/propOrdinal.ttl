@@ -15,12 +15,7 @@
 @base <http://sweetontology.net/propOrdinal> .
 
 <http://sweetontology.net/propOrdinal> rdf:type owl:Ontology ;
-                                        owl:imports <http://sweetontology.net/prop> ,
-                                                    <http://sweetontology.net/propEnergyFlux> ,
-                                                    <http://sweetontology.net/relaSci> ,
-                                                    <http://sweetontology.net/repr> ,
-                                                    <http://sweetontology.net/reprMath> ,
-                                                    <http://sweetontology.net/reprTime> ;
+                                        
                                         rdfs:label "SWEET Ontology Property Ordinal" ;
                                         dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                         owl:versionInfo "3.5.0" .

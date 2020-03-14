@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/propRotation> .
 
 <http://sweetontology.net/propRotation> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/prop> ,
-                                                     <http://sweetontology.net/propQuantity> ,
-                                                     <http://sweetontology.net/propSpeed> ,
-                                                     <http://sweetontology.net/propTimeFrequency> ,
-                                                     <http://sweetontology.net/relaMath> ,
-                                                     <http://sweetontology.net/relaSci> ,
-                                                     <http://sweetontology.net/reprMathFunction> ,
-                                                     <http://sweetontology.net/reprMathOperation> ,
-                                                     <http://sweetontology.net/reprSciUnits> ;
+                                         
                                          rdfs:label "SWEET Ontology Property Rotation" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .

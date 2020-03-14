@@ -10,7 +10,7 @@
 @base <http://sweetontology.net/matrAnimal> .
 
 <http://sweetontology.net/matrAnimal> rdf:type owl:Ontology ;
-                                       owl:imports <http://sweetontology.net/matrBiomass> ;
+                                       
                                        rdfs:label "SWEET Ontology Material Animal" ;
                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                        owl:versionInfo "3.5.0" .

@@ -1,275 +1,225 @@
+# baseURI: http://sweetontology.net/realmCryo
+
 @prefix : <http://sweetontology.net/realmCryo/> .
-@prefix sorepsmo: <http://sweetontology.net/reprSciModel/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix sohur: <http://sweetontology.net/humanResearch/> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix soreac: <http://sweetontology.net/realmCryo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sorel: <http://sweetontology.net/rela/> .
-@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
+@prefix sohur: <http://sweetontology.net/humanResearch/> .
 @prefix somaw: <http://sweetontology.net/matrWater/> .
 @prefix sorea: <http://sweetontology.net/realm/> .
+@prefix soreac: <http://sweetontology.net/realmCryo/> .
+@prefix sorel: <http://sweetontology.net/rela/> .
+@prefix sorelsp: <http://sweetontology.net/relaSpace/> .
+@prefix sorepsmo: <http://sweetontology.net/reprSciModel/> .
 @prefix sostp: <http://sweetontology.net/statePhysical/> .
-@base <http://sweetontology.net/realmCryo> .
-
-<http://sweetontology.net/realmCryo> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/humanResearch> ,
-                                                  <http://sweetontology.net/matrWater> ,
-                                                  <http://sweetontology.net/realm> ,
-                                                  <http://sweetontology.net/rela> ,
-                                                  <http://sweetontology.net/relaSpace> ,
-                                                  <http://sweetontology.net/state> ,
-                                                  <http://sweetontology.net/statePhysical> ;
-                                      rdfs:label "SWEET Ontology Realm Cryosphere" ;
-                                      dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                      owl:versionInfo "3.5.0" .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://sweetontology.net/rela/hasRealm
-sorel:hasRealm rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/rela/hasState
-sorel:hasState rdf:type owl:ObjectProperty .
-
-
-###  http://sweetontology.net/relaSpace/inside
-sorelsp:inside rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://sweetontology.net/realmCryo/AblationZone
-soreac:AblationZone rdf:type owl:Class ;
-                  rdfs:subClassOf soreac:GlacialRegion ;
-                  rdfs:label "ablation zone"@en .
-
-
-###  http://sweetontology.net/realmCryo/AccumulationZone
-soreac:AccumulationZone rdf:type owl:Class ;
-                      rdfs:subClassOf soreac:GlacialRegion ;
-                      rdfs:label "accumulation zone"@en .
-
-
-###  http://sweetontology.net/realmCryo/AlpineTundra
-soreac:AlpineTundra rdf:type owl:Class ;
-                  rdfs:subClassOf soreac:Tundra ;
-                  rdfs:label "alpine tundra"@en .
-
-
-###  http://sweetontology.net/realmCryo/Calf
-soreac:Calf rdf:type owl:Class ;
-          rdfs:subClassOf soreac:SeaIce ;
-          rdfs:label "calf"@en .
-
-
-###  http://sweetontology.net/realmCryo/CongelationIce
-soreac:CongelationIce rdf:type owl:Class ;
-                    rdfs:subClassOf soreac:SeaIce ;
-                    rdfs:label "congelation ice"@en .
-
-
-###  http://sweetontology.net/realmCryo/DriftIce
-soreac:DriftIce rdf:type owl:Class ;
-              rdfs:subClassOf soreac:SeaIce ;
-              owl:disjointWith soreac:FastIce ;
-              rdfs:label "drift ice"@en .
-
-
-###  http://sweetontology.net/realmCryo/FastIce
-soreac:FastIce rdf:type owl:Class ;
-             rdfs:subClassOf soreac:SeaIce ;
-             rdfs:label "fast ice"@en .
-
-
-###  http://sweetontology.net/realmCryo/Floe
-soreac:Floe rdf:type owl:Class ;
-          owl:equivalentClass soreac:IceFloe ;
-          rdfs:subClassOf soreac:SeaIce ;
-          rdfs:label "floe"@en .
-
-
-###  http://sweetontology.net/realmCryo/FrazilIce
-soreac:FrazilIce rdf:type owl:Class ;
-               rdfs:subClassOf soreac:SeaIce ;
-               rdfs:label "frazil ice"@en .
-
-
-###  http://sweetontology.net/realmCryo/FrozenGround
-soreac:FrozenGround rdf:type owl:Class ;
-                  rdfs:subClassOf sorea:Land ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty sorel:hasState ;
-                                    owl:hasValue sostp:Frozen
-                                  ] ;
-                  rdfs:label "frozen ground"@en .
-
-
-###  http://sweetontology.net/realmCryo/GlacialRegion
-soreac:GlacialRegion rdf:type owl:Class ;
-                   rdfs:subClassOf sorea:PlanetaryRealm ;
-                   rdfs:label "glacial region"@en .
-
-
-###  http://sweetontology.net/realmCryo/Glacier
-soreac:Glacier rdf:type owl:Class ;
-             rdfs:subClassOf somaw:Ice ;
-             rdfs:label "glacier"@en .
-
-
-###  http://sweetontology.net/realmCryo/GlacierTerminus
-soreac:GlacierTerminus rdf:type owl:Class ;
-                     owl:equivalentClass soreac:Snout ;
-                     rdfs:subClassOf soreac:GlacialRegion ;
-                     rdfs:label "glacier terminus"@en .
-
-
-###  http://sweetontology.net/realmCryo/IceBase
-soreac:IceBase rdf:type owl:Class ;
-             rdfs:subClassOf sorea:PlanetaryBoundary ;
-             rdfs:label "ice base"@en .
-
-
-###  http://sweetontology.net/realmCryo/IceCap
-soreac:IceCap rdf:type owl:Class ;
-            rdfs:subClassOf sorea:PlanetaryRealm ;
-            rdfs:label "ice cap"@en .
-
-
-###  http://sweetontology.net/realmCryo/IceCore
-soreac:IceCore rdf:type owl:Class ;
-             rdfs:subClassOf sorepsmo:Sample ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty sorelsp:inside ;
-                               owl:someValuesFrom somaw:Ice
-                             ] ;
-             rdfs:label "ice core"@en .
-
-
-###  http://sweetontology.net/realmCryo/IceField
-soreac:IceField rdf:type owl:Class ;
-              rdfs:subClassOf soreac:SeaIce ;
-              rdfs:label "ice field"@en .
-
-
-###  http://sweetontology.net/realmCryo/IceFloe
-soreac:IceFloe rdf:type owl:Class ;
-             rdfs:label "ice floe"@en .
-
-
-###  http://sweetontology.net/realmCryo/IceSheet
-soreac:IceSheet rdf:type owl:Class ;
-              rdfs:subClassOf soreac:Glacier ;
-              rdfs:label "ice sheet"@en .
-
-
-###  http://sweetontology.net/realmCryo/IceShelf
-soreac:IceShelf rdf:type owl:Class ;
-              rdfs:subClassOf somaw:Ice ;
-              rdfs:label "ice shelf"@en .
-
-
-###  http://sweetontology.net/realmCryo/IceSnowInterface
-soreac:IceSnowInterface rdf:type owl:Class ;
-                      rdfs:subClassOf sorea:PlanetaryBoundary ;
-                      rdfs:label "ice snow interface"@en .
-
-
-###  http://sweetontology.net/realmCryo/IceStream
-soreac:IceStream rdf:type owl:Class ;
-               rdfs:subClassOf somaw:Ice ;
-               rdfs:label "ice stream"@en .
-
-
-###  http://sweetontology.net/realmCryo/IceSurface
-soreac:IceSurface rdf:type owl:Class ;
-                rdfs:subClassOf sorea:PlanetaryBoundary ;
-                rdfs:label "ice surface"@en .
-
-
-###  http://sweetontology.net/realmCryo/Iceberg
-soreac:Iceberg rdf:type owl:Class ;
-             rdfs:subClassOf soreac:LandIce ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty sorel:hasRealm ;
-                               owl:someValuesFrom sorea:Ocean
-                             ] ;
-             rdfs:label "iceberg"@en .
-
-
-###  http://sweetontology.net/realmCryo/LandIce
-soreac:LandIce rdf:type owl:Class ;
-             rdfs:subClassOf somaw:Ice ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty sorel:hasRealm ;
-                               owl:someValuesFrom sorea:Land
-                             ] ;
-             rdfs:label "land ice"@en .
-
-
-###  http://sweetontology.net/realmCryo/Lead
-soreac:Lead rdf:type owl:Class ;
-          rdfs:subClassOf soreac:SeaIce ;
-          rdfs:label "lead"@en .
-
-
-###  http://sweetontology.net/realmCryo/PackIce
-soreac:PackIce rdf:type owl:Class ;
-             rdfs:subClassOf soreac:DriftIce ;
-             rdfs:label "pack ice"@en .
-
-
-###  http://sweetontology.net/realmCryo/SeaIce
-soreac:SeaIce rdf:type owl:Class ;
-            rdfs:subClassOf somaw:Ice ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty sorel:hasRealm ;
-                              owl:someValuesFrom sorea:Ocean
-                            ] ;
-            rdfs:label "sea ice"@en .
-
-
-###  http://sweetontology.net/realmCryo/SeasonalIce
-soreac:SeasonalIce rdf:type owl:Class ;
-                 rdfs:subClassOf soreac:SeaIce ;
-                 rdfs:label "seasonal ice"@en .
-
-
-###  http://sweetontology.net/realmCryo/Snout
-soreac:Snout rdf:type owl:Class ;
-           rdfs:label "snout"@en .
-
-
-###  http://sweetontology.net/realmCryo/TabularIceberg
-soreac:TabularIceberg rdf:type owl:Class ;
-                    rdfs:subClassOf soreac:Iceberg ;
-                    rdfs:label "tabular iceberg"@en .
-
-
-###  http://sweetontology.net/realmCryo/Tundra
-soreac:Tundra rdf:type owl:Class ;
-            rdfs:subClassOf sorea:Land ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty sorel:hasRealm ;
-                              owl:someValuesFrom soreac:FrozenGround
-                            ] ;
-            rdfs:label "tundra"@en .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://sweetontology.net/statePhysical/Frozen
-sostp:Frozen rdf:type owl:NamedIndividual .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sweetontology.net/realmCryo>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:label "SWEET Ontology Realm Cryosphere" ;
+  owl:versionInfo "3.5.0" ;
+.
+soreac:AblationZone
+  a owl:Class ;
+  rdfs:label "ablation zone"@en ;
+  rdfs:subClassOf soreac:GlacialRegion ;
+.
+soreac:AccumulationZone
+  a owl:Class ;
+  rdfs:label "accumulation zone"@en ;
+  rdfs:subClassOf soreac:GlacialRegion ;
+.
+soreac:AlpineTundra
+  a owl:Class ;
+  rdfs:label "alpine tundra"@en ;
+  rdfs:subClassOf soreac:Tundra ;
+.
+soreac:Calf
+  a owl:Class ;
+  rdfs:label "calf"@en ;
+  rdfs:subClassOf soreac:SeaIce ;
+.
+soreac:CongelationIce
+  a owl:Class ;
+  rdfs:label "congelation ice"@en ;
+  rdfs:subClassOf soreac:SeaIce ;
+.
+soreac:DriftIce
+  a owl:Class ;
+  rdfs:label "drift ice"@en ;
+  rdfs:subClassOf soreac:SeaIce ;
+  owl:disjointWith soreac:FastIce ;
+.
+soreac:FastIce
+  a owl:Class ;
+  rdfs:label "fast ice"@en ;
+  rdfs:subClassOf soreac:SeaIce ;
+.
+soreac:Floe
+  a owl:Class ;
+  rdfs:label "floe"@en ;
+  rdfs:subClassOf soreac:SeaIce ;
+  owl:equivalentClass soreac:IceFloe ;
+.
+soreac:FrazilIce
+  a owl:Class ;
+  rdfs:label "frazil ice"@en ;
+  rdfs:subClassOf soreac:SeaIce ;
+.
+soreac:FrozenGround
+  a owl:Class ;
+  rdfs:label "frozen ground"@en ;
+  rdfs:subClassOf sorea:Land ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue sostp:Frozen ;
+      owl:onProperty sorel:hasState ;
+    ] ;
+.
+soreac:GlacialRegion
+  a owl:Class ;
+  rdfs:label "glacial region"@en ;
+.
+soreac:Glacier
+  a owl:Class ;
+  rdfs:label "glacier"@en ;
+  rdfs:subClassOf somaw:Ice ;
+.
+soreac:GlacierTerminus
+  a owl:Class ;
+  rdfs:label "glacier terminus"@en ;
+  rdfs:subClassOf soreac:GlacialRegion ;
+  owl:equivalentClass soreac:Snout ;
+.
+soreac:IceBase
+  a owl:Class ;
+  rdfs:label "ice base"@en ;
+  rdfs:subClassOf sorea:PlanetaryBoundary ;
+.
+soreac:IceCap
+  a owl:Class ;
+  rdfs:label "ice cap"@en ;
+.
+soreac:IceCore
+  a owl:Class ;
+  rdfs:label "ice core"@en ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/common/Physical_Object> ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorelsp:inside ;
+      owl:someValuesFrom somaw:Ice ;
+    ] ;
+.
+soreac:IceField
+  a owl:Class ;
+  rdfs:label "ice field"@en ;
+  rdfs:subClassOf soreac:SeaIce ;
+.
+soreac:IceFloe
+  a owl:Class ;
+  rdfs:label "ice floe"@en ;
+.
+soreac:IceSheet
+  a owl:Class ;
+  rdfs:label "ice sheet"@en ;
+  rdfs:subClassOf soreac:Glacier ;
+.
+soreac:IceShelf
+  a owl:Class ;
+  rdfs:label "ice shelf"@en ;
+  rdfs:subClassOf somaw:Ice ;
+.
+soreac:IceSnowInterface
+  a owl:Class ;
+  rdfs:label "ice snow interface"@en ;
+  rdfs:subClassOf sorea:PlanetaryBoundary ;
+.
+soreac:IceStream
+  a owl:Class ;
+  rdfs:label "ice stream"@en ;
+  rdfs:subClassOf somaw:Ice ;
+.
+soreac:IceSurface
+  a owl:Class ;
+  rdfs:label "ice surface"@en ;
+  rdfs:subClassOf sorea:PlanetaryBoundary ;
+.
+soreac:Iceberg
+  a owl:Class ;
+  rdfs:label "iceberg"@en ;
+  rdfs:subClassOf soreac:LandIce ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorel:hasRealm ;
+      owl:someValuesFrom sorea:Ocean ;
+    ] ;
+.
+soreac:LandIce
+  a owl:Class ;
+  rdfs:label "land ice"@en ;
+  rdfs:subClassOf somaw:Ice ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorel:hasRealm ;
+      owl:someValuesFrom sorea:Land ;
+    ] ;
+.
+soreac:Lead
+  a owl:Class ;
+  rdfs:label "lead"@en ;
+  rdfs:subClassOf soreac:SeaIce ;
+.
+soreac:PackIce
+  a owl:Class ;
+  rdfs:label "pack ice"@en ;
+  rdfs:subClassOf soreac:DriftIce ;
+.
+soreac:SeaIce
+  a owl:Class ;
+  rdfs:label "sea ice"@en ;
+  rdfs:subClassOf somaw:Ice ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorel:hasRealm ;
+      owl:someValuesFrom sorea:Ocean ;
+    ] ;
+.
+soreac:SeasonalIce
+  a owl:Class ;
+  rdfs:label "seasonal ice"@en ;
+  rdfs:subClassOf soreac:SeaIce ;
+.
+soreac:Snout
+  a owl:Class ;
+  rdfs:label "snout"@en ;
+.
+soreac:TabularIceberg
+  a owl:Class ;
+  rdfs:label "tabular iceberg"@en ;
+  rdfs:subClassOf soreac:Iceberg ;
+.
+soreac:Tundra
+  a owl:Class ;
+  rdfs:label "tundra"@en ;
+  rdfs:subClassOf sorea:Land ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sorel:hasRealm ;
+      owl:someValuesFrom soreac:FrozenGround ;
+    ] ;
+.
+sorel:hasRealm
+  a owl:ObjectProperty ;
+.
+sorel:hasState
+  a owl:ObjectProperty ;
+.
+sorelsp:inside
+  a owl:ObjectProperty ;
+.
+sostp:Frozen
+  a owl:NamedIndividual ;
+.

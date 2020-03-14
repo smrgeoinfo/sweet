@@ -12,9 +12,7 @@
 @base <http://sweetontology.net/phenBiol> .
 
 <http://sweetontology.net/phenBiol> rdf:type owl:Ontology ;
-                                     owl:imports <http://sweetontology.net/matrBiomass> ,
-                                                 <http://sweetontology.net/phen> ,
-                                                 <http://sweetontology.net/reprMathGraph> ;
+                                     
                                      rdfs:label "SWEET Ontology Phenomena Biology" ;
                                      dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                      owl:versionInfo "3.5.0" .

@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/reprDataServiceGeospatial> .
 
 <http://sweetontology.net/reprDataServiceGeospatial> rdf:type owl:Ontology ;
-                                                      owl:imports <http://sweetontology.net/relaSpace> ,
-                                                                  <http://sweetontology.net/reprDataService> ,
-                                                                  <http://sweetontology.net/reprDataServiceAnalysis> ,
-                                                                  <http://sweetontology.net/reprDataServiceReduction> ,
-                                                                  <http://sweetontology.net/reprMathOperation> ;
+                                                      
                                                       rdfs:label "SWEET Ontology Representation Data Service Geospatial" ;
                                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                       owl:versionInfo "3.5.0" .

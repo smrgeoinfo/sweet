@@ -15,12 +15,7 @@
 @base <http://sweetontology.net/stateThermodynamic> .
 
 <http://sweetontology.net/stateThermodynamic> rdf:type owl:Ontology ;
-                                               owl:imports <http://sweetontology.net/propOrdinal> ,
-                                                           <http://sweetontology.net/propTemperature> ,
-                                                           <http://sweetontology.net/relaMath> ,
-                                                           <http://sweetontology.net/relaPhysical> ,
-                                                           <http://sweetontology.net/statePhysical> ,
-                                                           <http://sweetontology.net/stateSystem> ;
+                                               
                                                rdfs:label "SWEET Ontology State Thermodynamic" ;
                                                dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                owl:versionInfo "3.5.0" .

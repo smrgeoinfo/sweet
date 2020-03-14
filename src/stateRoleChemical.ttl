@@ -11,8 +11,7 @@
 @base <http://sweetontology.net/stateRoleChemical> .
 
 <http://sweetontology.net/stateRoleChemical> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/prop> ,
-                                                          <http://sweetontology.net/stateRole> ;
+                                              
                                               rdfs:label "SWEET Ontology State Role Chemical" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

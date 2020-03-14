@@ -17,15 +17,7 @@
 @base <http://sweetontology.net/realmAtmo> .
 
 <http://sweetontology.net/realmAtmo> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/matrAerosol> ,
-                                                  <http://sweetontology.net/phenAtmo> ,
-                                                  <http://sweetontology.net/phenFluidInstability> ,
-                                                  <http://sweetontology.net/propTemperatureGradient> ,
-                                                  <http://sweetontology.net/realm> ,
-                                                  <http://sweetontology.net/rela> ,
-                                                  <http://sweetontology.net/relaChemical> ,
-                                                  <http://sweetontology.net/relaPhysical> ,
-                                                  <http://sweetontology.net/relaSpace> ;
+                                      
                                       rdfs:label "SWEET Ontology Realm Atmospheric" ;
                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                       owl:versionInfo "3.5.0" .

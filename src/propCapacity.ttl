@@ -13,10 +13,7 @@
 @base <http://sweetontology.net/propCapacity> .
 
 <http://sweetontology.net/propCapacity> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/propMass> ,
-                                                     <http://sweetontology.net/propQuantity> ,
-                                                     <http://sweetontology.net/relaSci> ,
-                                                     <http://sweetontology.net/reprSciUnits> ;
+                                         
                                          rdfs:label "SWEET Ontology Property Capacity" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .

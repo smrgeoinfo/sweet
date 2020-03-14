@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/reprSciFunction> .
 
 <http://sweetontology.net/reprSciFunction> rdf:type owl:Ontology ;
-                                            owl:imports <http://sweetontology.net/propChemical> ,
-                                                        <http://sweetontology.net/propEnergy> ,
-                                                        <http://sweetontology.net/propMass> ,
-                                                        <http://sweetontology.net/propPressure> ,
-                                                        <http://sweetontology.net/propSpaceMultidimensional> ,
-                                                        <http://sweetontology.net/propSpaceThickness> ,
-                                                        <http://sweetontology.net/propTemperature> ,
-                                                        <http://sweetontology.net/relaPhysical> ,
-                                                        <http://sweetontology.net/reprMathFunction> ;
+                                            
                                             rdfs:label "SWEET Ontology Representation Scientific Function" ;
                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                             owl:versionInfo "3.5.0" .

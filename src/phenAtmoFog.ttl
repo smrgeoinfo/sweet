@@ -27,24 +27,7 @@
 @base <http://sweetontology.net/phenAtmoFog> .
 
 <http://sweetontology.net/phenAtmoFog> rdf:type owl:Ontology ;
-                                        owl:imports <http://sweetontology.net/matrCompound> ,
-                                                    <http://sweetontology.net/matrSediment> ,
-                                                    <http://sweetontology.net/matrWater> ,
-                                                    <http://sweetontology.net/phen> ,
-                                                    <http://sweetontology.net/phenAtmoCloud> ,
-                                                    <http://sweetontology.net/phenAtmoFront> ,
-                                                    <http://sweetontology.net/phenAtmoPrecipitation> ,
-                                                    <http://sweetontology.net/phenAtmoWindMesoscale> ,
-                                                    <http://sweetontology.net/phenFluidTransport> ,
-                                                    <http://sweetontology.net/phenMixing> ,
-                                                    <http://sweetontology.net/procStateChange> ,
-                                                    <http://sweetontology.net/realm> ,
-                                                    <http://sweetontology.net/realmLandCoastal> ,
-                                                    <http://sweetontology.net/realmLandOrographic> ,
-                                                    <http://sweetontology.net/rela> ,
-                                                    <http://sweetontology.net/relaChemical> ,
-                                                    <http://sweetontology.net/relaPhysical> ,
-                                                    <http://sweetontology.net/relaSpace> ;
+                                        
                                         rdfs:label "SWEET Ontology Phenomena Atmosphere Fog" ;
                                         dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                         owl:versionInfo "3.5.0" .

@@ -19,16 +19,7 @@
 @base <http://sweetontology.net/relaProvenance> .
 
 <http://sweetontology.net/relaProvenance> rdf:type owl:Ontology ;
-                                           owl:imports <http://sweetontology.net/proc> ,
-                                                       <http://sweetontology.net/prop> ,
-                                                       <http://sweetontology.net/propOrdinal> ,
-                                                       <http://sweetontology.net/propQuantity> ,
-                                                       <http://sweetontology.net/relaMath> ,
-                                                       <http://sweetontology.net/reprDataModel> ,
-                                                       <http://sweetontology.net/reprDataProduct> ,
-                                                       <http://sweetontology.net/reprDataService> ,
-                                                       <http://sweetontology.net/reprSciComponent> ,
-                                                       <http://sweetontology.net/reprSciProvenance> ;
+                                           
                                            rdfs:label "SWEET Ontology Relationships Provenance" ;
                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                            owl:versionInfo "3.5.0" .

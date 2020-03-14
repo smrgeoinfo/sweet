@@ -16,12 +16,7 @@
 @base <http://sweetontology.net/reprDataServiceAnalysis> .
 
 <http://sweetontology.net/reprDataServiceAnalysis> rdf:type owl:Ontology ;
-                                                    owl:imports <http://sweetontology.net/human> ,
-                                                                <http://sweetontology.net/relaMath> ,
-                                                                <http://sweetontology.net/relaProvenance> ,
-                                                                <http://sweetontology.net/reprMathFunctionOrthogonal> ,
-                                                                <http://sweetontology.net/reprMathSolution> ,
-                                                                <http://sweetontology.net/reprSciModel> ;
+                                                    
                                                     rdfs:label "SWEET Ontology Representation Data Servcie Analysis" ;
                                                     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                     owl:versionInfo "3.5.0" .

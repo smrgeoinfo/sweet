@@ -20,17 +20,7 @@
 @base <http://sweetontology.net/phenFluidInstability> .
 
 <http://sweetontology.net/phenFluidInstability> rdf:type owl:Ontology ;
-                                                 owl:imports <http://sweetontology.net/phenAtmoFront> ,
-                                                             <http://sweetontology.net/phenFluidDynamics> ,
-                                                             <http://sweetontology.net/phenSystem> ,
-                                                             <http://sweetontology.net/phenSystemComplexity> ,
-                                                             <http://sweetontology.net/propTemperatureGradient> ,
-                                                             <http://sweetontology.net/rela> ,
-                                                             <http://sweetontology.net/relaSci> ,
-                                                             <http://sweetontology.net/statePhysical> ,
-                                                             <http://sweetontology.net/stateSpaceScale> ,
-                                                             <http://sweetontology.net/stateSystem> ,
-                                                             <http://sweetontology.net/stateThermodynamic> ;
+                                                 
                                                  rdfs:label "SWEET Ontology Phenomena Fluid Instability" ;
                                                  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                  owl:versionInfo "3.5.0" .

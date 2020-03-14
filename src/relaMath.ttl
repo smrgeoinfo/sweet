@@ -17,14 +17,7 @@
 @base <http://sweetontology.net/relaMath> .
 
 <http://sweetontology.net/relaMath> rdf:type owl:Ontology ;
-                                     owl:imports <http://sweetontology.net/propDifference> ,
-                                                 <http://sweetontology.net/propFunction> ,
-                                                 <http://sweetontology.net/repr> ,
-                                                 <http://sweetontology.net/reprMath> ,
-                                                 <http://sweetontology.net/reprMathFunction> ,
-                                                 <http://sweetontology.net/reprMathGraph> ,
-                                                 <http://sweetontology.net/reprMathOperation> ,
-                                                 <http://sweetontology.net/reprMathStatistics> ;
+                                     
                                      rdfs:label "SWEET Ontology Relationships Mathematical" ;
                                      dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                      owl:versionInfo "3.5.0" .

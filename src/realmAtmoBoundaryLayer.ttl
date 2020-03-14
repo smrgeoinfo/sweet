@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/realmAtmoBoundaryLayer> .
 
 <http://sweetontology.net/realmAtmoBoundaryLayer> rdf:type owl:Ontology ;
-                                                   owl:imports <http://sweetontology.net/phenAtmo> ,
-                                                               <http://sweetontology.net/phenFluidInstability> ,
-                                                               <http://sweetontology.net/phenFluidTransport> ,
-                                                               <http://sweetontology.net/phenMixing> ,
-                                                               <http://sweetontology.net/propSpaceHeight> ,
-                                                               <http://sweetontology.net/realm> ,
-                                                               <http://sweetontology.net/realmAtmo> ,
-                                                               <http://sweetontology.net/rela> ,
-                                                               <http://sweetontology.net/stateSolid> ;
+                                                   
                                                    rdfs:label "SWEET Ontology Realm Atmospheric Boundary Layer" ;
                                                    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                    owl:versionInfo "3.5.0" .

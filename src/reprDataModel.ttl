@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/reprDataModel> .
 
 <http://sweetontology.net/reprDataModel> rdf:type owl:Ontology ;
-                                          owl:imports <http://sweetontology.net/relaMath> ,
-                                                      <http://sweetontology.net/relaSpace> ,
-                                                      <http://sweetontology.net/repr> ,
-                                                      <http://sweetontology.net/reprDataProduct> ,
-                                                      <http://sweetontology.net/reprSciModel> ,
-                                                      <http://sweetontology.net/reprSpace> ,
-                                                      <http://sweetontology.net/reprSpaceGeometry> ,
-                                                      <http://sweetontology.net/reprSpaceGeometry3D> ,
-                                                      <http://sweetontology.net/reprTime> ;
+                                          
                                           rdfs:label "SWEET Ontology Representation Data Model" ;
                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                           owl:versionInfo "3.5.0" .

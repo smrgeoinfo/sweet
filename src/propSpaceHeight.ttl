@@ -16,13 +16,7 @@
 @base <http://sweetontology.net/propSpaceHeight> .
 
 <http://sweetontology.net/propSpaceHeight> rdf:type owl:Ontology ;
-                                            owl:imports <http://sweetontology.net/propQuantity> ,
-                                                        <http://sweetontology.net/propSpace> ,
-                                                        <http://sweetontology.net/propSpaceDistance> ,
-                                                        <http://sweetontology.net/realm> ,
-                                                        <http://sweetontology.net/rela> ,
-                                                        <http://sweetontology.net/relaSci> ,
-                                                        <http://sweetontology.net/reprSciUnits> ;
+                                            
                                             rdfs:label "SWEET Ontology Property Space Height" ;
                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                             owl:versionInfo "3.5.0" .

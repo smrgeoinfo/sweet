@@ -27,24 +27,7 @@
 @base <http://sweetontology.net/phenAtmo> .
 
 <http://sweetontology.net/phenAtmo> rdf:type owl:Ontology ;
-                                     owl:imports <http://sweetontology.net/matr> ,
-                                                 <http://sweetontology.net/matrWater> ,
-                                                 <http://sweetontology.net/phen> ,
-                                                 <http://sweetontology.net/phenAtmoFog> ,
-                                                 <http://sweetontology.net/phenAtmoWind> ,
-                                                 <http://sweetontology.net/phenFluidInstability> ,
-                                                 <http://sweetontology.net/phenSystemComplexity> ,
-                                                 <http://sweetontology.net/phenWave> ,
-                                                 <http://sweetontology.net/realm> ,
-                                                 <http://sweetontology.net/realmAtmo> ,
-                                                 <http://sweetontology.net/realmAtmoBoundaryLayer> ,
-                                                 <http://sweetontology.net/realmLandOrographic> ,
-                                                 <http://sweetontology.net/rela> ,
-                                                 <http://sweetontology.net/relaSpace> ,
-                                                 <http://sweetontology.net/relaTime> ,
-                                                 <http://sweetontology.net/reprSciModel> ,
-                                                 <http://sweetontology.net/reprTimeDay> ,
-                                                 <http://sweetontology.net/stateSpaceScale> ;
+                                     
                                      rdfs:label "SWEET Ontology Phenomena Atmosphere" ;
                                      dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                      owl:versionInfo "3.5.0" .

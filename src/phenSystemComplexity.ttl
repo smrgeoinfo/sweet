@@ -11,8 +11,7 @@
 @base <http://sweetontology.net/phenSystemComplexity> .
 
 <http://sweetontology.net/phenSystemComplexity> rdf:type owl:Ontology ;
-                                                 owl:imports <http://sweetontology.net/phenSystem> ,
-                                                             <http://sweetontology.net/reprMathFunction> ;
+                                                 
                                                  rdfs:label "SWEET Ontology Phenomena System Complexity" ;
                                                  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                  owl:versionInfo "3.5.0" .

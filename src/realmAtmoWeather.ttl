@@ -18,15 +18,7 @@
 @base <http://sweetontology.net/realmAtmoWeather> .
 
 <http://sweetontology.net/realmAtmoWeather> rdf:type owl:Ontology ;
-                                             owl:imports <http://sweetontology.net/phenAtmo> ,
-                                                         <http://sweetontology.net/phenAtmoPrecipitation> ,
-                                                         <http://sweetontology.net/phenFluidInstability> ,
-                                                         <http://sweetontology.net/procStateChange> ,
-                                                         <http://sweetontology.net/propSpaceHeight> ,
-                                                         <http://sweetontology.net/realm> ,
-                                                         <http://sweetontology.net/realmAtmo> ,
-                                                         <http://sweetontology.net/rela> ,
-                                                         <http://sweetontology.net/relaPhysical> ;
+                                             
                                              rdfs:label "SWEET Ontology Realm Atmospheric Weather" ;
                                              dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                              owl:versionInfo "3.5.0" .

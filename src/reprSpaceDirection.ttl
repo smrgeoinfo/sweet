@@ -11,8 +11,7 @@
 @base <http://sweetontology.net/reprSpaceDirection> .
 
 <http://sweetontology.net/reprSpaceDirection> rdf:type owl:Ontology ;
-                                               owl:imports <http://sweetontology.net/propSpaceDirection> ,
-                                                           <http://sweetontology.net/relaSpace> ;
+                                               
                                                rdfs:label "SWEET Ontology Representation Space Direction" ;
                                                dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                owl:versionInfo "3.5.0" .

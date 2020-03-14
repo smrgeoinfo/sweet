@@ -12,9 +12,7 @@
 @base <http://sweetontology.net/matrFacility> .
 
 <http://sweetontology.net/matrFacility> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/humanTransportation> ,
-                                                     <http://sweetontology.net/matrEquipment> ,
-                                                     <http://sweetontology.net/relaHuman> ;
+                                         
                                          rdfs:label "SWEET Ontology Material Facility" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .

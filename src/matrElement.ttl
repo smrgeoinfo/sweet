@@ -1,680 +1,574 @@
+# baseURI: http://sweetontology.net/matrElement
+
 @prefix : <http://sweetontology.net/matrElement/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix soma: <http://sweetontology.net/matr/> .
 @prefix somael: <http://sweetontology.net/matrElement/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sorelch: <http://sweetontology.net/relaChemical/> .
-@base <http://sweetontology.net/matrElement> .
-
-<http://sweetontology.net/matrElement> rdf:type owl:Ontology ;
-                                        owl:imports <http://sweetontology.net/matr> ,
-                                                    <http://sweetontology.net/relaChemical> ;
-                                        rdfs:label "SWEET Ontology Material Element" ;
-                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                        owl:versionInfo "3.5.0" .
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://sweetontology.net/matrElement/Actinoid
-somael:Actinoid rdf:type owl:Class ;
-              rdfs:subClassOf somael:Element ;
-              rdfs:label "actinoid"@en .
-
-
-###  http://sweetontology.net/matrElement/AlkaliMetal
-somael:AlkaliMetal rdf:type owl:Class ;
-                 rdfs:subClassOf somael:Metal ;
-                 rdfs:label "alkali metal"@en .
-
-
-###  http://sweetontology.net/matrElement/AlkalineEarthMetal
-somael:AlkalineEarthMetal rdf:type owl:Class ;
-                        rdfs:subClassOf somael:Metal ;
-                        rdfs:label "alkaline earth metal"@en .
-
-
-###  http://sweetontology.net/matrElement/Atmophile
-somael:Atmophile rdf:type owl:Class ;
-               rdfs:subClassOf somael:Element ;
-               rdfs:label "atmophile"@en .
-
-
-###  http://sweetontology.net/matrElement/Chalcogen
-somael:Chalcogen rdf:type owl:Class ;
-               rdfs:subClassOf somael:Element ;
-               rdfs:label "chalcogen"@en .
-
-
-###  http://sweetontology.net/matrElement/Chalcophile
-somael:Chalcophile rdf:type owl:Class ;
-                 rdfs:subClassOf somael:Element ;
-                 rdfs:label "chalcophile"@en .
-
-
-###  http://sweetontology.net/matrElement/ChemicalElement
-somael:ChemicalElement rdf:type owl:Class ;
-                     owl:equivalentClass somael:Element ;
-                     rdfs:label "chemical element"@en .
-
-
-###  http://sweetontology.net/matrElement/Element
-somael:Element rdf:type owl:Class ;
-             rdfs:subClassOf soma:Chemical ;
-             rdfs:label "element"@en .
-
-
-###  http://sweetontology.net/matrElement/Ha
-somael:Ha rdf:type owl:Class ;
-        owl:equivalentClass somael:Halogen ;
-        rdfs:label "ha"@en .
-
-
-###  http://sweetontology.net/matrElement/Halogen
-somael:Halogen rdf:type owl:Class ;
-             rdfs:subClassOf somael:Element ;
-             rdfs:label "halogen"@en .
-
-
-###  http://sweetontology.net/matrElement/HeavyMetal
-somael:HeavyMetal rdf:type owl:Class ;
-                rdfs:subClassOf somael:Metal ;
-                rdfs:label "heavy metal"@en .
-
-
-###  http://sweetontology.net/matrElement/Lithophile
-somael:Lithophile rdf:type owl:Class ;
-                rdfs:subClassOf somael:Element ;
-                rdfs:label "lithophile"@en .
-
-
-###  http://sweetontology.net/matrElement/Metal
-somael:Metal rdf:type owl:Class ;
-           rdfs:subClassOf somael:Element ;
-           owl:disjointWith somael:Metalloid ,
-                            somael:Nonmetal ;
-           rdfs:label "metal"@en .
-
-
-###  http://sweetontology.net/matrElement/Metalloid
-somael:Metalloid rdf:type owl:Class ;
-               rdfs:subClassOf somael:Element ;
-               owl:disjointWith somael:Nonmetal ;
-               rdfs:label "metalloid"@en .
-
-
-###  http://sweetontology.net/matrElement/NobleGas
-somael:NobleGas rdf:type owl:Class ;
-              rdfs:subClassOf somael:Element ;
-              rdfs:label "noble gas"@en .
-
-
-###  http://sweetontology.net/matrElement/Nonmetal
-somael:Nonmetal rdf:type owl:Class ;
-              rdfs:subClassOf somael:Element ;
-              rdfs:label "nonmetal"@en .
-
-
-###  http://sweetontology.net/matrElement/PostTransitionMetal
-somael:PostTransitionMetal rdf:type owl:Class ;
-                         rdfs:subClassOf somael:Metal ;
-                         rdfs:label "post transition metal"@en .
-
-
-###  http://sweetontology.net/matrElement/Prictogen
-somael:Prictogen rdf:type owl:Class ;
-               rdfs:subClassOf somael:Element ;
-               rdfs:label "prictogen"@en .
-
-
-###  http://sweetontology.net/matrElement/RareEarthElement
-somael:RareEarthElement rdf:type owl:Class ;
-                      rdfs:subClassOf somael:Element ;
-                      rdfs:label "rare earth element"@en .
-
-
-###  http://sweetontology.net/matrElement/Siderophile
-somael:Siderophile rdf:type owl:Class ;
-                 rdfs:subClassOf somael:Element ;
-                 rdfs:label "siderophile"@en .
-
-
-###  http://sweetontology.net/matrElement/TraceMetal
-somael:TraceMetal rdf:type owl:Class ;
-                rdfs:subClassOf soma:TraceSubstance ,
-                                somael:Metal ;
-                rdfs:label "trace metal"@en .
-
-
-###  http://sweetontology.net/matrElement/TransitionMetal
-somael:TransitionMetal rdf:type owl:Class ;
-                     rdfs:subClassOf somael:Metal ;
-                     rdfs:label "transition metal"@en .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://sweetontology.net/matrElement/Al
-somael:Al rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:Metal ;
-        owl:sameAs somael:Aluminum ;
-        rdfs:label "al"@en .
-
-
-###  http://sweetontology.net/matrElement/Aluminum
-somael:Aluminum rdf:type owl:NamedIndividual ,
-                       somael:Element ;
-              rdfs:label "aluminum"@en .
-
-
-###  http://sweetontology.net/matrElement/Antimony
-somael:Antimony rdf:type owl:NamedIndividual ,
-                       somael:Element ;
-              owl:sameAs somael:Sb ;
-              rdfs:label "antimony"@en .
-
-
-###  http://sweetontology.net/matrElement/Ar
-somael:Ar rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:NobleGas ;
-        owl:sameAs somael:Argon ;
-        rdfs:label "ar"@en .
-
-
-###  http://sweetontology.net/matrElement/Argon
-somael:Argon rdf:type owl:NamedIndividual ,
-                    somael:Element ;
-           rdfs:label "argon"@en .
-
-
-###  http://sweetontology.net/matrElement/Arsenic
-somael:Arsenic rdf:type owl:NamedIndividual ,
-                      somael:Element ;
-             owl:sameAs somael:As ;
-             rdfs:label "arsenic"@en .
-
-
-###  http://sweetontology.net/matrElement/As
-somael:As rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:Prictogen ;
-        rdfs:label "as"@en .
-
-
-###  http://sweetontology.net/matrElement/B
-somael:B rdf:type owl:NamedIndividual ,
-                somael:Element ,
-                somael:Metalloid ;
-       owl:sameAs somael:Boron ;
-       rdfs:label "b"@en .
-
-
-###  http://sweetontology.net/matrElement/Be
-somael:Be rdf:type owl:NamedIndividual ,
-                 somael:AlkalineEarthMetal ,
-                 somael:Element ;
-        owl:sameAs somael:Beryllium ;
-        rdfs:label "be"@en .
-
-
-###  http://sweetontology.net/matrElement/Beryllium
-somael:Beryllium rdf:type owl:NamedIndividual ,
-                        somael:Element ;
-               rdfs:label "beryllium"@en .
-
-
-###  http://sweetontology.net/matrElement/Boron
-somael:Boron rdf:type owl:NamedIndividual ,
-                    somael:Element ;
-           rdfs:label "boron"@en .
-
-
-###  http://sweetontology.net/matrElement/Br
-somael:Br rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:Halogen ;
-        owl:sameAs somael:Bromine ;
-        rdfs:label "br"@en .
-
-
-###  http://sweetontology.net/matrElement/Bromine
-somael:Bromine rdf:type owl:NamedIndividual ,
-                      somael:Element ;
-             rdfs:label "bromine"@en .
-
-
-###  http://sweetontology.net/matrElement/C
-somael:C rdf:type owl:NamedIndividual ,
-                somael:Element ,
-                somael:Nonmetal ;
-       owl:sameAs somael:Carbon ;
-       rdfs:label "c"@en .
-
-
-###  http://sweetontology.net/matrElement/Ca
-somael:Ca rdf:type owl:NamedIndividual ,
-                 somael:AlkalineEarthMetal ,
-                 somael:Element ;
-        owl:sameAs somael:Calcium ;
-        rdfs:label "ca"@en .
-
-
-###  http://sweetontology.net/matrElement/Cadmium
-somael:Cadmium rdf:type owl:NamedIndividual ,
-                      somael:Element ;
-             owl:sameAs somael:Cd ;
-             rdfs:label "cadmium"@en .
-
-
-###  http://sweetontology.net/matrElement/Calcium
-somael:Calcium rdf:type owl:NamedIndividual ,
-                      somael:Element ;
-             rdfs:label "calcium"@en .
-
-
-###  http://sweetontology.net/matrElement/Carbon
-somael:Carbon rdf:type owl:NamedIndividual ,
-                     somael:Element ;
-            rdfs:label "carbon"@en .
-
-
-###  http://sweetontology.net/matrElement/Cd
-somael:Cd rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:TransitionMetal ;
-        rdfs:label "cd"@en .
-
-
-###  http://sweetontology.net/matrElement/Ch
-somael:Ch rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:TransitionMetal ;
-        owl:sameAs somael:Chromium ;
-        rdfs:label "ch"@en .
-
-
-###  http://sweetontology.net/matrElement/Chlorine
-somael:Chlorine rdf:type owl:NamedIndividual ,
-                       somael:Element ;
-              owl:sameAs somael:Cl ;
-              rdfs:label "chlorine"@en .
-
-
-###  http://sweetontology.net/matrElement/Chromium
-somael:Chromium rdf:type owl:NamedIndividual ,
-                       somael:Element ;
-              rdfs:label "chromium"@en .
-
-
-###  http://sweetontology.net/matrElement/Cl
-somael:Cl rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:Halogen ;
-        rdfs:label "cl"@en .
-
-
-###  http://sweetontology.net/matrElement/Copper
-somael:Copper rdf:type owl:NamedIndividual ,
-                     somael:Element ;
-            owl:sameAs somael:Cu ;
-            rdfs:label "copper"@en .
-
-
-###  http://sweetontology.net/matrElement/Cu
-somael:Cu rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:TransitionMetal ;
-        rdfs:label "cu"@en .
-
-
-###  http://sweetontology.net/matrElement/F
-somael:F rdf:type owl:NamedIndividual ,
-                somael:Element ,
-                somael:Halogen ;
-       owl:sameAs somael:Fluorine ;
-       rdfs:label "f"@en .
-
-
-###  http://sweetontology.net/matrElement/Fe
-somael:Fe rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:TransitionMetal ;
-        owl:sameAs somael:Iron ;
-        rdfs:label "fe"@en .
-
-
-###  http://sweetontology.net/matrElement/Fluorine
-somael:Fluorine rdf:type owl:NamedIndividual ,
-                       somael:Element ;
-              rdfs:label "fluorine"@en .
-
-
-###  http://sweetontology.net/matrElement/H
-somael:H rdf:type owl:NamedIndividual ,
-                somael:Element ,
-                somael:Nonmetal ;
-       owl:sameAs somael:Hydrogen ;
-       rdfs:label "h"@en .
-
-
-###  http://sweetontology.net/matrElement/He
-somael:He rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:NobleGas ;
-        owl:sameAs somael:Helium ;
-        rdfs:label "he"@en .
-
-
-###  http://sweetontology.net/matrElement/Helium
-somael:Helium rdf:type owl:NamedIndividual ,
-                     somael:Element ;
-            rdfs:label "helium"@en .
-
-
-###  http://sweetontology.net/matrElement/Hg
-somael:Hg rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:TransitionMetal ;
-        owl:sameAs somael:Mercury ;
-        rdfs:label "hg"@en .
-
-
-###  http://sweetontology.net/matrElement/Hydrogen
-somael:Hydrogen rdf:type owl:NamedIndividual ,
-                       somael:Element ;
-              rdfs:label "hydrogen"@en .
-
-
-###  http://sweetontology.net/matrElement/I
-somael:I rdf:type owl:NamedIndividual ,
-                somael:Element ,
-                somael:Halogen ;
-       owl:sameAs somael:Iodine ;
-       rdfs:label "i"@en .
-
-
-###  http://sweetontology.net/matrElement/Iodine
-somael:Iodine rdf:type owl:NamedIndividual ,
-                     somael:Element ;
-            rdfs:label "iodine"@en .
-
-
-###  http://sweetontology.net/matrElement/Iron
-somael:Iron rdf:type owl:NamedIndividual ,
-                   somael:Element ;
-          rdfs:label "iron"@en .
-
-
-###  http://sweetontology.net/matrElement/K
-somael:K rdf:type owl:NamedIndividual ,
-                somael:AlkaliMetal ,
-                somael:Element ;
-       owl:sameAs somael:Potassium ;
-       rdfs:label "k"@en .
-
-
-###  http://sweetontology.net/matrElement/Lead
-somael:Lead rdf:type owl:NamedIndividual ,
-                   somael:Element ;
-          owl:sameAs somael:Pb ;
-          rdfs:label "lead"@en .
-
-
-###  http://sweetontology.net/matrElement/Li
-somael:Li rdf:type owl:NamedIndividual ,
-                 somael:AlkaliMetal ,
-                 somael:Element ;
-        owl:sameAs somael:Lithium ;
-        rdfs:label "li"@en .
-
-
-###  http://sweetontology.net/matrElement/Lithium
-somael:Lithium rdf:type owl:NamedIndividual ,
-                      somael:Element ;
-             rdfs:label "lithium"@en .
-
-
-###  http://sweetontology.net/matrElement/Magnesium
-somael:Magnesium rdf:type owl:NamedIndividual ,
-                        somael:Element ;
-               owl:sameAs somael:Mg ;
-               rdfs:label "magnesium"@en .
-
-
-###  http://sweetontology.net/matrElement/Manganese
-somael:Manganese rdf:type owl:NamedIndividual ,
-                        somael:Element ;
-               owl:sameAs somael:Mn ;
-               rdfs:label "manganese"@en .
-
-
-###  http://sweetontology.net/matrElement/Mercury
-somael:Mercury rdf:type owl:NamedIndividual ,
-                      somael:Element ;
-             rdfs:label "mercury"@en .
-
-
-###  http://sweetontology.net/matrElement/Mg
-somael:Mg rdf:type owl:NamedIndividual ,
-                 somael:AlkalineEarthMetal ,
-                 somael:Element ;
-        rdfs:label "mg"@en .
-
-
-###  http://sweetontology.net/matrElement/Mn
-somael:Mn rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:TransitionMetal ;
-        rdfs:label "mn"@en .
-
-
-###  http://sweetontology.net/matrElement/Mo
-somael:Mo rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:TransitionMetal ;
-        owl:sameAs somael:Molybdenum ;
-        rdfs:label "mo"@en .
-
-
-###  http://sweetontology.net/matrElement/Molybdenum
-somael:Molybdenum rdf:type owl:NamedIndividual ,
-                         somael:Element ;
-                rdfs:label "molybdenum"@en .
-
-
-###  http://sweetontology.net/matrElement/N
-somael:N rdf:type owl:NamedIndividual ,
-                somael:Element ,
-                somael:Prictogen ;
-       owl:sameAs somael:Nitrogen ;
-       rdfs:label "n"@en .
-
-
-###  http://sweetontology.net/matrElement/Na
-somael:Na rdf:type owl:NamedIndividual ,
-                 somael:AlkaliMetal ,
-                 somael:Element ;
-        owl:sameAs somael:Sodium ;
-        rdfs:label "na"@en .
-
-
-###  http://sweetontology.net/matrElement/Ne
-somael:Ne rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:NobleGas ;
-        owl:sameAs somael:Neon ;
-        rdfs:label "ne"@en .
-
-
-###  http://sweetontology.net/matrElement/Neon
-somael:Neon rdf:type owl:NamedIndividual ,
-                   somael:Element ;
-          rdfs:label "neon"@en .
-
-
-###  http://sweetontology.net/matrElement/Nitrogen
-somael:Nitrogen rdf:type owl:NamedIndividual ,
-                       somael:Element ;
-              rdfs:label "nitrogen"@en .
-
-
-###  http://sweetontology.net/matrElement/O
-somael:O rdf:type owl:NamedIndividual ,
-                somael:Chalcogen ,
-                somael:Element ;
-       owl:sameAs somael:Oxygen ;
-       rdfs:label "o"@en .
-
-
-###  http://sweetontology.net/matrElement/Oxygen
-somael:Oxygen rdf:type owl:NamedIndividual ,
-                     somael:Element ;
-            rdfs:label "oxygen"@en .
-
-
-###  http://sweetontology.net/matrElement/P
-somael:P rdf:type owl:NamedIndividual ,
-                somael:Element ,
-                somael:Prictogen ;
-       owl:sameAs somael:Phosphorus ;
-       rdfs:label "p"@en .
-
-
-###  http://sweetontology.net/matrElement/Pb
-somael:Pb rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:PostTransitionMetal ;
-        rdfs:label "pb"@en .
-
-
-###  http://sweetontology.net/matrElement/Phosphorus
-somael:Phosphorus rdf:type owl:NamedIndividual ,
-                         somael:Element ;
-                rdfs:label "phosphorus"@en .
-
-
-###  http://sweetontology.net/matrElement/Potassium
-somael:Potassium rdf:type owl:NamedIndividual ,
-                        somael:Element ;
-               rdfs:label "potassium"@en .
-
-
-###  http://sweetontology.net/matrElement/Radon
-somael:Radon rdf:type owl:NamedIndividual ,
-                    somael:Element ;
-           owl:sameAs somael:Rn ;
-           rdfs:label "radon"@en .
-
-
-###  http://sweetontology.net/matrElement/Rn
-somael:Rn rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:NobleGas ;
-        rdfs:label "rn"@en .
-
-
-###  http://sweetontology.net/matrElement/S
-somael:S rdf:type owl:NamedIndividual ,
-                somael:Chalcogen ,
-                somael:Element ;
-       owl:sameAs somael:Sulfur ;
-       rdfs:label "s"@en .
-
-
-###  http://sweetontology.net/matrElement/Sb
-somael:Sb rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:Prictogen ;
-        rdfs:label "sb"@en .
-
-
-###  http://sweetontology.net/matrElement/Se
-somael:Se rdf:type owl:NamedIndividual ,
-                 somael:Chalcogen ,
-                 somael:Element ;
-        rdfs:label "se"@en .
-
-
-###  http://sweetontology.net/matrElement/Selenium
-somael:Selenium rdf:type owl:NamedIndividual ,
-                       somael:Element ;
-              rdfs:label "selenium"@en .
-
-
-###  http://sweetontology.net/matrElement/Si
-somael:Si rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:Metalloid ;
-        owl:sameAs somael:Silicon ;
-        rdfs:label "si"@en .
-
-
-###  http://sweetontology.net/matrElement/Silicon
-somael:Silicon rdf:type owl:NamedIndividual ,
-                      somael:Element ;
-             rdfs:label "silicon"@en .
-
-
-###  http://sweetontology.net/matrElement/Sodium
-somael:Sodium rdf:type owl:NamedIndividual ,
-                     somael:Element ;
-            rdfs:label "sodium"@en .
-
-
-###  http://sweetontology.net/matrElement/Sulfur
-somael:Sulfur rdf:type owl:NamedIndividual ,
-                     somael:Element ;
-            rdfs:label "sulfur"@en .
-
-
-###  http://sweetontology.net/matrElement/Th
-somael:Th rdf:type owl:NamedIndividual ,
-                 somael:Actinoid ,
-                 somael:Element ;
-        owl:sameAs somael:Thorium ;
-        rdfs:label "th"@en .
-
-
-###  http://sweetontology.net/matrElement/Thorium
-somael:Thorium rdf:type owl:NamedIndividual ,
-                      somael:Element ;
-             rdfs:label "thorium"@en .
-
-
-###  http://sweetontology.net/matrElement/U
-somael:U rdf:type owl:NamedIndividual ,
-                somael:Actinoid ,
-                somael:Element ;
-       rdfs:label "u"@en .
-
-
-###  http://sweetontology.net/matrElement/Uranium
-somael:Uranium rdf:type owl:NamedIndividual ,
-                      somael:Element ;
-             rdfs:label "uranium"@en .
-
-
-###  http://sweetontology.net/matrElement/Zi
-somael:Zi rdf:type owl:NamedIndividual ,
-                 somael:Element ,
-                 somael:TransitionMetal ;
-        owl:sameAs somael:Zinc ;
-        rdfs:label "zi"@en .
-
-
-###  http://sweetontology.net/matrElement/Zinc
-somael:Zinc rdf:type owl:NamedIndividual ,
-                   somael:Element ;
-          rdfs:label "zinc"@en .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sweetontology.net/matrElement>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:label "SWEET Ontology Material Element" ;
+  owl:versionInfo "3.5.0" ;
+.
+somael:Actinoid
+  a owl:Class ;
+  rdfs:label "actinoid"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:Al
+  a somael:Element ;
+  a somael:Metal ;
+  a owl:NamedIndividual ;
+  rdfs:label "al"@en ;
+  owl:sameAs somael:Aluminum ;
+.
+somael:AlkaliMetal
+  a owl:Class ;
+  rdfs:label "alkali metal"@en ;
+  rdfs:subClassOf somael:Metal ;
+.
+somael:AlkalineEarthMetal
+  a owl:Class ;
+  rdfs:label "alkaline earth metal"@en ;
+  rdfs:subClassOf somael:Metal ;
+.
+somael:Aluminum
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "aluminum"@en ;
+.
+somael:Antimony
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "antimony"@en ;
+  owl:sameAs somael:Sb ;
+.
+somael:Ar
+  a somael:Element ;
+  a somael:NobleGas ;
+  a owl:NamedIndividual ;
+  rdfs:label "ar"@en ;
+  owl:sameAs somael:Argon ;
+.
+somael:Argon
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "argon"@en ;
+.
+somael:Arsenic
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "arsenic"@en ;
+  owl:sameAs somael:As ;
+.
+somael:As
+  a somael:Element ;
+  a somael:Prictogen ;
+  a owl:NamedIndividual ;
+  rdfs:label "as"@en ;
+.
+somael:Atmophile
+  a owl:Class ;
+  rdfs:label "atmophile"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:B
+  a somael:Element ;
+  a somael:Metalloid ;
+  a owl:NamedIndividual ;
+  rdfs:label "b"@en ;
+  owl:sameAs somael:Boron ;
+.
+somael:Be
+  a somael:AlkalineEarthMetal ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "be"@en ;
+  owl:sameAs somael:Beryllium ;
+.
+somael:Beryllium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "beryllium"@en ;
+.
+somael:Boron
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "boron"@en ;
+.
+somael:Br
+  a somael:Element ;
+  a somael:Halogen ;
+  a owl:NamedIndividual ;
+  rdfs:label "br"@en ;
+  owl:sameAs somael:Bromine ;
+.
+somael:Bromine
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "bromine"@en ;
+.
+somael:C
+  a somael:Element ;
+  a somael:Nonmetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "c"@en ;
+  owl:sameAs somael:Carbon ;
+.
+somael:Ca
+  a somael:AlkalineEarthMetal ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "ca"@en ;
+  owl:sameAs somael:Calcium ;
+.
+somael:Cadmium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "cadmium"@en ;
+  owl:sameAs somael:Cd ;
+.
+somael:Calcium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "calcium"@en ;
+.
+somael:Carbon
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "carbon"@en ;
+.
+somael:Cd
+  a somael:Element ;
+  a somael:TransitionMetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "cd"@en ;
+.
+somael:Ch
+  a somael:Element ;
+  a somael:TransitionMetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "ch"@en ;
+  owl:sameAs somael:Chromium ;
+.
+somael:Chalcogen
+  a owl:Class ;
+  rdfs:label "chalcogen"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:Chalcophile
+  a owl:Class ;
+  rdfs:label "chalcophile"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:ChemicalElement
+  a owl:Class ;
+  rdfs:label "chemical element"@en ;
+  owl:equivalentClass somael:Element ;
+.
+somael:Chlorine
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "chlorine"@en ;
+  owl:sameAs somael:Cl ;
+.
+somael:Chromium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "chromium"@en ;
+.
+somael:Cl
+  a somael:Element ;
+  a somael:Halogen ;
+  a owl:NamedIndividual ;
+  rdfs:label "cl"@en ;
+.
+somael:Copper
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "copper"@en ;
+  owl:sameAs somael:Cu ;
+.
+somael:Cu
+  a somael:Element ;
+  a somael:TransitionMetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "cu"@en ;
+.
+somael:Element
+  a owl:Class ;
+  rdfs:label "element"@en ;
+.
+somael:F
+  a somael:Element ;
+  a somael:Halogen ;
+  a owl:NamedIndividual ;
+  rdfs:label "f"@en ;
+  owl:sameAs somael:Fluorine ;
+.
+somael:Fe
+  a somael:Element ;
+  a somael:TransitionMetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "fe"@en ;
+  owl:sameAs somael:Iron ;
+.
+somael:Fluorine
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "fluorine"@en ;
+.
+somael:H
+  a somael:Element ;
+  a somael:Nonmetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "h"@en ;
+  owl:sameAs somael:Hydrogen ;
+.
+somael:Ha
+  a owl:Class ;
+  rdfs:label "ha"@en ;
+  owl:equivalentClass somael:Halogen ;
+.
+somael:Halogen
+  a owl:Class ;
+  rdfs:label "halogen"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:He
+  a somael:Element ;
+  a somael:NobleGas ;
+  a owl:NamedIndividual ;
+  rdfs:label "he"@en ;
+  owl:sameAs somael:Helium ;
+.
+somael:HeavyMetal
+  a owl:Class ;
+  rdfs:label "heavy metal"@en ;
+  rdfs:subClassOf somael:Metal ;
+.
+somael:Helium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "helium"@en ;
+.
+somael:Hg
+  a somael:Element ;
+  a somael:TransitionMetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "hg"@en ;
+  owl:sameAs somael:Mercury ;
+.
+somael:Hydrogen
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "hydrogen"@en ;
+.
+somael:I
+  a somael:Element ;
+  a somael:Halogen ;
+  a owl:NamedIndividual ;
+  rdfs:label "i"@en ;
+  owl:sameAs somael:Iodine ;
+.
+somael:Iodine
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "iodine"@en ;
+.
+somael:Iron
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "iron"@en ;
+.
+somael:K
+  a somael:AlkaliMetal ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "k"@en ;
+  owl:sameAs somael:Potassium ;
+.
+somael:Lead
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "lead"@en ;
+  owl:sameAs somael:Pb ;
+.
+somael:Li
+  a somael:AlkaliMetal ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "li"@en ;
+  owl:sameAs somael:Lithium ;
+.
+somael:Lithium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "lithium"@en ;
+.
+somael:Lithophile
+  a owl:Class ;
+  rdfs:label "lithophile"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:Magnesium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "magnesium"@en ;
+  owl:sameAs somael:Mg ;
+.
+somael:Manganese
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "manganese"@en ;
+  owl:sameAs somael:Mn ;
+.
+somael:Mercury
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "mercury"@en ;
+.
+somael:Metal
+  a owl:Class ;
+  rdfs:label "metal"@en ;
+  rdfs:subClassOf somael:Element ;
+  owl:disjointWith somael:Metalloid ;
+  owl:disjointWith somael:Nonmetal ;
+.
+somael:Metalloid
+  a owl:Class ;
+  rdfs:label "metalloid"@en ;
+  rdfs:subClassOf somael:Element ;
+  owl:disjointWith somael:Nonmetal ;
+.
+somael:Mg
+  a somael:AlkalineEarthMetal ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "mg"@en ;
+.
+somael:Mn
+  a somael:Element ;
+  a somael:TransitionMetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "mn"@en ;
+.
+somael:Mo
+  a somael:Element ;
+  a somael:TransitionMetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "mo"@en ;
+  owl:sameAs somael:Molybdenum ;
+.
+somael:Molybdenum
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "molybdenum"@en ;
+.
+somael:N
+  a somael:Element ;
+  a somael:Prictogen ;
+  a owl:NamedIndividual ;
+  rdfs:label "n"@en ;
+  owl:sameAs somael:Nitrogen ;
+.
+somael:Na
+  a somael:AlkaliMetal ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "na"@en ;
+  owl:sameAs somael:Sodium ;
+.
+somael:Ne
+  a somael:Element ;
+  a somael:NobleGas ;
+  a owl:NamedIndividual ;
+  rdfs:label "ne"@en ;
+  owl:sameAs somael:Neon ;
+.
+somael:Neon
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "neon"@en ;
+.
+somael:Nitrogen
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "nitrogen"@en ;
+.
+somael:NobleGas
+  a owl:Class ;
+  rdfs:label "noble gas"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:Nonmetal
+  a owl:Class ;
+  rdfs:label "nonmetal"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:O
+  a somael:Chalcogen ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "o"@en ;
+  owl:sameAs somael:Oxygen ;
+.
+somael:Oxygen
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "oxygen"@en ;
+.
+somael:P
+  a somael:Element ;
+  a somael:Prictogen ;
+  a owl:NamedIndividual ;
+  rdfs:label "p"@en ;
+  owl:sameAs somael:Phosphorus ;
+.
+somael:Pb
+  a somael:Element ;
+  a somael:PostTransitionMetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "pb"@en ;
+.
+somael:Phosphorus
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "phosphorus"@en ;
+.
+somael:PostTransitionMetal
+  a owl:Class ;
+  rdfs:label "post transition metal"@en ;
+  rdfs:subClassOf somael:Metal ;
+.
+somael:Potassium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "potassium"@en ;
+.
+somael:Prictogen
+  a owl:Class ;
+  rdfs:label "prictogen"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:Radon
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "radon"@en ;
+  owl:sameAs somael:Rn ;
+.
+somael:RareEarthElement
+  a owl:Class ;
+  rdfs:label "rare earth element"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:Rn
+  a somael:Element ;
+  a somael:NobleGas ;
+  a owl:NamedIndividual ;
+  rdfs:label "rn"@en ;
+.
+somael:S
+  a somael:Chalcogen ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "s"@en ;
+  owl:sameAs somael:Sulfur ;
+.
+somael:Sb
+  a somael:Element ;
+  a somael:Prictogen ;
+  a owl:NamedIndividual ;
+  rdfs:label "sb"@en ;
+.
+somael:Se
+  a somael:Chalcogen ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "se"@en ;
+.
+somael:Selenium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "selenium"@en ;
+.
+somael:Si
+  a somael:Element ;
+  a somael:Metalloid ;
+  a owl:NamedIndividual ;
+  rdfs:label "si"@en ;
+  owl:sameAs somael:Silicon ;
+.
+somael:Siderophile
+  a owl:Class ;
+  rdfs:label "siderophile"@en ;
+  rdfs:subClassOf somael:Element ;
+.
+somael:Silicon
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "silicon"@en ;
+.
+somael:Sodium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "sodium"@en ;
+.
+somael:Sulfur
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "sulfur"@en ;
+.
+somael:Th
+  a somael:Actinoid ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "th"@en ;
+  owl:sameAs somael:Thorium ;
+.
+somael:Thorium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "thorium"@en ;
+.
+somael:TraceMetal
+  a owl:Class ;
+  rdfs:label "trace metal"@en ;
+  rdfs:subClassOf soma:TraceSubstance ;
+  rdfs:subClassOf somael:Metal ;
+.
+somael:TransitionMetal
+  a owl:Class ;
+  rdfs:label "transition metal"@en ;
+  rdfs:subClassOf somael:Metal ;
+.
+somael:U
+  a somael:Actinoid ;
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "u"@en ;
+.
+somael:Uranium
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "uranium"@en ;
+.
+somael:Zi
+  a somael:Element ;
+  a somael:TransitionMetal ;
+  a owl:NamedIndividual ;
+  rdfs:label "zi"@en ;
+  owl:sameAs somael:Zinc ;
+.
+somael:Zinc
+  a somael:Element ;
+  a owl:NamedIndividual ;
+  rdfs:label "zinc"@en ;
+.

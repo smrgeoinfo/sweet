@@ -16,12 +16,7 @@
 @base <http://sweetontology.net/matrEquipment> .
 
 <http://sweetontology.net/matrEquipment> rdf:type owl:Ontology ;
-                                          owl:imports <http://sweetontology.net/humanTransportation> ,
-                                                      <http://sweetontology.net/matr> ,
-                                                      <http://sweetontology.net/realm> ,
-                                                      <http://sweetontology.net/realmAstroBody> ,
-                                                      <http://sweetontology.net/rela> ,
-                                                      <http://sweetontology.net/relaHuman> ;
+                                          
                                           rdfs:label "SWEET Ontology Material Equipment" ;
                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                           owl:versionInfo "3.5.0" .

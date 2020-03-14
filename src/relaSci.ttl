@@ -19,20 +19,7 @@
 @base <http://sweetontology.net/relaSci> .
 
 <http://sweetontology.net/relaSci> rdf:type owl:Ontology ;
-                                    owl:imports <http://sweetontology.net/matrBiomass> ,
-                                                <http://sweetontology.net/matrRock> ,
-                                                <http://sweetontology.net/phenGeolSeismicity> ,
-                                                <http://sweetontology.net/phenSystem> ,
-                                                <http://sweetontology.net/prop> ,
-                                                <http://sweetontology.net/propOrdinal> ,
-                                                <http://sweetontology.net/propQuantity> ,
-                                                <http://sweetontology.net/realmGeol> ,
-                                                <http://sweetontology.net/realmGeolBasin> ,
-                                                <http://sweetontology.net/relaChemical> ,
-                                                <http://sweetontology.net/relaMath> ,
-                                                <http://sweetontology.net/repr> ,
-                                                <http://sweetontology.net/reprMath> ,
-                                                <http://sweetontology.net/reprSciUnits> ;
+                                    
                                     rdfs:label "SWEET Ontology Relationships Scientific" ;
                                     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                     owl:versionInfo "3.5.0" .

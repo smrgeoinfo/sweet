@@ -11,7 +11,7 @@
 @base <http://sweetontology.net/reprTimeDay> .
 
 <http://sweetontology.net/reprTimeDay> rdf:type owl:Ontology ;
-                                        owl:imports <http://sweetontology.net/relaTime> ;
+                                        
                                         rdfs:label "SWEET Ontology Representation Time Day" ;
                                         dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                         owl:versionInfo "3.5.0" .

@@ -13,10 +13,7 @@
 @base <http://sweetontology.net/propQuantity> .
 
 <http://sweetontology.net/propQuantity> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/prop> ,
-                                                     <http://sweetontology.net/relaSci> ,
-                                                     <http://sweetontology.net/reprMath> ,
-                                                     <http://sweetontology.net/reprSciUnits> ;
+                                         
                                          rdfs:label "SWEET Ontology Property Quantity" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .

@@ -17,14 +17,7 @@
 @base <http://sweetontology.net/matrIsotope> .
 
 <http://sweetontology.net/matrIsotope> rdf:type owl:Ontology ;
-                                        owl:imports <http://sweetontology.net/matr> ,
-                                                    <http://sweetontology.net/matrElement> ,
-                                                    <http://sweetontology.net/matrParticle> ,
-                                                    <http://sweetontology.net/propCategorical> ,
-                                                    <http://sweetontology.net/rela> ,
-                                                    <http://sweetontology.net/relaChemical> ,
-                                                    <http://sweetontology.net/state> ,
-                                                    <http://sweetontology.net/statePhysical> ;
+                                        
                                         rdfs:label "SWEET Ontology Material Isotope" ;
                                         dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                         owl:versionInfo "3.5.0" .

@@ -19,16 +19,7 @@
 @base <http://sweetontology.net/phenAtmoWind> .
 
 <http://sweetontology.net/phenAtmoWind> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/matrAerosol> ,
-                                                     <http://sweetontology.net/matrSediment> ,
-                                                     <http://sweetontology.net/phenAtmo> ,
-                                                     <http://sweetontology.net/phenFluidDynamics> ,
-                                                     <http://sweetontology.net/procPhysical> ,
-                                                     <http://sweetontology.net/propPressure> ,
-                                                     <http://sweetontology.net/propSpaceDirection> ,
-                                                     <http://sweetontology.net/rela> ,
-                                                     <http://sweetontology.net/relaChemical> ,
-                                                     <http://sweetontology.net/relaSci> ;
+                                         
                                          rdfs:label "SWEET Ontology Phenomena Atmosphere Wind" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .

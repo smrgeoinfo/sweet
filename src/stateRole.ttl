@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/stateRole> .
 
 <http://sweetontology.net/stateRole> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/procPhysical> ,
-                                                  <http://sweetontology.net/prop> ,
-                                                  <http://sweetontology.net/propOrdinal> ,
-                                                  <http://sweetontology.net/rela> ,
-                                                  <http://sweetontology.net/relaSci> ;
+                                      
                                       rdfs:label "SWEET Ontology State Role" ;
                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                       owl:versionInfo "3.5.0" .

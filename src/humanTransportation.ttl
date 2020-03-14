@@ -14,12 +14,7 @@
 @base <http://sweetontology.net/humanTransportation> .
 
 <http://sweetontology.net/humanTransportation> rdf:type owl:Ontology ;
-                                                owl:imports <http://sweetontology.net/human> ,
-                                                            <http://sweetontology.net/humanCommerce> ,
-                                                            <http://sweetontology.net/humanJurisdiction> ,
-                                                            <http://sweetontology.net/matrEquipment> ,
-                                                            <http://sweetontology.net/relaHuman> ,
-                                                            <http://sweetontology.net/relaTime> ;
+                                                
                                                 rdfs:label "SWEET Ontology Human Transportation" ;
                                                 dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                                 owl:versionInfo "3.5.0" .

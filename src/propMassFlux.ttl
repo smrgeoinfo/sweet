@@ -12,9 +12,7 @@
 @base <http://sweetontology.net/propMassFlux> .
 
 <http://sweetontology.net/propMassFlux> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/propMass> ,
-                                                     <http://sweetontology.net/propQuantity> ,
-                                                     <http://sweetontology.net/relaChemical> ;
+                                         
                                          rdfs:label "SWEET Ontology Property Mass Flux" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .

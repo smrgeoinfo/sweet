@@ -13,10 +13,7 @@
 @base <http://sweetontology.net/matrEnergy> .
 
 <http://sweetontology.net/matrEnergy> rdf:type owl:Ontology ;
-                                       owl:imports <http://sweetontology.net/matrEquipment> ,
-                                                   <http://sweetontology.net/phenEnergy> ,
-                                                   <http://sweetontology.net/relaPhysical> ,
-                                                   <http://sweetontology.net/reprSciComponent> ;
+                                       
                                        rdfs:label "SWEET Ontology Material Energy" ;
                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                        owl:versionInfo "3.5.0" .

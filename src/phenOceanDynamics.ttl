@@ -20,17 +20,7 @@
 @base <http://sweetontology.net/phenOceanDynamics> .
 
 <http://sweetontology.net/phenOceanDynamics> rdf:type owl:Ontology ;
-                                              owl:imports <http://sweetontology.net/phenFluidDynamics> ,
-                                                          <http://sweetontology.net/phenGeolSeismicity> ,
-                                                          <http://sweetontology.net/phenMixing> ,
-                                                          <http://sweetontology.net/phenOcean> ,
-                                                          <http://sweetontology.net/phenOceanCoastal> ,
-                                                          <http://sweetontology.net/rela> ,
-                                                          <http://sweetontology.net/relaPhysical> ,
-                                                          <http://sweetontology.net/relaSpace> ,
-                                                          <http://sweetontology.net/reprSpaceDirection> ,
-                                                          <http://sweetontology.net/stateSpaceScale> ,
-                                                          <http://sweetontology.net/stateThermodynamic> ;
+                                              
                                               rdfs:label "SWEET Ontology Phenomena Ocean Dynamics" ;
                                               dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                               owl:versionInfo "3.5.0" .

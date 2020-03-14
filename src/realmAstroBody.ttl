@@ -12,11 +12,7 @@
 @base <http://sweetontology.net/realmAstroBody> .
 
 <http://sweetontology.net/realmAstroBody> rdf:type owl:Ontology ;
-                                           owl:imports <http://sweetontology.net/matr> ,
-                                                       <http://sweetontology.net/propTime> ,
-                                                       <http://sweetontology.net/realm> ,
-                                                       <http://sweetontology.net/relaPhysical> ,
-                                                       <http://sweetontology.net/reprSpaceGeometry3D> ;
+                                           
                                            rdfs:label "SWEET Ontology Realm Astrophysical Body" ;
                                            dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                            owl:versionInfo "3.5.0" .

@@ -1,237 +1,479 @@
+# baseURI: http://sweetontology.net/sweetAll
+# imports: http://sweetontology.net/matr
+# imports: http://sweetontology.net/matrAerosol
+# imports: http://sweetontology.net/matrElement
+# imports: http://sweetontology.net/matrElementalMolecule
+# imports: http://sweetontology.net/matrEnergy
+# imports: http://sweetontology.net/matrEquipment
+# imports: http://sweetontology.net/matrFacility
+# imports: http://sweetontology.net/matrIndustrial
+# imports: http://sweetontology.net/matrInstrument
+# imports: http://sweetontology.net/matrIon
+# imports: http://sweetontology.net/matrIsotope
+# imports: http://sweetontology.net/matrMineral
+# imports: http://sweetontology.net/matrNaturalResource
+# imports: http://sweetontology.net/matrOrganicCompound
+# imports: http://sweetontology.net/matrParticle
+# imports: http://sweetontology.net/matrPlant
+# imports: http://sweetontology.net/matrRock
+# imports: http://sweetontology.net/matrRockIgneous
+# imports: http://sweetontology.net/matrSediment
+# imports: http://sweetontology.net/matrWater
+# imports: http://sweetontology.net/phen
+# imports: http://sweetontology.net/phenAtmo
+
+# imports: http://sweetontology.net/phenAtmoPressure
+# imports: http://sweetontology.net/phenAtmoTransport
+# imports: http://sweetontology.net/phenAtmoWind
+# imports: http://sweetontology.net/phenAtmoWindMesoscale
+# imports: http://sweetontology.net/phenBiol
+# imports: http://sweetontology.net/phenCryo
+# imports: http://sweetontology.net/phenCycle
+# imports: http://sweetontology.net/phenCycleMaterial
+# imports: http://sweetontology.net/phenEcology
+# imports: http://sweetontology.net/phenElecMag
+# imports: http://sweetontology.net/phenEnergy
+# imports: http://sweetontology.net/phenEnvirImpact
+# imports: http://sweetontology.net/phenFluidDynamics
+# imports: http://sweetontology.net/phenFluidInstability
+# imports: http://sweetontology.net/phenFluidTransport
+# imports: http://sweetontology.net/phenGeol
+# imports: http://sweetontology.net/phenGeolFault
+# imports: http://sweetontology.net/phenGeolGeomorphology
+# imports: http://sweetontology.net/phenGeolSeismicity
+# imports: http://sweetontology.net/phenGeolTectonic
+# imports: http://sweetontology.net/phenGeolVolcano
+# imports: http://sweetontology.net/phenHelio
+# imports: http://sweetontology.net/phenHydro
+# imports: http://sweetontology.net/phenMixing
+# imports: http://sweetontology.net/phenOcean
+# imports: http://sweetontology.net/phenOceanCoastal
+# imports: http://sweetontology.net/phenOceanDynamics
+# imports: http://sweetontology.net/phenPlanetClimate
+# imports: http://sweetontology.net/phenReaction
+# imports: http://sweetontology.net/phenSolid
+# imports: http://sweetontology.net/phenStar
+# imports: http://sweetontology.net/phenSystem
+# imports: http://sweetontology.net/phenSystemComplexity
+# imports: http://sweetontology.net/phenWave
+# imports: http://sweetontology.net/phenWaveNoise
+# imports: http://sweetontology.net/proc
+# imports: http://sweetontology.net/procChemical
+# imports: http://sweetontology.net/procPhysical
+# imports: http://sweetontology.net/procStateChange
+# imports: http://sweetontology.net/procWave
+# imports: http://sweetontology.net/prop
+# imports: http://sweetontology.net/propBinary
+# imports: http://sweetontology.net/propCapacity
+# imports: http://sweetontology.net/propCategorical
+# imports: http://sweetontology.net/propCharge
+# imports: http://sweetontology.net/propChemical
+# imports: http://sweetontology.net/propConductivity
+# imports: http://sweetontology.net/propCount
+# imports: http://sweetontology.net/propDifference
+# imports: http://sweetontology.net/propDiffusivity
+# imports: http://sweetontology.net/propDimensionlessRatio
+# imports: http://sweetontology.net/propEnergy
+# imports: http://sweetontology.net/propEnergyFlux
+# imports: http://sweetontology.net/propFraction
+# imports: http://sweetontology.net/propFunction
+# imports: http://sweetontology.net/propIndex
+# imports: http://sweetontology.net/propMass
+# imports: http://sweetontology.net/propMassFlux
+# imports: http://sweetontology.net/propOrdinal
+# imports: http://sweetontology.net/propPressure
+# imports: http://sweetontology.net/propQuantity
+# imports: http://sweetontology.net/propRotation
+# imports: http://sweetontology.net/propSpace
+# imports: http://sweetontology.net/propSpaceDirection
+# imports: http://sweetontology.net/propSpaceDistance
+# imports: http://sweetontology.net/propSpaceHeight
+# imports: http://sweetontology.net/propSpaceLocation
+# imports: http://sweetontology.net/propSpaceMultidimensional
+# imports: http://sweetontology.net/propSpaceThickness
+# imports: http://sweetontology.net/propSpeed
+# imports: http://sweetontology.net/propTemperature
+# imports: http://sweetontology.net/propTemperatureGradient
+# imports: http://sweetontology.net/propTime
+# imports: http://sweetontology.net/propTimeFrequency
+# imports: http://sweetontology.net/realm
+# imports: http://sweetontology.net/realmAstroBody
+
+# imports: http://sweetontology.net/realmAtmo
+# imports: http://sweetontology.net/realmAtmoBoundaryLayer
+# imports: http://sweetontology.net/realmAtmoWeather
+# imports: http://sweetontology.net/realmBiolBiome
+# imports: http://sweetontology.net/realmClimateZone
+# imports: http://sweetontology.net/realmCryo
+# imports: http://sweetontology.net/realmEarthReference
+# imports: http://sweetontology.net/realmGeol
+# imports: http://sweetontology.net/realmGeolBasin
+# imports: http://sweetontology.net/realmGeolConstituent
+# imports: http://sweetontology.net/realmGeolContinental
+# imports: http://sweetontology.net/realmGeolOrogen
+# imports: http://sweetontology.net/realmHydro
+# imports: http://sweetontology.net/realmHydroBody
+# imports: http://sweetontology.net/realmLandAeolian
+# imports: http://sweetontology.net/realmLandCoastal
+# imports: http://sweetontology.net/realmLandFluvial
+# imports: http://sweetontology.net/realmLandGlacial
+# imports: http://sweetontology.net/realmLandOrographic
+# imports: http://sweetontology.net/realmLandProtected
+# imports: http://sweetontology.net/realmLandTectonic
+# imports: http://sweetontology.net/realmLandVolcanic
+# imports: http://sweetontology.net/realmLandform
+# imports: http://sweetontology.net/realmOcean
+# imports: http://sweetontology.net/realmOceanFeature
+# imports: http://sweetontology.net/realmOceanFloor
+# imports: http://sweetontology.net/realmRegion
+# imports: http://sweetontology.net/realmSoil
+# imports: http://sweetontology.net/rela
+# imports: http://sweetontology.net/relaChemical
+# imports: http://sweetontology.net/relaClimate
+# imports: http://sweetontology.net/relaHuman
+# imports: http://sweetontology.net/relaMath
+# imports: http://sweetontology.net/relaPhysical
+# imports: http://sweetontology.net/relaProvenance
+# imports: http://sweetontology.net/relaSci
+# imports: http://sweetontology.net/relaSpace
+# imports: http://sweetontology.net/relaTime
+# imports: http://sweetontology.net/repr
+# imports: http://sweetontology.net/reprDataFormat
+# imports: http://sweetontology.net/reprDataModel
+# imports: http://sweetontology.net/reprDataProduct
+# imports: http://sweetontology.net/reprDataService
+# imports: http://sweetontology.net/reprDataServiceAnalysis
+# imports: http://sweetontology.net/reprDataServiceGeospatial
+# imports: http://sweetontology.net/reprDataServiceReduction
+# imports: http://sweetontology.net/reprDataServiceValidation
+# imports: http://sweetontology.net/reprMath
+# imports: http://sweetontology.net/reprMathFunction
+# imports: http://sweetontology.net/reprMathFunctionOrthogonal
+# imports: http://sweetontology.net/reprMathGraph
+# imports: http://sweetontology.net/reprMathOperation
+# imports: http://sweetontology.net/reprMathSolution
+# imports: http://sweetontology.net/reprMathStatistics
+# imports: http://sweetontology.net/reprSciComponent
+# imports: http://sweetontology.net/reprSciFunction
+# imports: http://sweetontology.net/reprSciLaw
+# imports: http://sweetontology.net/reprSciMethodology
+# imports: http://sweetontology.net/reprSciModel
+# imports: http://sweetontology.net/reprSciProvenance
+# imports: http://sweetontology.net/reprSciUnits
+# imports: http://sweetontology.net/reprSpace
+# imports: http://sweetontology.net/reprSpaceCoordinate
+# imports: http://sweetontology.net/reprSpaceDirection
+# imports: http://sweetontology.net/reprSpaceGeometry
+# imports: http://sweetontology.net/reprSpaceGeometry3D
+# imports: http://sweetontology.net/reprSpaceReferenceSystem
+# imports: http://sweetontology.net/reprTime
+# imports: http://sweetontology.net/reprTimeDay
+# imports: http://sweetontology.net/reprTimeSeason
+# imports: http://sweetontology.net/state
+# imports: http://sweetontology.net/stateBiological
+# imports: http://sweetontology.net/stateChemical
+# imports: http://sweetontology.net/stateDataProcessing
+# imports: http://sweetontology.net/stateEnergyFlux
+# imports: http://sweetontology.net/stateFluid
+# imports: http://sweetontology.net/stateOrdinal
+# imports: http://sweetontology.net/statePhysical
+# imports: http://sweetontology.net/stateRealm
+# imports: http://sweetontology.net/stateRole
+# imports: http://sweetontology.net/stateRoleBiological
+# imports: http://sweetontology.net/stateRoleChemical
+# imports: http://sweetontology.net/stateRoleGeographic
+# imports: http://sweetontology.net/stateRoleImpact
+# imports: http://sweetontology.net/stateRoleRepresentative
+# imports: http://sweetontology.net/stateRoleTrust
+# imports: http://sweetontology.net/stateSolid
+# imports: http://sweetontology.net/stateSpace
+# imports: http://sweetontology.net/stateSpaceConfiguration
+# imports: http://sweetontology.net/stateSpaceScale
+# imports: http://sweetontology.net/stateSpectralBand
+# imports: http://sweetontology.net/stateSpectralLine
+# imports: http://sweetontology.net/stateStorm
+# imports: http://sweetontology.net/stateSystem
+# imports: http://sweetontology.net/stateThermodynamic
+# imports: http://sweetontology.net/stateTime
+# imports: http://sweetontology.net/stateTimeCycle
+# imports: http://sweetontology.net/stateTimeFrequency
+# imports: http://sweetontology.net/stateTimeGeologic
+# imports: http://sweetontology.net/stateVisibility
+
 @prefix : <http://sweetontology.net/sweetAll/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://sweetontology.net/sweetAll> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://sweetontology.net/sweetAll> rdf:type owl:Ontology ;
-                                     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                     owl:imports <http://sweetontology.net/human> ,
-                                                 <http://sweetontology.net/humanAgriculture> ,
-                                                 <http://sweetontology.net/humanCommerce> ,
-                                                 <http://sweetontology.net/humanDecision> ,
-                                                 <http://sweetontology.net/humanEnvirAssessment> ,
-                                                 <http://sweetontology.net/humanEnvirConservation> ,
-                                                 <http://sweetontology.net/humanEnvirControl> ,
-                                                 <http://sweetontology.net/humanEnvirStandards> ,
-                                                 <http://sweetontology.net/humanJurisdiction> ,
-                                                 <http://sweetontology.net/humanKnowledgeDomain> ,
-                                                 <http://sweetontology.net/humanResearch> ,
-                                                 <http://sweetontology.net/humanTechReadiness> ,
-                                                 <http://sweetontology.net/humanTransportation> ,
-                                                 <http://sweetontology.net/matr> ,
-                                                 <http://sweetontology.net/matrAerosol> ,
-                                                 <http://sweetontology.net/matrAnimal> ,
-                                                 <http://sweetontology.net/matrBiomass> ,
-                                                 <http://sweetontology.net/matrElement> ,
-                                                 <http://sweetontology.net/matrElementalMolecule> ,
-                                                 <http://sweetontology.net/matrEnergy> ,
-                                                 <http://sweetontology.net/matrEquipment> ,
-                                                 <http://sweetontology.net/matrFacility> ,
-                                                 <http://sweetontology.net/matrIndustrial> ,
-                                                 <http://sweetontology.net/matrInstrument> ,
-                                                 <http://sweetontology.net/matrIon> ,
-                                                 <http://sweetontology.net/matrIsotope> ,
-                                                 <http://sweetontology.net/matrMicrobiota> ,
-                                                 <http://sweetontology.net/matrMineral> ,
-                                                 <http://sweetontology.net/matrNaturalResource> ,
-                                                 <http://sweetontology.net/matrOrganicCompound> ,
-                                                 <http://sweetontology.net/matrParticle> ,
-                                                 <http://sweetontology.net/matrPlant> ,
-                                                 <http://sweetontology.net/matrRock> ,
-                                                 <http://sweetontology.net/matrRockIgneous> ,
-                                                 <http://sweetontology.net/matrSediment> ,
-                                                 <http://sweetontology.net/matrWater> ,
-                                                 <http://sweetontology.net/phen> ,
-                                                 <http://sweetontology.net/phenAtmo> ,
-                                                 <http://sweetontology.net/phenAtmoCloud> ,
-                                                 <http://sweetontology.net/phenAtmoFog> ,
-                                                 <http://sweetontology.net/phenAtmoFront> ,
-                                                 <http://sweetontology.net/phenAtmoLightning> ,
-                                                 <http://sweetontology.net/phenAtmoPrecipitation> ,
-                                                 <http://sweetontology.net/phenAtmoPressure> ,
-                                                 <http://sweetontology.net/phenAtmoTransport> ,
-                                                 <http://sweetontology.net/phenAtmoWind> ,
-                                                 <http://sweetontology.net/phenAtmoWindMesoscale> ,
-                                                 <http://sweetontology.net/phenBiol> ,
-                                                 <http://sweetontology.net/phenCryo> ,
-                                                 <http://sweetontology.net/phenCycle> ,
-                                                 <http://sweetontology.net/phenCycleMaterial> ,
-                                                 <http://sweetontology.net/phenEcology> ,
-                                                 <http://sweetontology.net/phenElecMag> ,
-                                                 <http://sweetontology.net/phenEnergy> ,
-                                                 <http://sweetontology.net/phenEnvirImpact> ,
-                                                 <http://sweetontology.net/phenFluidDynamics> ,
-                                                 <http://sweetontology.net/phenFluidInstability> ,
-                                                 <http://sweetontology.net/phenFluidTransport> ,
-                                                 <http://sweetontology.net/phenGeol> ,
-                                                 <http://sweetontology.net/phenGeolFault> ,
-                                                 <http://sweetontology.net/phenGeolGeomorphology> ,
-                                                 <http://sweetontology.net/phenGeolSeismicity> ,
-                                                 <http://sweetontology.net/phenGeolTectonic> ,
-                                                 <http://sweetontology.net/phenGeolVolcano> ,
-                                                 <http://sweetontology.net/phenHelio> ,
-                                                 <http://sweetontology.net/phenHydro> ,
-                                                 <http://sweetontology.net/phenMixing> ,
-                                                 <http://sweetontology.net/phenOcean> ,
-                                                 <http://sweetontology.net/phenOceanCoastal> ,
-                                                 <http://sweetontology.net/phenOceanDynamics> ,
-                                                 <http://sweetontology.net/phenPlanetClimate> ,
-                                                 <http://sweetontology.net/phenReaction> ,
-                                                 <http://sweetontology.net/phenSolid> ,
-                                                 <http://sweetontology.net/phenStar> ,
-                                                 <http://sweetontology.net/phenSystem> ,
-                                                 <http://sweetontology.net/phenSystemComplexity> ,
-                                                 <http://sweetontology.net/phenWave> ,
-                                                 <http://sweetontology.net/phenWaveNoise> ,
-                                                 <http://sweetontology.net/proc> ,
-                                                 <http://sweetontology.net/procChemical> ,
-                                                 <http://sweetontology.net/procPhysical> ,
-                                                 <http://sweetontology.net/procStateChange> ,
-                                                 <http://sweetontology.net/procWave> ,
-                                                 <http://sweetontology.net/prop> ,
-                                                 <http://sweetontology.net/propBinary> ,
-                                                 <http://sweetontology.net/propCapacity> ,
-                                                 <http://sweetontology.net/propCategorical> ,
-                                                 <http://sweetontology.net/propCharge> ,
-                                                 <http://sweetontology.net/propChemical> ,
-                                                 <http://sweetontology.net/propConductivity> ,
-                                                 <http://sweetontology.net/propCount> ,
-                                                 <http://sweetontology.net/propDifference> ,
-                                                 <http://sweetontology.net/propDiffusivity> ,
-                                                 <http://sweetontology.net/propDimensionlessRatio> ,
-                                                 <http://sweetontology.net/propEnergy> ,
-                                                 <http://sweetontology.net/propEnergyFlux> ,
-                                                 <http://sweetontology.net/propFraction> ,
-                                                 <http://sweetontology.net/propFunction> ,
-                                                 <http://sweetontology.net/propIndex> ,
-                                                 <http://sweetontology.net/propMass> ,
-                                                 <http://sweetontology.net/propMassFlux> ,
-                                                 <http://sweetontology.net/propOrdinal> ,
-                                                 <http://sweetontology.net/propPressure> ,
-                                                 <http://sweetontology.net/propQuantity> ,
-                                                 <http://sweetontology.net/propRotation> ,
-                                                 <http://sweetontology.net/propSpace> ,
-                                                 <http://sweetontology.net/propSpaceDirection> ,
-                                                 <http://sweetontology.net/propSpaceDistance> ,
-                                                 <http://sweetontology.net/propSpaceHeight> ,
-                                                 <http://sweetontology.net/propSpaceLocation> ,
-                                                 <http://sweetontology.net/propSpaceMultidimensional> ,
-                                                 <http://sweetontology.net/propSpaceThickness> ,
-                                                 <http://sweetontology.net/propSpeed> ,
-                                                 <http://sweetontology.net/propTemperature> ,
-                                                 <http://sweetontology.net/propTemperatureGradient> ,
-                                                 <http://sweetontology.net/propTime> ,
-                                                 <http://sweetontology.net/propTimeFrequency> ,
-                                                 <http://sweetontology.net/realm> ,
-                                                 <http://sweetontology.net/realmAstroBody> ,
-                                                 <http://sweetontology.net/realmAstroHelio> ,
-                                                 <http://sweetontology.net/realmAstroStar> ,
-                                                 <http://sweetontology.net/realmAtmo> ,
-                                                 <http://sweetontology.net/realmAtmoBoundaryLayer> ,
-                                                 <http://sweetontology.net/realmAtmoWeather> ,
-                                                 <http://sweetontology.net/realmBiolBiome> ,
-                                                 <http://sweetontology.net/realmClimateZone> ,
-                                                 <http://sweetontology.net/realmCryo> ,
-                                                 <http://sweetontology.net/realmEarthReference> ,
-                                                 <http://sweetontology.net/realmGeol> ,
-                                                 <http://sweetontology.net/realmGeolBasin> ,
-                                                 <http://sweetontology.net/realmGeolConstituent> ,
-                                                 <http://sweetontology.net/realmGeolContinental> ,
-                                                 <http://sweetontology.net/realmGeolOrogen> ,
-                                                 <http://sweetontology.net/realmHydro> ,
-                                                 <http://sweetontology.net/realmHydroBody> ,
-                                                 <http://sweetontology.net/realmLandAeolian> ,
-                                                 <http://sweetontology.net/realmLandCoastal> ,
-                                                 <http://sweetontology.net/realmLandFluvial> ,
-                                                 <http://sweetontology.net/realmLandGlacial> ,
-                                                 <http://sweetontology.net/realmLandOrographic> ,
-                                                 <http://sweetontology.net/realmLandProtected> ,
-                                                 <http://sweetontology.net/realmLandTectonic> ,
-                                                 <http://sweetontology.net/realmLandVolcanic> ,
-                                                 <http://sweetontology.net/realmLandform> ,
-                                                 <http://sweetontology.net/realmOcean> ,
-                                                 <http://sweetontology.net/realmOceanFeature> ,
-                                                 <http://sweetontology.net/realmOceanFloor> ,
-                                                 <http://sweetontology.net/realmRegion> ,
-                                                 <http://sweetontology.net/realmSoil> ,
-                                                 <http://sweetontology.net/rela> ,
-                                                 <http://sweetontology.net/relaChemical> ,
-                                                 <http://sweetontology.net/relaClimate> ,
-                                                 <http://sweetontology.net/relaHuman> ,
-                                                 <http://sweetontology.net/relaMath> ,
-                                                 <http://sweetontology.net/relaPhysical> ,
-                                                 <http://sweetontology.net/relaProvenance> ,
-                                                 <http://sweetontology.net/relaSci> ,
-                                                 <http://sweetontology.net/relaSpace> ,
-                                                 <http://sweetontology.net/relaTime> ,
-                                                 <http://sweetontology.net/repr> ,
-                                                 <http://sweetontology.net/reprDataFormat> ,
-                                                 <http://sweetontology.net/reprDataModel> ,
-                                                 <http://sweetontology.net/reprDataProduct> ,
-                                                 <http://sweetontology.net/reprDataService> ,
-                                                 <http://sweetontology.net/reprDataServiceAnalysis> ,
-                                                 <http://sweetontology.net/reprDataServiceGeospatial> ,
-                                                 <http://sweetontology.net/reprDataServiceReduction> ,
-                                                 <http://sweetontology.net/reprDataServiceValidation> ,
-                                                 <http://sweetontology.net/reprMath> ,
-                                                 <http://sweetontology.net/reprMathFunction> ,
-                                                 <http://sweetontology.net/reprMathFunctionOrthogonal> ,
-                                                 <http://sweetontology.net/reprMathGraph> ,
-                                                 <http://sweetontology.net/reprMathOperation> ,
-                                                 <http://sweetontology.net/reprMathSolution> ,
-                                                 <http://sweetontology.net/reprMathStatistics> ,
-                                                 <http://sweetontology.net/reprSciComponent> ,
-                                                 <http://sweetontology.net/reprSciFunction> ,
-                                                 <http://sweetontology.net/reprSciLaw> ,
-                                                 <http://sweetontology.net/reprSciMethodology> ,
-                                                 <http://sweetontology.net/reprSciModel> ,
-                                                 <http://sweetontology.net/reprSciProvenance> ,
-                                                 <http://sweetontology.net/reprSciUnits> ,
-                                                 <http://sweetontology.net/reprSpace> ,
-                                                 <http://sweetontology.net/reprSpaceCoordinate> ,
-                                                 <http://sweetontology.net/reprSpaceDirection> ,
-                                                 <http://sweetontology.net/reprSpaceGeometry> ,
-                                                 <http://sweetontology.net/reprSpaceGeometry3D> ,
-                                                 <http://sweetontology.net/reprSpaceReferenceSystem> ,
-                                                 <http://sweetontology.net/reprTime> ,
-                                                 <http://sweetontology.net/reprTimeDay> ,
-                                                 <http://sweetontology.net/reprTimeSeason> ,
-                                                 <http://sweetontology.net/state> ,
-                                                 <http://sweetontology.net/stateBiological> ,
-                                                 <http://sweetontology.net/stateChemical> ,
-                                                 <http://sweetontology.net/stateDataProcessing> ,
-                                                 <http://sweetontology.net/stateEnergyFlux> ,
-                                                 <http://sweetontology.net/stateFluid> ,
-                                                 <http://sweetontology.net/stateOrdinal> ,
-                                                 <http://sweetontology.net/statePhysical> ,
-                                                 <http://sweetontology.net/stateRealm> ,
-                                                 <http://sweetontology.net/stateRole> ,
-                                                 <http://sweetontology.net/stateRoleBiological> ,
-                                                 <http://sweetontology.net/stateRoleChemical> ,
-                                                 <http://sweetontology.net/stateRoleGeographic> ,
-                                                 <http://sweetontology.net/stateRoleImpact> ,
-                                                 <http://sweetontology.net/stateRoleRepresentative> ,
-                                                 <http://sweetontology.net/stateRoleTrust> ,
-                                                 <http://sweetontology.net/stateSolid> ,
-                                                 <http://sweetontology.net/stateSpace> ,
-                                                 <http://sweetontology.net/stateSpaceConfiguration> ,
-                                                 <http://sweetontology.net/stateSpaceScale> ,
-                                                 <http://sweetontology.net/stateSpectralBand> ,
-                                                 <http://sweetontology.net/stateSpectralLine> ,
-                                                 <http://sweetontology.net/stateStorm> ,
-                                                 <http://sweetontology.net/stateSystem> ,
-                                                 <http://sweetontology.net/stateThermodynamic> ,
-                                                 <http://sweetontology.net/stateTime> ,
-                                                 <http://sweetontology.net/stateTimeCycle> ,
-                                                 <http://sweetontology.net/stateTimeFrequency> ,
-                                                 <http://sweetontology.net/stateTimeGeologic> ,
-                                                 <http://sweetontology.net/stateVisibility> ;
-                                     rdfs:label "SWEET Ontology" ;
-									 	rdfs:comment """The semantic web for Earth and environmental terminology (SWEET) is an investigation in improving discovery and use of Earth science data, through software understanding of the semantics of web resources.  SWEET is a collection of ontologies conceptualizing a knowledge space for Earth system science, represented using the web ontology language (OWL). It includes both orthogonal concepts (space, time, Earth realms, physical quantities, etc.) and integrative science knowledge concepts (phenomena, events, etc.).  The ontology is modularized into 224 component files in this version, each representing a different namespace, with numerous dependencies implemented by OWL imports between the namespace.  Component factoring may change in future versions.
+<http://sweetontology.net/phenGeolTectonic/TectonicAssemblage>
+  rdfs:subClassOf :GeologicUnit ;
+.
+<http://sweetontology.net/realmGeol/DenudationalFeature>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmGeol/Depression>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmGeol/Dome>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmGeol/Embayment>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmGeol/Escarpment>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmGeol/GeophysicalFeature>
+  rdfs:subClassOf :GeologicUnit ;
+.
+<http://sweetontology.net/realmGeol/InnerCore>
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <http://sweetontology.net/realmGeol/Core> ;
+      owl:onProperty <http://sweetontology.net/rela/partOf> ;
+    ] ;
+.
+<http://sweetontology.net/realmGeol/LithodemicFeature>
+  rdfs:subClassOf :GeologicUnit ;
+.
+<http://sweetontology.net/realmGeol/OuterCore>
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <http://sweetontology.net/realmGeol/Core> ;
+      owl:onProperty <http://sweetontology.net/rela/partOf> ;
+    ] ;
+.
+<http://sweetontology.net/realmGeol/Ridge>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmGeol/StratigraphicFeature>
+  rdfs:subClassOf :GeologicUnit ;
+.
+<http://sweetontology.net/realmGeolOrogen/RearArc>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmGeolOrogen/RetroArc>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmHydro/Embankment>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmHydro/FloodBank>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmHydro/Levee>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmHydro/RaisedBank>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmHydroBody/Fiord>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandAeolian/SandDune>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandCoastal/DeltaBar>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandTectonic/Diapir>
+  rdfs:subClassOf :GeologicUnit ;
+.
+<http://sweetontology.net/realmLandTectonic/Ophiolite>
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/TectonicFeature> ;
+.
+<http://sweetontology.net/realmLandVolcanic/LavaPlain>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/realmLandform/Landform>
+  rdfs:subClassOf :GeomorphicFeature ;
+.
+<http://sweetontology.net/sweetAll>
+  a owl:Ontology ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  rdfs:comment """The semantic web for Earth and environmental terminology (SWEET) is an investigation in improving discovery and use of Earth science data, through software understanding of the semantics of web resources.  SWEET is a collection of ontologies conceptualizing a knowledge space for Earth system science, represented using the web ontology language (OWL). It includes both orthogonal concepts (space, time, Earth realms, physical quantities, etc.) and integrative science knowledge concepts (phenomena, events, etc.).  The ontology is modularized into 224 component files in this version, each representing a different namespace, with numerous dependencies implemented by OWL imports between the namespace.  Component factoring may change in future versions.
 
 The original version was developed by Robert Raskin at JPL (see Raskin and  Pan, 2005: https://doi.org/10.1016/j.cageo.2004.12.004). Stewardship has been taken over by the Earth Science Information Partners Federation (ESIPFed), managed through a GitHub repository at https://github.com/ESIPFed/sweet.  See https://github.com/ESIPFed/sweet/blob/master/CONTRIBUTING.md for information about providing comments or contributing to development of SWEET."""@en ;
-                                     owl:versionInfo "3.5.0" .
+  rdfs:label "SWEET Ontology" ;
 
-###  Generated by the OWL API (version 5.1.2.2017-10-13T07:13:07Z) https://github.com/owlcs/owlapi/
+  owl:imports <http://sweetontology.net/matr> ;
+
+
+  owl:imports <http://sweetontology.net/matrElement> ;
+  owl:imports <http://sweetontology.net/matrElementalMolecule> ;
+  owl:imports <http://sweetontology.net/matrEnergy> ;
+
+
+  owl:imports <http://sweetontology.net/matrIon> ;
+  owl:imports <http://sweetontology.net/matrIsotope> ;
+
+  owl:imports <http://sweetontology.net/matrMineral> ;
+  owl:imports <http://sweetontology.net/matrNaturalResource> ;
+  owl:imports <http://sweetontology.net/matrOrganicCompound> ;
+  owl:imports <http://sweetontology.net/matrParticle> ;
+
+  owl:imports <http://sweetontology.net/matrRock> ;
+  owl:imports <http://sweetontology.net/matrRockIgneous> ;
+  owl:imports <http://sweetontology.net/matrSediment> ;
+  owl:imports <http://sweetontology.net/matrWater> ;
+  owl:imports <http://sweetontology.net/phen> ;
+  owl:imports <http://sweetontology.net/phenAtmo> ;
+
+
+
+
+  owl:imports <http://sweetontology.net/phenCryo> ;
+  owl:imports <http://sweetontology.net/phenCycle> ;
+  owl:imports <http://sweetontology.net/phenCycleMaterial> ;
+  owl:imports <http://sweetontology.net/phenEcology> ;
+
+  owl:imports <http://sweetontology.net/phenEnergy> ;
+
+
+  owl:imports <http://sweetontology.net/phenGeol> ;
+  owl:imports <http://sweetontology.net/phenGeolFault> ;
+  owl:imports <http://sweetontology.net/phenGeolGeomorphology> ;
+  owl:imports <http://sweetontology.net/phenGeolSeismicity> ;
+  owl:imports <http://sweetontology.net/phenGeolTectonic> ;
+  owl:imports <http://sweetontology.net/phenGeolVolcano> ;
+
+  owl:imports <http://sweetontology.net/phenHydro> ;
+  owl:imports <http://sweetontology.net/phenMixing> ;
+  owl:imports <http://sweetontology.net/phenOcean> ;
+  owl:imports <http://sweetontology.net/phenOceanCoastal> ;
+
+  owl:imports <http://sweetontology.net/phenPlanetClimate> ;
+
+  owl:imports <http://sweetontology.net/phenSolid> ;
+
+  owl:imports <http://sweetontology.net/phenSystem> ;
+
+
+  owl:imports <http://sweetontology.net/proc> ;
+  owl:imports <http://sweetontology.net/procChemical> ;
+  owl:imports <http://sweetontology.net/procPhysical> ;
+
+  owl:imports <http://sweetontology.net/prop> ;
+  owl:imports <http://sweetontology.net/propBinary> ;
+
+  owl:imports <http://sweetontology.net/propCategorical> ;
+
+  owl:imports <http://sweetontology.net/propChemical> ;
+
+  owl:imports <http://sweetontology.net/propCount> ;
+  owl:imports <http://sweetontology.net/propDifference> ;
+
+  owl:imports <http://sweetontology.net/propDimensionlessRatio> ;
+  owl:imports <http://sweetontology.net/propEnergy> ;
+  owl:imports <http://sweetontology.net/propEnergyFlux> ;
+  owl:imports <http://sweetontology.net/propFraction> ;
+  owl:imports <http://sweetontology.net/propFunction> ;
+
+  owl:imports <http://sweetontology.net/propMass> ;
+  owl:imports <http://sweetontology.net/propMassFlux> ;
+  owl:imports <http://sweetontology.net/propOrdinal> ;
+  owl:imports <http://sweetontology.net/propPressure> ;
+  owl:imports <http://sweetontology.net/propQuantity> ;
+
+  owl:imports <http://sweetontology.net/propSpace> ;
+
+  owl:imports <http://sweetontology.net/propSpeed> ;
+  owl:imports <http://sweetontology.net/propTemperature> ;
+
+  owl:imports <http://sweetontology.net/propTime> ;
+  owl:imports <http://sweetontology.net/propTimeFrequency> ;
+  owl:imports <http://sweetontology.net/realm> ;
+
+
+  owl:imports <http://sweetontology.net/realmAtmo> ;
+
+
+
+  owl:imports <http://sweetontology.net/realmClimateZone> ;
+  owl:imports <http://sweetontology.net/realmCryo> ;
+  owl:imports <http://sweetontology.net/realmEarthReference> ;
+  owl:imports <http://sweetontology.net/realmGeol> ;
+  owl:imports <http://sweetontology.net/realmGeolBasin> ;
+  owl:imports <http://sweetontology.net/realmGeolConstituent> ;
+  owl:imports <http://sweetontology.net/realmGeolContinental> ;
+  owl:imports <http://sweetontology.net/realmGeolOrogen> ;
+  owl:imports <http://sweetontology.net/realmHydro> ;
+  owl:imports <http://sweetontology.net/realmHydroBody> ;
+  owl:imports <http://sweetontology.net/realmLandAeolian> ;
+  owl:imports <http://sweetontology.net/realmLandCoastal> ;
+  owl:imports <http://sweetontology.net/realmLandFluvial> ;
+  owl:imports <http://sweetontology.net/realmLandGlacial> ;
+  owl:imports <http://sweetontology.net/realmLandOrographic> ;
+  owl:imports <http://sweetontology.net/realmLandProtected> ;
+  owl:imports <http://sweetontology.net/realmLandTectonic> ;
+  owl:imports <http://sweetontology.net/realmLandVolcanic> ;
+  owl:imports <http://sweetontology.net/realmLandform> ;
+  owl:imports <http://sweetontology.net/realmOcean> ;
+  owl:imports <http://sweetontology.net/realmOceanFeature> ;
+  owl:imports <http://sweetontology.net/realmOceanFloor> ;
+  owl:imports <http://sweetontology.net/realmRegion> ;
+  owl:imports <http://sweetontology.net/realmSoil> ;
+  owl:imports <http://sweetontology.net/rela> ;
+  owl:imports <http://sweetontology.net/relaChemical> ;
+  owl:imports <http://sweetontology.net/relaClimate> ;
+
+
+  owl:imports <http://sweetontology.net/relaPhysical> ;
+  owl:imports <http://sweetontology.net/relaProvenance> ;
+  owl:imports <http://sweetontology.net/relaSci> ;
+  owl:imports <http://sweetontology.net/relaSpace> ;
+  owl:imports <http://sweetontology.net/relaTime> ;
+  owl:imports <http://sweetontology.net/repr> ;
+
+  owl:imports <http://sweetontology.net/reprMath> ;
+
+
+  owl:imports <http://sweetontology.net/reprSciUnits> ;
+  owl:imports <http://sweetontology.net/reprSpace> ;
+
+  owl:imports <http://sweetontology.net/reprTime> ;
+  owl:imports <http://sweetontology.net/reprTimeDay> ;
+  owl:imports <http://sweetontology.net/reprTimeSeason> ;
+  owl:imports <http://sweetontology.net/state> ;
+
+  owl:imports <http://sweetontology.net/stateChemical> ;
+
+  owl:imports <http://sweetontology.net/stateEnergyFlux> ;
+  owl:imports <http://sweetontology.net/stateFluid> ;
+  owl:imports <http://sweetontology.net/stateOrdinal> ;
+  owl:imports <http://sweetontology.net/statePhysical> ;
+  owl:imports <http://sweetontology.net/stateRealm> ;
+  owl:imports <http://sweetontology.net/stateRole> ;
+
+
+
+  owl:imports <http://sweetontology.net/stateSolid> ;
+  owl:imports <http://sweetontology.net/stateSpace> ;
+
+
+  owl:imports <http://sweetontology.net/stateSystem> ;
+  owl:imports <http://sweetontology.net/stateThermodynamic> ;
+  owl:imports <http://sweetontology.net/stateTime> ;
+  owl:imports <http://sweetontology.net/stateTimeCycle> ;
+  owl:imports <http://sweetontology.net/stateTimeFrequency> ;
+  owl:imports <http://sweetontology.net/stateTimeGeologic> ;
+  owl:imports <http://sweetontology.net/stateVisibility> ;
+  owl:versionInfo "3.5.0" ;
+.
+:GeologicUnit
+  a owl:Class ;
+  rdfs:comment "a body of material in the Earth whose complete and precise extent is inferred to exist (NADM GeologicUnit, Stratigraphic unit in sense of NACSN or International Stratigraphic Code), or a classifier used to characterize parts of the Earth (e.g. lithologic map unit like 'granitic rock' or 'alluvial deposit', surficial units like 'till' or 'old alluvium'). GeoSciML v3.2" ;
+  rdfs:label "Geologic Unit "@en ;
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/GeologicFeature> ;
+  skos:prefLabel "Geologic Unit "@en ;
+.
+:GeomorphicFeature
+  a owl:Class ;
+  rdfs:comment "A feature describing the shape and nature of the Earth's land surface (ie, a landform).  These landforms may be created by natural Earth processes (eg, river channel, beach, moraine, mountain) or through human (anthropogenic) activity (eg, dredged channel, reclaimed land, mine waste dumps). GeoSciML v3.2" ;
+  rdfs:label "Geomorphic Feature "@en ;
+  rdfs:subClassOf <http://sweetontology.net/realmGeol/GeologicFeature> ;
+  skos:prefLabel "Geomorphic Feature  "@en ;
+.

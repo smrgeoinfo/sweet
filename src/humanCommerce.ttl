@@ -12,10 +12,7 @@
 @base <http://sweetontology.net/humanCommerce> .
 
 <http://sweetontology.net/humanCommerce> rdf:type owl:Ontology ;
-                                          owl:imports <http://sweetontology.net/human> ,
-                                                      <http://sweetontology.net/humanEnvirConservation> ,
-                                                      <http://sweetontology.net/matrEquipment> ,
-                                                      <http://sweetontology.net/relaHuman> ;
+                                          
                                           rdfs:label "SWEET Ontology Human Commerce" ;
                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                           owl:versionInfo "3.5.0" .

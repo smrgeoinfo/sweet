@@ -14,11 +14,7 @@
 @base <http://sweetontology.net/phenSolid> .
 
 <http://sweetontology.net/phenSolid> rdf:type owl:Ontology ;
-                                      owl:imports <http://sweetontology.net/phen> ,
-                                                  <http://sweetontology.net/procPhysical> ,
-                                                  <http://sweetontology.net/rela> ,
-                                                  <http://sweetontology.net/statePhysical> ,
-                                                  <http://sweetontology.net/stateRoleGeographic> ;
+                                      
                                       rdfs:label "SWEET Ontology Phenomena Solid" ;
                                       dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                       owl:versionInfo "3.5.0" .

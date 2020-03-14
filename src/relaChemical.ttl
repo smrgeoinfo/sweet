@@ -12,9 +12,7 @@
 @base <http://sweetontology.net/relaChemical> .
 
 <http://sweetontology.net/relaChemical> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/matr> ,
-                                                     <http://sweetontology.net/procChemical> ,
-                                                     <http://sweetontology.net/rela> ;
+                                         
                                          rdfs:label "SWEET Ontology Relationships Chemical" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .

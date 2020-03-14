@@ -14,13 +14,7 @@
 @base <http://sweetontology.net/stateBiological> .
 
 <http://sweetontology.net/stateBiological> rdf:type owl:Ontology ;
-                                            owl:imports <http://sweetontology.net/propCategorical> ,
-                                                        <http://sweetontology.net/propOrdinal> ,
-                                                        <http://sweetontology.net/relaSci> ,
-                                                        <http://sweetontology.net/relaTime> ,
-                                                        <http://sweetontology.net/reprSpaceDirection> ,
-                                                        <http://sweetontology.net/state> ,
-                                                        <http://sweetontology.net/stateTime> ;
+                                            
                                             rdfs:label "SWEET Ontology State Biological" ;
                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                             owl:versionInfo "3.5.0" .

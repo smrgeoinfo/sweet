@@ -14,10 +14,7 @@
 @base <http://sweetontology.net/reprSciModel> .
 
 <http://sweetontology.net/reprSciModel> rdf:type owl:Ontology ;
-                                         owl:imports <http://sweetontology.net/humanResearch> ,
-                                                     <http://sweetontology.net/phenAtmo> ,
-                                                     <http://sweetontology.net/rela> ,
-                                                     <http://sweetontology.net/repr> ;
+                                         
                                          rdfs:label "SWEET Ontology Representation Scientific Model" ;
                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
                                          owl:versionInfo "3.5.0" .
