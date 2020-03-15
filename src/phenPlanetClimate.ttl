@@ -66,7 +66,7 @@ sophpc:ClimateChange
 sophpc:ClimatePhenomena
   a owl:Class ;
   rdfs:label "climate phenomena"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 sophpc:ClimaticAnomaly
   a owl:Class ;
@@ -126,7 +126,7 @@ sophpc:GreenhouseEffect
 sophpc:HeatIsland
   a owl:Class ;
   rdfs:label "heat island"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:hasValue sostss:Microscale ;

@@ -53,7 +53,7 @@ sophgf:GenericDecollement
 sophgf:Heave
   a owl:Class ;
   rdfs:label "heave"@en ;
-  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicfeature/Displacement> ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom sophgf:Horizontal ;
@@ -128,7 +128,7 @@ sophgf:StrikeSlip
 sophgf:Throw
   a owl:Class ;
   rdfs:label "throw"@en ;
-  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicfeature/Displacement> ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:hasValue sorepsd:Vertical ;

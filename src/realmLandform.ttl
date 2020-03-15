@@ -58,7 +58,7 @@ soreal:Dryland
 soreal:Field
   a owl:Class ;
   rdfs:label "field"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 soreal:Highland
   a owl:Class ;
@@ -161,7 +161,7 @@ soreal:ShatterCone
 soreal:Spall
   a owl:Class ;
   rdfs:label "spall"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 soreal:SurfaceRegion
   a owl:Class ;

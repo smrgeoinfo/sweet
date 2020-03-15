@@ -56,7 +56,7 @@ sophhy:Drain
 sophhy:Drainage
   a owl:Class ;
   rdfs:label "drainage"@en ;
-  rdfs:subClassOf <http://loop3d.org/GSO/ontology/2020/1/geologicproperty/Displacement> ;
+  rdfs:subClassOf sophhy:WaterFlow ;
 .
 sophhy:FlashFlood
   a owl:Class ;
@@ -80,7 +80,7 @@ sophhy:GroundwaterStorage
 sophhy:HydrospherePhenomena
   a owl:Class ;
   rdfs:label "hydrosphere phenomena"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom sorea:Hydrosphere ;
@@ -163,7 +163,7 @@ sophhy:Runoff
 sophhy:SnowCover
   a owl:Class ;
   rdfs:label "snow cover"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 sophhy:Snowslide
   a owl:Class ;

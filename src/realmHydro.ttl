@@ -165,7 +165,7 @@ soreah:SaturatedZone
 soreah:SeepageFace
   a owl:Class ;
   rdfs:label "seepage face"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 soreah:SurfaceWater
   a owl:Class ;

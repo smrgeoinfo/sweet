@@ -101,7 +101,7 @@ sorealo:Orographic
 sorealo:Orography
   a owl:Class ;
   rdfs:label "orography"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 sorealo:Pass
   a owl:Class ;

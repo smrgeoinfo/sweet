@@ -71,7 +71,7 @@ soph:BrownianMotion
 soph:DynamicalPhenomena
   a owl:Class ;
   rdfs:label "dynamical phenomena"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 soph:Event
   a owl:Class ;
@@ -91,7 +91,7 @@ soph:ExtremeEvent
 soph:Flash
   a owl:Class ;
   rdfs:label "flash"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 soph:Occurrence
   a owl:Class ;
@@ -104,7 +104,7 @@ soph:Phenomena
 soph:PlanetaryPhenomena
   a owl:Class ;
   rdfs:label "planetary phenomena"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:hasValue sostss:PlanetaryScale ;
@@ -153,7 +153,7 @@ soph:StochasticProcess
 soph:Teleconnection
   a owl:Class ;
   rdfs:label "teleconnection"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 sophsy:Exchange
   a owl:Class ;

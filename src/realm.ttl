@@ -157,7 +157,7 @@ sorea:Realm
 sorea:Ring
   a owl:Class ;
   rdfs:label "ring"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:hasValue sostp:Solid ;

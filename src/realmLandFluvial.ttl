@@ -180,7 +180,7 @@ sorealf:Valley
 sorealf:Wall
   a owl:Class ;
   rdfs:label "wall"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 sorealf:Wash
   a owl:Class ;

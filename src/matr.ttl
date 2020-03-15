@@ -115,7 +115,7 @@ soma:InorganicSubstance
 soma:Medium
   a owl:Class ;
   rdfs:label "medium"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 soma:MixedChemicalSubstance
   a owl:Class ;

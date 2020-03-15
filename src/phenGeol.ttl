@@ -42,7 +42,7 @@ sophg:Fluvial
 sophg:GeologicalPhenomena
   a owl:Class ;
   rdfs:label "geological phenomena"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom soreag:SolidEarth ;
@@ -101,7 +101,7 @@ sophg:Orogeny
 sophg:Paleomagnetism
   a owl:Class ;
   rdfs:label "paleomagnetism"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 sophg:Pedogenesis
   a owl:Class ;

@@ -70,7 +70,7 @@ sophec:EcologicalDynamics
 sophec:EcologicalPhenomena
   a owl:Class ;
   rdfs:label "ecological phenomena"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 sophec:EcosystemHealth
   a owl:Class ;

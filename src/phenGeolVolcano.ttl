@@ -106,7 +106,7 @@ sophgv:SummitEruption
 sophgv:Surge
   a owl:Class ;
   rdfs:label "surge"@en ;
-  rdfs:subClassOf <http://sweetontology.net/sweetGeo/Thing_1> ;
+  rdfs:subClassOf <http://sweetontology.net/sweetGeo/needsdefinition> ;
 .
 sophgv:VolcanicActivity
   a owl:Class ;
